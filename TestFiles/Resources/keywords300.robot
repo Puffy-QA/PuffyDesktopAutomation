@@ -8,7 +8,7 @@ Resource            ../Resources/VariableTexts.robot
 
 *** Keywords ***
 
-#=============================TEST REQUIREMENTS===================================================#
+#=============================TEST REQUIREMENTS==================================================#
 Initiate Video Recording
     Start Video Recording       alias=FallSale name=FallSale
 
