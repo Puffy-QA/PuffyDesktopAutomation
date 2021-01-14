@@ -65,20 +65,20 @@ Verify price in compare page for Puffy Mattress
     Get Puffy Mattress Price and compare to mid page
 Verify price in compare page for Puffy Lux Mattress
     Go to Puffy Lux Mattress Product Page
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress Twin
+    Click size dropdown for Puffy Lux Mattress
+    Set size to twin for Puffy Lux Mattress
     Get Puffy Lux Mattress Price and compare to mid page
 Verify price in compare page for Puffy Lux Hybrid Mattress
     Go to Puffy Lux Mattress Product Page
     Click on Puffy Lux Hybrid
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress Twin
+    Click size dropdown for Puffy Lux Mattress
+    Set size to twin for Puffy Lux Mattress
     Get Puffy Lux Hybrid Mattress Price and compare to mid page
 Verify price in compare page for Puffy Royal Hybrid Mattress
     Go to Puffy Royal Mattress Product Page
     Click on Puffy Royal Hybrid
-    Click Puffy Royal Mattress Size dropdown
-    Select Puffy Royal Mattress Twin
+    Click size dropdown for Puffy Royal Mattress
+    Set size to Twin for Puffy Royal Mattress
     Get Puffy Royal Hybrid Mattress Price and compare to mid page
 Verify the price in PDP Puffy Mattress
     Go to Puffy Mattress Product Page
@@ -110,105 +110,105 @@ Verify the price in PDP Puffy Lux Mattress
     Go to Puffy Lux Mattress Product Page
     Check sale text in Seasonal Banner
     Check Freebie and discount value in PDP
-    Check Puffy Lux Mattress PDP Default size
-    Click Puffy Lux Mattress Size dropdown
-    Check Puffy Lux Mattress sizes original prices
-    Check Puffy Lux Mattress sizes 300OFF prices
-    Check Puffy Lux Mattress sizes list order
-    Select Puffy Lux Mattress Twin
-    Check Puffy Lux Mattress Twin size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress TwinXL
-    Check Puffy Lux Mattress TwinXL size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress Full
-    Check Puffy Lux Mattress Full size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress Queen
-    Check Puffy Lux Mattress Queen size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress King
-    Check Puffy Lux Mattress King size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress Cal King
-    Check Puffy Lux Mattress Cal King size monthly payment price
+    Check default size for Puffy Lux Mattress   #Check Puffy Lux Mattress PDP Default size
+    Click size dropdown for Puffy Lux Mattress      #Click Puffy Lux Mattress Size dropdown
+    Check original price for Puffy Lux Mattress (all sizes)     #Check Puffy Lux Mattress sizes original prices
+    Check $300 off price for Puffy Lux Mattress (all sizes)     #Check Puffy Lux Mattress sizes 300OFF prices
+    Check order in Size dropdown for Puffy Lux Mattress     #Check Puffy Lux Mattress sizes list order
+    Set size to Twin for Puffy Lux Mattress         #Select Puffy Lux Mattress Twin
+    Check installment price for Twin Size Puffy Lux Mattress        #Check Puffy Lux Mattress Twin size monthly payment price
+    Click size dropdown for Puffy Lux Mattress
+    Set size to TwinXL for Puffy Lux Mattress
+    Check installment price for TwinXL Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to Full for Puffy Lux Mattress
+    Check installment price for Full Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to Queen for Puffy Lux Mattress
+    Check installment price for Queen Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to King for Puffy Lux Mattress
+    Check installment price for King Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to Cal King for Puffy Lux Mattress
+    Check installment price for Cal King Size Puffy Lux Mattress
 Verify the price in PDP Puffy Lux Hybrid Mattress
     Click on Puffy Lux Hybrid
-    Click Puffy Lux Mattress Size dropdown
-    Check Puffy Lux Hybrid sizes original prices
-    Check Puffy Lux Hybrid sizes 300OFF prices
-    Check Puffy Lux Mattress sizes list order
-    Select Puffy Lux Mattress Twin
-    Check Puffy Lux Mattress Twin size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress TwinXL
-    Check Puffy Lux Mattress TwinXL size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress Full
-    Check Puffy Lux Mattress Full size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress Queen
-    Check Puffy Lux Mattress Queen size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress King
-    Check Puffy Lux Mattress King size monthly payment price
-    Click Puffy Lux Mattress Size dropdown
-    Select Puffy Lux Mattress Cal King
-    Check Puffy Lux Mattress Cal King size monthly payment price
+    Click size dropdown for Puffy Lux Mattress
+    Check original price for Puffy Lux Hybrid Mattress (all sizes)     #Check Puffy Lux Hybrid sizes original prices
+    Check $300 off price for Puffy Lux Hybrid Mattress (all sizes)     #Check Puffy Lux Hybrid sizes 300OFF prices
+    Check order in Size dropdown for Puffy Lux Mattress     #Check Puffy Lux Mattress sizes list order
+    Set size to twin for Puffy Lux Mattress
+    Check installment price for Twin Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to TwinXL for Puffy Lux Mattress
+    Check installment price for TwinXL Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to Full for Puffy Lux Mattress
+    Check installment price for Full Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to Queen for Puffy Lux Mattress
+    Check installment price for Queen Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to King for Puffy Lux Mattress
+    Check installment price for King Size Puffy Lux Mattress
+    Click size dropdown for Puffy Lux Mattress
+    Set size to Cal King for Puffy Lux Mattress
+    Check installment price for Cal King Size Puffy Lux Mattress
 Verify the price in PDP Puffy Royal Mattress
     Go to Puffy Royal Mattress Product Page
     Check sale text in Seasonal Banner
     Check Freebie and discount value in PDP
-    Check Puffy Royal Mattress PDP Default size
-    Click Puffy Royal Mattress Size dropdown
-    Check Puffy Royal sizes original prices
-    Check Puffy Royal sizes 300OFF prices
-    Check Puffy Royal Mattress sizes list order
-    Select Puffy Royal Mattress Twin
-    Check Puffy Royal Mattress Twin size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
-    Select Puffy Royal Mattress TwinXL
-    Check Puffy Royal Mattress TwinXL size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
-    Select Puffy Royal Mattress Full
-    Check Puffy Royal Mattress Full size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
-    Select Puffy Royal Mattress Queen
-    Check Puffy Royal Mattress Queen size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
-    Select Puffy Royal Mattress King
-    Check Puffy Royal Mattress King size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
-    Select Puffy Royal Mattress Cal King
-    Check Puffy Royal Mattress Cal King size monthly payment price
+    Check default size for Puffy Royal Mattress           #Check Puffy Royal Mattress PDP Default size
+    Click size dropdown for Puffy Royal Mattress              #Click Puffy Royal Mattress Size dropdown
+    Check original price for Puffy Royal Mattress (all sizes)      #Check Puffy Royal sizes original prices
+    Check $300 off price for Puffy Royal Mattress (all sizes)      #Check Puffy Royal sizes 300OFF prices
+    Check order in Size dropdown for Puffy Royal Mattress          #Check Puffy Royal Mattress sizes list order
+    Set size to Twin for Puffy Royal Mattress                      #Select Puffy Royal Mattress Twin
+    Check installment price for Twin Size Puffy Royal Mattress
+    Click size dropdown for Puffy Royal Mattress
+    Set size to TwinXL for Puffy Royal Mattress
+    Check installment price for TwinXL Size Puffy Royal Mattress
+    Click size dropdown for Puffy Royal Mattress
+    Set size to Full for Puffy Royal Mattress
+    Check installment price for Full Size Puffy Royal Mattress
+    Click size dropdown for Puffy Royal Mattress
+    Set size to Queen for Puffy Royal Mattress
+    Check installment price for Queen Size Puffy Royal Mattress
+    Click size dropdown for Puffy Royal Mattress
+    Set size to King for Puffy Royal Mattress
+    Check installment price for King Size Puffy Royal Mattress
+    Click size dropdown for Puffy Royal Mattress
+    Set size to Cal King for Puffy Royal Mattress
+    Check installment price for Cal King Size Puffy Royal Mattress
 Verify the price in PDP Puffy Royal Hybrid Mattress
     Click on Puffy Royal Hybrid
-    Click Puffy Royal Mattress Size dropdown
+    Click size dropdown for Puffy Royal Mattress
     Check Puffy Royal Hybrid sizes original prices
     Check Puffy Royal Hybrid sizes 300OFF prices
-    Check Puffy Royal Mattress sizes list order
-    Select Puffy Royal Mattress Twin
+    Check order in Size dropdown for Puffy Royal Mattress
+    Set size to Twin for Puffy Royal Mattress
     Check Puffy Royal Mattress Twin size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
-    Select Puffy Royal Mattress TwinXL
+    Click size dropdown for Puffy Royal Mattress
+    Set size to Twin for Puffy Royal MattressXL
     Check Puffy Royal Mattress TwinXL size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
+    Click size dropdown for Puffy Royal Mattress
     Select Puffy Royal Mattress Full
     Check Puffy Royal Mattress Full size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
+    Click size dropdown for Puffy Royal Mattress
     Select Puffy Royal Mattress Queen
     Check Puffy Royal Mattress Queen size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
+    Click size dropdown for Puffy Royal Mattress
     Select Puffy Royal Mattress King
     Check Puffy Royal Mattress King size monthly payment price
-    Click Puffy Royal Mattress Size dropdown
+    Click size dropdown for Puffy Royal Mattress
     Select Puffy Royal Mattress Cal King
     Check Puffy Royal Mattress Cal King size monthly payment price
 Verify the price in PDP Puffy Foundation
     Go to Puffy Foundation Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Foundation PDP Default size
+    Check default size for Puffy Foundation
     Click Puffy Foundation Size dropdown
     Check Puffy Foundation sizes original prices
     #Check Puffy Foundation sizes 15%OFF prices
@@ -234,7 +234,7 @@ Verify the price in PDP Puffy Adjustable Base
     Go to Puffy Adjustable Base Product Page
     Check sale text in Seasonal Banner
     #Check Freebie and discount value in PDP
-    Check Puffy Adjustable Base PDP Default size
+    Check default size for Puffy Adjustable Base
     Click Puffy Adjustable Base Size dropdown
     Check Puffy Adjustable Base original prices
     Check Puffy Adjustable Base 300OFF prices
@@ -254,7 +254,7 @@ Verify the price in PDP Puffy Bed Frame
     Go to Puffy Bed Frame Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Bed Frame PDP Default size
+    Check default size for Puffy Bed Frame
     Click Puffy Bed Frame Size dropdown
     Check Puffy Bed Frame original prices
     #Check Puffy Bed Frame sizes 15%OFF prices
@@ -274,7 +274,7 @@ Verify the price in PDP Puffy Comforter
     Go to Puffy Comforter Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Comforter PDP Default size
+    Check default size for Puffy Comforter
     Click Puffy Comforter Size dropdown
     Check Puffy Comforter original prices
     #Check Puffy Comforter sizes 15%OFF prices
@@ -291,7 +291,7 @@ Verify the price in PDP Puffy Pillow
     Go to Puffy Pillow Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Pillow PDP Default size
+    Check default size for Puffy Pillow
     Click Puffy Pillow Size dropdown
     Check Puffy Pillow original prices
     Check Puffy Pillow sizes list order
@@ -311,7 +311,7 @@ Verify the price in PDP Puffy Mattress Pad
     Go to Puffy Mattress Pad Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Mattress Pad PDP Default size
+    Check default size for Puffy Mattress Pad
     Click Puffy Mattress Pad Size dropdown
     Check Puffy Mattress Pad original prices
     #Check Puffy Mattress Pad sizes 15%OFF prices
@@ -337,7 +337,7 @@ Verify the price in PDP Puffy Mattress Protector
     Go to Puffy Mattress Protector Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Mattress Protector PDP Default size
+    Check default size for Puffy Mattress Protector
     Click Puffy Mattress Protector Size dropdown
     Check Puffy Mattress Protector original prices
     #Check Puffy Mattress Protector sizes 15%OFF prices
@@ -364,7 +364,7 @@ Verify the price in PDP Puffy Topper
     Don't show seasonal sale content check
     #Don't show freebies content check
     Check Puffy Topper PDP Default feel
-    Check Puffy Topper PDP Default size
+    Check default size for Puffy Mattress Topper
     Click Puffy Topper feel dropdown
     Check Puffy Topper feel options
     Select Puffy Topper Firm
@@ -416,7 +416,7 @@ Verify the price in PDP Puffy Blanket
     Go to Puffy Blanket Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Blanket PDP Default size
+    Check default size for Puffy Blanket
     Click Puffy Blanket Size dropdown
     Check Puffy Blanket original prices
     #Check Puffy Bed Frame sizes 15%OFF prices
@@ -433,7 +433,7 @@ Verify the price in PDP Puffy Weighted Blanket
     Go to Puffy Weighted Blanket Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Weighted Blanket PDP Default size
+    Check default size for Puffy Weighted Blanket
     Click Puffy Weighted Blanket Size dropdown
     Check Puffy Weighted Blanket original prices
     #Check Puffy Weighted Blanket 15%OFF prices
@@ -450,8 +450,8 @@ Verify the price in PDP Puffy Sheets
     Go to Puffy Sheets Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Sheets PDP Default color
-    Check Puffy Sheets PDP Default size
+    Check default color for Puffy Sheets
+    Check default size for Puffy Sheets
     Click Puffy Sheets color dropdown
     Check Puffy Sheets color options
     Click Puffy Sheets color dropdown
@@ -503,7 +503,7 @@ Verify the price in PDP Puffy Dog Bed
     Go to Puffy Dog Bed Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Dog Bed PDP Default size
+    Check default size for Puffy Dog Bed
     Click Puffy Dog Bed Size dropdown
     Check Puffy Dog Bed original prices
     #Check Puffy Dog Bed 15%OFF prices
@@ -520,7 +520,7 @@ Verify the price in PDP Puffy Rug
     Go to Puffy Rug Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Rug PDP Default size
+    Check default size for Puffy Rug
     Click Puffy Rug Size dropdown
     Check Puffy Rug original prices
     #Check Puffy Rug 15%OFF prices
