@@ -6,7 +6,7 @@ Library             ScreenCapLibrary
 Library             Collections
 Library             String
 Suite Teardown      close browser
-#Resource          ../TestFiles/Resources/Variables.robot
+
 
 *** Variables ***
 ${Homepage}                     https://puffy.com/?preview_theme_id=84017709090
