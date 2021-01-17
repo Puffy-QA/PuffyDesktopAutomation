@@ -26,3 +26,4 @@ ${DISCOUNTCODEPAGEDETAILS2}     + Free Pillow
 ${SAVE350}                      https://puffy.com/pages/save350
 ${FOOTER350}                    NEW YEAR'S SALE NOW $350 OFF + FREE PILLOW
 ${SALE350DETAILS}               $350 OFF + FREE PILLOW
+${PUFFYBROWSER}                 alias=Puffy
