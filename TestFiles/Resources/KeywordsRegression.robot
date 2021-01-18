@@ -1,4 +1,5 @@
 *** Keywords ***
+
 Initiate Video Recording
     Start Video Recording       alias=FallSale name=FallSale
 
@@ -858,4 +859,5 @@ Main Menu click checks
     Click Element       ${LOCSUPPORT}
     Location Should be     ${SUPPORTFAQSURL}
     wait until page contains        ${TEXTFAQH2}
+
 

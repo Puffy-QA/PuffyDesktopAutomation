@@ -138,3 +138,4 @@ ${LOCMENUFINANCING}                                    css=body > div.shopify-se
 ${LOCHEADERSTORE}                                            css=.store-button--desktop
 ${LOCHEADERPUFFYLOGO}                                  css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.logo > a
 ${LOCSUPPORT}                                          css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(6) > a
+
