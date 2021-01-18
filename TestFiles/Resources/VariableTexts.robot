@@ -34,6 +34,14 @@ ${TEXTPUFFYGIFTSHOPH1}              GIFT IDEAS FOR
 ${TEXTCHECKOUTINFORMATIONH1}        Contact information
 ${TEXTCHECKOUTSHIPPINGH1}           Shipping method
 ${TEXTCHECKOUTPAYMENTH1}            Payment
+${TEXTPUFFYMATTRESSREVIEWSH1}       Puffy Mattress Reviews
+${TEXTPUFFYMATTRESSREVIEWVIDEOSH1}  Puffy Mattress Review Videos
+${TEXTPUFFYMATTRESSAWARDSH1}        Award-Winning
+${TEXTCONTACTUSH1}                  Contact Puffy Customer Support
+${TEXTFAQH2}                        QUESTIONS? REVIEW OUR FAQ BY SELECTING THE RELEVANT CATEGORY. IF YOU STILL HAVE QUESTIONS, CONTACT US BY USING THE FORM BELOW.
+${TEXTFINANCINGH1}                  Sleep on a cloud
+${TEXTSTOREH1}                      Puffy Store
+${TEXTHOMEPAGEH1}                   Puffy Mattress
 ###########################################################FOOTER TESTCASES$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$##############
 ${FOOTERPUFFYMATTRESSSPELLING}                      Puffy
 ${FOOTERPUFFYLUXMATTRESSSPELLING}                   Puffy Lux
@@ -83,3 +91,28 @@ ${FOOTERCOPYRIGHTSPELLING}                          Puffy Mattress
 ${SIGNUPNODOMAIN}                                   email
 ${SIGNUPINVALIDEMAIL}                               email.com
 ${SIGNUPVALIDEMAIL}                                 email@gmail.com
+####################################################MEGA MENU SPELLING CHECKS######################################################
+${MENUPUFFYMATTRESSSPELLING}                        Puffy Mattress
+${MENUPUFFYLUXMATTRESSSPELLING}                     Puffy Lux Mattress
+${MENUPUFFYROYALMATTRESSSPELLING}                   Puffy Royal Mattress
+${MENUPUFFYFOUNDATIONSPELLING}                      Foundation
+${MENUPUFFYADJUSTABLEBASESPELLING}                  Adjustable Base
+${MENUPUFFYBEDFRAMESPELLING}                        Bed Frame
+${MENUPUFFYCOMFORTERSPELLING}                       Comforter
+${MENUPUFFYPILLOWSPELLING}                          Pillow
+${MENUPUFFYBODYPILLOWSPELLING}                      Body Pillow
+${MENUPUFFYMATTRESSPADSPELLING}                     Mattress Pad
+${MENUPUFFYMATTRESSPROTECTORSPELLING}               Mattress Protector
+${MENUPUFFYMATTRESSTOPPERSPELLING}                  Mattress Topper
+${MENUPUFFYBLANKETSPELLING}                         Blanket
+${MENUPUFFYWEIGHTEDBLANKETSPELLING}                 Weighted Blanket
+${MENUPUFFYSHEETSSPELLING}                          Sheets
+${MENUPUFFYDOGBEDSPELLING}                          Dog Bed
+${MENUPUFFYRUGSPELLING}                             Rug
+${MENUCUSTOMERREVIEWSSPELLING}                      Customer Reviews
+${MENUVIDEOREVIEWSSPELLING}                         Video Reviews
+${MENUMENUAWARDSSPELLING}                           Awards
+${MENUCONTACTUSSPELLING}                            Contact Us
+${MENUFAQSSPELLING}                                 FAQs
+${MENUFINANCINGSPELLING}                            Financing
+${HEADERSTORESPELLING}                              STORE

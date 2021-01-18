@@ -10,7 +10,6 @@ Resource            ../Resources/VariableURL.robot
 Resource            ../Resources/VariableTexts.robot
 Resource            ../Resources/VariableSettings.robot
 Resource            ../Resources/KeywordsRegression.robot
-Resource            ../Resources/Keywords300.robot
 *** Test Cases ***
 Start Record Video
     Initiate Video Recording
