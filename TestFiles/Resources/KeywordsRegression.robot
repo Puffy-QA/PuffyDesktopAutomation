@@ -513,6 +513,7 @@ Switch to Version B
 Switch to Version C
     Click element   ${LOCTOGGLEC}
 
+
 ###########################################################MEGA MENU KEYWORDS###########################################################
 
 *** Keywords ***

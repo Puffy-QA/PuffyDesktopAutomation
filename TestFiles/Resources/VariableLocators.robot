@@ -40,6 +40,7 @@ ${LOC12REASONSPDP}                  css=#productReasons > div.block__rich_text_a
 ${LOCTOGGLEA}                       css=#showVersionA
 ${LOCTOGGLEB}                       css=#showVersionB
 ${LOCTOGGLEC}                       css=#showVersionC
+
 ###########################################################FOOTER TESTCASES$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$##############
 ${LOCSIGNUPTEXTFIELD}               css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > div.newsletter-wrapper > div > div > div > div > form > div > div > div.needsclick.FormComponent__StyledFormComponentWrapper-e0xun6-0.jSFixL.kl-private-reset-css-Xuajs1 > div > input
 ${LOCFOOTERSIGNUP}                  css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > div.newsletter-wrapper > div > div > div > div > form > div > div > div.needsclick.FormComponent__StyledFormComponentWrapper-e0xun6-0.IRToG.kl-private-reset-css-Xuajs1 > button
@@ -140,3 +141,4 @@ ${LOCMENUFINANCING}                                    css=body > div.shopify-se
 ${LOCHEADERSTORE}                                            css=.store-button--desktop
 ${LOCHEADERPUFFYLOGO}                                  css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.logo > a
 ${LOCSUPPORT}                                          css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(6) > a
+
