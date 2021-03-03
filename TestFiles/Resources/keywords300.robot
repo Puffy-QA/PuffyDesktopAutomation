@@ -26,10 +26,14 @@ Check Seasonal Sale text on timer (Save 350)
     ${Content}=            get text        css=#saleTimer > div:nth-child(1) > div
     Run keyword if          "${Content}"!="${FOOTER350}"      Fail        Wrong Seasonal Sale timer Content Actual content: ${Content} Expected: ${Timer350}
     Click element           css=#saleTimer > span > svg
+Check sale text in Seasonal Banner (Mattress)
+    sleep                   2s
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan:nth-child(1)
+    Run keyword if          "${Content}"!="${SALENAME}"      Fail        Wrong Seasonal Sale Content Actual Result: ${Content} Expected: ${SALENAME}
 Check sale text in Seasonal Banner
     sleep                   2s
-    ${Content}=            get text        css=#Summer_SALE
-    Run keyword if          "${Content}"!="${SALENAME}"      Fail        Wrong Seasonal Sale Content Actual Result: ${Content}
+    ${Content}=            get text        css=#Summer_SALE > tspan
+    Run keyword if          "${Content}"!="${SALENAME}"      Fail        Wrong Seasonal Sale Content Actual Result: ${Content} Expected: ${SALENAME}
 
 Don't show seasonal sale content check
     Page Should Not Contain Element              css=#Presidents_Day_Sale_Product_Page_Banner > path.cls-product-mattress1
@@ -154,14 +158,18 @@ Go to Gift Shop page (Click on footer Gift Shop link)
 #=============================DISCOUNTS AND FREEBIES=================================================#
 
 Check Freebie and discount value in PDP
-    ${Content}=            get text        css=#_300_Off_FREE_PILLOW
-    Run keyword if          '${Content}'!='${SALEDETAILS}'      Fail        Wrong Discount Value and Freebie Content
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan.cls-mattress-badge3
+    Run keyword if          '${Content}'!='${SALEDETAILS}'      Fail        Wrong Discount Value and Freebie Content  Expected: ${SALEDETAILS} Actual: ${Content}
+
+Check Freebie and discount value in PDP Adjustable Base
+    ${Content}=            get text        css=#_300_Off > tspan
+    Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong Discount Value and Freebie Content  Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
 
 Wait and dismiss popup
     sleep                   5s
-    ${check}=               Run Keyword and Return Status  Element should be visible      xpath=/html/body/div[3]/div[2]/div/div[1]/img
+    ${check}=               Run Keyword and Return Status  Element should be visible      xpath=/html/body/div[2]/div[2]/div/div[1]/img
     run keyword if          ${check} == False    Wait and dismiss popup
-    ...     ELSE            Click element   xpath=/html/body/div[3]/div[2]/div/span
+    ...     ELSE            Click element   css=#Layer_1 > polygon
 #=============================PRODUCT SIZE DROPDOWNS=================================================#
 Click size dropdown for Puffy Mattress
     wait until page contains element        css=#product_form_345108381730 > div.product-variants-holder > div > div > div
@@ -269,11 +277,11 @@ Check default feel for Puffy Mattress Topper
 
 Check default size for Puffy Blanket
     ${DefaultSize}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYBLANKETDEFAULTSIZE}'      Fail        Wrong Puffy Blanket Default Size. Expected Result: ${PuffyBlanketDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYBLANKETDEFAULTSIZE}'      Fail        Wrong Puffy Blanket Default Size. Expected Result: ${SIZEPUFFYBLANKETDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Weighted Blanket
     ${DefaultSize}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYWEIGHTEDBLANKETDEFAULTSIZE}'      Fail        Wrong Puffy WeightedBlanket Default Size. Expected Result: ${PuffyWeightedBlanketDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYWEIGHTEDBLANKETDEFAULTSIZE}'      Fail        Wrong Puffy WeightedBlanket Default Size. Expected Result: ${SIZEPUFFYWEIGHTEDBLANKETDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default color for Puffy Sheets
     ${DefaultSize}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-color > div > div > div > span.display-name.is--not--sale
@@ -525,8 +533,8 @@ Check Puffy Pillow original prices
 
 Check Puffy Body Pillow original prices
 
-    Wait Until Element Is Visible          css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-body-pillow > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__content > div.product-price > span
-    ${Content}=            get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-body-pillow > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__content > div.product-price > span
+    Wait Until Element Is Visible          css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-body-pillow > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head.product-head--smaller > div > div.product-head__content > div.product-price > span
+    ${Content}=            get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-body-pillow > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head.product-head--smaller > div > div.product-head__content > div.product-price > span
     Run keyword if          '${Content}'!='${PUFFYBODYPILLOWORIGINAL}'      Fail        Wrong Puffy Pillow Standard Size original price. Expected Result: ${PuffyBodyPillowOriginal} Actual Result: ${Content}
 
 Check Puffy Body Pillow sizes 15OFF prices
@@ -655,8 +663,8 @@ Check Puffy Topper 15OFF prices
 
 Check Puffy Blanket original prices
 
-    Wait Until Element Is Visible          css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
+    Wait Until Element Is Visible          css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
+    ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     Run keyword if          '${Content}'!='${PUFFYBLANKETSMALLORIGINAL}'      Fail        Wrong Puffy Blanket Small Size original price. Expected Result: ${PuffyBlanketSmallOriginal} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
@@ -1139,34 +1147,34 @@ Check Puffy Blanket sizes list order
 
     Wait Until Element Is Visible          css=#product_form_4412718972962 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
     ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYBLANKETPDPSIZEORDER1}'      Fail        First size in Puffy Blanket PDP is Wrong. Expected Result: ${PuffyBlanketPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYBLANKETPDPSIZEORDER1}'      Fail        First size in Puffy Blanket PDP is Wrong. Expected Result: ${SIZEPUFFYBLANKETPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYBLANKETPDPSIZEORDER2}'      Fail        Second size in Puffy Blanket PDP is Wrong. Expected Result: ${PuffyBlanketPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYBLANKETPDPSIZEORDER2}'      Fail        Second size in Puffy Blanket PDP is Wrong. Expected Result: ${SIZEPUFFYBLANKETPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYBLANKETPDPSIZEORDER3}'      Fail        Third size in Puffy Blanket PDP is Wrong. Expected Result: ${PuffyBlanketPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYBLANKETPDPSIZEORDER3}'      Fail        Third size in Puffy Blanket PDP is Wrong. Expected Result: ${SIZEPUFFYBLANKETPDPSIZEORDER3} Actual Result: ${Content}
 
 Check Puffy Weighted Blanket sizes list order
 
     Wait Until Element Is Visible          css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
     ${Content}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER1}'      Fail        First size in Puffy Weighted Blanket PDP is Wrong. Expected Result: ${PuffyWeightedBlanketPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER1}'      Fail        First size in Puffy Weighted Blanket PDP is Wrong. Expected Result: ${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER2}'      Fail        Second size in Puffy Weighted Blanket PDP is Wrong. Expected Result: ${PuffyWeightedBlanketPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER2}'      Fail        Second size in Puffy Weighted Blanket PDP is Wrong. Expected Result: ${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER3}'      Fail        Third size in Puffy Weighted Blanket PDP is Wrong. Expected Result: ${PuffyWeightedBlanketPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER3}'      Fail        Third size in Puffy Weighted Blanket PDP is Wrong. Expected Result: ${SIZEPUFFYWEIGHTEDBLANKETPDPSIZEORDER3} Actual Result: ${Content}
 Check Puffy Sheets color options
 
     Wait Until Element Is Visible          css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-color > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-color > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPCOLORORDER1}'      Fail        First color option in Puffy Sheets PDP is Wrong. Expected Result: ${PuffySheetsPDPColorOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPCOLORORDER1}'      Fail        First color option in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPCOLORORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-color > div > ul > li:nth-child(2)
-    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPCOLORORDER2}'      Fail        Second color option in Puffy Sheets PDP is Wrong. Expected Result: ${PuffySheetsPDPColorOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPCOLORORDER2}'      Fail        Second color option in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPCOLORORDER2} Actual Result: ${Content}
 
 
 Check Puffy Sheets sizes list order
@@ -1174,45 +1182,45 @@ Check Puffy Sheets sizes list order
     Wait Until Element Is Visible          css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER1}'      Fail        First size in Puffy Sheets PDP is Wrong. Expected Result: ${PuffySheetsPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER1}'      Fail        First size in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER2}'      Fail        Second size in Puffy Sheets PDP is Wrong. Expected Result: ${PuffySheetsPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER2}'      Fail        Second size in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER3}'      Fail        Third size in Puffy Sheets PDP is Wrong. Expected Result: ${PuffySheetsPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER3}'      Fail        Third size in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER4}'      Fail        Fourth size in Puffy Sheets PDP is Wrong. Expected Result: ${PuffySheetsPDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER4}'      Fail        Fourth size in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPSIZEORDER4} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER5}'      Fail        Fifth size in Puffy Sheets PDP is Wrong. Expected Result: ${PuffySheetsPDPSizeOrder5} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER5}'      Fail        Fifth size in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPSIZEORDER5} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER6}'      Fail        Sixth size in Puffy Sheets PDP is Wrong. Expected Result: ${PuffySheetsPDPSizeOrder6} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPSIZEORDER6}'      Fail        Sixth size in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPSIZEORDER6} Actual Result: ${Content}
 
 Check Puffy Dog Bed sizes list order
 
     Wait Until Element Is Visible          css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYDOGBEDPDPSIZEORDER1}'      Fail        First size in Puffy Dog Bed PDP is Wrong. Expected Result: ${PuffyDogBedPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYDOGBEDPDPSIZEORDER1}'      Fail        First size in Puffy Dog Bed PDP is Wrong. Expected Result: ${SIZEPUFFYDOGBEDPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYDOGBEDPDPSIZEORDER2}'      Fail        Second size in Puffy Dog Bed PDP is Wrong. Expected Result: ${PuffyDogBedPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYDOGBEDPDPSIZEORDER2}'      Fail        Second size in Puffy Dog Bed PDP is Wrong. Expected Result: ${SIZEPUFFYDOGBEDPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYDOGBEDPDPSIZEORDER3}'      Fail        Third size in Puffy Dog Bed PDP is Wrong. Expected Result: ${PuffyDogBedPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYDOGBEDPDPSIZEORDER3}'      Fail        Third size in Puffy Dog Bed PDP is Wrong. Expected Result: ${SIZEPUFFYDOGBEDPDPSIZEORDER3} Actual Result: ${Content}
 
 Check Puffy Rug sizes list order
 
     Wait Until Element Is Visible          css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYRUGPDPSIZEORDER1}'      Fail        First size in Puffy Rug PDP is Wrong. Expected Result: ${PuffyRugPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYRUGPDPSIZEORDER1}'      Fail        First size in Puffy Rug PDP is Wrong. Expected Result: ${SIZEPUFFYRUGPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYRUGPDPSIZEORDER2}'      Fail        Second size in Puffy Rug PDP is Wrong. Expected Result: ${PuffyRugPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYRUGPDPSIZEORDER2}'      Fail        Second size in Puffy Rug PDP is Wrong. Expected Result: ${SIZEPUFFYRUGPDPSIZEORDER2} Actual Result: ${Content}
 
 
 #################################################Select Sizes#################################################
@@ -1898,8 +1906,8 @@ Get Puffy Mattress Price and compare to mid page
     sleep               2s
     Click element       ${LOCCOMPARE}
     Wait Until Page Contains    Puffy Mattress
-    ${PuffyMattressMinimumOriginalPriceComparePage}=        get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyMattressDiscountedPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.price-area > span.price-area__price.jsDiscountedPrice
+    ${PuffyMattressMinimumOriginalPriceComparePage}=        get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.price-area > span > del
+    ${PuffyMattressDiscountedPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
     ${PuffyMattressKlarnaPriceComparePage}=                 get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
     ${PuffyMattressSplitItPriceComparePage}=                get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
     Run keyword if          '${PuffyMattressMinimumOriginalPricePDP}'!='${PuffyMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Mattress Original in Comparison Page. Expected Result: ${PuffyMattressMinimumOriginalPricePDP} Actual Result: ${PuffyMattressMinimumOriginalPriceComparePage}
@@ -1918,8 +1926,8 @@ Get Puffy Lux Mattress Price and compare to mid page
     sleep               2s
     Click element       ${LOCCOMPARE}
     Wait Until Page Contains    Puffy Mattress
-    ${PuffyLuxMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyLuxMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.price-area > span.price-area__price.jsDiscountedPrice
+    ${PuffyLuxMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.price-area > span > del
+    ${PuffyLuxMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
     ${PuffyLuxMattressKlarnaPriceComparePage}=              get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
     ${PuffyLuxMattressSplitItPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
     Run keyword if          '${PuffyLuxMattressMinimumOriginalPricePDP}'!='${PuffyLuxMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Lux Mattress Original in Comparison Page. Expected Result: ${PuffyLuxMattressMinimumOriginalPricePDP} Actual Result: ${PuffyLuxMattressMinimumOriginalPriceComparePage}
@@ -1938,7 +1946,7 @@ Get Puffy Lux Hybrid Mattress Price and compare to mid page
     click link                                            link:Compare Hybrids
     Wait Until Page Contains element                                              css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span.price-area__old-price > del
     ${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyLuxHybridMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span.price-area__price.jsDiscountedPrice
+    ${PuffyLuxHybridMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
     ${PuffyLuxHybridMattressKlarnaPriceComparePage}=              get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
     ${PuffyLuxHybridMattressSplitItPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
     Run keyword if          '${PuffyLuxHybridMattressMinimumOriginalPricePDP}'!='${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress Original in Comparison Page. Expected Result: ${PuffyLuxHybridMattressMinimumOriginalPricePDP} Actual Result: ${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}
@@ -1956,7 +1964,7 @@ Get Puffy Royal Hybrid Mattress Price and compare to mid page
     click link                                              link:Compare Hybrids
     Wait Until Page Contains element                                                css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span.price-area__old-price > del
     ${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyRoyalHybridMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span.price-area__price.jsDiscountedPrice
+    ${PuffyRoyalHybridMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
     ${PuffyRoyalHybridMattressKlarnaPriceComparePage}=              get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
     ${PuffyRoyalHybridMattressSplitItPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
     Run keyword if          '${PuffyRoyalHybridMattressMinimumOriginalPricePDP}'!='${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress Original in Comparison Page. Expected Result: ${PuffyRoyalHybridMattressMinimumOriginalPricePDP} Actual Result: ${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}
@@ -2094,6 +2102,9 @@ Switch to Version A
     Click element   ${LOCTOGGLEA}
 Switch to Version B
     Click element   ${LOCTOGGLEB}
+    sleep                           10s
+Switch to Version C
+    Click element   ${LOCTOGGLEC}
 
 
 Keyfail
@@ -2109,7 +2120,7 @@ Check amount in Pay as low as for Klarna
     Run keyword if          '${$300PUFFYFINANCINGPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${$300PuffyFinancingPageKlarna} Actual Result: ${KlarnaPayAsLow}
 
 Scroll Up to Splitit
-    Scroll Element Into View                css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > p
+    Scroll Element Into View                css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > h2
 Check amount in Pay as low as for SplitIt
     ${SplitItPayAsLow}=     get text        css=body > div.container.main.content > div.financing__splitit > div.featured-financing.text-bar > div.featured-financing__desc > strong
     Run keyword if          '${$300PUFFYFINANCINGPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${$300PuffyFinancingPageSplitIt} Actual Result: ${SplitItPayAsLow}
@@ -2146,6 +2157,8 @@ Go to Save350 page
 
 Go to homepage
     Go to                           ${HOMEPAGE}
+Go to checkout
+    Go to                           https://puffy.com/17400017/checkouts/5619f740ae3cd56f1ca86f6ffec3626a?channel=online_store&preview_checkout_version=2021-01-25
 
 #===========================SmokeTest=========================
 
@@ -2170,9 +2183,17 @@ Go to Puffy Hybrid Homepage
     Click Link           link:Puffy Hybrid
     ${Content}=            get text        css=body > div.index-sections > div.hero-area.is--mobile-reversed > div.hero-area__box.hero-area__box--hero-image > div > div.b-hero__inner > div.b-hero__content > h1
     Run keyword if          '${Content}'!='${TEXTPUFFYHYBRIDMATTRESSH1}'                Fail        Homepage main title (H1) not found Expected: ${TEXTPUFFYHYBRIDMATTRESSH1} Actual: ${Content}
-Check Seasonal Sale text on badges
+Check Seasonal Sale text on badges (Store/Giftshop Page)
     sleep                   2s
-    ${Content}=            get text        css=#Summer_SALE
+    ${Content}=            get text        css=#VALENTINE_S_DAY_SALE_NOW > tspan
+    Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${SALENAME} Actual: ${Content}
+Check Seasonal Sale text on badges (PDP)
+    sleep                   2s
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan:nth-child(1)
+    Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${SALENAME} Actual: ${Content}
+Check Seasonal Sale text on badges (PDP Adjustable Base)
+    sleep                   2s
+    ${Content}=            get text        css=#Summer_SALE > tspan
     Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${Sale Name} Actual: ${Content}
 Click on Puffy Lux Hybrid Toggle
     Click element       css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-type > div.hybrid-buttons > label.hybrid-buttons__item.hybrid-buttons__item--2
@@ -2184,14 +2205,14 @@ Click on Puffy Royal Hybrid Toggle
     ${Content}=            get text         ${LOC12REASONSPDP}
     Run keyword if         '${Content}'!='${TEXTPUFFYROYALHYBRIDMATTRESSH2}'               Fail        Product Name (H1) not found Expected: ${TEXTPUFFYROYALHYBRIDMATTRESSH2} Actual: ${Content}
 Check current cart count
-    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div/a/span
     set test variable       ${CartCount}    ${CartText}
 Go to Puffy Sheets
     Mouse Over          ${LOCBEDDING}
     sleep               2s
     Click element       ${LOCSHEETS}
     Wait Until Page Contains    12 REASONS TO CHOOSE
-    ${Content}=         get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-sheets > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__headline > h1
+    ${Content}=         get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-sheets > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__text > div.product-head__headline > h1
     Run keyword if      '${Content}'!='${TEXTPUFFYSHEETSH1}'          Fail        Product name (H1) not found on the page Expected: ${TEXTPUFFYSHEETSH1} Actual: ${Content}
 Open cart
     click element           ${LOCCART}
@@ -2242,6 +2263,8 @@ Select and proceed with Splitit
     Run keyword if          '${Content}'!='${TEXTSPLITITH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTSPLITITH1} Actual: ${Content}
     sleep                               2s
     Go Back
+    sleep                               5s
+    Go Back
     sleep                               2s
     wait until page contains            All transactions are secure and encrypted.
 
@@ -2255,10 +2278,10 @@ Select and proceed with Klarna
     wait until page contains            Change Payment Method
     sleep                               5s
     #wait until page contains            ${TEXTKLARNAH1}
-    ${Content}=            get text     css=#message-component-root__header__title
-    Run keyword if          '${Content}'!='${TEXTKLARNAH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTKLARNAH1} Actual: ${Content}
-    sleep                               2s
-    Click Link                          link:Change Payment Method
+    #${Content}=            get text     css=#message-component-root__header__title
+    #Run keyword if          '${Content}'!='${TEXTKLARNAH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTKLARNAH1} Actual: ${Content}
+    #sleep                               2s
+    Click element                       css=#changePaymentMethod > a
     sleep                               2s
     wait until page contains            All transactions are secure and encrypted.
 Click on "Shop The Mattress" on the Homepage
@@ -2270,9 +2293,13 @@ Verify H1 on Comparison Page
     Run keyword if          '${Content}'!='${TEXTCOMPAREPAGEH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTCOMPAREPAGEH1} Actual: ${Content}
 Verify H1 on Puffy PDP
     Wait until page Contains            ${TEXTPUFFYMATTRESSH1}
-    ${Content}=            get text     css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-mattress > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__headline > h1
+    ${Content}=            get text     css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-mattress > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__text.product-head__text--boxed > div.product-head__headline > h1 > span
     Run keyword if          '${Content}'!='${TEXTPUFFYMATTRESSH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTPUFFYMATTRESSH1} Actual: ${Content}
 Check Seasonal Sale text on Homepage
+    sleep                   2s
+    ${Content}=            get text        css=#Cyber_Monday_Sale_Now > tspan
+    Run keyword if          "${Content}"!="${SALENAME}"        Fail        Wrong Seasonal Sale text on homepage Expected: ${SALENAME} Actual: ${Content}
+Check Seasonal Sale text on Homepage (HYBRID)
     sleep                   2s
     ${Content}=            get text        css=#Cyber_Monday_Sale_Now > tspan
     Run keyword if          "${Content}"!="${SALENAME}"        Fail        Wrong Seasonal Sale text on homepage Expected: ${SALENAME} Actual: ${Content}
@@ -2282,30 +2309,35 @@ Go back to Compare Page
 click on "Shop Now" button for Puffy Lux
     Click Element                       css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.compare-boxes__action > a
 Check discount value and freebie on Homepage
-    ${Content}=            get text        css=#_300_OFF_Free_Pillow
+    ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on homepage Expected: ${SALEDETAILS} Actual: ${Content}
+Check discount value and freebie on Homepage (HYBRID)
+    ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan
+    Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on homepage Expected: ${SALEDETAILS} Actual: ${Content}
+
 Add Puffy Body Pillow to cart
     Click element           css=#product_form_4431983280162 > div.purchase-details > div > button
-    sleep                   2s
-    ${Content}=            get text        css=#cartHolder > div > div > div.cart-checkout__content > div.cart-checkout__action > button
-    Run keyword if          '${Content}'!='${TEXTCARTDRAWERNOTE}'     Fail        Cart Drawer was not displayed. Item was not added to cart. Expected: ${TEXTCARTDRAWERNOTE} Actual: ${Content}
+    sleep                   5s
+    wait until page contains element        css=#main-header
+    ${Content}=            get text        css=#main-header
+    Run keyword if          '${Content}'!='${INFOTABHEADER}'     Fail        Wrong Header on Checkout page Information Tab. Expected: ${INFOTABHEADER} Actual: ${Content}
 Verify H1 on Puffy Lux
     Wait Until Page contains element    class:product-head__title
 Check discount value and freebie on badges for mattresses
     sleep                   2s
-    ${Content}=            get text        css=#_300_OFF_FREE_PILLOW
+    ${Content}=            get text        css=#_300_OFF_FREE_PILLOW > tspan
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on badges for mattress Expected: ${SALEDETAILS} Actual: ${Content}
 Check discount value and freebie on Mattress PDPs
-    ${Content}=            get text        css=#_300_Off_FREE_PILLOW
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan.cls-mattress-badge3
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on mattress PDP Expected: ${SALEDETAILS} Actual: ${Content}
-Check discount value on Adjustable Base PDP
-    sleep                   2s
-    ${Content}=            get text        css=#_300_Off
-    Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong discount value on adjustable base PDP Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
 Check discount value on badges for adjustable base
     sleep                   2s
-    ${Content}=            get text        css=#_300_OFF
+    ${Content}=            get text        css=#_300_OFF > tspan
     Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong discount value text on badge for adjustable base Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
+Check discount value on Adjustable Base PDP
+    sleep                   2s
+    ${Content}=            get text        css=#_300_Off > tspan
+    Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong discount value on adjustable base PDP Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
 Check Puffy Mattress original prices (all sizes)
     Wait Until Element Is Visible          css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > del > span.original-price
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > del > span.original-price
@@ -2508,17 +2540,17 @@ Check Puffy Sheets 15OFF prices (all sizes)
 Select Puffy Mattress Size (Queen)
     Click element           css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(4)
 
-Select Puffy Lux Size (Twin)
-    Click element           css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1)
+Select Puffy Lux Size (King)
+    Click element           css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5)
 
-Select Puffy Lux Size (Twin XL)
-    Click element           css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2)
+Select Puffy Lux Size (Cal King)
+    Click element           css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6)
 
-Select Puffy Royal Size (King)
-    Click element           css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5)
+Select Puffy Royal Size (Twin)
+    Click element           css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1)
 
-Select Puffy Royal Size (Cal King)
-    Click element           css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6)
+Select Puffy Royal Size (Twin XL)
+    Click element           css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2)
 
 Select Puffy Sheets Size (Queen)
     Click element           css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4)
@@ -2530,21 +2562,27 @@ Select Puffy Adjustable Base Size (Split King)
     Wait Until Element Is Visible       css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(4) > div > span.display-name.is--sale--price
     Click element           css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(4) > div > span.display-name.is--sale--price
 Add Puffy Adjustable Base to cart
-    Wait Until Element Is Visible   css=#product_form_416170377250 > div.purchase-details > div > button
-    click element           css=#product_form_416170377250 > div.purchase-details > div > button
-    sleep                   2s
-    ${Content}=            get text        css=#cartHolder > div > div > div.cart-checkout__content > div.cart-checkout__action > button
-    Run keyword if          '${Content}'!='${TEXTCARTDRAWERNOTE}'     Fail        Cart Drawer was not displayed. Item was not added to cart. Expected: ${TEXTCARTDRAWERNOTE} Actual: ${Content}
+    Click element          css=#product_form_416170377250 > div.purchase-details > div > button
+    sleep                   5s
+    wait until page contains element        css=#main-header
+    ${Content}=            get text        css=#main-header
+    Run keyword if          '${Content}'!='${INFOTABHEADER}'     Fail        Wrong Header on Checkout page Information Tab. Expected: ${INFOTABHEADER} Actual: ${Content}
 Add Puffy Sheets to cart
     click element           css=#product_form_4359826341922 > div.purchase-details > div > button
-    sleep                   2s
-    ${Content}=            get text        css=#cartHolder > div > div > div.cart-checkout__content > div.cart-checkout__action > button
-    Run keyword if          '${Content}'!='${TEXTCARTDRAWERNOTE}'     Fail        Cart Drawer was not displayed. Item was not added to cart. Expected: ${TEXTCARTDRAWERNOTE} Actual: ${Content}
+   sleep                   5s
+    wait until page contains element        css=#main-header
+    ${Content}=            get text        css=#main-header
+    Run keyword if          '${Content}'!='${INFOTABHEADER}'     Fail        Wrong Header on Checkout page Information Tab. Expected: ${INFOTABHEADER} Actual: ${Content}
 Add Puffy Mattress to cart
     Click element           css=#product_form_345108381730 > div.purchase-details > div > button
-    sleep                   2s
-    ${Content}=            get text        css=#cartHolder > div > div > div.cart-checkout__content > div.cart-checkout__action > button
-    Run keyword if          '${Content}'!='${TEXTCARTDRAWERNOTE}'     Fail        Cart Drawer was not displayed. Item was not added to cart. Expected: ${TEXTCARTDRAWERNOTE} Actual: ${Content}
+    sleep                   5s
+    wait until page contains element        css=#main-header
+    ${Content}=            get text        css=#main-header
+    Run keyword if          '${Content}'!='${INFOTABHEADER}'     Fail        Wrong Header on Checkout page Information Tab. Expected: ${INFOTABHEADER} Actual: ${Content}
+Click Return to cart
+    sleep                   1s
+    Click element           css=body > div.main_wrapper > div > div.wrap > div.main > div.main__content > div.step > form > div.step__footer > a > span
+    Wait until page contains element    ${LOCCARTHEADER}
 Close cart
     sleep                   1s
     Click element           css=body > div.cart_content.jsCartContent.cart-content-mob > div.cart-close > span.cart-close-btn.cart-close__icon
@@ -2557,11 +2595,12 @@ Check cart count after adding a mattress
     Run keyword if          ${BeforeShopping}!=${AfterShopping}       Fail    Wrong cart count after adding a mattress
 Add Puffy Royal to cart
     click element           css=#product_form_3832788910114 > div.purchase-details > div > button
-    sleep                   2s
-    ${Content}=            get text        css=#cartHolder > div > div > div.cart-checkout__content > div.cart-checkout__action > button
-    Run keyword if          '${Content}'!='${TEXTCARTDRAWERNOTE}'     Fail        Cart Drawer was not displayed. Item was not added to cart. Expected: ${TEXTCARTDRAWERNOTE} Actual: ${Content}
+    sleep                   5s
+    wait until page contains element        css=#main-header
+    ${Content}=            get text        css=#main-header
+    Run keyword if          '${Content}'!='${INFOTABHEADER}'     Fail        Wrong Header on Checkout page Information Tab. Expected: ${INFOTABHEADER} Actual: ${Content}
 Check current cart count (Lux Hybrid)
-    ${CartText}   get text  xpath=/html/body/div[7]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div/a/span
     set test variable       ${CartCount}    ${CartText}
 Check cart count after adding an accessory
     ${BeforeShopping} =     evaluate    ${CartCount}
@@ -2574,13 +2613,14 @@ Check product redirection in cart
     sleep                           2s
     click link                      link:Puffy Sheets
     Wait Until Page Contains        Puffy Sheets
-    ${Content}=            get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-sheets > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__headline > h1
+    ${Content}=            get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-sheets > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__text > div.product-head__headline > h1
     Run keyword if          '${Content}'!='${TEXTPUFFYSHEETSH1}'     Fail        Product name (H1) not found Expected: ${TEXTPUFFYSHEETSH1} Actual: ${Content}
 Add Puffy Lux to cart
     click element           css=#product_form_549302042658 > div.purchase-details > div > button
-    sleep                   2s
-    ${Content}=            get text        css=#cartHolder > div > div > div.cart-checkout__content > div.cart-checkout__action > button
-    Run keyword if          '${Content}'!='${TEXTCARTDRAWERNOTE}'     Fail        Cart Drawer was not displayed. Item was not added to cart. Expected: ${TEXTCARTDRAWERNOTE} Actual: ${Content}
+    sleep                   5s
+    wait until page contains element        css=#main-header
+    ${Content}=            get text        css=#main-header
+    Run keyword if          '${Content}'!='${INFOTABHEADER}'     Fail        Wrong Header on Checkout page Information Tab. Expected: ${INFOTABHEADER} Actual: ${Content}
 Check cart count after adding a mattress (Lux Hybrid)
     ${BeforeShopping} =     evaluate    ${CartCount}
     sleep                   2s
@@ -2600,4 +2640,164 @@ Continue to Payment tab
     wait until page contains            All transactions are secure and encrypted.
     ${Content}=            get text     css=#main-header
     Run keyword if          '${Content}'!='${TEXTCHECKOUTPAYMENTH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTCHECKOUTPAYMENTH1} Actual: ${Content}
+
+##################################Checkout Product List#############################################
+
+Verify if Puffy Sheets is in Order Summary and details are correct
+
+    Wait Until Element Is Visible               css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(1) > th > span.product__description__name.order-summary__emphasis
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(1) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYSHEETS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYSHEETS} Actual: ${ProductName}
+    ${ColorSize}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(1) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${ColorSize}'!='${ORDERSUMMARYPUFFYSHEETSSIZECOLOR}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYSHEETSSIZECOLOR} Actual: ${ColorSize}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(1) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYSHEETSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYSHEETSQTY} Actual: ${Quantity}
+    ${Price}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(1) > td.product__price > span
+    Run keyword if          '${Price}'!='${ORDERSUMMARYPUFFYSHEETSPRICE}'      Fail        Wrong product price in Order Summary. Expected: ${ORDERSUMMARYPUFFYSHEETSPRICE} Actual: ${Price}
+
+Verify if Puffy Body Pillow is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(2) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYBODYPILLOW}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYBODYPILLOW} Actual: ${ProductName}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(2) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYBODYPILLOWQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYBODYPILLOWQTY} Actual: ${Quantity}
+    ${Price}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(2) > td.product__price > span
+    Run keyword if          '${Price}'!='${ORDERSUMMARYPUFFYBODYPILLOWPRICE}'      Fail        Wrong product price in Order Summary. Expected: ${ORDERSUMMARYPUFFYBODYPILLOWPRICE} Actual: ${Price}
+
+Verify if Puffy Adjustable Base is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(3) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYADJUSTABLEBASE}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYADJUSTABLEBASE} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(3) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYADJUSTABLEBASESIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYADJUSTABLEBASESIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(3) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYADJUSTABLEBASEQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYADJUSTABLEBASEQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(3) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYADJUSTABLEBASEDISCOUNTEDPRICE}'      Fail        Wrong product price in Order Summary. Expected: ${ORDERSUMMARYPUFFYADJUSTABLEBASEDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(3) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYADJUSTABLEBASEORIGINALPRICE}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYADJUSTABLEBASEORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(3) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong product price in Order Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
+
+Verify if Puffy Royal Hybrid is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESS} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSSIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
+
+Verify if Puffy Royal is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYROYALMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESS} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYROYALMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESSSIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYROYALMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESSQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYROYALMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYROYALMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
+
+Verify if Puffy Lux Hybrid is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESS} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSSIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
+
+Verify if Puffy Lux is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYLUXMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESS} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYLUXMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESSSIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYLUXMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESSQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYLUXMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYLUXMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
+    
+Verify if Puffy Mattress is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESS} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESSSIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESSQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
+    
+Verify if White Standard Free Puffy Pillow is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARD}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARD} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARDSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARDSIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARDQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARDQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARDDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARDDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARDORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARDORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE3}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE3} Actual: ${DiscountCode}
+
+Verify if White King Free Puffy Pillow is in Order Summary and details are correct    
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITE}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITE} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITESIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITESIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITEQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITEQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITEDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITEDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITEORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITEORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE2}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE2} Actual: ${DiscountCode}
+
+Verify if Gray Free Puffy Pillow is in Order Summary and details are correct
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > th > span.product__description__name.order-summary__emphasis
+    Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYPILLOWKINGGRAY}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGGRAY} Actual: ${ProductName}
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > th > span.product__description__variant.order-summary__small-text
+    Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYPILLOWKINGGRAYSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGGRAYSIZE} Actual: ${Size}
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > td.product__image > div > span
+    Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYPILLOWKINGGRAYQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGGRAYQTY} Actual: ${Quantity}
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > td.product__price > span
+    Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYPILLOWKINGGRAYDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGGRAYDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > td.product__price > del
+    Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYPILLOWKINGGRAYORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGGRAYORIGINALPRICE} Actual: ${OriginalPrice}
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > th > ul > li > span
+    Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE4}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE4} Actual: ${DiscountCode}
+Verify if Total Savings amount is correct
+    ${TotalSavings}=            get text         css=#order-summary > div > div.sidebar__discount > div > span
+    Run keyword if          '${TotalSavings}'!='${TOTALSAVINGS}'      Fail        Wrong Product in Order Summary. Expected: ${TOTALSAVINGS} Actual: ${TotalSavings}
+Verify if Subtotal amount is correct
+    ${SubTotal}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--total-lines > table > tbody > tr.total-line.total-line--subtotal > td > span
+    Run keyword if          '${SubTotal}'!='${SUBTOTAL}'      Fail        Wrong Product in Order Summary. Expected: ${SUBTOTAL} Actual: ${SubTotal}
+Verify if Shipping amount is correct
+    ${Shipping}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--total-lines > table > tbody > tr.total-line.total-line--shipping > td > span
+    Run keyword if          '${Shipping}'!='${SHIPPING}'      Fail        Wrong Product in Order Summary. Expected: ${SHIPPING} Actual: ${Shipping}
+Verify if Total amount is correct
+    ${Total}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--total-lines > table > tfoot > tr > td > span.payment-due__price.skeleton-while-loading--lg
+    Run keyword if          '${Total}'!='${TOTAL}'      Fail        Wrong Product in Order Summary. Expected: ${TOTAL} Actual: ${Total}
 

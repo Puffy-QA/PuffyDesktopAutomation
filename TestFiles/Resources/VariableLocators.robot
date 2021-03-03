@@ -30,6 +30,7 @@ ${LOCBEDROOM}                       css=body > div.shopify-section.header-sectio
 ${LOCFEEDBACK}                      html.null body.index.is--hybrid-false.timer--exists.jdgm-buyer-badge--removed div.index-sections div#shopify-section-hov_instagramBoxes.shopify-section div.instagram-boxes div.instagram-boxes__inner
 ${LOCSTORE}                         css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div > div > ul > li:nth-child(12) > p > a
 ${LOCLOGO}                          css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.logo > a
+${LOCCARTHEADER}                    css=body > div.cart_content.jsCartContent.cart-content-mob > div.cart-close > span.cart-close__title
 ${LOCCONTACTS}                      //*[@id="contact"]/a
 ${LOCDOGBED}                        css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(1) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${LOCRUG}                           css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(2) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
@@ -38,6 +39,7 @@ ${LOCBLACKFRIDAYSALEMENUBUTTON}     css=body > div.shopify-section.header-sectio
 ${LOC12REASONSPDP}                  css=#productReasons > div.block__rich_text_and_image.block__product-pad-template-0 > div > div > div > h2
 ${LOCTOGGLEA}                       css=#showVersionA
 ${LOCTOGGLEB}                       css=#showVersionB
+${LOCTOGGLEC}                       css=#showVersionC
 ###########################################################FOOTER TESTCASES$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$##############
 ${LOCSIGNUPTEXTFIELD}               css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > div.newsletter-wrapper > div > div > div > div > form > div > div > div.needsclick.FormComponent__StyledFormComponentWrapper-e0xun6-0.jSFixL.kl-private-reset-css-Xuajs1 > div > input
 ${LOCFOOTERSIGNUP}                  css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > div.newsletter-wrapper > div > div > div > div > form > div > div > div.needsclick.FormComponent__StyledFormComponentWrapper-e0xun6-0.IRToG.kl-private-reset-css-Xuajs1 > button

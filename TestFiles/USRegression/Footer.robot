@@ -18,7 +18,7 @@ Verify the Sale Popup appears
     Open Login Screen
     Wait and dismiss popup
 #Switch version
-    #Switch to Version A
+    #Switch to Version B
     sleep               2s
 Verify sale details on Timer Bar
     Check Seasonal Sale text on timer
