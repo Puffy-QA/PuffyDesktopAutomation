@@ -2799,5 +2799,5 @@ Verify if Shipping amount is correct
     Run keyword if          '${Shipping}'!='${SHIPPING}'      Fail        Wrong Product in Order Summary. Expected: ${SHIPPING} Actual: ${Shipping}
 Verify if Total amount is correct
     ${Total}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--total-lines > table > tfoot > tr > td > span.payment-due__price.skeleton-while-loading--lg
-    Run keyword if          '${Total}'!='${TOTAL}'      Fail        Wrong Product in Order Summary. Expected: ${TOTAL} Actual: ${Total}
+    Run keyword if          '${Total}'!='${TOTAL}'      Fail        Wrong Product in Order Summary. Expected: ${TOTAL}  Actual: ${Total}
 
