@@ -16,11 +16,11 @@ ${Last Name}                    Doe
 ${Address}                      123 Edward Street
 ${City}                         Toronto
 ${ZipCode}                      E1A 0A8
-${Sale Name}                    NEW YEAR'S SALE NOW
-${Sale Name Homepage}           NEW YEAR'S SALE NOW
+${Sale Name}                    DAYLIGHT SAVINGS SALE NOW
+${Sale Name Homepage}           DAYLIGHT SAVINGS SALE NOW
 ${Sale Details}                 $300 OFF
 ${Discount Amount}              $300 OFF
-${Homepage}                     https://puffy.ca
+${Homepage}                     https://puffy.ca/?preview_theme_id=120131944522
 ${systembrowser}                Chrome
 ${Feedback}                     html.null body.index.is--hybrid-false.timer--exists.jdgm-buyer-badge--removed div.index-sections div#shopify-section-hov_instagramBoxes.shopify-section div.instagram-boxes div.instagram-boxes__inner
 ${Shop}                         div.compare-boxes__headline:nth-child(1) > h2:nth-child(1) > a:nth-child(1)
@@ -51,11 +51,9 @@ ${Puffy Nightstand}
 ${Dog Bed}                      css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(1) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${Rug}                          css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(2) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${Cart}                         css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.cart_container > div > a
-${FOOTER}                       NEW YEAR'S SALE NOW $300 OFF
+${FOOTER}                       DAYLIGHT SAVINGS SALE NOW $300 OFF
 ${ToggleA}                      css=#showVersionA
 ${ToggleB}                      css=#showVersionB
-
-#Product Prices
 ${PuffyMattTwinOriginal}        $1,045
 ${PuffyMattTwin300OFF}          $745
 ${PuffyMattTwin350OFF}          $695
@@ -272,6 +270,8 @@ Start Record Video
 Popup Sale
     Launch Puffy homepage
     Wait and dismiss popup
+    #Go to checkout
+    #Go to Homepage
 #Switch version
     #Switch to Version A
 Timer Bar
@@ -357,9 +357,9 @@ Go to Checkout
     Click checkout
 
 Complete your Bedroom Set section
-    Complete your Bedroom Set from checkout product page redirection
-    sleep           5s
-    Click checkout
+    #Complete your Bedroom Set from checkout product page redirection
+    #sleep           5s
+    #Click checkout
     Checkout Contact information field
     Continue to Payment
 
@@ -383,9 +383,9 @@ Click on Puffy Logo
 
 Wait and dismiss popup
     sleep                   5s
-    ${check}=               Run Keyword and Return Status  Element should be visible      xpath=/html/body/div[3]/div[2]/div/div[1]/img
+    ${check}=               Run Keyword and Return Status  Element should be visible      xpath=/html/body/div[2]/div[2]/div/div[1]/img
     run keyword if          ${check} == False    Wait and dismiss popup
-    ...     ELSE            Click element   xpath=/html/body/div[3]/div[2]/div/span
+    ...     ELSE            Click element   css=#Layer_1 > polygon
 
 Seasonal Sale timer text check
     ${Content}=            get text        css=#saleTimer > div:nth-child(1)
@@ -424,7 +424,7 @@ Go to Store page
 
 Banner Seasonal Sale text check
     sleep                   2s
-    ${Content}=            get text        css=#SUMMER_SALE
+    ${Content}=            get text        css=#SUMMER_SALE > tspan
     Run keyword if          "${Content}"!="${Sale Name}"      Fail        Wrong Seasonal Sale Content
 
 Banner Discount Value and Freebie check
@@ -852,7 +852,7 @@ Start Record Video
 
 
 Cart Count Before Adding product
-    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div[2]/a/span
+    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div[2]/a/span
     set test variable       ${CartCount}    ${CartText}
 
 Cart Count After Adding Product with free pillow
@@ -957,3 +957,11 @@ Switch to Version A
     Click element   ${ToggleA}
 Switch to Version B
     Click element   ${ToggleB}
+
+
+Go to checkout
+    Go to                           https://puffy.ca/26046955594/checkouts/0f97020530288a9b599c19429e4cc516?channel=online_store&preview_checkout_version=2021-01-25&preview_theme_id=83530580042
+    sleep                           10s
+Go to homepage
+    Go to                           ${HOMEPAGE}
+    sleep                           10s

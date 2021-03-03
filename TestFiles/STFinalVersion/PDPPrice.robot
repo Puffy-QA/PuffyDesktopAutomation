@@ -19,8 +19,8 @@ Verify the Sale Popup appears
     Wait and dismiss popup
 Verify sale details on Timer Bar
     Check Seasonal Sale text on timer
-#version
-    #Switch to Version A
+#Switch version
+    #Switch to Version B
 Verify product prices in Store page (ALL category)
     Go to Store page (Click on footer Store link)
     sleep  2s
@@ -82,7 +82,7 @@ Verify price in compare page for Puffy Royal Hybrid Mattress
     Get Puffy Royal Hybrid Mattress Price and compare to mid page
 Verify the price in PDP Puffy Mattress
     Go to Puffy Mattress Product Page
-    Check sale text in Seasonal Banner      #Banner Seasonal Sale text check #reword
+    Check sale text in Seasonal Banner (Mattress)    #Banner Seasonal Sale text check #reword
     Check Freebie and discount value in PDP     #PDP Discount Value and Freebie check #reword
     Check default size for Puffy Mattress   #Check Puffy Mattress PDP Default size #Check default size for Puffy Mattress
     Click size dropdown for Puffy Mattress  #Click Puffy Mattress Size dropdown #Click Size dropdown for Puffy Mattress
@@ -108,7 +108,7 @@ Verify the price in PDP Puffy Mattress
     Check installment price for Cal King size Puffy Mattress
 Verify the price in PDP Puffy Lux Mattress
     Go to Puffy Lux Mattress Product Page
-    Check sale text in Seasonal Banner
+    Check sale text in Seasonal Banner (Mattress)
     Check Freebie and discount value in PDP
     Check default size for Puffy Lux Mattress   #Check Puffy Lux Mattress PDP Default size
     Click size dropdown for Puffy Lux Mattress      #Click Puffy Lux Mattress Size dropdown
@@ -157,7 +157,7 @@ Verify the price in PDP Puffy Lux Hybrid Mattress
     Check installment price for Cal King Size Puffy Lux Mattress
 Verify the price in PDP Puffy Royal Mattress
     Go to Puffy Royal Mattress Product Page
-    Check sale text in Seasonal Banner
+    Check sale text in Seasonal Banner (Mattress)
     Check Freebie and discount value in PDP
     Check default size for Puffy Royal Mattress           #Check Puffy Royal Mattress PDP Default size
     Click size dropdown for Puffy Royal Mattress              #Click Puffy Royal Mattress Size dropdown
@@ -188,22 +188,22 @@ Verify the price in PDP Puffy Royal Hybrid Mattress
     Check Puffy Royal Hybrid sizes 300OFF prices
     Check order in Size dropdown for Puffy Royal Mattress
     Set size to Twin for Puffy Royal Mattress
-    Check Puffy Royal Mattress Twin size monthly payment price
+    Check installment price for Twin Size Puffy Royal Mattress
     Click size dropdown for Puffy Royal Mattress
-    Set size to Twin for Puffy Royal MattressXL
-    Check Puffy Royal Mattress TwinXL size monthly payment price
+    Set size to TwinXL for Puffy Royal Mattress
+    Check installment price for TwinXL Size Puffy Royal Mattress
     Click size dropdown for Puffy Royal Mattress
-    Select Puffy Royal Mattress Full
-    Check Puffy Royal Mattress Full size monthly payment price
+    Set size to Full for Puffy Royal Mattress
+    Check installment price for Full Size Puffy Royal Mattress
     Click size dropdown for Puffy Royal Mattress
-    Select Puffy Royal Mattress Queen
-    Check Puffy Royal Mattress Queen size monthly payment price
+    Set size to Queen for Puffy Royal Mattress
+    Check installment price for Queen Size Puffy Royal Mattress
     Click size dropdown for Puffy Royal Mattress
-    Select Puffy Royal Mattress King
-    Check Puffy Royal Mattress King size monthly payment price
+    Set size to King for Puffy Royal Mattress
+    Check installment price for King Size Puffy Royal Mattress
     Click size dropdown for Puffy Royal Mattress
-    Select Puffy Royal Mattress Cal King
-    Check Puffy Royal Mattress Cal King size monthly payment price
+    Set size to Cal King for Puffy Royal Mattress
+    Check installment price for Cal King Size Puffy Royal Mattress
 Verify the price in PDP Puffy Foundation
     Go to Puffy Foundation Product Page
     Don't show seasonal sale content check
@@ -233,7 +233,7 @@ Verify the price in PDP Puffy Foundation
 Verify the price in PDP Puffy Adjustable Base
     Go to Puffy Adjustable Base Product Page
     Check sale text in Seasonal Banner
-    #Check Freebie and discount value in PDP
+    Check Freebie and discount value in PDP Adjustable Base
     Check default size for Puffy Adjustable Base
     Click Puffy Adjustable Base Size dropdown
     Check Puffy Adjustable Base original prices
@@ -363,7 +363,7 @@ Verify the price in PDP Puffy Topper
     Go to Puffy Topper Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
-    Check Puffy Topper PDP Default feel
+    Check default feel for Puffy Mattress Topper
     Check default size for Puffy Mattress Topper
     Click Puffy Topper feel dropdown
     Check Puffy Topper feel options
@@ -541,7 +541,7 @@ Check prices in Discount page
     Go to Discount page
     Check discount details 1
     Check discount details 2
-    Scroll down to Mattress Financing with Klarna #section
+    Scroll Down to Mattress Financing with Klarna           #section
     Check amount in Pay as low as for Klarna Discount Page
     Scroll down to Mattress Payment plans with Splitit
     Check amount in Pay as low as for SplitIt Discount Page

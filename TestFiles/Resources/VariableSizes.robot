@@ -19,8 +19,8 @@ ${SIZEPUFFYMATTRESSPADDEFAULTSIZE}                          Queen
 ${SIZEPuffyMattressProtectorDefaultSize}                    Queen
 ${SIZEPUFFYTOPPERDEFAULTSIZE}                               Queen
 ${SIZEPUFFYTOPPERDEFAULTFEEL}                               Firm
-${SIZEPUFFYBLANKETDEFAULTSIZE}                              Small
-${SIZEPUFFYWEIGHTEDBLANKETDEFAULTSIZE}                      Twin
+${SIZEPUFFYBLANKETDEFAULTSIZE}                              Medium
+${SIZEPUFFYWEIGHTEDBLANKETDEFAULTSIZE}                      Queen
 ${SIZEPUFFYSHEETSDEFAULTCOLOR}                              Gray
 ${SIZEPUFFYSHEETSDEFAULTSIZE}                               Queen
 ${SIZEPUFFYDOGBEDDEFAULTSIZE}                               Small

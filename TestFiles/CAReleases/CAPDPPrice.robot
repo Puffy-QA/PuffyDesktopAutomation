@@ -16,7 +16,7 @@ ${Last Name}                    Doe
 ${Address}                      123 William Street
 ${City}                         New York
 ${ZipCode}                      03101
-${Sale Name}                    NEW YEAR'S SALE NOW
+${Sale Name}                    DAYLIGHT SAVINGS SALE NOW
 ${Sale Details}                 $300 OFF
 ${Discount Amount}              $300 OFF
 ${Homepage}                     https://puffy.ca
@@ -50,7 +50,7 @@ ${Puffy Nightstand}
 ${Dog Bed}                      css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(1) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${Rug}                          css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(2) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${Cart}                         css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.cart_container > div > a
-${FOOTER}                       NEW YEAR'S SALE NOW $300 OFF
+${FOOTER}                       DAYLIGHT SAVINGS SALE NOW $300 OFF
 ${BlackFridaySALEMenuButton}    css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li.menu__item.menu__item--sale > a
 
 ####################################################Product Default Sizes####################################################
@@ -1355,9 +1355,9 @@ PDP Discount Value and Freebie check
 
 Wait and dismiss popup
     sleep                   5s
-    ${check}=               Run Keyword and Return Status  Element should be visible      xpath=/html/body/div[3]/div[2]/div/div[1]/img
+    ${check}=               Run Keyword and Return Status  Element should be visible      xpath=/html/body/div[2]/div[2]/div/div[1]/img
     run keyword if          ${check} == False    Wait and dismiss popup
-    ...     ELSE            Click element   xpath=/html/body/div[3]/div[2]/div/span
+    ...     ELSE            Click element   css=#Layer_1 > polygon
 #=============================PRODUCT SIZE DROPDOWNS=================================================#
 Click Puffy Mattress Size dropdown
     wait until page contains element        css=#product_form_3809097089098 > div.product-variants-holder > div > div > div

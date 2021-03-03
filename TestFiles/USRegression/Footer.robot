@@ -10,6 +10,7 @@ Resource            ../Resources/VariableURL.robot
 Resource            ../Resources/VariableTexts.robot
 Resource            ../Resources/VariableSettings.robot
 Resource            ../Resources/KeywordsRegression.robot
+
 *** Test Cases ***
 Start Record Video
     Initiate Video Recording
@@ -17,7 +18,7 @@ Verify the Sale Popup appears
     Open Login Screen
     Wait and dismiss popup
 #Switch version
-    #Switch to Version A
+    #Switch to Version B
     sleep               2s
 Verify sale details on Timer Bar
     Check Seasonal Sale text on timer

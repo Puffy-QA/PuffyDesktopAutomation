@@ -1,5 +1,4 @@
 *** Keywords ***
-
 Initiate Video Recording
     Start Video Recording       alias=FallSale name=FallSale
 
@@ -13,9 +12,9 @@ Check Seasonal Sale text on timer
     Click element           css=#saleTimer > span > svg
 Wait and dismiss popup
     sleep                   5s
-    ${check}=               Run Keyword and Return Status  Element should be visible      xpath=/html/body/div[3]/div[2]/div/div[1]/img
+    ${check}=               Run Keyword and Return Status  Element should be visible      xpath=/html/body/div[2]/div[2]/div/div[1]/img
     run keyword if          ${check} == False    Wait and dismiss popup
-    ...     ELSE            Click element   xpath=/html/body/div[3]/div[2]/div/span
+    ...     ELSE            Click element   css=#Layer_1 > polygon
 Check Product Section Spelling
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     ${FooterPuffyMattress}=               get text           ${LOCFOOTERPUFFY}
@@ -511,6 +510,8 @@ Switch to Version A
     Click element   ${LOCTOGGLEA}
 Switch to Version B
     Click element   ${LOCTOGGLEB}
+Switch to Version C
+    Click element   ${LOCTOGGLEC}
 
 
 ###########################################################MEGA MENU KEYWORDS###########################################################
@@ -859,5 +860,4 @@ Main Menu click checks
     Click Element       ${LOCSUPPORT}
     Location Should be     ${SUPPORTFAQSURL}
     wait until page contains        ${TEXTFAQH2}
-
 
