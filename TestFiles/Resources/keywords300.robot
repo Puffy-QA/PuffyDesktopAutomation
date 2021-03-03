@@ -24,7 +24,7 @@ Check Seasonal Sale text on timer
     Click element           css=#saleTimer > span > svg
 Check Seasonal Sale text on timer (Save 350)
     ${Content}=            get text        css=#saleTimer > div:nth-child(1) > div
-    Run keyword if          "${Content}"!="${FOOTER350}"      Fail        Wrong Seasonal Sale timer Content Actual content: ${Content} Expected: ${Timer350}
+    Run keyword if          "${Content}"!="${FOOTER350}"      Fail        Wrong Seasonal Sale timer Content Actual content: ${Content} Expected: ${FOOTER350}
     Click element           css=#saleTimer > span > svg
 Check sale text in Seasonal Banner (Mattress)
     sleep                   2s
@@ -230,50 +230,50 @@ Click Puffy Rug size dropdown
 #=============================PRODUCT DEFAULT SIZES=================================================#
 Check default size for Puffy Mattress
     ${DefaultSize}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > div > div > span.display-name.is--sale--price
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYMATTRESSDEFAULTSIZE}'      Fail        Wrong Puffy Mattress Default Size. Expected Result: ${PuffyMattressDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYMATTRESSDEFAULTSIZE}'      Fail        Wrong Puffy Mattress Default Size. Expected Result: ${SIZEPUFFYMATTRESSDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Lux Mattress
     ${DefaultSize}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > div > div > span.display-name.is--sale--price
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYLUXMATTRESSDEFAULTSIZE}'      Fail        Wrong Puffy Lux Mattress Default Size. Expected Result: ${PuffyLuxMattressDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYLUXMATTRESSDEFAULTSIZE}'      Fail        Wrong Puffy Lux Mattress Default Size. Expected Result: ${SIZEPUFFYLUXMATTRESSDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Royal Mattress
     ${DefaultSize}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > div > div > span.display-name.is--sale--price
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYROYALMATTRESSDEFAULTSIZE}'      Fail        Wrong Puffy Royal Mattress Default Size. Expected Result: ${PuffyRoyalMattressDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYROYALMATTRESSDEFAULTSIZE}'      Fail        Wrong Puffy Royal Mattress Default Size. Expected Result: ${SIZEPUFFYROYALMATTRESSDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Foundation
     ${DefaultSize}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYFOUNDATIONDEFAULTSIZE}'      Fail        Wrong Puffy Foundation Default Size. Expected Result: ${PuffyFoundationDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYFOUNDATIONDEFAULTSIZE}'      Fail        Wrong Puffy Foundation Default Size. Expected Result: ${SIZEPUFFYFOUNDATIONDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Adjustable Base
     ${DefaultSize}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > div > div > span.display-name.is--sale--price
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYADJUSTABLEBASEDEFAULTSIZE}'      Fail        Wrong Puffy Adjustable Base Default Size. Expected Result: ${PuffyAdjustableBaseDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYADJUSTABLEBASEDEFAULTSIZE}'      Fail        Wrong Puffy Adjustable Base Default Size. Expected Result: ${SIZEPUFFYADJUSTABLEBASEDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Bed Frame
     ${DefaultSize}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYBEDFRAMEDEFAULTSIZE}'      Fail        Wrong Puffy Bed Frame Default Size. Expected Result: ${PuffyBedFrameDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYBEDFRAMEDEFAULTSIZE}'      Fail        Wrong Puffy Bed Frame Default Size. Expected Result: ${SIZEPUFFYBEDFRAMEDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Comforter
     ${DefaultSize}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYCOMFORTERDEFAULTSIZE}'      Fail        Wrong Puffy Comforter Default Size. Expected Result: ${PuffyComforterDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYCOMFORTERDEFAULTSIZE}'      Fail        Wrong Puffy Comforter Default Size. Expected Result: ${SIZEPUFFYCOMFORTERDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Pillow
     ${DefaultSize}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYPILLOWDEFAULTSIZE}'      Fail        Wrong Puffy Pillow Default Size. Expected Result: ${PuffyPillowDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYPILLOWDEFAULTSIZE}'      Fail        Wrong Puffy Pillow Default Size. Expected Result: ${SIZEPUFFYPILLOWDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Mattress Pad
     ${DefaultSize}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYMATTRESSPADDEFAULTSIZE}'      Fail        Wrong Puffy Mattress Pad Default Size. Expected Result: ${PuffyMattressPadDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYMATTRESSPADDEFAULTSIZE}'      Fail        Wrong Puffy Mattress Pad Default Size. Expected Result: ${SIZEPUFFYMATTRESSPADDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Mattress Protector
     ${DefaultSize}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYMATTRESSPROTECTORDEFAULTSIZE}'      Fail        Wrong Puffy Mattress Protector Default Size. Expected Result: ${PuffyMattressPadDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYMATTRESSPROTECTORDEFAULTSIZE}'      Fail        Wrong Puffy Mattress Protector Default Size. Expected Result: ${SIZEPUFFYMATTRESSPROTECTORDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Mattress Topper
     ${DefaultSize}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYTOPPERDEFAULTSIZE}'      Fail        Wrong Puffy Mattress Protector Default Size. Expected Result: ${PuffyTopperDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYTOPPERDEFAULTSIZE}'      Fail        Wrong Puffy Mattress Protector Default Size. Expected Result: ${SIZEPUFFYTOPPERDEFAULTSIZE} Actual Result: ${DefaultSize}
 Check default feel for Puffy Mattress Topper
     ${DefaultFeel}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-feel > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultFeel}'!='${SIZEPUFFYTOPPERDEFAULTFEEL}'      Fail        Wrong Puffy Topper Default Feel. Expected Result: ${PuffyTopperDefaultfeel} Actual Result: ${DefaultFeel}
+    Run keyword if          '${DefaultFeel}'!='${SIZEPUFFYTOPPERDEFAULTFEEL}'      Fail        Wrong Puffy Topper Default Feel. Expected Result: ${SIZEPUFFYTOPPERDEFAULTFEEL} Actual Result: ${DefaultFeel}
 
 Check default size for Puffy Blanket
     ${DefaultSize}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
@@ -285,20 +285,20 @@ Check default size for Puffy Weighted Blanket
 
 Check default color for Puffy Sheets
     ${DefaultSize}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-color > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYSHEETSDEFAULTCOLOR}'      Fail        Wrong Puffy Sheets Default color. Expected Result: ${PuffySheetsDefaultColor} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYSHEETSDEFAULTCOLOR}'      Fail        Wrong Puffy Sheets Default color. Expected Result: ${SIZEPUFFYSHEETSDEFAULTCOLOR} Actual Result: ${DefaultSize}
 Check default size for Puffy Sheets
     ${DefaultSize}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYSHEETSDEFAULTSIZE}'      Fail        Wrong Puffy Sheets Default Size. Expected Result: ${PuffySheetsDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYSHEETSDEFAULTSIZE}'      Fail        Wrong Puffy Sheets Default Size. Expected Result: ${SIZEPUFFYSHEETSDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 Check default size for Puffy Dog Bed
     ${DefaultSize}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYDOGBEDDEFAULTSIZE}'      Fail        Wrong Puffy Dog Bed Default color. Expected Result: ${PuffyDogBedDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYDOGBEDDEFAULTSIZE}'      Fail        Wrong Puffy Dog Bed Default color. Expected Result: ${SIZEPUFFYDOGBEDDEFAULTSIZE} Actual Result: ${DefaultSize}
 Check default color for Puffy Rug
     ${DefaultSize}=            get text        css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-color > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYRUGDEFAULTCOLOR}'      Fail        Wrong Puffy Rug Default Color. Expected Result: ${PuffyRugDefaultColor} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYRUGDEFAULTCOLOR}'      Fail        Wrong Puffy Rug Default Color. Expected Result: ${SIZEPUFFYRUGDEFAULTCOLOR} Actual Result: ${DefaultSize}
 Check default size for Puffy Rug
     ${DefaultSize}=            get text        css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > div > div > span.display-name.is--not--sale
-    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYRUGDEFAULTSIZE}'      Fail        Wrong Puffy Rug Default Size. Expected Result: ${PuffyRugDefaultSize} Actual Result: ${DefaultSize}
+    Run keyword if          '${DefaultSize}'!='${SIZEPUFFYRUGDEFAULTSIZE}'      Fail        Wrong Puffy Rug Default Size. Expected Result: ${SIZEPUFFYRUGDEFAULTSIZE} Actual Result: ${DefaultSize}
 
 #=============================PRODUCT ORIGINAL PRICE CHECKS===================================================#
 
@@ -307,22 +307,22 @@ Check original price for Puffy Mattress (all sizes)
     Wait Until Element Is Visible          css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > del > span.original-price
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Mattress Twin Size original price. Expected Result: ${PuffyMattressTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Mattress Twin Size original price. Expected Result: ${PUFFYMATTRESSTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Mattress TwinXL Size original price. Expected Result: ${PuffyMattressTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Mattress TwinXL Size original price. Expected Result: ${PUFFYMATTRESSTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Mattress Full Size original price. Expected Result: ${PuffyMattressFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Mattress Full Size original price. Expected Result: ${PUFFYMATTRESSFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Mattress Queen Size original price. Expected Result: ${PuffyMattressQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Mattress Queen Size original price. Expected Result: ${PUFFYMATTRESSQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(5) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Mattress King Size original price. Expected Result: ${PuffyMattressKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Mattress King Size original price. Expected Result: ${PUFFYMATTRESSKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(6) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Mattress CalKing Size original price. Expected Result: ${PuffyMattressCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Mattress CalKing Size original price. Expected Result: ${PUFFYMATTRESSCALKINGORIGINAL} Actual Result: ${Content}
 
 
 Check original price for Puffy Lux Mattress (all sizes)
@@ -330,434 +330,434 @@ Check original price for Puffy Lux Mattress (all sizes)
     Wait Until Element Is Visible          css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > del > span.original-price
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Lux Twin Size original price. Expected Result: ${PuffyLuxMattressTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Lux Twin Size original price. Expected Result: ${PUFFYLUXMATTRESSTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Lux TwinXL Size original price. Expected Result: ${PuffyLuxMattressTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Lux TwinXL Size original price. Expected Result: ${PUFFYLUXMATTRESSTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Lux Full Size original price. Expected Result: ${PuffyLuxMattressFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Lux Full Size original price. Expected Result: ${PUFFYLUXMATTRESSFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li.option.selected.focus > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Lux Queen Size original price. Expected Result: ${PuffyLuxMattressQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Lux Queen Size original price. Expected Result: ${PUFFYLUXMATTRESSQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Lux King Size original price. Expected Result: ${PuffyLuxMattressKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Lux King Size original price. Expected Result: ${PUFFYLUXMATTRESSKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Lux CalKing Size original price. Expected Result: ${PuffyLuxMattressCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Lux CalKing Size original price. Expected Result: ${PUFFYLUXMATTRESSCALKINGORIGINAL} Actual Result: ${Content}
 
 Check original price for Puffy Lux Hybrid Mattress (all sizes)
 
     Wait Until Element Is Visible          css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > del > span.hybrid-price
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Lux Hybrid Twin Size original price. Expected Result: ${PuffyLuxMattressTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Lux Hybrid Twin Size original price. Expected Result: ${PUFFYLUXMATTRESSTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Lux Hybrid TwinXL Size original price. Expected Result: ${PuffyLuxMattressTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Lux Hybrid TwinXL Size original price. Expected Result: ${PUFFYLUXMATTRESSTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Lux Hybrid Full Size original price. Expected Result: ${PuffyLuxMattressFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Lux Hybrid Full Size original price. Expected Result: ${PUFFYLUXMATTRESSFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Lux Hybrid Queen Size original price. Expected Result: ${PuffyLuxMattressQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Lux Hybrid Queen Size original price. Expected Result: ${PUFFYLUXMATTRESSQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Lux Hybrid King Size original price. Expected Result: ${PuffyLuxMattressKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Lux Hybrid King Size original price. Expected Result: ${PUFFYLUXMATTRESSKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Lux Hybrid CalKing Size original price. Expected Result: ${PuffyLuxMattressCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Lux Hybrid CalKing Size original price. Expected Result: ${PUFFYLUXMATTRESSCALKINGORIGINAL} Actual Result: ${Content}
 
 
-Check original price for Puffy Royal Mattress (all sizes)
+Check original price for Puffy Royal Mattress (all SIZES)
 
     Wait Until Element Is Visible          css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > del > span.original-price
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Royal Twin Size original price. Expected Result: ${PuffyRoyalMattressTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Royal Twin Size original price. Expected Result: ${PUFFYROYALMATTRESSTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Royal TwinXL Size original price. Expected Result: ${PuffyRoyalMattressTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Royal TwinXL Size original price. Expected Result: ${PUFFYROYALMATTRESSTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Royal Full Size original price. Expected Result: ${PuffyRoyalMattressFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Royal Full Size original price. Expected Result: ${PUFFYROYALMATTRESSFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li.option.selected.focus > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Royal Queen Size original price. Expected Result: ${PuffyRoyalMattressQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Royal Queen Size original price. Expected Result: ${PUFFYROYALMATTRESSQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Royal King Size original price. Expected Result: ${PuffyRoyalMattressKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Royal King Size original price. Expected Result: ${PUFFYROYALMATTRESSKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Royal CalKing Size original price. Expected Result: ${PuffyRoyalMattressCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Royal CalKing Size original price. Expected Result: ${PUFFYROYALMATTRESSCALKINGORIGINAL} Actual Result: ${Content}
 
 
 Check Puffy Royal Hybrid sizes original prices
 
     Wait Until Element Is Visible          css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > del > span.hybrid-price
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Royal Hybrid Twin Size original price. Expected Result: ${PuffyRoyalMattressTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINORIGINAL}'      Fail        Wrong Puffy Royal Hybrid Twin Size original price. Expected Result: ${PUFFYROYALMATTRESSTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Royal Hybrid TwinXL Size original price. Expected Result: ${PuffyRoyalMattressTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINXLORIGINAL}'      Fail        Wrong Puffy Royal Hybrid TwinXL Size original price. Expected Result: ${PUFFYROYALMATTRESSTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Royal Hybrid Full Size original price. Expected Result: ${PuffyRoyalMattressFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSFULLORIGINAL}'      Fail        Wrong Puffy Royal Hybrid Full Size original price. Expected Result: ${PUFFYROYALMATTRESSFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Royal Hybrid Queen Size original price. Expected Result: ${PuffyRoyalMattressQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSQUEENORIGINAL}'      Fail        Wrong Puffy Royal Hybrid Queen Size original price. Expected Result: ${PUFFYROYALMATTRESSQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Royal Hybrid King Size original price. Expected Result: ${PuffyRoyalMattressKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSKINGORIGINAL}'      Fail        Wrong Puffy Royal Hybrid King Size original price. Expected Result: ${PUFFYROYALMATTRESSKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > del > span.hybrid-price
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Royal Hybrid CalKing Size original price. Expected Result: ${PuffyRoyalMattressCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Royal Hybrid CalKing Size original price. Expected Result: ${PUFFYROYALMATTRESSCALKINGORIGINAL} Actual Result: ${Content}
 Check Puffy Foundation sizes original prices
 
     Wait Until Element Is Visible          css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONTWINORIGINAL}'      Fail        Wrong Puffy Foundation Twin Size original price. Expected Result: ${PuffyFoundationTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONTWINORIGINAL}'      Fail        Wrong Puffy Foundation Twin Size original price. Expected Result: ${PUFFYFOUNDATIONTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONTWINXLORIGINAL}'      Fail        Wrong Puffy Foundation TwinXL Size original price. Expected Result: ${PuffyFoundationTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONTWINXLORIGINAL}'      Fail        Wrong Puffy Foundation TwinXL Size original price. Expected Result: ${PUFFYFOUNDATIONTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONFULLORIGINAL}'      Fail        Wrong Puffy Foundation Full Size original price. Expected Result: ${PuffyFoundationFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONFULLORIGINAL}'      Fail        Wrong Puffy Foundation Full Size original price. Expected Result: ${PUFFYFOUNDATIONFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONQUEENORIGINAL}'      Fail        Wrong Puffy Foundation Queen Size original price. Expected Result: ${PuffyFoundationQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONQUEENORIGINAL}'      Fail        Wrong Puffy Foundation Queen Size original price. Expected Result: ${PUFFYFOUNDATIONQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONKINGORIGINAL}'      Fail        Wrong Puffy Foundation King Size original price. Expected Result: ${PuffyFoundationKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONKINGORIGINAL}'      Fail        Wrong Puffy Foundation King Size original price. Expected Result: ${PUFFYFOUNDATIONKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONCALKINGORIGINAL}'      Fail        Wrong Puffy Foundation CalKing Size original price. Expected Result: ${PuffyFoundationCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONCALKINGORIGINAL}'      Fail        Wrong Puffy Foundation CalKing Size original price. Expected Result: ${PUFFYFOUNDATIONCALKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Foundation sizes 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONTWIN15OFF}'      Fail        Wrong Puffy Foundation Twin Size 15% Off price. Expected Result: ${PuffyFoundationTwin15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONTWIN15OFF}'      Fail        Wrong Puffy Foundation Twin Size 15% Off price. Expected Result: ${PUFFYFOUNDATIONTWIN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONTWINXL15OFF}'      Fail        Wrong Puffy Foundation TwinXL Size 15% Off price. Expected Result: ${PuffyFoundationTwinXL15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONTWINXL15OFF}'      Fail        Wrong Puffy Foundation TwinXL Size 15% Off price. Expected Result: ${PUFFYFOUNDATIONTWINXL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONFULL15OFF}'      Fail        Wrong Puffy Foundation Full Size 15% Off price. Expected Result: ${PuffyFoundationFull15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONFULL15OFF}'      Fail        Wrong Puffy Foundation Full Size 15% Off price. Expected Result: ${PUFFYFOUNDATIONFULL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONQUEEN15OFF}'      Fail        Wrong Puffy Foundation Queen Size 15% Off price. Expected Result: ${PuffyFoundationQueen15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONQUEEN15OFF}'      Fail        Wrong Puffy Foundation Queen Size 15% Off price. Expected Result: ${PUFFYFOUNDATIONQUEEN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONKING15OFF}'      Fail        Wrong Puffy Foundation King Size 15% Off price. Expected Result: ${PuffyFoundationKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONKING15OFF}'      Fail        Wrong Puffy Foundation King Size 15% Off price. Expected Result: ${PUFFYFOUNDATIONKING15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONCALKING15OFF}'      Fail        Wrong Puffy Foundation CalKing Size 15% Off price. Expected Result: ${PuffyFoundationCalKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYFOUNDATIONCALKING15OFF}'      Fail        Wrong Puffy Foundation CalKing Size 15% Off price. Expected Result: ${PUFFYFOUNDATIONCALKING15OFF} Actual Result: ${Content}
 
 Check Puffy Adjustable Base original prices
 
     Wait Until Element Is Visible          css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > del > span.original-price
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASETWINXLORIGINAL}'      Fail        Wrong Puffy Adjustable Base TwinXL Size original price. Expected Result: ${PuffyAdjustableBaseTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASETWINXLORIGINAL}'      Fail        Wrong Puffy Adjustable Base TwinXL Size original price. Expected Result: ${PUFFYADJUSTABLEBASETWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASEFULLORIGINAL}'      Fail        Wrong Puffy Adjustable Base Full Size original price. Expected Result: ${PuffyAdjustableBaseFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASEFULLORIGINAL}'      Fail        Wrong Puffy Adjustable Base Full Size original price. Expected Result: ${PUFFYADJUSTABLEBASEFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASEQUEENORIGINAL}'      Fail        Wrong Puffy Adjustable Base Queen Size original price. Expected Result: ${PuffyAdjustableBaseQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASEQUEENORIGINAL}'      Fail        Wrong Puffy Adjustable Base Queen Size original price. Expected Result: ${PUFFYADJUSTABLEBASEQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > del > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASESPLITKINGORIGINAL}'      Fail        Wrong Puffy Adjustable Base Split King Size original price. Expected Result: ${PuffyAdjustableBaseSplitKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASESPLITKINGORIGINAL}'      Fail        Wrong Puffy Adjustable Base Split King Size original price. Expected Result: ${PUFFYADJUSTABLEBASESPLITKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Bed Frame original prices
 
     Wait Until Element Is Visible          css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYBEDFRAMEFULLORIGINAL}'      Fail        Wrong Puffy Bed Frame Full Size original price. Expected Result: ${PuffyBedFrameFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBEDFRAMEFULLORIGINAL}'      Fail        Wrong Puffy Bed Frame Full Size original price. Expected Result: ${PUFFYBEDFRAMEFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYBEDFRAMEQUEENORIGINAL}'      Fail        Wrong Puffy Bed Frame Queen Size original price. Expected Result: ${PuffyBedFrameQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBEDFRAMEQUEENORIGINAL}'      Fail        Wrong Puffy Bed Frame Queen Size original price. Expected Result: ${PUFFYBEDFRAMEQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYBEDFRAMEKINGORIGINAL}'      Fail        Wrong Puffy Bed Frame King Size original price. Expected Result: ${PuffyBedFrameKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBEDFRAMEKINGORIGINAL}'      Fail        Wrong Puffy Bed Frame King Size original price. Expected Result: ${PUFFYBEDFRAMEKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYBEDFRAMECALKINGORIGINAL}'      Fail        Wrong Puffy Bed Frame Cal King Size original price. Expected Result: ${PuffyBedFrameCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBEDFRAMECALKINGORIGINAL}'      Fail        Wrong Puffy Bed Frame Cal King Size original price. Expected Result: ${PUFFYBEDFRAMECALKINGORIGINAL} Actual Result: ${Content}
 
 check puffy bed frame sizes 15off prices
     wait until element is visible          css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    run keyword if          '${content}'!='${PUFFYBEDFRAMEFULL15OFF}'      fail        wrong puffy bed frame full size original price. expected result: ${puffybedframefull15off} actual result: ${content}
+    run keyword if          '${content}'!='${PUFFYBEDFRAMEFULL15OFF}'      fail        wrong puffy bed frame full size original price. expected result: ${PUFFYBEDFRAMEFULL15OFF} actual result: ${content}
 
     ${content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    run keyword if          '${content}'!='${PUFFYBEDFRAMEQUEEN15OFF}'      fail        wrong puffy bed frame queen size original price. expected result: ${puffybedframequeen15off} actual result: ${content}
+    run keyword if          '${content}'!='${PUFFYBEDFRAMEQUEEN15OFF}'      fail        wrong puffy bed frame queen size original price. expected result: ${PUFFYBEDFRAMEQUEEN15OFF} actual result: ${content}
 
     ${content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    run keyword if          '${content}'!='${PUFFYBEDFRAMEKING15OFF}'      fail        wrong puffy bed frame king size original price. expected result: ${puffybedframeking15off} actual result: ${content}
+    run keyword if          '${content}'!='${PUFFYBEDFRAMEKING15OFF}'      fail        wrong puffy bed frame king size original price. expected result: ${PUFFYBEDFRAMEKING15OFF} actual result: ${content}
 
     ${content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > span > span.original-price
-    run keyword if          '${content}'!='${PUFFYBEDFRAMECALKING15OFF}'      fail        wrong puffy bed frame cal king size original price. expected result: ${puffybedframecalking15off} actual result: ${content}
+    run keyword if          '${content}'!='${PUFFYBEDFRAMECALKING15OFF}'      fail        wrong puffy bed frame cal king size original price. expected result: ${PUFFYBEDFRAMECALKING15OFF} actual result: ${content}
 
 
 Check Puffy Comforter original prices
 
     Wait Until Element Is Visible          css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYCOMFORTERTWIN/TWINXLORIGINAL}'      Fail        Wrong Puffy Comforter Twin/TwinXL Size original price. Expected Result: ${PuffyComforterTwin/TwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYCOMFORTERTWIN/TWINXLORIGINAL}'      Fail        Wrong Puffy Comforter Twin/TwinXL Size original price. Expected Result: ${PUFFYCOMFORTERTWIN/TWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYCOMFORTERFULL/QUEENORIGINAL}'      Fail        Wrong Puffy Comforter Full/Queen Size original price. Expected Result: ${PuffyComforterFull/QueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYCOMFORTERFULL/QUEENORIGINAL}'      Fail        Wrong Puffy Comforter Full/Queen Size original price. Expected Result: ${PUFFYCOMFORTERFULL/QUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYCOMFORTERKING/CALKINGORIGINAL}'      Fail        Wrong Puffy Comforter King/Cal King Size original price. Expected Result: ${PuffyComforterKing/CalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYCOMFORTERKING/CALKINGORIGINAL}'      Fail        Wrong Puffy Comforter King/Cal King Size original price. Expected Result: ${PUFFYCOMFORTERKING/CALKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Comforter sizes 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYCOMFORTERTWIN/TWINXL15OFF}'      Fail        Wrong Puffy Comforter Twin/TwinXL Size 15% Off price. Expected Result: ${PuffyComforterTwin/TwinXL15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYCOMFORTERTWIN/TWINXL15OFF}'      Fail        Wrong Puffy Comforter Twin/TwinXL Size 15% Off price. Expected Result: ${PUFFYCOMFORTERTWIN/TWINXL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYCOMFORTERFULL/QUEEN15OFF}'      Fail        Wrong Puffy Comforter Full/Queen Size 15% Off price. Expected Result: ${PuffyComforterFull/Queen15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYCOMFORTERFULL/QUEEN15OFF}'      Fail        Wrong Puffy Comforter Full/Queen Size 15% Off price. Expected Result: ${PUFFYCOMFORTERFULL/QUEEN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYCOMFORTERKING/CALKING15OFF}'      Fail        Wrong Puffy Comforter King/Cal King Size 15% Off price. Expected Result: ${PuffyComforterKing/CalKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYCOMFORTERKING/CALKING15OFF}'      Fail        Wrong Puffy Comforter King/Cal King Size 15% Off price. Expected Result: ${PUFFYCOMFORTERKING/CALKING15OFF} Actual Result: ${Content}
 
 Check Puffy Pillow original prices
 
     Wait Until Element Is Visible          css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
     ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPILLOWSTANDARDORIGINAL}'      Fail        Wrong Puffy Pillow Standard Size original price. Expected Result: ${PuffyPillowStandardOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPILLOWSTANDARDORIGINAL}'      Fail        Wrong Puffy Pillow Standard Size original price. Expected Result: ${PUFFYPILLOWSTANDARDORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPILLOWKINGORIGINAL}'      Fail        Wrong Puffy Comforter Full/Queen Size original price. Expected Result: ${PuffyPillowKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPILLOWKINGORIGINAL}'      Fail        Wrong Puffy Comforter Full/Queen Size original price. Expected Result: ${PUFFYPILLOWKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Body Pillow original prices
 
     Wait Until Element Is Visible          css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-body-pillow > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head.product-head--smaller > div > div.product-head__content > div.product-price > span
     ${Content}=            get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-body-pillow > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head.product-head--smaller > div > div.product-head__content > div.product-price > span
-    Run keyword if          '${Content}'!='${PUFFYBODYPILLOWORIGINAL}'      Fail        Wrong Puffy Pillow Standard Size original price. Expected Result: ${PuffyBodyPillowOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBODYPILLOWORIGINAL}'      Fail        Wrong Puffy Pillow Standard Size original price. Expected Result: ${PUFFYBODYPILLOWORIGINAL} Actual Result: ${Content}
 
 Check Puffy Body Pillow sizes 15OFF prices
 
     Wait Until Element Is Visible          css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-body-pillow > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__content > div.product-price > div > span > span
     ${Content}=            get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-body-pillow > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__content > div.product-price > div > span > span
-    Run keyword if          '${Content}'!='${PUFFYBODYPILLOW15OFF}'      Fail        Wrong Puffy Pillow Standard Size 15% Off price. Expected Result: ${PuffyBodyPillowOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBODYPILLOW15OFF}'      Fail        Wrong Puffy Pillow Standard Size 15% Off price. Expected Result: ${PUFFYBODYPILLOWORIGINAL} Actual Result: ${Content}
 
 Check Puffy Mattress Pad original prices
 
     Wait Until Element Is Visible          css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADTWINORIGINAL}'      Fail        Wrong Puffy Mattress Pad Twin Size original price. Expected Result: ${PuffyMattressPadTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADTWINORIGINAL}'      Fail        Wrong Puffy Mattress Pad Twin Size original price. Expected Result: ${PUFFYMATTRESSPADTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADTWINXLORIGINAL}'      Fail        Wrong Puffy Mattress Pad Twin XL Size original price. Expected Result: ${PuffyMattressPadTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADTWINXLORIGINAL}'      Fail        Wrong Puffy Mattress Pad Twin XL Size original price. Expected Result: ${PUFFYMATTRESSPADTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADFULLORIGINAL}'      Fail        Wrong Puffy Mattress Pad Full Size original price. Expected Result: ${PuffyMattressPadFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADFULLORIGINAL}'      Fail        Wrong Puffy Mattress Pad Full Size original price. Expected Result: ${PUFFYMATTRESSPADFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADQUEENORIGINAL}'      Fail        Wrong Puffy Mattress Pad Queen Size original price. Expected Result: ${PuffyMattressPadQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADQUEENORIGINAL}'      Fail        Wrong Puffy Mattress Pad Queen Size original price. Expected Result: ${PUFFYMATTRESSPADQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADKINGORIGINAL}'      Fail        Wrong Puffy Mattress Pad King Size original price. Expected Result: ${PuffyMattressPadKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADKINGORIGINAL}'      Fail        Wrong Puffy Mattress Pad King Size original price. Expected Result: ${PUFFYMATTRESSPADKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADCALKINGORIGINAL}'      Fail        Wrong Puffy Mattress Pad Cal King Size original price. Expected Result: ${PuffyMattressPadKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPADCALKINGORIGINAL}'      Fail        Wrong Puffy Mattress Pad Cal King Size original price. Expected Result: ${PUFFYMATTRESSPADKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Mattress Pad sizes 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPADTWIN15OFF}'      Fail        Wrong Puffy Mattress Pad Twin Size 15% Off price. Expected Result: ${PuffyPadTwin15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPADTWIN15OFF}'      Fail        Wrong Puffy Mattress Pad Twin Size 15% Off price. Expected Result: ${PUFFYPADTWIN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPADTWINXL15OFF}'      Fail        Wrong Puffy Mattress Pad Twin XL Size 15% Off price. Expected Result: ${PuffyPadTwinXL15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPADTWINXL15OFF}'      Fail        Wrong Puffy Mattress Pad Twin XL Size 15% Off price. Expected Result: ${PUFFYPADTWINXL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPADFULL15OFF}'      Fail        Wrong Puffy Mattress Pad Full Size 15% Off price. Expected Result: ${PuffyPadFull15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPADFULL15OFF}'      Fail        Wrong Puffy Mattress Pad Full Size 15% Off price. Expected Result: ${PUFFYPADFULL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPADQUEEN15OFF}'      Fail        Wrong Puffy Mattress Pad Queen Size 15% Off price. Expected Result: ${PuffyPadQueen15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPADQUEEN15OFF}'      Fail        Wrong Puffy Mattress Pad Queen Size 15% Off price. Expected Result: ${PUFFYPADQUEEN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPADKING15OFF}'      Fail        Wrong Puffy Mattress Pad King Size 15% Off price. Expected Result: ${PuffyPadKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPADKING15OFF}'      Fail        Wrong Puffy Mattress Pad King Size 15% Off price. Expected Result: ${PUFFYPADKING15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPADCALKING15OFF}'      Fail        Wrong Puffy Mattress Pad Cal King Size 15% Off price. Expected Result: ${PuffyPadCalKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPADCALKING15OFF}'      Fail        Wrong Puffy Mattress Pad Cal King Size 15% Off price. Expected Result: ${PUFFYPADCALKING15OFF} Actual Result: ${Content}
 
 Check Puffy Mattress Protector original prices
 
     Wait Until Element Is Visible          css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORTWINORIGINAL}'      Fail        Wrong Puffy Mattress Protector Twin Size original price. Expected Result: ${PuffyMattressProtectorTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORTWINORIGINAL}'      Fail        Wrong Puffy Mattress Protector Twin Size original price. Expected Result: ${PUFFYMATTRESSPROTECTORTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORTWINXLORIGINAL}'      Fail        Wrong Puffy Mattress Protector Twin XL Size original price. Expected Result: ${PuffyMattressProtectorTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORTWINXLORIGINAL}'      Fail        Wrong Puffy Mattress Protector Twin XL Size original price. Expected Result: ${PUFFYMATTRESSPROTECTORTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORFULLORIGINAL}'      Fail        Wrong Puffy Mattress Protector Full Size original price. Expected Result: ${PuffyMattressProtectorFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORFULLORIGINAL}'      Fail        Wrong Puffy Mattress Protector Full Size original price. Expected Result: ${PUFFYMATTRESSPROTECTORFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORQUEENORIGINAL}'      Fail        Wrong Puffy Mattress Protector Queen Size original price. Expected Result: ${PuffyMattressProtectorQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORQUEENORIGINAL}'      Fail        Wrong Puffy Mattress Protector Queen Size original price. Expected Result: ${PUFFYMATTRESSPROTECTORQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORKINGORIGINAL}'      Fail        Wrong Puffy Mattress Protector King Size original price. Expected Result: ${PuffyMattressProtectorKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORKINGORIGINAL}'      Fail        Wrong Puffy Mattress Protector King Size original price. Expected Result: ${PUFFYMATTRESSPROTECTORKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORCALKINGORIGINAL}'      Fail        Wrong Puffy Mattress Protector Cal King Size original price. Expected Result: ${PuffyMattressProtectorCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSPROTECTORCALKINGORIGINAL}'      Fail        Wrong Puffy Mattress Protector Cal King Size original price. Expected Result: ${PUFFYMATTRESSPROTECTORCALKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Mattress Protector sizes 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPROTECTORQUEEN15OFF}'      Fail        Wrong Puffy Mattress Protector Queen Size original price. Expected Result: ${PuffyProtectorQueen15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPROTECTORQUEEN15OFF}'      Fail        Wrong Puffy Mattress Protector Queen Size original price. Expected Result: ${PUFFYPROTECTORQUEEN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPROTECTORKING15OFF}'      Fail        Wrong Puffy Mattress Protector King Size original price. Expected Result: ${PuffyProtectorKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPROTECTORKING15OFF}'      Fail        Wrong Puffy Mattress Protector King Size original price. Expected Result: ${PUFFYPROTECTORKING15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYPROTECTORCALKING15OFF}'      Fail        Wrong Puffy Mattress Protector Cal King Size original price. Expected Result: ${PuffyProtectorCalKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYPROTECTORCALKING15OFF}'      Fail        Wrong Puffy Mattress Protector Cal King Size original price. Expected Result: ${PUFFYPROTECTORCALKING15OFF} Actual Result: ${Content}
 
 
 Check Puffy Topper original prices
 
     Wait Until Element Is Visible          css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERTWINORIGINAL}'      Fail        Wrong Puffy Topper Twin Size original price. Expected Result: ${PuffyTopperTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERTWINORIGINAL}'      Fail        Wrong Puffy Topper Twin Size original price. Expected Result: ${PUFFYTOPPERTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERTWINXLORIGINAL}'      Fail        Wrong Puffy Topper Twin XL Size original price. Expected Result: ${PuffyTopperTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERTWINXLORIGINAL}'      Fail        Wrong Puffy Topper Twin XL Size original price. Expected Result: ${PUFFYTOPPERTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERFULLORIGINAL}'      Fail        Wrong Puffy Topper Full Size original price. Expected Result: ${PuffyTopperFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERFULLORIGINAL}'      Fail        Wrong Puffy Topper Full Size original price. Expected Result: ${PUFFYTOPPERFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERQUEENORIGINAL}'      Fail        Wrong Puffy Topper Queen Size original price. Expected Result: ${PuffyTopperQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERQUEENORIGINAL}'      Fail        Wrong Puffy Topper Queen Size original price. Expected Result: ${PUFFYTOPPERQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERKINGORIGINAL}'      Fail        Wrong Puffy Topper King Size original price. Expected Result: ${PuffyTopperKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERKINGORIGINAL}'      Fail        Wrong Puffy Topper King Size original price. Expected Result: ${PUFFYTOPPERKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERCALKINGORIGINAL}'      Fail        Wrong Puffy Topper Cal King Size original price. Expected Result: ${PuffyTopperCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERCALKINGORIGINAL}'      Fail        Wrong Puffy Topper Cal King Size original price. Expected Result: ${PUFFYTOPPERCALKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Topper 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERTWIN15OFF}'      Fail        Wrong Puffy Topper Twin Size 15% Off price. Expected Result: ${PuffyTopperTwin15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERTWIN15OFF}'      Fail        Wrong Puffy Topper Twin Size 15% Off price. Expected Result: ${PUFFYTOPPERTWIN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERTWINXL15OFF}'      Fail        Wrong Puffy Topper Twin XL Size 15% Off price. Expected Result: ${PuffyTopperTwinXL15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERTWINXL15OFF}'      Fail        Wrong Puffy Topper Twin XL Size 15% Off price. Expected Result: ${PUFFYTOPPERTWINXL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERFULL15OFF}'      Fail        Wrong Puffy Topper Full Size 15% Off price. Expected Result: ${PuffyTopperFull15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERFULL15OFF}'      Fail        Wrong Puffy Topper Full Size 15% Off price. Expected Result: ${PUFFYTOPPERFULL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERQUEEN15OFF}'      Fail        Wrong Puffy Topper Queen Size 15% Off price. Expected Result: ${PuffyTopperQueen15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERQUEEN15OFF}'      Fail        Wrong Puffy Topper Queen Size 15% Off price. Expected Result: ${PUFFYTOPPERQUEEN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERKING15OFF}'      Fail        Wrong Puffy Topper King Size 15% Off price. Expected Result: ${PuffyTopperKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERKING15OFF}'      Fail        Wrong Puffy Topper King Size 15% Off price. Expected Result: ${PUFFYTOPPERKING15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYTOPPERCALKING15OFF}'      Fail        Wrong Puffy Topper Cal King Size 15% Off price. Expected Result: ${PuffyTopperCalKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYTOPPERCALKING15OFF}'      Fail        Wrong Puffy Topper Cal King Size 15% Off price. Expected Result: ${PUFFYTOPPERCALKING15OFF} Actual Result: ${Content}
 
 Check Puffy Blanket original prices
 
     Wait Until Element Is Visible          css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYBLANKETSMALLORIGINAL}'      Fail        Wrong Puffy Blanket Small Size original price. Expected Result: ${PuffyBlanketSmallOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBLANKETSMALLORIGINAL}'      Fail        Wrong Puffy Blanket Small Size original price. Expected Result: ${PUFFYBLANKETSMALLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYBLANKETMEDIUMORIGINAL}'      Fail        Wrong Puffy Blanket Medium Size original price. Expected Result: ${PuffyBlanketMediumOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBLANKETMEDIUMORIGINAL}'      Fail        Wrong Puffy Blanket Medium Size original price. Expected Result: ${PUFFYBLANKETMEDIUMORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYBLANKETLARGEORIGINAL}'      Fail        Wrong Puffy Blanket Large Size original price. Expected Result: ${PuffyBlanketLargeOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYBLANKETLARGEORIGINAL}'      Fail        Wrong Puffy Blanket Large Size original price. Expected Result: ${PUFFYBLANKETLARGEORIGINAL} Actual Result: ${Content}
 
 Check Puffy Weighted Blanket original prices
 
     Wait Until Element Is Visible          css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETTWINORIGINAL}'      Fail        Wrong Puffy Weighted Blanket Twin Size original price. Expected Result: ${PuffyWeightedBlanketTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETTWINORIGINAL}'      Fail        Wrong Puffy Weighted Blanket Twin Size original price. Expected Result: ${PUFFYWEIGHTEDBLANKETTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETQUEENORIGINAL}'      Fail        Wrong Puffy Weighted Blanket Queen Size original price. Expected Result: ${PuffyWeightedBlanketQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETQUEENORIGINAL}'      Fail        Wrong Puffy Weighted Blanket Queen Size original price. Expected Result: ${PUFFYWEIGHTEDBLANKETQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETKINGORIGINAL}'      Fail        Wrong Puffy Weighted Blanket King Size original price. Expected Result: ${PuffyWeightedBlanketKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETKINGORIGINAL}'      Fail        Wrong Puffy Weighted Blanket King Size original price. Expected Result: ${PUFFYWEIGHTEDBLANKETKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Weighted Blanket 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETTWIN15OFF}'      Fail        Wrong Puffy Weighted Blanket Twin Size 15% Off price. Expected Result: ${PuffyWeightedBlanketTwin15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETTWIN15OFF}'      Fail        Wrong Puffy Weighted Blanket Twin Size 15% Off price. Expected Result: ${PUFFYWEIGHTEDBLANKETTWIN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETQUEEN15OFF}'      Fail        Wrong Puffy Weighted Blanket Queen Size 15% Off price. Expected Result: ${PuffyWeightedBlanketQueen15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYWEIGHTEDBLANKETQUEEN15OFF}'      Fail        Wrong Puffy Weighted Blanket Queen Size 15% Off price. Expected Result: ${PUFFYWEIGHTEDBLANKETQUEEN15OFF} Actual Result: ${Content}
 
 
 Check Puffy Sheets original prices
 
     Wait Until Element Is Visible          css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSTWINORIGINAL}'      Fail        Wrong Puffy Sheets Twin Size original price. Expected Result: ${PuffySheetsTwinOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSTWINORIGINAL}'      Fail        Wrong Puffy Sheets Twin Size original price. Expected Result: ${PUFFYSHEETSTWINORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSTWINXLORIGINAL}'      Fail        Wrong Puffy Sheets Twin XL Size original price. Expected Result: ${PuffySheetsTwinXLOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSTWINXLORIGINAL}'      Fail        Wrong Puffy Sheets Twin XL Size original price. Expected Result: ${PUFFYSHEETSTWINXLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSFULLORIGINAL}'      Fail        Wrong Puffy Sheets Full Size original price. Expected Result: ${PuffySheetsFullOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSFULLORIGINAL}'      Fail        Wrong Puffy Sheets Full Size original price. Expected Result: ${PUFFYSHEETSFULLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSQUEENORIGINAL}'      Fail        Wrong Puffy Sheets Queen Size original price. Expected Result: ${PuffySheetsQueenOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSQUEENORIGINAL}'      Fail        Wrong Puffy Sheets Queen Size original price. Expected Result: ${PUFFYSHEETSQUEENORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSKINGORIGINAL}'      Fail        Wrong Puffy Sheets King Size original price. Expected Result: ${PuffySheetsKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSKINGORIGINAL}'      Fail        Wrong Puffy Sheets King Size original price. Expected Result: ${PUFFYSHEETSKINGORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSCALKINGORIGINAL}'      Fail        Wrong Puffy Sheets Cal King Size original price. Expected Result: ${PuffySheetsCalKingOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSCALKINGORIGINAL}'      Fail        Wrong Puffy Sheets Cal King Size original price. Expected Result: ${PUFFYSHEETSCALKINGORIGINAL} Actual Result: ${Content}
 
 Check Puffy Sheets 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSTWINXL15OFF}'      Fail        Wrong Puffy Sheets Twin XL Size 15% Off price. Expected Result: ${PuffySheetsTwinXL15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSTWINXL15OFF}'      Fail        Wrong Puffy Sheets Twin XL Size 15% Off price. Expected Result: ${PUFFYSHEETSTWINXL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSFULL15OFF}'      Fail        Wrong Puffy Sheets Full Size 15% Off price. Expected Result: ${PuffySheetsFull15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSFULL15OFF}'      Fail        Wrong Puffy Sheets Full Size 15% Off price. Expected Result: ${PUFFYSHEETSFULL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSQUEEN15OFF}'      Fail        Wrong Puffy Sheets Queen Size 15% Off price. Expected Result: ${PuffySheetsQueen15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSQUEEN15OFF}'      Fail        Wrong Puffy Sheets Queen Size 15% Off price. Expected Result: ${PUFFYSHEETSQUEEN15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSKING15OFF}'      Fail        Wrong Puffy Sheets King Size 15% Off price. Expected Result: ${PuffySheetsKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSKING15OFF}'      Fail        Wrong Puffy Sheets King Size 15% Off price. Expected Result: ${PUFFYSHEETSKING15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYSHEETSCALKING15OFF}'      Fail        Wrong Puffy Sheets Cal King Size 15% Off price. Expected Result: ${PuffySheetsCalKing15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYSHEETSCALKING15OFF}'      Fail        Wrong Puffy Sheets Cal King Size 15% Off price. Expected Result: ${PUFFYSHEETSCALKING15OFF} Actual Result: ${Content}
 
 
 Check Puffy Dog Bed original prices
 
     Wait Until Element Is Visible          css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYDOGBEDSMALLORIGINAL}'      Fail        Wrong Puffy Dog Bed Small Size original price. Expected Result: ${PuffyDogBedSmallOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYDOGBEDSMALLORIGINAL}'      Fail        Wrong Puffy Dog Bed Small Size original price. Expected Result: ${PUFFYDOGBEDSMALLORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYDOGBEDMEDIUMORIGINAL}'      Fail        Wrong Puffy Dog Bed Medium Size original price. Expected Result: ${PuffyDogBedMediumOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYDOGBEDMEDIUMORIGINAL}'      Fail        Wrong Puffy Dog Bed Medium Size original price. Expected Result: ${PUFFYDOGBEDMEDIUMORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYDOGBEDLARGEORIGINAL}'      Fail        Wrong Puffy Dog Bed Large Size original price. Expected Result: ${PuffyDogBedLargeOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYDOGBEDLARGEORIGINAL}'      Fail        Wrong Puffy Dog Bed Large Size original price. Expected Result: ${PUFFYDOGBEDLARGEORIGINAL} Actual Result: ${Content}
 
 Check Puffy Dog Bed 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYDOGBEDSMALL15OFF}'      Fail        Wrong Puffy Dog Bed Small Size 15% Off price. Expected Result: ${PuffyDogBedSmall15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYDOGBEDSMALL15OFF}'      Fail        Wrong Puffy Dog Bed Small Size 15% Off price. Expected Result: ${PUFFYDOGBEDSMALL15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYDOGBEDMEDIUM15OFF}'      Fail        Wrong Puffy Dog Bed Medium Size 15% Off price. Expected Result: ${PuffyDogBedMedium15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYDOGBEDMEDIUM15OFF}'      Fail        Wrong Puffy Dog Bed Medium Size 15% Off price. Expected Result: ${PUFFYDOGBEDMEDIUM15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4365356662818 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYDOGBEDLARGE15OFF}'      Fail        Wrong Puffy Dog Bed Large Size 15% Off price. Expected Result: ${PuffyDogBedLarge15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYDOGBEDLARGE15OFF}'      Fail        Wrong Puffy Dog Bed Large Size 15% Off price. Expected Result: ${PUFFYDOGBEDLARGE15OFF} Actual Result: ${Content}
 
 
 
@@ -765,19 +765,19 @@ Check Puffy Rug original prices
 
     Wait Until Element Is Visible          css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYRUGMEDIUMORIGINAL}'      Fail        Wrong Puffy Rug Medium Size original price. Expected Result: ${PuffyRugMediumOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYRUGMEDIUMORIGINAL}'      Fail        Wrong Puffy Rug Medium Size original price. Expected Result: ${PUFFYRUGMEDIUMORIGINAL} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYRUGLARGEORIGINAL}'      Fail        Wrong Puffy Rug Large Size original price. Expected Result: ${PuffyRugLargeOriginal} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYRUGLARGEORIGINAL}'      Fail        Wrong Puffy Rug Large Size original price. Expected Result: ${PUFFYRUGLARGEORIGINAL} Actual Result: ${Content}
 
 Check Puffy Rug 15OFF prices
 
     Wait Until Element Is Visible          css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus > span > span > span.original-price
     ${Content}=            get text        css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYRUGMEDIUM15OFF}'      Fail        Wrong Puffy Rug Medium Size 15% Off price. Expected Result: ${PuffyRugMedium15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYRUGMEDIUM15OFF}'      Fail        Wrong Puffy Rug Medium Size 15% Off price. Expected Result: ${PUFFYRUGMEDIUM15OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4125949657122 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price
-    Run keyword if          '${Content}'!='${PUFFYRUGLARGE15OFF}'      Fail        Wrong Puffy Rug Large Size 15% Off price. Expected Result: ${PuffyRugLarge15OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYRUGLARGE15OFF}'      Fail        Wrong Puffy Rug Large Size 15% Off price. Expected Result: ${PUFFYRUGLARGE15OFF} Actual Result: ${Content}
 
 
 #=============================PRODUCT 300 OFF PRICE CHECKS===================================================#
@@ -787,66 +787,66 @@ Check $300 off price for Puffy Mattress (all sizes)
     Wait Until Element Is Visible          css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price.jsDiscountedPrice
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Mattress Twin Size 300 OFF price. Expected Result: ${PuffyMattressTwin300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Mattress Twin Size 300 OFF price. Expected Result: ${PUFFYMATTRESSTWIN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Mattress TwinXL Size 300 OFF price. Expected Result: ${PuffyMattressTwinXL300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Mattress TwinXL Size 300 OFF price. Expected Result: ${PUFFYMATTRESSTWINXL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSFULL300OFF}'      Fail        Wrong Puffy Mattress Full Size 300 OFF price. Expected Result: ${PuffyMattressFull300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSFULL300OFF}'      Fail        Wrong Puffy Mattress Full Size 300 OFF price. Expected Result: ${PUFFYMATTRESSFULL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li.option.selected.focus > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Mattress Queen Size 300 OFF price. Expected Result: ${PuffyMattressQueen300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Mattress Queen Size 300 OFF price. Expected Result: ${PUFFYMATTRESSQUEEN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(5) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSKING300OFF}'      Fail        Wrong Puffy Mattress King Size 300 OFF price. Expected Result: ${PuffyMattressKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSKING300OFF}'      Fail        Wrong Puffy Mattress King Size 300 OFF price. Expected Result: ${PUFFYMATTRESSKING300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(6) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Mattress CalKing Size 300 OFF price. Expected Result: ${PuffyMattressCalKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Mattress CalKing Size 300 OFF price. Expected Result: ${PUFFYMATTRESSCALKING300OFF} Actual Result: ${Content}
 
 Check $300 off price for Puffy Lux Mattress (all sizes)
 
     Wait Until Element Is Visible          css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price.jsDiscountedPrice
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Lux Twin Size 300 OFF price. Expected Result: ${PuffyLuxMattressTwin300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Lux Twin Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSTWIN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Lux TwinXL Size 300 OFF price. Expected Result: ${PuffyLuxMattressTwinXL300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Lux TwinXL Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSTWINXL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSFULL300OFF}'      Fail        Wrong Puffy Lux Full Size 300 OFF price. Expected Result: ${PuffyLuxMattressFull300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSFULL300OFF}'      Fail        Wrong Puffy Lux Full Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSFULL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li.option.selected.focus > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Lux Queen Size 300 OFF price. Expected Result: ${PuffyLuxMattressQueen300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Lux Queen Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSQUEEN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSKING300OFF}'      Fail        Wrong Puffy Lux King Size 300 OFF price. Expected Result: ${PuffyLuxMattressKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSKING300OFF}'      Fail        Wrong Puffy Lux King Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSKING300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Lux CalKing Size 300 OFF price. Expected Result: ${PuffyLuxMattressCalKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Lux CalKing Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSCALKING300OFF} Actual Result: ${Content}
 
 Check $300 off price for Puffy Lux Hybrid Mattress (all sizes)
 
     Wait Until Element Is Visible     css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.hybrid-price.jsDiscountedPrice
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Lux Hybrid Twin Size 300 OFF price. Expected Result: ${PuffyLuxMattressTwin300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Lux Hybrid Twin Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSTWIN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Lux Hybrid TwinXL Size 300 OFF price. Expected Result: ${PuffyLuxMattressTwinXL300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Lux Hybrid TwinXL Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSTWINXL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSFULL300OFF}'      Fail        Wrong Puffy Lux Hybrid Full Size 300 OFF price. Expected Result: ${PuffyLuxMattressFull300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSFULL300OFF}'      Fail        Wrong Puffy Lux Hybrid Full Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSFULL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Lux Hybrid Queen Size 300 OFF price. Expected Result: ${PuffyLuxMattressQueen300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Lux Hybrid Queen Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSQUEEN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSKING300OFF}'      Fail        Wrong Puffy Lux Hybrid King Size 300 OFF price. Expected Result: ${PuffyLuxMattressKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSKING300OFF}'      Fail        Wrong Puffy Lux Hybrid King Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSKING300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Lux Hybrid CalKing Size 300 OFF price. Expected Result: ${PuffyLuxMattressCalKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Lux Hybrid CalKing Size 300 OFF price. Expected Result: ${PUFFYLUXMATTRESSCALKING300OFF} Actual Result: ${Content}
 
 
 Check $300 off price for Puffy Royal Mattress (all sizes)
@@ -854,22 +854,22 @@ Check $300 off price for Puffy Royal Mattress (all sizes)
     Wait Until Element Is Visible          css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price.jsDiscountedPrice
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Royal Twin Size 300 OFF price. Expected Result: ${PuffyRoyalMattressTwin300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Royal Twin Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSTWIN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Royal TwinXL Size 300 OFF price. Expected Result: ${PuffyRoyalMattressTwinXL300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Royal TwinXL Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSTWINXL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSFULL300OFF}'      Fail        Wrong Puffy Royal Full Size 300 OFF price. Expected Result: ${PuffyRoyalMattressFull300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSFULL300OFF}'      Fail        Wrong Puffy Royal Full Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSFULL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li.option.selected.focus > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Royal Queen Size 300 OFF price. Expected Result: ${PuffyRoyalMattressQueen300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Royal Queen Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSQUEEN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PuffyRoyalMattressKing300OFF}'      Fail        Wrong Puffy Royal King Size 300 OFF price. Expected Result: ${PuffyRoyalMattressKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PuffyRoyalMattressKing300OFF}'      Fail        Wrong Puffy Royal King Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSKING300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Royal CalKing Size 300 OFF price. Expected Result: ${PuffyRoyalMattressCalKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Royal CalKing Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSCALKING300OFF} Actual Result: ${Content}
 
 
 Check Puffy Royal Hybrid sizes 300OFF prices
@@ -877,22 +877,22 @@ Check Puffy Royal Hybrid sizes 300OFF prices
     Wait Until Element Is Visible     css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.hybrid-price.jsDiscountedPrice
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Royal Hybrid Twin Size 300 OFF price. Expected Result: ${PuffyRoyalMattressTwin300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWIN300OFF}'      Fail        Wrong Puffy Royal Hybrid Twin Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSTWIN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Royal Hybrid TwinXL Size 300 OFF price. Expected Result: ${PuffyRoyalMattressTwinXL300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSTWINXL300OFF}'      Fail        Wrong Puffy Royal Hybrid TwinXL Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSTWINXL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSFULL300OFF}'      Fail        Wrong Puffy Royal Hybrid Full Size 300 OFF price. Expected Result: ${PuffyRoyalMattressFull300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSFULL300OFF}'      Fail        Wrong Puffy Royal Hybrid Full Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSFULL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Royal Hybrid Queen Size 300 OFF price. Expected Result: ${PuffyRoyalMattressQueen300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSQUEEN300OFF}'      Fail        Wrong Puffy Royal Hybrid Queen Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSQUEEN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSKING300OFF}'      Fail        Wrong Puffy Royal Hybrid King Size 300 OFF price. Expected Result: ${PuffyRoyalMattressKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSKING300OFF}'      Fail        Wrong Puffy Royal Hybrid King Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSKING300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > span > span.hybrid-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Royal Hybrid CalKing Size 300 OFF price. Expected Result: ${PuffyRoyalMattressCalKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYROYALMATTRESSCALKING300OFF}'      Fail        Wrong Puffy Royal Hybrid CalKing Size 300 OFF price. Expected Result: ${PUFFYROYALMATTRESSCALKING300OFF} Actual Result: ${Content}
 
 
 
@@ -901,16 +901,16 @@ Check Puffy Adjustable Base 300OFF prices
     Wait Until Element Is Visible     css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price.jsDiscountedPrice
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASETWINXL300OFF}'      Fail        Wrong Puffy Adjustable Base TwinXL Size 300 OFF price. Expected Result: ${PuffyAdjustableBaseTwinXL300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASETWINXL300OFF}'      Fail        Wrong Puffy Adjustable Base TwinXL Size 300 OFF price. Expected Result: ${PUFFYADJUSTABLEBASETWINXL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(2) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASEFULL300OFF}'      Fail        Wrong Puffy Adjustable Base Full Size 300 OFF price. Expected Result: ${PuffyAdjustableBaseFull300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASEFULL300OFF}'      Fail        Wrong Puffy Adjustable Base Full Size 300 OFF price. Expected Result: ${PUFFYADJUSTABLEBASEFULL300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(3) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASEQUEEN300OFF}'      Fail        Wrong Puffy Adjustable Base Queen Size 300 OFF price. Expected Result: ${PuffyAdjustableBaseQueen300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASEQUEEN300OFF}'      Fail        Wrong Puffy Adjustable Base Queen Size 300 OFF price. Expected Result: ${PUFFYADJUSTABLEBASEQUEEN300OFF} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(4) > span > span > span.original-price.jsDiscountedPrice
-    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASESPLITKING300OFF}'      Fail        Wrong Puffy Adjustable Base Split King 300 OFF price. Expected Result: ${PuffyAdjustableBaseSplitKing300OFF} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${PUFFYADJUSTABLEBASESPLITKING300OFF}'      Fail        Wrong Puffy Adjustable Base Split King 300 OFF price. Expected Result: ${PUFFYADJUSTABLEBASESPLITKING300OFF} Actual Result: ${Content}
 #=============================PRODUCT PDP SIZE ORDERING===================================================#
 
 Check order in Size dropdown for Puffy Mattress
@@ -918,44 +918,44 @@ Check order in Size dropdown for Puffy Mattress
     Wait Until Element Is Visible          css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--sale--price
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER1}'      Fail        First size in Puffy Mattress PDP is Wrong. Expected Result: ${PuffyMattressPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER1}'      Fail        First size in Puffy Mattress PDP is Wrong. Expected Result: ${PUFFYMATTRESSPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER2}'      Fail        Second size in Puffy Mattress PDP is Wrong. Expected Result: ${PuffyMattressPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER2}'      Fail        Second size in Puffy Mattress PDP is Wrong. Expected Result: ${PUFFYMATTRESSPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER3}'      Fail        Third size in Puffy Mattress PDP is Wrong. Expected Result: ${PuffyMattressPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER3}'      Fail        Third size in Puffy Mattress PDP is Wrong. Expected Result: ${PUFFYMATTRESSPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER4}'      Fail        Fourth size in Puffy Mattress PDP is Wrong. Expected Result: ${PuffyMattressPDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER4}'      Fail        Fourth size in Puffy Mattress PDP is Wrong. Expected Result: ${PUFFYMATTRESSPDPSIZEORDER4} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(5) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER5}'      Fail        Fifth size in Puffy Mattress PDP is Wrong. Expected Result: ${PuffyMattressPDPSizeOrder5} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER5}'      Fail        Fifth size in Puffy Mattress PDP is Wrong. Expected Result: ${PUFFYMATTRESSPDPSIZEORDER5} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(6) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER6}'      Fail        Sixth size in Puffy Mattress PDP is Wrong. Expected Result: ${PuffyMattressPDPSizeOrder6} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPDPSIZEORDER6}'      Fail        Sixth size in Puffy Mattress PDP is Wrong. Expected Result: ${PUFFYMATTRESSPDPSIZEORDER6} Actual Result: ${Content}
 
 Check order in Size dropdown for Puffy Lux Mattress
 
     Wait Until Element Is Visible          css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > div > span.display-name.is--sale--price
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER1}'      Fail        First size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PuffyLuxMattressPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER1}'      Fail        First size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PUFFYLUXMATTRESSPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER2}'      Fail        Second size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PuffyLuxMattressPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER2}'      Fail        Second size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PUFFYLUXMATTRESSPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER3}'      Fail        Third size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PuffyLuxMattressPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER3}'      Fail        Third size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PUFFYLUXMATTRESSPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER4}'      Fail        Fourth size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PuffyLuxMattressPDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER4}'      Fail        Fourth size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PUFFYLUXMATTRESSPDPSIZEORDER4} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER5}'      Fail        Fifth size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PuffyLuxMattressPDPSizeOrder5} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER5}'      Fail        Fifth size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PUFFYLUXMATTRESSPDPSIZEORDER5} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER6}'      Fail        Sixth size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PuffyLuxMattressPDPSizeOrder6} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYLUXMATTRESSPDPSIZEORDER6}'      Fail        Sixth size in Puffy Lux Mattress PDP is Wrong. Expected Result: ${PUFFYLUXMATTRESSPDPSIZEORDER6} Actual Result: ${Content}
 
 
 Check order in Size dropdown for Puffy Royal Mattress
@@ -963,22 +963,22 @@ Check order in Size dropdown for Puffy Royal Mattress
     Wait Until Element Is Visible          css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > div > span.display-name.is--sale--price
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER1}'      Fail        First size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PuffyRoyalMattressPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER1}'      Fail        First size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PUFFYROYALMATTRESSPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER2}'      Fail        Second size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PuffyRoyalMattressPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER2}'      Fail        Second size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PUFFYROYALMATTRESSPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER3}'      Fail        Third size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PuffyRoyalMattressPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER3}'      Fail        Third size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PUFFYROYALMATTRESSPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER4}'      Fail        Fourth size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PuffyRoyalMattressPDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER4}'      Fail        Fourth size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PUFFYROYALMATTRESSPDPSIZEORDER4} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER5}'      Fail        Fifth size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PuffyRoyalMattressPDPSizeOrder5} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER5}'      Fail        Fifth size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PUFFYROYALMATTRESSPDPSIZEORDER5} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER6}'      Fail        Sixth size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PuffyRoyalMattressPDPSizeOrder6} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYROYALMATTRESSPDPSIZEORDER6}'      Fail        Sixth size in Puffy Royal Mattress PDP is Wrong. Expected Result: ${PUFFYROYALMATTRESSPDPSIZEORDER6} Actual Result: ${Content}
 
 
 
@@ -987,22 +987,22 @@ Check Puffy Foundation sizes list order
     Wait Until Element Is Visible          css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER1}'      Fail        First size in Puffy Foundation PDP is Wrong. Expected Result: ${PuffyFoundationPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER1}'      Fail        First size in Puffy Foundation PDP is Wrong. Expected Result: ${PUFFYFOUNDATIONPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER2}'      Fail        Second size in Puffy Foundation PDP is Wrong. Expected Result: ${PuffyFoundationPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER2}'      Fail        Second size in Puffy Foundation PDP is Wrong. Expected Result: ${PUFFYFOUNDATIONPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER3}'      Fail        Third size in Puffy Foundation PDP is Wrong. Expected Result: ${PuffyFoundationPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER3}'      Fail        Third size in Puffy Foundation PDP is Wrong. Expected Result: ${PUFFYFOUNDATIONPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(4) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER4}'      Fail        Fourth size in Puffy Foundation PDP is Wrong. Expected Result: ${PuffyFoundationPDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER4}'      Fail        Fourth size in Puffy Foundation PDP is Wrong. Expected Result: ${PUFFYFOUNDATIONPDPSIZEORDER4} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(5) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER5}'      Fail        Fifth size in Puffy Foundation PDP is Wrong. Expected Result: ${PuffyFoundationPDPSizeOrder5} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER5}'      Fail        Fifth size in Puffy Foundation PDP is Wrong. Expected Result: ${PUFFYFOUNDATIONPDPSIZEORDER5} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_150983180312 > div.product-variants-holder > div > div > ul > li:nth-child(6) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER6}'      Fail        Sixth size in Puffy Foundation PDP is Wrong. Expected Result: ${PuffyFoundationPDPSizeOrder6} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYFOUNDATIONPDPSIZEORDER6}'      Fail        Sixth size in Puffy Foundation PDP is Wrong. Expected Result: ${PUFFYFOUNDATIONPDPSIZEORDER6} Actual Result: ${Content}
 
 
 
@@ -1011,16 +1011,16 @@ Check Puffy ADjustable Base sizes list order
     Wait Until Element Is Visible          css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--sale--price
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYADJUSTABLEBASEPDPSIZEORDER1}'      Fail        First size in Puffy Adjustable Base PDP is Wrong. Expected Result: ${PuffyAdjustableBasePDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYADJUSTABLEBASEPDPSIZEORDER1}'      Fail        First size in Puffy Adjustable Base PDP is Wrong. Expected Result: ${PUFFYADJUSTABLEBASEPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYADJUSTABLEBASEPDPSIZEORDER2}'      Fail        Second size in Puffy Adjustable Base PDP is Wrong. Expected Result: ${PuffyAdjustableBasePDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYADJUSTABLEBASEPDPSIZEORDER2}'      Fail        Second size in Puffy Adjustable Base PDP is Wrong. Expected Result: ${PUFFYADJUSTABLEBASEPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYADJUSTABLEBASEPDPSIZEORDER3}'      Fail        Third size in Puffy Adjustable Base PDP is Wrong. Expected Result: ${PuffyAdjustableBasePDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYADJUSTABLEBASEPDPSIZEORDER3}'      Fail        Third size in Puffy Adjustable Base PDP is Wrong. Expected Result: ${PUFFYADJUSTABLEBASEPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_416170377250 > div.product-variants-holder > div > div > ul > li:nth-child(4) > div > span.display-name.is--sale--price
-    Run keyword if          '${Content}'!='${SIZEPUFFYADJUSTABLEBASEPDPSIZEORDER4}'      Fail        Fourth size in Puffy Adjustable Base PDP is Wrong. Expected Result: ${PuffyAdjustableBasePDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYADJUSTABLEBASEPDPSIZEORDER4}'      Fail        Fourth size in Puffy Adjustable Base PDP is Wrong. Expected Result: ${PUFFYADJUSTABLEBASEPDPSIZEORDER4} Actual Result: ${Content}
 
 
 Check Puffy Bed Frame sizes list order
@@ -1028,16 +1028,16 @@ Check Puffy Bed Frame sizes list order
     Wait Until Element Is Visible          css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYBEDFRAMEPDPSIZEORDER1}'      Fail        First size in Puffy Bed Frame PDP is Wrong. Expected Result: ${PuffyBedFramePDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYBEDFRAMEPDPSIZEORDER1}'      Fail        First size in Puffy Bed Frame PDP is Wrong. Expected Result: ${PUFFYBEDFRAMEPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYBEDFRAMEPDPSIZEORDER2}'      Fail        Second size in Puffy Bed Frame PDP is Wrong. Expected Result: ${PuffyBedFramePDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYBEDFRAMEPDPSIZEORDER2}'      Fail        Second size in Puffy Bed Frame PDP is Wrong. Expected Result: ${PUFFYBEDFRAMEPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYBEDFRAMEPDPSIZEORDER3}'      Fail        Third size in Puffy Bed Frame PDP is Wrong. Expected Result: ${PuffyBedFramePDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYBEDFRAMEPDPSIZEORDER3}'      Fail        Third size in Puffy Bed Frame PDP is Wrong. Expected Result: ${PUFFYBEDFRAMEPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1528789401634 > div.product-variants-holder > div > div > ul > li:nth-child(4) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYBEDFRAMEPDPSIZEORDER4}'      Fail        Fourth size in Puffy Bed Frame PDP is Wrong. Expected Result: ${PuffyBedFramePDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYBEDFRAMEPDPSIZEORDER4}'      Fail        Fourth size in Puffy Bed Frame PDP is Wrong. Expected Result: ${PUFFYBEDFRAMEPDPSIZEORDER4} Actual Result: ${Content}
 
 
 Check Puffy Comforter sizes list order
@@ -1045,67 +1045,67 @@ Check Puffy Comforter sizes list order
     Wait Until Element Is Visible          css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYCOMFORTERPDPSIZEORDER1}'      Fail        First size in Puffy Comforter PDP is Wrong. Expected Result: ${PuffyComforterPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYCOMFORTERPDPSIZEORDER1}'      Fail        First size in Puffy Comforter PDP is Wrong. Expected Result: ${PUFFYCOMFORTERPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYCOMFORTERPDPSIZEORDER2}'      Fail        Second size in Puffy Comforter PDP is Wrong. Expected Result: ${PuffyComforterPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYCOMFORTERPDPSIZEORDER2}'      Fail        Second size in Puffy Comforter PDP is Wrong. Expected Result: ${PUFFYCOMFORTERPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYCOMFORTERPDPSIZEORDER3}'      Fail        Third size in Puffy Comforter PDP is Wrong. Expected Result: ${PuffyComforterPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYCOMFORTERPDPSIZEORDER3}'      Fail        Third size in Puffy Comforter PDP is Wrong. Expected Result: ${PUFFYCOMFORTERPDPSIZEORDER3} Actual Result: ${Content}
 
 Check Puffy Pillow sizes list order
 
     Wait Until Element Is Visible          css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPSIZEORDER1}'      Fail        First size in Puffy Pillow PDP is Wrong. Expected Result: ${PuffyPillowPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPSIZEORDER1}'      Fail        First size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYPILLOWPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPSIZEORDER2}'      Fail        Second size in Puffy Pillow PDP is Wrong. Expected Result: ${PuffyPillowPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPSIZEORDER2}'      Fail        Second size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYPILLOWPDPSIZEORDER2} Actual Result: ${Content}
 
 Check Puffy Mattress Pad sizes list order
 
     Wait Until Element Is Visible          css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER1}'      Fail        First size in Puffy Pillow PDP is Wrong. Expected Result: ${PuffyMattressPadPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER1}'      Fail        First size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYMATTRESSPADPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER2}'      Fail        Second size in Puffy Pillow PDP is Wrong. Expected Result: ${PuffyMattressPadPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER2}'      Fail        Second size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYMATTRESSPADPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER3}'      Fail        Third size in Puffy Pillow PDP is Wrong. Expected Result: ${PuffyMattressPadPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER3}'      Fail        Third size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYMATTRESSPADPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER4}'      Fail        Fourth size in Puffy Pillow PDP is Wrong. Expected Result: ${PuffyMattressPadPDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER4}'      Fail        Fourth size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYMATTRESSPADPDPSIZEORDER4} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(5) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER5}'      Fail        Fifth size in Puffy Pillow PDP is Wrong. Expected Result: ${PuffyMattressPadPDPSizeOrder5} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER5}'      Fail        Fifth size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYMATTRESSPADPDPSIZEORDER5} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4830838194210 > div.product-variants-holder > div > div > ul > li:nth-child(6) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER6}'      Fail        Sixth size in Puffy Pillow PDP is Wrong. Expected Result: ${PuffyMattressPadPDPSizeOrder6} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPADPDPSIZEORDER6}'      Fail        Sixth size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYMATTRESSPADPDPSIZEORDER6} Actual Result: ${Content}
 
 Check Puffy Mattress Protector sizes list order
 
     Wait Until Element Is Visible          css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER1}'      Fail        First size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER1}'      Fail        First size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER2}'      Fail        Second size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER2}'      Fail        Second size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER3}'      Fail        Third size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER3}'      Fail        Third size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER4}'      Fail        Fourth size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER4}'      Fail        Fourth size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER4} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(5) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER5}'      Fail        Fifth size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder5} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER5}'      Fail        Fifth size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER5} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1508181475362 > div.product-variants-holder > div > div > ul > li:nth-child(6) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER6}'      Fail        Sixth size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder6} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYMATTRESSPROTECTORPDPSIZEORDER6}'      Fail        Sixth size in Puffy Mattress Protector PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER6} Actual Result: ${Content}
 
 
 
@@ -1115,32 +1115,32 @@ Check Puffy Topper feel options
     Wait Until Element Is Visible          css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-feel > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-feel > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPFEELORDER1}'      Fail        First feel option in Puffy Topper PDP is Wrong. Expected Result: ${PuffyTopperPDPFeelOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPFEELORDER1}'      Fail        First feel option in Puffy Topper PDP is Wrong. Expected Result: ${PUFFYTOPPERPDPFEELORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-feel > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPFEELORDER2}'      Fail        Second feel option in Puffy Topper PDP is Wrong. Expected Result: ${PuffyTopperPDPFeelOrder1} Actual Result: ${Content}. Expected Result: ${PuffyTopperPDPFeelOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPFEELORDER2}'      Fail        Second feel option in Puffy Topper PDP is Wrong. Expected Result: ${PUFFYTOPPERPDPFEELORDER1} Actual Result: ${Content}. Expected Result: ${PuffyTopperPDPFeelOrder2} Actual Result: ${Content}
 
 Check Puffy Topper sizes list order
 
     Wait Until Element Is Visible          css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER1}'      Fail        First size in Puffy Topper PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder1} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER1}'      Fail        First size in Puffy Topper PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER1} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER2}'      Fail        Second size in Puffy Topper PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder2} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER2}'      Fail        Second size in Puffy Topper PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER3}'      Fail        Third size in Puffy Topper PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder3} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER3}'      Fail        Third size in Puffy Topper PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER3} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(4) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER4}'      Fail        Fourth size in Puffy Topper PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder4} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER4}'      Fail        Fourth size in Puffy Topper PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER4} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(5) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER5}'      Fail        Fifth size in Puffy Topper PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder5} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER5}'      Fail        Fifth size in Puffy Topper PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER5} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_1837366476834 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER6}'      Fail        Sixth size in Puffy Topper PDP is Wrong. Expected Result: ${PuffyMattressProtectorPDPSizeOrder6} Actual Result: ${Content}
+    Run keyword if          '${Content}'!='${SIZEPUFFYTOPPERPDPSIZEORDER6}'      Fail        Sixth size in Puffy Topper PDP is Wrong. Expected Result: ${PUFFYMATTRESSPROTECTORPDPSIZEORDER6} Actual Result: ${Content}
 
 
 Check Puffy Blanket sizes list order
@@ -1392,199 +1392,199 @@ Select Puffy Rug Large
 Check installment price for Twin Size Puffy Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSTWINKLARNA300OFF}'      Fail        Wrong Puffy Mattress Twin Size monthly payment for Klarna. Expected Result: ${PuffyMattressTwinKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSTWINKLARNA300OFF}'      Fail        Wrong Puffy Mattress Twin Size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSTWINKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSTWINSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Twin Size monthly payment for Splitit. Expected Result: ${PuffyMattressTwinSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSTWINSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Twin Size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSTWINSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for TwinXL Size Puffy Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSTWINXLKLARNA300OFF}'      Fail        Wrong Puffy Mattress Twin XL Size monthly payment for Klarna. Expected Result: ${PuffyMattressTwinXLKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSTWINXLKLARNA300OFF}'      Fail        Wrong Puffy Mattress Twin XL Size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSTWINXLKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSTWINXLSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Twin XL Size monthly payment for Splitit. Expected Result: ${PuffyMattressTwinXLSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSTWINXLSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Twin XL Size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSTWINXLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Full Size Puffy Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSFULLKLARNA300OFF}'      Fail        Wrong Puffy Mattress Full Size monthly payment for Klarna. Expected Result: ${PuffyMattressFullKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSFULLKLARNA300OFF}'      Fail        Wrong Puffy Mattress Full Size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSFULLKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSFULLSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Full Size monthly payment for Splitit. Expected Result: ${PuffyMattressFullSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSFULLSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Full Size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSFULLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Queen Size Puffy Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSQUEENKLARNA300OFF}'      Fail        Wrong Puffy Mattress Queen Size monthly payment for Klarna. Expected Result: ${PuffyMattressQueenKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSQUEENKLARNA300OFF}'      Fail        Wrong Puffy Mattress Queen Size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSQUEENKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSQUEENSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Queen Size monthly payment for Splitit. Expected Result: ${PuffyMattressQueenSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSQUEENSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Queen Size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSQUEENSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for King Size Puffy Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSKINGKLARNA300OFF}'      Fail        Wrong Puffy Mattress King Size monthly payment for Klarna. Expected Result: ${PuffyMattressKingKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSKINGKLARNA300OFF}'      Fail        Wrong Puffy Mattress King Size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSKINGKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSKINGSPLITIT300OFF}'      Fail      Wrong Puffy Mattress King Size monthly payment for Splitit. Expected Result: ${PuffyMattressKingSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSKINGSPLITIT300OFF}'      Fail      Wrong Puffy Mattress King Size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSKINGSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Cal King Size Puffy Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSCALKINGKLARNA300OFF}'      Fail        Wrong Puffy Mattress Cal King Size monthly payment for Klarna. Expected Result: ${PuffyMattressCalKingKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSCALKINGKLARNA300OFF}'      Fail        Wrong Puffy Mattress Cal King Size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSCALKINGKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_345108381730 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSCALKINGSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Cal King Size monthly payment for Splitit. Expected Result: ${PuffyMattressCalKingSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSCALKINGSPLITIT300OFF}'      Fail      Wrong Puffy Mattress Cal King Size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSCALKINGSPLITIT300OFF} Actual Result: ${Splitit}
 
 
 Check installment price for Twin Size Puffy Lux Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSTWINKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Twin Size monthly payment for Klarna. Expected Result: ${PuffyLuxMattressTwinKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSTWINKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Twin Size monthly payment for Klarna. Expected Result: ${PUFFYLUXMATTRESSTWINKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSTWINSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Twin Size monthly payment for Splitit. Expected Result: ${PuffyLuxMattressTwinSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSTWINSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Twin Size monthly payment for Splitit. Expected Result: ${PUFFYLUXMATTRESSTWINSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for TwinXL Size Puffy Lux Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSTWINXLKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Twin XL Size monthly payment for Klarna. Expected Result: ${PuffyLuxMattressTwinXLKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSTWINXLKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Twin XL Size monthly payment for Klarna. Expected Result: ${PUFFYLUXMATTRESSTWINXLKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSTWINXLSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Twin XL Size monthly payment for Splitit. Expected Result: ${PuffyLuxMattressTwinXLSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSTWINXLSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Twin XL Size monthly payment for Splitit. Expected Result: ${PUFFYLUXMATTRESSTWINXLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Full Size Puffy Lux Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSFULLKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Full Size monthly payment for Klarna. Expected Result: ${PuffyLuxMattressFullKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSFULLKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Full Size monthly payment for Klarna. Expected Result: ${PUFFYLUXMATTRESSFULLKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSFULLSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Full Size monthly payment for Splitit. Expected Result: ${PuffyLuxMattressFullSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSFULLSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Full Size monthly payment for Splitit. Expected Result: ${PUFFYLUXMATTRESSFULLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Queen Size Puffy Lux Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSQUEENKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Queen Size monthly payment for Klarna. Expected Result: ${PuffyLuxMattressQueenKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSQUEENKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Queen Size monthly payment for Klarna. Expected Result: ${PUFFYLUXMATTRESSQUEENKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSQUEENSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Queen Size monthly payment for Splitit. Expected Result: ${PuffyLuxMattressQueenSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSQUEENSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Queen Size monthly payment for Splitit. Expected Result: ${PUFFYLUXMATTRESSQUEENSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for King Size Puffy Lux Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSKINGKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress King Size monthly payment for Klarna. Expected Result: ${PuffyLuxMattressKingKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSKINGKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress King Size monthly payment for Klarna. Expected Result: ${PUFFYLUXMATTRESSKINGKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSKINGSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress King Size monthly payment for Splitit. Expected Result: ${PuffyLuxMattressKingSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSKINGSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress King Size monthly payment for Splitit. Expected Result: ${PUFFYLUXMATTRESSKINGSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Cal King Size Puffy Lux Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSCALKINGKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Cal King Size monthly payment for Klarna. Expected Result: ${PuffyLuxMattressCalKingKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYLUXMATTRESSCALKINGKLARNA300OFF}'      Fail        Wrong Puffy Lux Mattress Cal King Size monthly payment for Klarna. Expected Result: ${PUFFYLUXMATTRESSCALKINGKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSCALKINGSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Cal King Size monthly payment for Splitit. Expected Result: ${PuffyLuxMattressCalKingSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYLUXMATTRESSCALKINGSPLITIT300OFF}'      Fail      Wrong Puffy Lux Mattress Cal King Size monthly payment for Splitit. Expected Result: ${PUFFYLUXMATTRESSCALKINGSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Twin Size Puffy Royal Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSTWINKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Twin Size monthly payment for Klarna. Expected Result: ${PuffyRoyalMattressTwinKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSTWINKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Twin Size monthly payment for Klarna. Expected Result: ${PUFFYROYALMATTRESSTWINKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSTWINSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Twin Size monthly payment for Splitit. Expected Result: ${PuffyRoyalMattressTwinSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSTWINSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Twin Size monthly payment for Splitit. Expected Result: ${PUFFYROYALMATTRESSTWINSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for TwinXL Size Puffy Royal Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSTWINXLKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Twin XL Size monthly payment for Klarna. Expected Result: ${PuffyRoyalMattressTwinXLKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSTWINXLKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Twin XL Size monthly payment for Klarna. Expected Result: ${PUFFYROYALMATTRESSTWINXLKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSTWINXLSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Twin XL Size monthly payment for Splitit. Expected Result: ${PuffyRoyalMattressTwinXLSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSTWINXLSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Twin XL Size monthly payment for Splitit. Expected Result: ${PUFFYROYALMATTRESSTWINXLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Full Size Puffy Royal Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSFULLKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Full Size monthly payment for Klarna. Expected Result: ${PuffyRoyalMattressFullKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSFULLKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Full Size monthly payment for Klarna. Expected Result: ${PUFFYROYALMATTRESSFULLKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSFULLSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Full Size monthly payment for Splitit. Expected Result: ${PuffyRoyalMattressFullSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSFULLSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Full Size monthly payment for Splitit. Expected Result: ${PUFFYROYALMATTRESSFULLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Queen Size Puffy Royal Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSQUEENKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Queen Size monthly payment for Klarna. Expected Result: ${PuffyRoyalMattressQueenKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSQUEENKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Queen Size monthly payment for Klarna. Expected Result: ${PUFFYROYALMATTRESSQUEENKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSQUEENSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Queen Size monthly payment for Splitit. Expected Result: ${PuffyRoyalMattressQueenSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSQUEENSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Queen Size monthly payment for Splitit. Expected Result: ${PUFFYROYALMATTRESSQUEENSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for King Size Puffy Royal Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSKINGKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress King Size monthly payment for Klarna. Expected Result: ${PuffyRoyalMattressKingKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSKINGKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress King Size monthly payment for Klarna. Expected Result: ${PUFFYROYALMATTRESSKINGKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSKINGSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress King Size monthly payment for Splitit. Expected Result: ${PuffyRoyalMattressKingSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSKINGSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress King Size monthly payment for Splitit. Expected Result: ${PUFFYROYALMATTRESSKINGSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check installment price for Cal King Size Puffy Royal Mattress
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSCALKINGKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Cal King Size monthly payment for Klarna. Expected Result: ${PuffyRoyalMattressCalKingKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYROYALMATTRESSCALKINGKLARNA300OFF}'      Fail        Wrong Puffy Royal Mattress Cal King Size monthly payment for Klarna. Expected Result: ${PUFFYROYALMATTRESSCALKINGKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSCALKINGSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Cal King Size monthly payment for Splitit. Expected Result: ${PuffyRoyalMattressCalKingSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYROYALMATTRESSCALKINGSPLITIT300OFF}'      Fail      Wrong Puffy Royal Mattress Cal King Size monthly payment for Splitit. Expected Result: ${PUFFYROYALMATTRESSCALKINGSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check Puffy Foundation Twin size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONTWINKLARNANOOFF}'      Fail        Wrong Puffy Foundation Twin Size monthly payment for Klarna. Expected Result: ${PuffyFoundationTwinKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONTWINKLARNANOOFF}'      Fail        Wrong Puffy Foundation Twin Size monthly payment for Klarna. Expected Result: ${PUFFYFOUNDATIONTWINKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONTWINSPLITITNOOFF}'      Fail      Wrong Puffy Foundation Twin Size monthly payment for Splitit. Expected Result: ${PuffyFoundationTwinSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONTWINSPLITITNOOFF}'      Fail      Wrong Puffy Foundation Twin Size monthly payment for Splitit. Expected Result: ${PUFFYFOUNDATIONTWINSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Foundation TwinXL size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Lux Mattress Twin XL Size monthly payment for Klarna. Expected Result: ${PuffyFoundationTwinXLKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Lux Mattress Twin XL Size monthly payment for Klarna. Expected Result: ${PUFFYFOUNDATIONTWINXLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Lux Mattress Twin XL Size monthly payment for Splitit. Expected Result: ${PuffyFoundationTwinXLSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Lux Mattress Twin XL Size monthly payment for Splitit. Expected Result: ${PUFFYFOUNDATIONTWINXLSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Foundation Full size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONFULLKLARNANOOFF}'      Fail        Wrong Puffy Foundation Full Size monthly payment for Klarna. Expected Result: ${PuffyFoundationFullKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONFULLKLARNANOOFF}'      Fail        Wrong Puffy Foundation Full Size monthly payment for Klarna. Expected Result: ${PUFFYFOUNDATIONFULLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONFULLSPLITITNOOFF}'      Fail      Wrong Foundation Full Size monthly payment for Splitit. Expected Result: ${PuffyFoundationFullSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONFULLSPLITITNOOFF}'      Fail      Wrong Foundation Full Size monthly payment for Splitit. Expected Result: ${PUFFYFOUNDATIONFULLSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Foundation Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONQUEENKLARNANOOFF}'     Fail        Wrong Puffy Foundation Queen Size monthly payment for Klarna. Expected Result: ${PuffyFoundationQueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONQUEENKLARNANOOFF}'     Fail        Wrong Puffy Foundation Queen Size monthly payment for Klarna. Expected Result: ${PUFFYFOUNDATIONQUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Foundation Queen Size monthly payment for Splitit. Expected Result: ${PuffyFoundationQueenSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Foundation Queen Size monthly payment for Splitit. Expected Result: ${PUFFYFOUNDATIONQUEENSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Foundation King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONKINGKLARNANOOFF}'      Fail        Wrong Puffy Foundation King Size monthly payment for Klarna. Expected Result: ${PuffyFoundationKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONKINGKLARNANOOFF}'      Fail        Wrong Puffy Foundation King Size monthly payment for Klarna. Expected Result: ${PUFFYFOUNDATIONKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONKINGSPLITITNOOFF}'      Fail      Wrong Puffy Foundation King Size monthly payment for Splitit. Expected Result: ${PuffyFoundationKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONKINGSPLITITNOOFF}'      Fail      Wrong Puffy Foundation King Size monthly payment for Splitit. Expected Result: ${PUFFYFOUNDATIONKINGSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Foundation Cal King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Foundation Cal King Size monthly payment for Klarna. Expected Result: ${PuffyFoundationCalKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYFOUNDATIONCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Foundation Cal King Size monthly payment for Klarna. Expected Result: ${PUFFYFOUNDATIONCALKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_150983180312 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Foundation Cal King Size monthly payment for Splitit. Expected Result: ${PuffyFoundationCalKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYFOUNDATIONCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Foundation Cal King Size monthly payment for Splitit. Expected Result: ${PUFFYFOUNDATIONCALKINGSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Adjustable Base TwinXL size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_416170377250 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYADJUSTABLEBASETWINXLKLARNA300OFF}'      Fail        Wrong Puffy Adjustable Base TwinXL Size monthly payment for Klarna. Expected Result: ${PuffyAdjustableBaseTwinXLKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYADJUSTABLEBASETWINXLKLARNA300OFF}'      Fail        Wrong Puffy Adjustable Base TwinXL Size monthly payment for Klarna. Expected Result: ${PUFFYADJUSTABLEBASETWINXLKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_416170377250 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYADJUSTABLEBASETWINXLSPLITIT300OFF}'      Fail      Wrong Puffy Adjustable Base TwinXL Size monthly payment for Splitit. Expected Result: ${PuffyAdjustableBaseTwinXLSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYADJUSTABLEBASETWINXLSPLITIT300OFF}'      Fail      Wrong Puffy Adjustable Base TwinXL Size monthly payment for Splitit. Expected Result: ${PUFFYADJUSTABLEBASETWINXLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check Puffy Adjustable Base Full size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_416170377250 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYADJUSTABLEBASEFULLKLARNA300OFF}'      Fail        Wrong Puffy Adjustable Base Full Size monthly payment for Klarna. Expected Result: ${PuffyAdjustableBaseFullKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYADJUSTABLEBASEFULLKLARNA300OFF}'      Fail        Wrong Puffy Adjustable Base Full Size monthly payment for Klarna. Expected Result: ${PUFFYADJUSTABLEBASEFULLKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_416170377250 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYADJUSTABLEBASEFULLSPLITIT300OFF}'      Fail      Wrong Puffy Adjustable Base Full Size monthly payment for Splitit. Expected Result: ${PuffyAdjustableBaseFullSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYADJUSTABLEBASEFULLSPLITIT300OFF}'      Fail      Wrong Puffy Adjustable Base Full Size monthly payment for Splitit. Expected Result: ${PUFFYADJUSTABLEBASEFULLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check Puffy Adjustable Base Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_416170377250 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYADJUSTABLEBASEQUEENKLARNA300OFF}'      Fail        Wrong Puffy Adjustable Base Queen Size monthly payment for Klarna. Expected Result: ${PuffyAdjustableBaseQueenKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYADJUSTABLEBASEQUEENKLARNA300OFF}'      Fail        Wrong Puffy Adjustable Base Queen Size monthly payment for Klarna. Expected Result: ${PUFFYADJUSTABLEBASEQUEENKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_416170377250 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYADJUSTABLEBASEQUEENSPLITIT300OFF}'      Fail      Wrong Puffy Adjustable Base Queen Size monthly payment for Splitit. Expected Result: ${PuffyAdjustableBaseQueenSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYADJUSTABLEBASEQUEENSPLITIT300OFF}'      Fail      Wrong Puffy Adjustable Base Queen Size monthly payment for Splitit. Expected Result: ${PUFFYADJUSTABLEBASEQUEENSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check Puffy Adjustable Base Split King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_416170377250 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYADJUSTABLEBASESPLITKINGKLARNA300OFF}'     Fail        Wrong Puffy Adjustable Base Split King Size monthly payment for Klarna. Expected Result: ${PuffyAdjustableBaseSplitKingKlarna300Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYADJUSTABLEBASESPLITKINGKLARNA300OFF}'     Fail        Wrong Puffy Adjustable Base Split King Size monthly payment for Klarna. Expected Result: ${PUFFYADJUSTABLEBASESPLITKINGKLARNA300OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_416170377250 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYADJUSTABLEBASESPLITKINGSPLITIT300OFF}'      Fail      Wrong Puffy Adjustable Base Split King Size monthly payment for Splitit. Expected Result: ${PuffyAdjustableBaseSplitKingSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYADJUSTABLEBASESPLITKINGSPLITIT300OFF}'      Fail      Wrong Puffy Adjustable Base Split King Size monthly payment for Splitit. Expected Result: ${PUFFYADJUSTABLEBASESPLITKINGSPLITIT300OFF} Actual Result: ${Splitit}
 
 
 
@@ -1592,30 +1592,30 @@ Check Puffy Adjustable Base Split King size monthly payment price
 Check Puffy Bed Frame Full size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1528789401634 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYBEDFRAMEFULLKLARNANOOFF}'      Fail        Wrong Puffy Bed Frame Full Size monthly payment for Klarna. Expected Result: ${PuffyBedFrameFullKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYBEDFRAMEFULLKLARNANOOFF}'      Fail        Wrong Puffy Bed Frame Full Size monthly payment for Klarna. Expected Result: ${PUFFYBEDFRAMEFULLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1528789401634 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYBEDFRAMEFULLSPLITITNOOFF}'      Fail      Wrong Puffy Bed Frame Full Size monthly payment for Splitit. Expected Result: ${PuffyBedFrameFullSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYBEDFRAMEFULLSPLITITNOOFF}'      Fail      Wrong Puffy Bed Frame Full Size monthly payment for Splitit. Expected Result: ${PUFFYBEDFRAMEFULLSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Bed Frame Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1528789401634 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYBEDFRAMEQUEENKLARNANOOFF}'      Fail        Wrong Puffy Bed Frame Queen Size monthly payment for Klarna. Expected Result: ${PuffyBedFrameQueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYBEDFRAMEQUEENKLARNANOOFF}'      Fail        Wrong Puffy Bed Frame Queen Size monthly payment for Klarna. Expected Result: ${PUFFYBEDFRAMEQUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1528789401634 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYBEDFRAMEQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Bed Frame Queen Size monthly payment for Splitit. Expected Result: ${PuffyBedFrameQueenSplitIt15Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYBEDFRAMEQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Bed Frame Queen Size monthly payment for Splitit. Expected Result: ${PUFFYBEDFRAMEQUEENSPLITIT15OFF} Actual Result: ${Splitit}
 
 Check Puffy Bed Frame King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1528789401634 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYBEDFRAMEKINGKLARNANOOFF}'      Fail        Wrong Puffy Bed Frame King Size monthly payment for Klarna. Expected Result: ${PuffyBedFrameKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYBEDFRAMEKINGKLARNANOOFF}'      Fail        Wrong Puffy Bed Frame King Size monthly payment for Klarna. Expected Result: ${PUFFYBEDFRAMEKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1528789401634 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYBEDFRAMEKINGSPLITITNOOFF}'      Fail      Wrong Puffy Bed Frame King Size monthly payment for Splitit. Expected Result: ${PuffyBedFrameKingSplitIt15Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYBEDFRAMEKINGSPLITITNOOFF}'      Fail      Wrong Puffy Bed Frame King Size monthly payment for Splitit. Expected Result: ${PUFFYBEDFRAMEKINGSPLITIT15OFF} Actual Result: ${Splitit}
 
 Check Puffy Bed Frame Cal King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1528789401634 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYBEDFRAMECALKINGKLARNANOOFF}'     Fail        Wrong Puffy Bed Frame Cal King Size monthly payment for Klarna. Expected Result: ${PuffyBedFrameCalKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYBEDFRAMECALKINGKLARNANOOFF}'     Fail        Wrong Puffy Bed Frame Cal King Size monthly payment for Klarna. Expected Result: ${PUFFYBEDFRAMECALKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1528789401634 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYBEDFRAMECALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Bed Frame Cal King Size monthly payment for Splitit. Expected Result: ${PuffyBedFrameCalKingSplitIt15Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYBEDFRAMECALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Bed Frame Cal King Size monthly payment for Splitit. Expected Result: ${PUFFYBEDFRAMECALKINGSPLITIT15OFF} Actual Result: ${Splitit}
 
 
 
@@ -1623,265 +1623,265 @@ Check Puffy Bed Frame Cal King size monthly payment price
 Check Puffy Comforter Twin/Twin XL size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1536090603554 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYCOMFORTERTWIN/TWINXLKLARNANOOFF}'      Fail        Wrong Puffy Comforter Twin/Twin XL Size monthly payment for Klarna. Expected Result: ${PuffyComforterTwin/TwinXLKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYCOMFORTERTWIN/TWINXLKLARNANOOFF}'      Fail        Wrong Puffy Comforter Twin/Twin XL Size monthly payment for Klarna. Expected Result: ${PUFFYCOMFORTERTWIN/TWINXLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1536090603554 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYCOMFORTERTWIN/TWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Comforter Twin/Twin XL Size monthly payment for Splitit. Expected Result: ${PuffyBedFrameFullSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYCOMFORTERTWIN/TWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Comforter Twin/Twin XL Size monthly payment for Splitit. Expected Result: ${PUFFYBEDFRAMEFULLSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check Puffy Comforter Full/Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1536090603554 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYCOMFORTERFULL/QUEENKLARNANOOFF}'      Fail        Wrong Puffy Comforter Full/Queen Size monthly payment for Klarna. Expected Result: ${PuffyComforterFull/QueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYCOMFORTERFULL/QUEENKLARNANOOFF}'      Fail        Wrong Puffy Comforter Full/Queen Size monthly payment for Klarna. Expected Result: ${PUFFYCOMFORTERFULL/QUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1536090603554 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYCOMFORTERFULL/QUEENSPLITITNOOFF}'      Fail      Wrong Puffy Comforter Full/Queen Size monthly payment for Splitit. Expected Result: ${PuffyBedFrameQueenSplitIt300Off} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYCOMFORTERFULL/QUEENSPLITITNOOFF}'      Fail      Wrong Puffy Comforter Full/Queen Size monthly payment for Splitit. Expected Result: ${PUFFYBEDFRAMEQUEENSPLITIT300OFF} Actual Result: ${Splitit}
 
 Check Puffy Comforter King/Cal King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1536090603554 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYCOMFORTERKING/CALKINGKLARNANOOFF}'      Fail        Wrong Puffy Comforter King/Cal King Size monthly payment for Klarna. Expected Result: ${PuffyComforterKing/CalKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYCOMFORTERKING/CALKINGKLARNANOOFF}'      Fail        Wrong Puffy Comforter King/Cal King Size monthly payment for Klarna. Expected Result: ${PUFFYCOMFORTERKING/CALKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1536090603554 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYCOMFORTERKING/CALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Comforter King/Cal King Size monthly payment for Splitit. Expected Result: ${PuffyComforterKing/CalKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYCOMFORTERKING/CALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Comforter King/Cal King Size monthly payment for Splitit. Expected Result: ${PUFFYCOMFORTERKING/CALKINGSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Pillow Standard size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_625398710306 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYPILLOWSTANDARDKLARNANOOFF}'      Fail        Wrong Puffy Pillow Standard Size monthly payment for Klarna. Expected Result: ${PuffyPillowStandardKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYPILLOWSTANDARDKLARNANOOFF}'      Fail        Wrong Puffy Pillow Standard Size monthly payment for Klarna. Expected Result: ${PUFFYPILLOWSTANDARDKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_625398710306 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYPILLOWSTANDARDSPLITITNOOFF}'      Fail      Wrong Puffy Pillow Standard Size monthly payment for Splitit. Expected Result: ${PuffyPillowStandardSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYPILLOWSTANDARDSPLITITNOOFF}'      Fail      Wrong Puffy Pillow Standard Size monthly payment for Splitit. Expected Result: ${PUFFYPILLOWSTANDARDSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Pillow King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_625398710306 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYPILLOWKINGKLARNANOOFF}'      Fail        Wrong Puffy Pillow King Size monthly payment for Klarna. Expected Result: ${PuffyPillowKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYPILLOWKINGKLARNANOOFF}'      Fail        Wrong Puffy Pillow King Size monthly payment for Klarna. Expected Result: ${PUFFYPILLOWKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_625398710306 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYPILLOWKINGSPLITITNOOFF}'      Fail      Wrong Puffy Pillow King Size monthly payment for Splitit. Expected Result: ${PuffyPillowKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYPILLOWKINGSPLITITNOOFF}'      Fail      Wrong Puffy Pillow King Size monthly payment for Splitit. Expected Result: ${PUFFYPILLOWKINGSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Body Pillow monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4431983280162 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYBODYPILLOWKLARNANOOFF}'      Fail        Wrong Puffy Body Pillow monthly payment for Klarna. Expected Result: ${PuffyBodyPillowKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYBODYPILLOWKLARNANOOFF}'      Fail        Wrong Puffy Body Pillow monthly payment for Klarna. Expected Result: ${PUFFYBODYPILLOWKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4431983280162 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYBODYPILLOWSPLITITNOOFF}'      Fail      Wrong Puffy Body Pillow monthly payment for Splitit. Expected Result: ${PuffyBodyPillowSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYBODYPILLOWSPLITITNOOFF}'      Fail      Wrong Puffy Body Pillow monthly payment for Splitit. Expected Result: ${PUFFYBODYPILLOWSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Mattress Pad Twin size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADTWINKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad Twin size monthly payment for Klarna. Expected Result: ${PuffyMattressPadTwinKlarna15Off} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADTWINKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad Twin size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPADTWINKLARNA15OFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADTWINSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad Twin size monthly payment for Splitit. Expected Result: ${PuffyMattressPadTwinSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADTWINSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad Twin size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSPADTWINSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Pad TwinXL size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad TwinXL size monthly payment for Klarna. Expected Result: ${PuffyMattressPadTwinXLKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad TwinXL size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPADTWINXLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad TwinXL size payment for Splitit. Expected Result: ${PuffyMattressPadTwinXLSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad TwinXL size payment for Splitit. Expected Result: ${PUFFYMATTRESSPADTWINXLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Pad Full size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADFULLKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad Full size monthly payment for Klarna. Expected Result: ${PuffyMattressPadFullKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADFULLKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad Full size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPADFULLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADFULLSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad Full size payment for Splitit. Expected Result: ${PuffyMattressPadFullSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADFULLSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad Full size payment for Splitit. Expected Result: ${PUFFYMATTRESSPADFULLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Pad Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADQUEENKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad Queen size monthly payment for Klarna. Expected Result: ${PuffyMattressPadQueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADQUEENKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad Queen size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPADQUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad Queen size monthly payment for Splitit. Expected Result: ${PuffyMattressPadQueenSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad Queen size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSPADQUEENSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Pad King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADKINGKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad King size monthly payment for Klarna. Expected Result: ${PuffyMattressPadKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADKINGKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad King size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPADKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADKINGSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad King size monthly payment for Splitit. Expected Result: ${PuffyMattressPadKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADKINGSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad King size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSPADKINGSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Pad Cal King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad Cal King size monthly payment for Klarna. Expected Result: ${PuffyMattressPadCalKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPADCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Mattress Pad Cal King size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPADCALKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4830838194210 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad Cal King size monthly payment for Splitit. Expected Result: ${PuffyMattressPadCalKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPADCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Pad Cal King size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSPADCALKINGSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Mattress Protector Twin size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORTWINKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector Twin size monthly payment for Klarna. Expected Result: ${PuffyMattressProtectorTwinKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORTWINKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector Twin size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPROTECTORTWINKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORTWINSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector Twin size monthly payment for Splitit. Expected Result: ${PuffyMattressProtectorTwinSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORTWINSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector Twin size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSPROTECTORTWINSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Protector TwinXL size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector TwinXL size monthly payment for Klarna. Expected Result: ${PuffyMattressProtectorTwinXLKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector TwinXL size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPROTECTORTWINXLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector TwinXL size payment for Splitit. Expected Result: ${PuffyMattressProtectorTwinXLSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector TwinXL size payment for Splitit. Expected Result: ${PUFFYMATTRESSPROTECTORTWINXLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Protector Full size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORFULLKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector Full size monthly payment for Klarna. Expected Result: ${PuffyMattressProtectorFullKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORFULLKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector Full size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPROTECTORFULLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORFULLSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector Full size payment for Splitit. Expected Result: ${PuffyMattressProtectorFullSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORFULLSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector Full size payment for Splitit. Expected Result: ${PUFFYMATTRESSPROTECTORFULLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Protector Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORQUEENKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector Queen size monthly payment for Klarna. Expected Result: ${PuffyMattressProtectorQueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORQUEENKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector Queen size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPROTECTORQUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector Queen size monthly payment for Splitit. Expected Result: ${PuffyMattressProtectorQueenSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector Queen size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSPROTECTORQUEENSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Protector King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORKINGKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector King size monthly payment for Klarna. Expected Result: ${PuffyMattressProtectorKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORKINGKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector King size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPROTECTORKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORKINGSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector King size monthly payment for Splitit. Expected Result: ${PuffyMattressProtectorKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORKINGSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector King size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSPROTECTORKINGSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Mattress Protector Cal King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector Cal King size monthly payment for Klarna. Expected Result: ${PuffyMattressProtectorCalKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYMATTRESSPROTECTORCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Mattress Protector Cal King size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPROTECTORCALKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1508181475362 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector Cal King size monthly payment for Splitit. Expected Result: ${PuffyMattressProtectorCalKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYMATTRESSPROTECTORCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Mattress Protector Cal King size monthly payment for Splitit. Expected Result: ${PUFFYMATTRESSPROTECTORCALKINGSPLITITNOOFF} Actual Result: ${Splitit}
 
 
 Check Puffy Topper Twin size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYTOPPERTWINKLARNANOOFF}'      Fail        Wrong Puffy Topper Twin size monthly payment for Klarna. Expected Result: ${PuffyTopperTwinKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYTOPPERTWINKLARNANOOFF}'      Fail        Wrong Puffy Topper Twin size monthly payment for Klarna. Expected Result: ${PUFFYTOPPERTWINKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYTOPPERTWINSPLITITNOOFF}'      Fail      Wrong Puffy Topper Twin size monthly payment for Splitit. Expected Result: ${PuffyTopperTwinSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYTOPPERTWINSPLITITNOOFF}'      Fail      Wrong Puffy Topper Twin size monthly payment for Splitit. Expected Result: ${PUFFYTOPPERTWINSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Topper TwinXL size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYTOPPERTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Topper TwinXL size monthly payment for Klarna. Expected Result: ${PuffyTopperTwinXLKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYTOPPERTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Topper TwinXL size monthly payment for Klarna. Expected Result: ${PUFFYTOPPERTWINXLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYTOPPERTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Topper TwinXL size payment for Splitit. Expected Result: ${PuffyTopperTwinXLSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYTOPPERTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Topper TwinXL size payment for Splitit. Expected Result: ${PUFFYTOPPERTWINXLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Topper Full size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYTOPPERFULLKLARNANOOFF}'      Fail        Wrong Puffy Topper Full size monthly payment for Klarna. Expected Result: ${PuffyTopperFullKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYTOPPERFULLKLARNANOOFF}'      Fail        Wrong Puffy Topper Full size monthly payment for Klarna. Expected Result: ${PUFFYTOPPERFULLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYTOPPERFULLSPLITITNOOFF}'      Fail      Wrong Puffy Topper Full size payment for Splitit. Expected Result: ${PuffyTopperFullSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYTOPPERFULLSPLITITNOOFF}'      Fail      Wrong Puffy Topper Full size payment for Splitit. Expected Result: ${PUFFYTOPPERFULLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Topper Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYTOPPERQUEENKLARNANOOFF}'      Fail        Wrong Puffy Topper Queen size monthly payment for Klarna. Expected Result: ${PuffyTopperQueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYTOPPERQUEENKLARNANOOFF}'      Fail        Wrong Puffy Topper Queen size monthly payment for Klarna. Expected Result: ${PUFFYTOPPERQUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYTOPPERQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Topper Queen size monthly payment for Splitit. Expected Result: ${PuffyTopperQueenSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYTOPPERQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Topper Queen size monthly payment for Splitit. Expected Result: ${PUFFYTOPPERQUEENSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Topper King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYTOPPERKINGKLARNANOOFF}'      Fail        Wrong Puffy Topper King size monthly payment for Klarna. Expected Result: ${PuffyTopperKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYTOPPERKINGKLARNANOOFF}'      Fail        Wrong Puffy Topper King size monthly payment for Klarna. Expected Result: ${PUFFYTOPPERKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYTOPPERKINGSPLITITNOOFF}'      Fail      Wrong Puffy Topper King size monthly payment for Splitit. Expected Result: ${PuffyTopperKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYTOPPERKINGSPLITITNOOFF}'      Fail      Wrong Puffy Topper King size monthly payment for Splitit. Expected Result: ${PUFFYTOPPERKINGSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Topper Cal King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYTOPPERCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Topper Cal King size monthly payment for Klarna. Expected Result: ${PuffyTopperCalKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYTOPPERCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Topper Cal King size monthly payment for Klarna. Expected Result: ${PUFFYTOPPERCALKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1837366476834 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYTOPPERCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Topper Cal King size monthly payment for Splitit. Expected Result: ${PuffyTopperCalKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYTOPPERCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Topper Cal King size monthly payment for Splitit. Expected Result: ${PUFFYTOPPERCALKINGSPLITITNOOFF} Actual Result: ${Splitit}
 
 
 Check Puffy Blanket Small size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4412718972962 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYBLANKETSMALLKLARNANOOFF}'      Fail        Wrong Puffy Blanket Small size monthly payment for Klarna. Expected Result: ${PuffyBlanketSmallKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYBLANKETSMALLKLARNANOOFF}'      Fail        Wrong Puffy Blanket Small size monthly payment for Klarna. Expected Result: ${PUFFYBLANKETSMALLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4412718972962 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYBLANKETSMALLSPLITITNOOFF}'      Fail      Wrong Puffy Blanket Small size monthly payment for Splitit. Expected Result: ${PuffyBlanketSmallSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYBLANKETSMALLSPLITITNOOFF}'      Fail      Wrong Puffy Blanket Small size monthly payment for Splitit. Expected Result: ${PUFFYBLANKETSMALLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Blanket Medium size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4412718972962 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYBLANKETMEDIUMKLARNANOOFF}'      Fail        Wrong Puffy Blanket Medium size monthly payment for Klarna. Expected Result: ${PuffyMattressPadKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYBLANKETMEDIUMKLARNANOOFF}'      Fail        Wrong Puffy Blanket Medium size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPADKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4412718972962 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYBLANKETMEDIUMSPLITITNOOFF}'      Fail      Wrong Puffy Blanket Medium size monthly payment for Splitit. Expected Result: ${PuffyBlanketMediumSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYBLANKETMEDIUMSPLITITNOOFF}'      Fail      Wrong Puffy Blanket Medium size monthly payment for Splitit. Expected Result: ${PUFFYBLANKETMEDIUMSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Blanket Large size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4412718972962 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYBLANKETLARGEKLARNANOOFF}'      Fail        Wrong Puffy Blanket Large size monthly payment for Klarna. Expected Result: ${PuffyMattressPadCalKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYBLANKETLARGEKLARNANOOFF}'      Fail        Wrong Puffy Blanket Large size monthly payment for Klarna. Expected Result: ${PUFFYMATTRESSPADCALKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4412718972962 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYBLANKETLARGESPLITITNOOFF}'      Fail      Wrong Puffy Blanket Large size monthly payment for Splitit. Expected Result: ${PuffyBlanketLargeSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYBLANKETLARGESPLITITNOOFF}'      Fail      Wrong Puffy Blanket Large size monthly payment for Splitit. Expected Result: ${PUFFYBLANKETLARGESPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Weighted Blanket Twin size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3773124771874 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYWEIGHTEDBLANKETTWINKLARNANOOFF}'      Fail        Wrong Puffy Weighted Blanket Twin size monthly payment for Klarna. Expected Result: ${PuffyWeightedBlanketTwinKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYWEIGHTEDBLANKETTWINKLARNANOOFF}'      Fail        Wrong Puffy Weighted Blanket Twin size monthly payment for Klarna. Expected Result: ${PUFFYWEIGHTEDBLANKETTWINKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3773124771874 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYWEIGHTEDBLANKETTWINSPLITITNOOFF}'      Fail      Wrong Puffy Weighted Blanket Twin size monthly payment for Splitit. Expected Result: ${PuffyWeightedBlanketTwinSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYWEIGHTEDBLANKETTWINSPLITITNOOFF}'      Fail      Wrong Puffy Weighted Blanket Twin size monthly payment for Splitit. Expected Result: ${PUFFYWEIGHTEDBLANKETTWINSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Weighted Blanket Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3773124771874 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYWEIGHTEDBLANKETQUEENKLARNANOOFF}'      Fail        Wrong Puffy Weighted Blanket Queen size monthly payment for Klarna. Expected Result: ${PuffyWeightedBlanketQueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYWEIGHTEDBLANKETQUEENKLARNANOOFF}'      Fail        Wrong Puffy Weighted Blanket Queen size monthly payment for Klarna. Expected Result: ${PUFFYWEIGHTEDBLANKETQUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3773124771874 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYWEIGHTEDBLANKETQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Weighted Blanket Queen size monthly payment for Splitit. Expected Result: ${PuffyWeightedBlanketQueenSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYWEIGHTEDBLANKETQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Weighted Blanket Queen size monthly payment for Splitit. Expected Result: ${PUFFYWEIGHTEDBLANKETQUEENSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Weighted Blanket King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_3773124771874 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYWEIGHTEDBLANKETKINGKLARNANOOFF}'      Fail        Wrong Puffy Weighted Blanket Queen size monthly payment for Klarna. Expected Result: ${PuffyWeightedBlanketQueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYWEIGHTEDBLANKETKINGKLARNANOOFF}'      Fail        Wrong Puffy Weighted Blanket Queen size monthly payment for Klarna. Expected Result: ${PUFFYWEIGHTEDBLANKETQUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_3773124771874 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYWEIGHTEDBLANKETKINGSPLITITNOOFF}'      Fail      Wrong Puffy Weighted Blanket Queen size monthly payment for Splitit. Expected Result: ${PuffyWeightedBlanketQueenSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYWEIGHTEDBLANKETKINGSPLITITNOOFF}'      Fail      Wrong Puffy Weighted Blanket Queen size monthly payment for Splitit. Expected Result: ${PUFFYWEIGHTEDBLANKETQUEENSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Sheets Twin size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYSHEETSTWINKLARNANOOFF}'      Fail        Wrong Puffy Sheets Twin size monthly payment for Klarna. Expected Result: ${PuffySheetsTwinKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYSHEETSTWINKLARNANOOFF}'      Fail        Wrong Puffy Sheets Twin size monthly payment for Klarna. Expected Result: ${PUFFYSHEETSTWINKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYSHEETSTWINSPLITITNOOFF}'      Fail      Wrong Puffy Sheets Twin size monthly payment for Splitit. Expected Result: ${PuffySheetsTwinSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYSHEETSTWINSPLITITNOOFF}'      Fail      Wrong Puffy Sheets Twin size monthly payment for Splitit. Expected Result: ${PUFFYSHEETSTWINSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Sheets TwinXL size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYSHEETSTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Sheets TwinXL size monthly payment for Klarna. Expected Result: ${PuffySheetsTwinXLKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYSHEETSTWINXLKLARNANOOFF}'      Fail        Wrong Puffy Sheets TwinXL size monthly payment for Klarna. Expected Result: ${PUFFYSHEETSTWINXLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYSHEETSTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Sheets TwinXL size payment for Splitit. Expected Result: ${PuffySheetsTwinXLSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYSHEETSTWINXLSPLITITNOOFF}'      Fail      Wrong Puffy Sheets TwinXL size payment for Splitit. Expected Result: ${PUFFYSHEETSTWINXLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Sheets Full size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYSHEETSFULLKLARNANOOFF}'      Fail        Wrong Puffy Sheets Full size monthly payment for Klarna. Expected Result: ${PuffySheetsFullKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYSHEETSFULLKLARNANOOFF}'      Fail        Wrong Puffy Sheets Full size monthly payment for Klarna. Expected Result: ${PUFFYSHEETSFULLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYSHEETSFULLSPLITITNOOFF}'      Fail      Wrong Puffy Sheets Full size payment for Splitit. Expected Result: ${PuffySheetsFullSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYSHEETSFULLSPLITITNOOFF}'      Fail      Wrong Puffy Sheets Full size payment for Splitit. Expected Result: ${PUFFYSHEETSFULLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Sheets Queen size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYSHEETSQUEENKLARNANOOFF}'      Fail        Wrong Puffy Sheets Queen size monthly payment for Klarna. Expected Result: ${PuffySheetsQueenKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYSHEETSQUEENKLARNANOOFF}'      Fail        Wrong Puffy Sheets Queen size monthly payment for Klarna. Expected Result: ${PUFFYSHEETSQUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYSHEETSQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Sheets Queen size monthly payment for Splitit. Expected Result: ${PuffySheetsQueenSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYSHEETSQUEENSPLITITNOOFF}'      Fail      Wrong Puffy Sheets Queen size monthly payment for Splitit. Expected Result: ${PUFFYSHEETSQUEENSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Sheets King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYSHEETSKINGKLARNANOOFF}'      Fail        Wrong Puffy Sheets King size monthly payment for Klarna. Expected Result: ${PuffySheetsKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYSHEETSKINGKLARNANOOFF}'      Fail        Wrong Puffy Sheets King size monthly payment for Klarna. Expected Result: ${PUFFYSHEETSKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYSHEETSKINGSPLITITNOOFF}'      Fail      Wrong Puffy Sheets King size monthly payment for Splitit. Expected Result: ${PuffySheetsKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYSHEETSKINGSPLITITNOOFF}'      Fail      Wrong Puffy Sheets King size monthly payment for Splitit. Expected Result: ${PUFFYSHEETSKINGSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Sheets Cal King size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYSHEETSCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Sheets Cal King size monthly payment for Klarna. Expected Result: ${PuffySheetsCalKingKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYSHEETSCALKINGKLARNANOOFF}'      Fail        Wrong Puffy Sheets Cal King size monthly payment for Klarna. Expected Result: ${PUFFYSHEETSCALKINGKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4359826341922 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYSHEETSCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Sheets Cal King size monthly payment for Splitit. Expected Result: ${PuffySheetsCalKingSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYSHEETSCALKINGSPLITITNOOFF}'      Fail      Wrong Puffy Sheets Cal King size monthly payment for Splitit. Expected Result: ${PUFFYSHEETSCALKINGSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Dog Bed Small size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4365356662818 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYDOGBEDSMALLKLARNANOOFF}'      Fail        Wrong Puffy Dog Bed Small size monthly payment for Klarna. Expected Result: ${PuffyDogBedSmallKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYDOGBEDSMALLKLARNANOOFF}'      Fail        Wrong Puffy Dog Bed Small size monthly payment for Klarna. Expected Result: ${PUFFYDOGBEDSMALLKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4365356662818 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYDOGBEDSMALLSPLITITNOOFF}'      Fail      Wrong Puffy Dog Bed Small size monthly payment for Splitit. Expected Result: ${PuffyDogBedSmallSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYDOGBEDSMALLSPLITITNOOFF}'      Fail      Wrong Puffy Dog Bed Small size monthly payment for Splitit. Expected Result: ${PUFFYDOGBEDSMALLSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Dog Bed Medium size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4365356662818 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYDOGBEDMEDIUMKLARNANOOFF}'      Fail        Wrong Puffy Dog Bed Medium size monthly payment for Klarna. Expected Result: ${PuffyDogBedMediumKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYDOGBEDMEDIUMKLARNANOOFF}'      Fail        Wrong Puffy Dog Bed Medium size monthly payment for Klarna. Expected Result: ${PUFFYDOGBEDMEDIUMKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4365356662818 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYDOGBEDMEDIUMSPLITITNOOFF}'      Fail      Wrong Puffy Dog Bed Medium size monthly payment for Splitit. Expected Result: ${PuffyDogBedMediumSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYDOGBEDMEDIUMSPLITITNOOFF}'      Fail      Wrong Puffy Dog Bed Medium size monthly payment for Splitit. Expected Result: ${PUFFYDOGBEDMEDIUMSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Dog Bed Large size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4365356662818 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYDOGBEDLARGEKLARNANOOFF}'      Fail        Wrong Puffy Dog Bed Large size monthly payment for Klarna. Expected Result: ${PuffyDogBedLargeKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYDOGBEDLARGEKLARNANOOFF}'      Fail        Wrong Puffy Dog Bed Large size monthly payment for Klarna. Expected Result: ${PUFFYDOGBEDLARGEKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4365356662818 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYDOGBEDLARGESPLITITNOOFF}'      Fail      Wrong Puffy Dog Bed Large size monthly payment for Splitit. Expected Result: ${PuffyDogBedLargeSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYDOGBEDLARGESPLITITNOOFF}'      Fail      Wrong Puffy Dog Bed Large size monthly payment for Splitit. Expected Result: ${PUFFYDOGBEDLARGESPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Rug Medium size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4125949657122 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYRUGMEDIUMKLARNANOOFF}'      Fail        Wrong Puffy Rug Medium size monthly payment for Klarna. Expected Result: ${PuffyDogBedMediumKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYRUGMEDIUMKLARNANOOFF}'      Fail        Wrong Puffy Rug Medium size monthly payment for Klarna. Expected Result: ${PUFFYDOGBEDMEDIUMKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4125949657122 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYRUGMEDIUMSPLITITNOOFF}'      Fail      Wrong Puffy Rug Medium size monthly payment for Splitit. Expected Result: ${PuffyRugMediumSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYRUGMEDIUMSPLITITNOOFF}'      Fail      Wrong Puffy Rug Medium size monthly payment for Splitit. Expected Result: ${PUFFYRUGMEDIUMSPLITITNOOFF} Actual Result: ${Splitit}
 Check Puffy Rug Large size monthly payment price
     sleep                               2s
     ${Klarna}=            get text        css=#product_form_4125949657122 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
-    Run keyword if          '${Klarna}'!='${PUFFYRUGLARGEKLARNANOOFF}'      Fail        Wrong Puffy Rug Large size monthly payment for Klarna. Expected Result: ${PuffyDogBedLargeKlarnaNoOff} Actual Result: ${Klarna}
+    Run keyword if          '${Klarna}'!='${PUFFYRUGLARGEKLARNANOOFF}'      Fail        Wrong Puffy Rug Large size monthly payment for Klarna. Expected Result: ${PUFFYDOGBEDLARGEKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_4125949657122 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYRUGLARGESPLITITNOOFF}'      Fail      Wrong Puffy Rug Large size monthly payment for Splitit. Expected Result: ${PuffyRugLargeSplitItNoOff} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYRUGLARGESPLITITNOOFF}'      Fail      Wrong Puffy Rug Large size monthly payment for Splitit. Expected Result: ${PUFFYRUGLARGESPLITITNOOFF} Actual Result: ${Splitit}
 
 ##################################################################PRODUCT TOGGLE CHANGES##################################################################
 Click on Puffy Lux Hybrid
@@ -1913,7 +1913,7 @@ Get Puffy Mattress Price and compare to mid page
     Run keyword if          '${PuffyMattressMinimumOriginalPricePDP}'!='${PuffyMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Mattress Original in Comparison Page. Expected Result: ${PuffyMattressMinimumOriginalPricePDP} Actual Result: ${PuffyMattressMinimumOriginalPriceComparePage}
     Run keyword if          '${PuffyMattressDiscountedPricePDP}'!='${PuffyMattressDiscountedPriceComparePage}'      Fail        Wrong Puffy Mattress Discounted price in Comparison Page. Expected Result: ${PuffyMattressDiscountedPricePDP} Actual Result: ${PuffyMattressDiscountedPriceComparePage}
     Run keyword if          '${PuffyMattressKlarnaPricePDP}${text}'!='${PuffyMattressKlarnaPriceComparePage}'      Fail        Wrong Puffy Mattress Klarna Price in Comparison Page. Expected Result: ${PuffyMattressKlarnaPricePDP} Actual Result: ${PuffyMattressKlarnaPriceComparePage}
-    Run keyword if          '${PUFFYMATTRESSTWINSPLITITMIDNOOFF}'!='${PuffyMattressSplitItPriceComparePage}'      Fail        Wrong Puffy Mattress SplitIt Price in Comparison Page. Expected Result: ${PuffyMattressTwinSplitItmidNoOff} Actual Result: ${PuffyMattressSplitItPriceComparePage}
+    Run keyword if          '${PUFFYMATTRESSTWINSPLITITMIDNOOFF}'!='${PuffyMattressSplitItPriceComparePage}'      Fail        Wrong Puffy Mattress SplitIt Price in Comparison Page. Expected Result: ${PUFFYMATTRESSTWINSPLITITMIDNOOFF} Actual Result: ${PuffyMattressSplitItPriceComparePage}
 
 Get Puffy Lux Mattress Price and compare to mid page
     sleep                                           1s
@@ -1933,7 +1933,7 @@ Get Puffy Lux Mattress Price and compare to mid page
     Run keyword if          '${PuffyLuxMattressMinimumOriginalPricePDP}'!='${PuffyLuxMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Lux Mattress Original in Comparison Page. Expected Result: ${PuffyLuxMattressMinimumOriginalPricePDP} Actual Result: ${PuffyLuxMattressMinimumOriginalPriceComparePage}
     Run keyword if          '${PuffyLuxMattressDiscountedPricePDP}'!='${PuffyLuxMattressDiscountedPriceComparePage}'      Fail        Wrong Puffy Lux Mattress Discounted price in Comparison Page. Expected Result: ${PuffyLuxMattressDiscountedPricePDP} Actual Result: ${PuffyLuxMattressDiscountedPriceComparePage}
     Run keyword if          '${PuffyLuxMattressKlarnaPricePDP}${text}'!='${PuffyLuxMattressKlarnaPriceComparePage}'      Fail        Wrong Puffy Lux Mattress Klarna Price in Comparison Page. Expected Result: ${PuffyLuxMattressKlarnaPricePDP} Actual Result: ${PuffyLuxMattressKlarnaPriceComparePage}
-    Run keyword if          '${PUFFYLUXMATTRESSTWINSPLITITMIDNOOFF}'!='${PuffyLuxMattressSplitItPriceComparePage}'      Fail        Wrong Puffy Lux Mattress SplitIt Price in Comparison Page. Expected Result: ${PuffyLuxMattressTwinSplitItmidNoOff} Actual Result: ${PuffyLuxMattressSplitItPriceComparePage}
+    Run keyword if          '${PUFFYLUXMATTRESSTWINSPLITITMIDNOOFF}'!='${PuffyLuxMattressSplitItPriceComparePage}'      Fail        Wrong Puffy Lux Mattress SplitIt Price in Comparison Page. Expected Result: ${PUFFYLUXMATTRESSTWINSPLITITMIDNOOFF} Actual Result: ${PuffyLuxMattressSplitItPriceComparePage}
 
 Get Puffy Lux Hybrid Mattress Price and compare to mid page
     sleep                                           1s
@@ -1952,7 +1952,7 @@ Get Puffy Lux Hybrid Mattress Price and compare to mid page
     Run keyword if          '${PuffyLuxHybridMattressMinimumOriginalPricePDP}'!='${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress Original in Comparison Page. Expected Result: ${PuffyLuxHybridMattressMinimumOriginalPricePDP} Actual Result: ${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}
     Run keyword if          '${PuffyLuxHybridMattressDiscountedPricePDP}'!='${PuffyLuxHybridMattressDiscountedPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress Discounted price in Comparison Page. Expected Result: ${PuffyLuxHybridMattressDiscountedPricePDP} Actual Result: ${PuffyLuxHybridMattressDiscountedPriceComparePage}
     Run keyword if          '${PuffyLuxHybridMattressKlarnaPricePDP}${text}'!='${PuffyLuxHybridMattressKlarnaPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress Klarna Price in Comparison Page. Expected Result: ${PuffyLuxHybridMattressKlarnaPricePDP} Actual Result: ${PuffyLuxHybridMattressKlarnaPriceComparePage}
-    Run keyword if          '${PUFFYLUXHYBRIDTWINSPLITITMIDNOOFF}'!='${PuffyLuxHybridMattressSplitItPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress SplitIt Price in Comparison Page. Expected Result: ${PuffyLuxHybridTwinSplitItmidNoOff} Actual Result: ${PuffyLuxHybridMattressSplitItPriceComparePage}
+    Run keyword if          '${PUFFYLUXHYBRIDTWINSPLITITMIDNOOFF}'!='${PuffyLuxHybridMattressSplitItPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress SplitIt Price in Comparison Page. Expected Result: ${PUFFYLUXHYBRIDTWINSPLITITMIDNOOFF} Actual Result: ${PuffyLuxHybridMattressSplitItPriceComparePage}
 
 Get Puffy Royal Hybrid Mattress Price and compare to mid page
     sleep                                           1s
@@ -1970,7 +1970,7 @@ Get Puffy Royal Hybrid Mattress Price and compare to mid page
     Run keyword if          '${PuffyRoyalHybridMattressMinimumOriginalPricePDP}'!='${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress Original in Comparison Page. Expected Result: ${PuffyRoyalHybridMattressMinimumOriginalPricePDP} Actual Result: ${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}
     Run keyword if          '${PuffyRoyalHybridMattressDiscountedPricePDP}'!='${PuffyRoyalHybridMattressDiscountedPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress Discounted price in Comparison Page. Expected Result: ${PuffyRoyalHybridMattressDiscountedPricePDP} Actual Result: ${PuffyRoyalHybridMattressDiscountedPriceComparePage}
     Run keyword if          '${PuffyRoyalHybridMattressKlarnaPricePDP}${text}'!='${PuffyRoyalHybridMattressKlarnaPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress Klarna Price in Comparison Page. Expected Result: ${PuffyRoyalHybridMattressKlarnaPricePDP} Actual Result: ${PuffyRoyalHybridMattressKlarnaPriceComparePage}
-    Run keyword if          '${PUFFYROYALHYBRIDTWINSPLITITMIDNOOFF}'!='${PuffyRoyalHybridMattressSplitItPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress SplitIt Price in Comparison Page. Expected Result: ${PuffyRoyalHybridTwinSplitItmidNoOff} Actual Result: ${PuffyRoyalHybridMattressSplitItPriceComparePage}
+    Run keyword if          '${PUFFYROYALHYBRIDTWINSPLITITMIDNOOFF}'!='${PuffyRoyalHybridMattressSplitItPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress SplitIt Price in Comparison Page. Expected Result: ${PUFFYROYALHYBRIDTWINSPLITITMIDNOOFF} Actual Result: ${PuffyRoyalHybridMattressSplitItPriceComparePage}
 
 
 #########################################################STORE PAGE###############################################################################
@@ -2117,13 +2117,13 @@ Click Klarna See Details link
     Click element               css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__klarna > a
 Check amount in Pay as low as for Klarna
     ${KlarnaPayAsLow}=     get text        css=body > div.container.main.content > div.financing__klarna > div.featured-financing.text-bar > div.featured-financing__desc > strong
-    Run keyword if          '${$300PUFFYFINANCINGPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${$300PuffyFinancingPageKlarna} Actual Result: ${KlarnaPayAsLow}
+    Run keyword if          '${$300PUFFYFINANCINGPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${$300PUFFYFINANCINGPAGEKLARNA} Actual Result: ${KlarnaPayAsLow}
 
 Scroll Up to Splitit
     Scroll Element Into View                css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > h2
 Check amount in Pay as low as for SplitIt
     ${SplitItPayAsLow}=     get text        css=body > div.container.main.content > div.financing__splitit > div.featured-financing.text-bar > div.featured-financing__desc > strong
-    Run keyword if          '${$300PUFFYFINANCINGPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${$300PuffyFinancingPageSplitIt} Actual Result: ${SplitItPayAsLow}
+    Run keyword if          '${$300PUFFYFINANCINGPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${$300PUFFYFINANCINGPAGESPLITIT} Actual Result: ${SplitItPayAsLow}
 Click Splitit See Details link
     wait until page contains element    css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
     Click element           css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
@@ -2133,11 +2133,11 @@ Go to Discount page
 
 Check discount details 1
     ${DiscountDetails1}=     get text        css=body > div.container.main.content > div.text-bar.is--blue > div > h2 > strong > span:nth-child(1)
-    Run keyword if          '${DISCOUNTCODEPAGEDETAILS1}'!='${DiscountDetails1}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DiscountCodePageDetails1} Actual Result: ${DiscountDetails1}
+    Run keyword if          '${DISCOUNTCODEPAGEDETAILS1}'!='${DiscountDetails1}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DISCOUNTCODEPAGEDETAILS1} Actual Result: ${DiscountDetails1}
 
 Check discount details 2
     ${DiscountDetails2}=     get text        css=body > div.container.main.content > div.text-bar.is--blue > div > h2 > strong > span:nth-child(3)
-    Run keyword if          '${DISCOUNTCODEPAGEDETAILS2}'!='${DiscountDetails2}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DiscountCodePageDetails2} Actual Result: ${DiscountDetails2}
+    Run keyword if          '${DISCOUNTCODEPAGEDETAILS2}'!='${DiscountDetails2}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DISCOUNTCODEPAGEDETAILS2} Actual Result: ${DiscountDetails2}
 Scroll down to Mattress Financing with Klarna
     Scroll Element Into View                    css=body > div.container.main.content > div.text-bar.is--gray.no-bottom-padding > div > h2
 
@@ -2145,11 +2145,11 @@ Scroll down to Mattress Payment plans with Splitit
     Scroll Element Into View                    css=body > div.container.main.content > div:nth-child(7) > div > h2
 Check amount in Pay as low as for Klarna Discount Page
     ${KlarnaPayAsLow}=     get text        css=body > div.container.main.content > div.text-bar.is--gray.no-bottom-padding > div > div > strong
-    Run keyword if          '${PUFFYDISCOUNTPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PuffyDiscountPageKlarna} Actual Result: ${KlarnaPayAsLow}
+    Run keyword if          '${PUFFYDISCOUNTPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PUFFYDISCOUNTPAGEKLARNA} Actual Result: ${KlarnaPayAsLow}
 
 Check amount in Pay as low as for SplitIt Discount Page
     ${SplitItPayAsLow}=     get text        css=body > div.container.main.content > div:nth-child(7) > div > div > strong
-    Run keyword if          '${PUFFYDISCOUNTPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PuffyDiscountPageSplitIt} Actual Result: ${SplitItPayAsLow}
+    Run keyword if          '${PUFFYDISCOUNTPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PUFFYDISCOUNTPAGESPLITIT} Actual Result: ${SplitItPayAsLow}
 
 Go to Save350 page
     Go to                           ${SAVE350}
@@ -2194,7 +2194,7 @@ Check Seasonal Sale text on badges (PDP)
 Check Seasonal Sale text on badges (PDP Adjustable Base)
     sleep                   2s
     ${Content}=            get text        css=#Summer_SALE > tspan
-    Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${Sale Name} Actual: ${Content}
+    Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${SALENAME} Actual: ${Content}
 Click on Puffy Lux Hybrid Toggle
     Click element       css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-type > div.hybrid-buttons > label.hybrid-buttons__item.hybrid-buttons__item--2
     ${Content}=            get text         ${LOC12REASONSPDP}
@@ -2225,7 +2225,7 @@ Click checkout
     Wait Until Page Contains Element    css=body > div.checkout-header > div.checkout-header__right > div > div:nth-child(1) > img
 Fill out Information tab in checkout
     ${Content}=            get text     css=#main-header
-    Run keyword if          '${Content}'!='${TEXTCHECKOUTINFORMATIONH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${CheckoutInformationH1} Actual: ${Content}
+    Run keyword if          '${Content}'!='${TEXTCHECKOUTINFORMATIONH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTCHECKOUTINFORMATIONH1} Actual: ${Content}
     Input text                          xpath=//*[@id="checkout_email"]     ${EMAIL}
     Input text                          xpath=//*[@id="checkout_shipping_address_first_name"]     ${FIRSTNAME}
     Input text                          xpath=//*[@id="checkout_shipping_address_last_name"]     ${LASTNAME}
