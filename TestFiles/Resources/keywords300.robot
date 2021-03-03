@@ -2163,7 +2163,7 @@ Go to checkout
 #===========================SmokeTest=========================
 
 Click "Shop Now" button for Puffy
-    Click Element                       css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.compare-boxes__action > a
+    Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.compare-boxes__action > a
 
 Go to Homepage (Click on Puffy Logo)
     sleep       2s
@@ -2193,7 +2193,7 @@ Check Seasonal Sale text on badges (PDP)
     Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${SALENAME} Actual: ${Content}
 Check Seasonal Sale text on badges (PDP Adjustable Base)
     sleep                   2s
-    ${Content}=            get text        css=#Summer_SALE > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan:nth-child(1)
     Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${SALENAME} Actual: ${Content}
 Click on Puffy Lux Hybrid Toggle
     Click element       css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-type > div.hybrid-buttons > label.hybrid-buttons__item.hybrid-buttons__item--2
@@ -2205,7 +2205,7 @@ Click on Puffy Royal Hybrid Toggle
     ${Content}=            get text         ${LOC12REASONSPDP}
     Run keyword if         '${Content}'!='${TEXTPUFFYROYALHYBRIDMATTRESSH2}'               Fail        Product Name (H1) not found Expected: ${TEXTPUFFYROYALHYBRIDMATTRESSH2} Actual: ${Content}
 Check current cart count
-    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
     set test variable       ${CartCount}    ${CartText}
 Go to Puffy Sheets
     Mouse Over          ${LOCBEDDING}
@@ -2285,11 +2285,12 @@ Select and proceed with Klarna
     sleep                               2s
     wait until page contains            All transactions are secure and encrypted.
 Click on "Shop The Mattress" on the Homepage
+    wait until page contains element    css=body > div.index-sections > div.hero-area.is--mobile-reversed > div.hero-area__box.hero-area__box--hero-image > div > div.b-hero__inner > div.b-hero__content > a
     Click Element                       css=body > div.index-sections > div.hero-area.is--mobile-reversed > div.hero-area__box.hero-area__box--hero-image > div > div.b-hero__inner > div.b-hero__content > a
 Verify H1 on Comparison Page
     sleep                               5s
     #Wait until page contains            ${TEXTCOMPAREPAGEH1}
-    ${Content}=            get text     css=body > div.container.main.content > div > div.compare-page__headline > h1
+    ${Content}=            get text     css=body > div.compare-page.content > div.compare-page__headline > h1
     Run keyword if          '${Content}'!='${TEXTCOMPAREPAGEH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTCOMPAREPAGEH1} Actual: ${Content}
 Verify H1 on Puffy PDP
     Wait until page Contains            ${TEXTPUFFYMATTRESSH1}
@@ -2307,7 +2308,7 @@ Go back to Compare Page
     Go Back
     #Wait until page contains            ${TEXTCOMPAREPAGEH1}
 click on "Shop Now" button for Puffy Lux
-    Click Element                       css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.compare-boxes__action > a
+    Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.compare-boxes__action > a
 Check discount value and freebie on Homepage
     ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on homepage Expected: ${SALEDETAILS} Actual: ${Content}
@@ -2336,7 +2337,7 @@ Check discount value on badges for adjustable base
     Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong discount value text on badge for adjustable base Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
 Check discount value on Adjustable Base PDP
     sleep                   2s
-    ${Content}=            get text        css=#_300_Off > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan.cls-mattress-badge3
     Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong discount value on adjustable base PDP Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
 Check Puffy Mattress original prices (all sizes)
     Wait Until Element Is Visible          css=#product_form_345108381730 > div.product-variants-holder > div > div > ul > li:nth-child(1) > span > del > span.original-price
@@ -2600,7 +2601,7 @@ Add Puffy Royal to cart
     ${Content}=            get text        css=#main-header
     Run keyword if          '${Content}'!='${INFOTABHEADER}'     Fail        Wrong Header on Checkout page Information Tab. Expected: ${INFOTABHEADER} Actual: ${Content}
 Check current cart count (Lux Hybrid)
-    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
     set test variable       ${CartCount}    ${CartText}
 Check cart count after adding an accessory
     ${BeforeShopping} =     evaluate    ${CartCount}
@@ -2799,5 +2800,5 @@ Verify if Shipping amount is correct
     Run keyword if          '${Shipping}'!='${SHIPPING}'      Fail        Wrong Product in Order Summary. Expected: ${SHIPPING} Actual: ${Shipping}
 Verify if Total amount is correct
     ${Total}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--total-lines > table > tfoot > tr > td > span.payment-due__price.skeleton-while-loading--lg
-    Run keyword if          '${Total}'!='${TOTAL}'      Fail        Wrong Product in Order Summary. Expected: ${TOTAL} Actual: ${Total}
+    Run keyword if          '${Total}'!='${TOTAL}'      Fail        Wrong Product in Order Summary. Expected: ${TOTAL}  Actual: ${Total}
 
