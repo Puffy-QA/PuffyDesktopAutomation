@@ -2264,7 +2264,7 @@ Select and proceed with Splitit
     sleep                               2s
     Go Back
     sleep                               5s
-    Go Back
+    Handle Alert
     sleep                               2s
     wait until page contains            All transactions are secure and encrypted.
 

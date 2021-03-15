@@ -6,6 +6,7 @@ Library             ScreenCapLibrary
 Library             Collections
 Library             String
 
+
 *** Variables ***
 ${LOCMATTRESSES}                    css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(1) > a
 ${LOCPUFFYMATTRESS}                 css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.dropdown_container.mega-menu.mega-menu-1 > div > div.dropdown_content > div:nth-child(1) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img

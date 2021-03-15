@@ -2244,7 +2244,7 @@ Check discount value on badges for adjustable base
 
 Check discount value on Adjustable Base PDP
     sleep                   2s
-    ${Content}=            get text        css=#_300_Off > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan.cls-mattress-badge3
     Run keyword if          '${Content}'!='${DISCOUNTAMOUNT350}'      Fail        Wrong discount value on adjustable base PDP Expected: ${DISCOUNTAMOUNT350} Actual: ${Content}
 
 
@@ -2673,6 +2673,8 @@ Select and proceed with Splitit
     Run keyword if          '${Content}'!='${TEXTSPLITITH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${SplititH1} Actual: ${Content}
     sleep                               2s
     Go Back
+    sleep                               2s
+    Handle Alert
     sleep                               2s
     wait until page contains            All transactions are secure and encrypted.
 #addcheck
