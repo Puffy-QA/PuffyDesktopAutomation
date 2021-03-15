@@ -5,6 +5,7 @@ Library             Selenium2Library
 Library             ScreenCapLibrary
 Library             Collections
 Library             String
+
 *** Variables ***
 ${LOCMATTRESSES}                    css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(1) > a
 ${LOCPUFFYMATTRESS}                 css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.dropdown_container.mega-menu.mega-menu-1 > div > div.dropdown_content > div:nth-child(1) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
@@ -29,7 +30,7 @@ ${LOCSHEETS}                        css=body > div.shopify-section.header-sectio
 ${LOCBEDROOM}                       css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(4) > a
 ${LOCFEEDBACK}                      html.null body.index.is--hybrid-false.timer--exists.jdgm-buyer-badge--removed div.index-sections div#shopify-section-hov_instagramBoxes.shopify-section div.instagram-boxes div.instagram-boxes__inner
 ${LOCSTORE}                         css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div > div > ul > li:nth-child(12) > p > a
-${LOCLOGO}                          css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.logo > a
+${LOCLOGO}                          css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.logo
 ${LOCCARTHEADER}                    css=body > div.cart_content.jsCartContent.cart-content-mob > div.cart-close > span.cart-close__title
 ${LOCCONTACTS}                      //*[@id="contact"]/a
 ${LOCDOGBED}                        css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(1) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
@@ -40,7 +41,6 @@ ${LOC12REASONSPDP}                  css=#productReasons > div.block__rich_text_a
 ${LOCTOGGLEA}                       css=#showVersionA
 ${LOCTOGGLEB}                       css=#showVersionB
 ${LOCTOGGLEC}                       css=#showVersionC
-
 ###########################################################FOOTER TESTCASES$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$##############
 ${LOCSIGNUPTEXTFIELD}               css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > div.newsletter-wrapper > div > div > div > div > form > div > div > div.needsclick.FormComponent__StyledFormComponentWrapper-e0xun6-0.jSFixL.kl-private-reset-css-Xuajs1 > div > input
 ${LOCFOOTERSIGNUP}                  css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > div.newsletter-wrapper > div > div > div > div > form > div > div > div.needsclick.FormComponent__StyledFormComponentWrapper-e0xun6-0.IRToG.kl-private-reset-css-Xuajs1 > button
@@ -139,6 +139,5 @@ ${LOCMENUCONTACTUS}                                    css=body > div.shopify-se
 ${LOCMENUFAQS}                                         css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(2) > a
 ${LOCMENUFINANCING}                                    css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(3) > a
 ${LOCHEADERSTORE}                                            css=.store-button--desktop
-${LOCHEADERPUFFYLOGO}                                  css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.logo > a
+${LOCHEADERPUFFYLOGO}                                  css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.logo
 ${LOCSUPPORT}                                          css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(6) > a
-

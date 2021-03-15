@@ -16,10 +16,10 @@ ${Last Name}                    Doe
 ${Address}                      123 William Street
 ${City}                         New York
 ${ZipCode}                      03101
-${Sale Name}                    DAYLIGHT SAVINGS SALE NOW
+${Sale Name}                    SPRING SALE NOW
 ${Sale Details}                 $300 OFF
 ${Discount Amount}              $300 OFF
-${Homepage}                     https://puffy.ca
+${Homepage}                     https://puffy.ca/?preview_theme_id=120147476554
 ${systembrowser}                Chrome
 ${Feedback}                     html.null body.index.is--hybrid-false.timer--exists.jdgm-buyer-badge--removed div.index-sections div#shopify-section-hov_instagramBoxes.shopify-section div.instagram-boxes div.instagram-boxes__inner
 ${STORE}                        css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div > div > ul > li:nth-child(9) > a
@@ -50,7 +50,7 @@ ${Puffy Nightstand}
 ${Dog Bed}                      css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(1) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${Rug}                          css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(2) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${Cart}                         css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.cart_container > div > a
-${FOOTER}                       DAYLIGHT SAVINGS SALE NOW $300 OFF
+${FOOTER}                       SPRING SALE NOW $300 OFF
 ${BlackFridaySALEMenuButton}    css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li.menu__item.menu__item--sale > a
 
 ####################################################Product Default Sizes####################################################
@@ -67,7 +67,7 @@ ${PuffyMattressPadDefaultSize}          Queen
 ${PuffyMattressProtectorDefaultSize}    Queen
 ${PuffyTopperDefaultSize}               Queen
 ${PuffyTopperDefaultfeel}               Firm
-${PuffyBlanketDefaultSize}              Small
+${PuffyBlanketDefaultSize}              Medium
 ${PuffyWeightedBlanketDefaultSize}      Twin
 ${PuffySheetsDefaultColor}              Gray
 ${PuffySheetsDefaultSize}               Queen
@@ -1224,7 +1224,7 @@ Seasonal Sale timer text check
 
 Banner Seasonal Sale text check
     sleep                   2s
-    ${Content}=            get text        css=#SUMMER_SALE > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan:nth-child(1)
     Run keyword if          "${Content}"!="${Sale Name}"      Fail        Wrong Seasonal Sale Content Actual Result: ${Content}
 
 Don't show seasonal sale content check
@@ -1350,7 +1350,7 @@ Go to Gift Shop page
 #=============================DISCOUNTS AND FREEBIES=================================================#
 
 PDP Discount Value and Freebie check
-    ${Content}=            get text        css=#_300_Off > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan.cls-mattress-badge3
     Run keyword if          '${Content}'!='${Sale Details}'      Fail        Wrong Discount Value and Freebie Content Expected: $${Sale Details} Actual: ${Content}
 
 Wait and dismiss popup

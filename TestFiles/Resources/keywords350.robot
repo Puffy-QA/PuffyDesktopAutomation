@@ -2220,7 +2220,7 @@ Check Seasonal Sale text on badges (PDP)
     Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${Sale Name} Actual: ${Content}
 Check Seasonal Sale text on badges (PDP Adjustable Base)
     sleep                   2s
-    ${Content}=            get text        css=#Summer_SALE > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan:nth-child(1)
     Run keyword if          "${Content}"!="${SALENAME}"            Fail        Wrong Seasonal Sale text on badges Expected: ${Sale Name} Actual: ${Content}
 Check discount value and freebie on badges for mattresses
     sleep                   2s
@@ -2569,7 +2569,7 @@ Check current cart count
     set test variable       ${CartCount}    ${carttext}
 
 Check current cart count (Lux Hybrid)
-    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
     set test variable       ${CartCount}    ${CartText}
 
 Check cart count after adding a mattress
@@ -2699,11 +2699,11 @@ Click on "Shop The Mattress" on the Homepage
 Verify H1 on Comparison Page
     sleep                               5s
     #Wait until page contains            ${TEXTCOMPAREPAGEH1}
-    ${Content}=            get text     css=body > div.container.main.content > div > div.compare-page__headline > h1
+    ${Content}=            get text     css=body > div.compare-page.content > div.compare-page__headline > h1
     Run keyword if          '${Content}'!='${TEXTCOMPAREPAGEH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTCOMPAREPAGEH1} Actual: ${Content}
 
 Click "Shop Now" button for Puffy
-    Click Element                       css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.compare-boxes__action > a
+    Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.compare-boxes__action > a
 
 Verify H1 on Puffy PDP
     Wait until page Contains            ${TEXTPUFFYMATTRESSH1}
@@ -2715,7 +2715,7 @@ Go back to Compare Page
     #Wait until page contains            ${TEXTCOMPAREPAGEH1}
 
 click on "Shop Now" button for Puffy Lux
-    Click Element                       css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.compare-boxes__action > a
+    Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.compare-boxes__action > a
 
 Verify H1 on Puffy Lux
     Wait Until Page contains element    class:product-head__title

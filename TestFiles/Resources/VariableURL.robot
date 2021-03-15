@@ -38,7 +38,6 @@ ${PUFFYMATTRESSREVIEWURL}                           https://www.mattressnerd.com
 ${SUPPORTREVIEWSURL}                                https://puffy.com/pages/puffy-mattress-reviews
 ${SUPPORTCONTACTUSURL}                              https://puffy.com/pages/contact-puffy-mattress#contact_us
 ${SUPPORTFAQSURL}                                   https://puffy.com/pages/contact-puffy-mattress#faqs
-
 ${SUPPORTFINANCINGURL}                              https://puffy.com/pages/financing
 ${SUPPORTRETURNPOLICYURL}                           https://puffy.com/pages/return-policy
 ${SUPPORTPUFFYGUARANTEEURL}                         https://puffy.com/pages/puffy-mattress-sleep-guarantee
