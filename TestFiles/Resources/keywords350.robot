@@ -2565,7 +2565,7 @@ Close cart
     Wait until page contains element    ${LOCLOGO}
 
 Check current cart count
-    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div/a/span
     set test variable       ${CartCount}    ${carttext}
 
 Check current cart count (Lux Hybrid)
