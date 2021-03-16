@@ -28,7 +28,7 @@ Banner Seasonal Sale text check (Mattress)
     Run keyword if          "${Content}"!="${SALENAME}"      Fail        Wrong Seasonal Sale Content Actual Result: ${Content}
 Banner Seasonal Sale text check (Adjustable Base)
     sleep                   2s
-    ${Content}=            get text        css=#Summer_SALE > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan:nth-child(1)
     Run keyword if          "${Content}"!="${SALENAME}"      Fail        Wrong Seasonal Sale Content Actual Result: ${Content}
 
 
@@ -1902,10 +1902,10 @@ Get Puffy Mattress Price and compare to mid page
     sleep               2s
     Click element       ${LOCCOMPARE}
     Wait Until Page Contains    Puffy Mattress
-    ${PuffyMattressMinimumOriginalPriceComparePage}=        get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyMattressDiscountedPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
-    ${PuffyMattressKlarnaPriceComparePage}=                 get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
-    ${PuffyMattressSplitItPriceComparePage}=                get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
+    ${PuffyMattressMinimumOriginalPriceComparePage}=        get text        css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.price-area > span > del
+    ${PuffyMattressDiscountedPriceComparePage}=             get text        css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
+    ${PuffyMattressKlarnaPriceComparePage}=                 get text        css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
+    ${PuffyMattressSplitItPriceComparePage}=                get text        css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
     Run keyword if          '${PuffyMattressMinimumOriginalPricePDP}'!='${PuffyMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Mattress Original in Comparison Page. Expected Result: ${PuffyMattressMinimumOriginalPricePDP} Actual Result: ${PuffyMattressMinimumOriginalPriceComparePage}
     Run keyword if          '${PuffyMattressDiscountedPricePDP}'!='${PuffyMattressDiscountedPriceComparePage}'      Fail        Wrong Puffy Mattress Discounted price in Comparison Page. Expected Result: ${PuffyMattressDiscountedPricePDP} Actual Result: ${PuffyMattressDiscountedPriceComparePage}
     Run keyword if          '${PuffyMattressKlarnaPricePDP}${text}'!='${PuffyMattressKlarnaPriceComparePage}'      Fail        Wrong Puffy Mattress Klarna Price in Comparison Page. Expected Result: ${PuffyMattressKlarnaPricePDP} Actual Result: ${PuffyMattressKlarnaPriceComparePage}
@@ -1922,10 +1922,10 @@ Get Puffy Lux Mattress Price and compare to mid page
     sleep               2s
     Click element       ${LOCCOMPARE}
     Wait Until Page Contains    Puffy Mattress
-    ${PuffyLuxMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyLuxMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
-    ${PuffyLuxMattressKlarnaPriceComparePage}=              get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
-    ${PuffyLuxMattressSplitItPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
+    ${PuffyLuxMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.price-area > span > del
+    ${PuffyLuxMattressDiscountedPriceComparePage}=          get text        css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
+    ${PuffyLuxMattressKlarnaPriceComparePage}=              get text        css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
+    ${PuffyLuxMattressSplitItPriceComparePage}=             get text        css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
     Run keyword if          '${PuffyLuxMattressMinimumOriginalPricePDP}'!='${PuffyLuxMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Lux Mattress Original in Comparison Page. Expected Result: ${PuffyLuxMattressMinimumOriginalPricePDP} Actual Result: ${PuffyLuxMattressMinimumOriginalPriceComparePage}
     Run keyword if          '${PuffyLuxMattressDiscountedPricePDP}'!='${PuffyLuxMattressDiscountedPriceComparePage}'      Fail        Wrong Puffy Lux Mattress Discounted price in Comparison Page. Expected Result: ${PuffyLuxMattressDiscountedPricePDP} Actual Result: ${PuffyLuxMattressDiscountedPriceComparePage}
     Run keyword if          '${PuffyLuxMattressKlarnaPricePDP}${text}'!='${PuffyLuxMattressKlarnaPriceComparePage}'      Fail        Wrong Puffy Lux Mattress Klarna Price in Comparison Page. Expected Result: ${PuffyLuxMattressKlarnaPricePDP} Actual Result: ${PuffyLuxMattressKlarnaPriceComparePage}
@@ -1940,11 +1940,11 @@ Get Puffy Lux Hybrid Mattress Price and compare to mid page
     ${PuffyLuxHybridMattressSplitItPricePDP}=             get text        css=#product_form_549302042658 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
 
     click link                                            link:Compare Hybrids
-    Wait Until Page Contains element                                              css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyLuxHybridMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
-    ${PuffyLuxHybridMattressKlarnaPriceComparePage}=              get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
-    ${PuffyLuxHybridMattressSplitItPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
+    Wait Until Page Contains element                                              css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span > del
+    ${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span > del
+    ${PuffyLuxHybridMattressDiscountedPriceComparePage}=          get text        css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
+    ${PuffyLuxHybridMattressKlarnaPriceComparePage}=              get text        css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
+    ${PuffyLuxHybridMattressSplitItPriceComparePage}=             get text        css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(2) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
     Run keyword if          '${PuffyLuxHybridMattressMinimumOriginalPricePDP}'!='${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress Original in Comparison Page. Expected Result: ${PuffyLuxHybridMattressMinimumOriginalPricePDP} Actual Result: ${PuffyLuxHybridMattressMinimumOriginalPriceComparePage}
     Run keyword if          '${PuffyLuxHybridMattressDiscountedPricePDP}'!='${PuffyLuxHybridMattressDiscountedPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress Discounted price in Comparison Page. Expected Result: ${PuffyLuxHybridMattressDiscountedPricePDP} Actual Result: ${PuffyLuxHybridMattressDiscountedPriceComparePage}
     Run keyword if          '${PuffyLuxHybridMattressKlarnaPricePDP}${text}'!='${PuffyLuxHybridMattressKlarnaPriceComparePage}'      Fail        Wrong Puffy Lux Hybrid Mattress Klarna Price in Comparison Page. Expected Result: ${PuffyLuxHybridMattressKlarnaPricePDP} Actual Result: ${PuffyLuxHybridMattressKlarnaPriceComparePage}
@@ -1958,11 +1958,11 @@ Get Puffy Royal Hybrid Mattress Price and compare to mid PAGE
     ${PuffyRoyalHybridMattressSplitItPricePDP}=             get text        css=#product_form_3832788910114 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
 
     click link                                              link:Compare Hybrids
-    Wait Until Page Contains element                                                css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span.price-area__old-price > del
-    ${PuffyRoyalHybridMattressDiscountedPriceComparePage}=          get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
-    ${PuffyRoyalHybridMattressKlarnaPriceComparePage}=              get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
-    ${PuffyRoyalHybridMattressSplitItPriceComparePage}=             get text        css=body > div.container.main.content > div > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
+    Wait Until Page Contains element                                                css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span > del
+    ${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}=     get text        css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span > del
+    ${PuffyRoyalHybridMattressDiscountedPriceComparePage}=          get text        css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.price-area > span > span.price-area__price.jsDiscountedPrice
+    ${PuffyRoyalHybridMattressKlarnaPriceComparePage}=              get text        css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.finance-area.is--common > div:nth-child(1) > div > a > span.data-splitit-price.jsKlarna
+    ${PuffyRoyalHybridMattressSplitItPriceComparePage}=             get text        css=body > div.compare-page > div.compare-page__content > div.compare-boxes.is--compare-hybrid-mattress-puffy-lux-and-royal > div:nth-child(1) > div > div.finance-area.is--common > div.finance-area__box.finance-area__box--separator > div > a > span.data-splitit-price.jsKlarna
     Run keyword if          '${PuffyRoyalHybridMattressMinimumOriginalPricePDP}'!='${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress Original in Comparison Page. Expected Result: ${PuffyRoyalHybridMattressMinimumOriginalPricePDP} Actual Result: ${PuffyRoyalHybridMattressMinimumOriginalPriceComparePage}
     Run keyword if          '${PuffyRoyalHybridMattressDiscountedPricePDP}'!='${PuffyRoyalHybridMattressDiscountedPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress Discounted price in Comparison Page. Expected Result: ${PuffyRoyalHybridMattressDiscountedPricePDP} Actual Result: ${PuffyRoyalHybridMattressDiscountedPriceComparePage}
     Run keyword if          '${PuffyRoyalHybridMattressKlarnaPricePDP}${text}'!='${PuffyRoyalHybridMattressKlarnaPriceComparePage}'      Fail        Wrong Puffy Royal Hybrid Mattress Klarna Price in Comparison Page. Expected Result: ${PuffyRoyalHybridMattressKlarnaPricePDP} Actual Result: ${PuffyRoyalHybridMattressKlarnaPriceComparePage}
@@ -2037,63 +2037,63 @@ Price check for Puffy Rug
 ####GIFT SHOP#####
 Gift Shop Price check for Puffy Pillow
     sleep                                   2s
-    ${PuffyPillowMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(4) > div > div > div:nth-child(1) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyPillowMinOriginalStorePage}=     get text        css=body > div:nth-child(13) > div > div > div:nth-child(1) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYPILLOWSTANDARDORIGINAL}'!='${PuffyPillowMinOriginalStorePage}'      Fail        Wrong Puffy Pillow "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYPILLOWSTANDARDORIGINAL} Actual Result: ${PuffyPillowMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Comforter
-    ${PuffyComforterMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(4) > div > div > div:nth-child(2) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyComforterMinOriginalStorePage}=     get text        css=body > div:nth-child(13) > div > div > div:nth-child(2) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYCOMFORTERTWIN/TWINXLORIGINAL}'!='${PuffyComforterMinOriginalStorePage}'      Fail        Wrong Puffy Comforter "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYCOMFORTERTWIN/TWINXLORIGINAL} Actual Result: ${PuffyComforterMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Weighted Blanket
-    ${PuffyWeightedBlanketMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(4) > div > div > div:nth-child(3) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyWeightedBlanketMinOriginalStorePage}=     get text        css=body > div:nth-child(13) > div > div > div:nth-child(3) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYWEIGHTEDBLANKETTWINORIGINAL}'!='${PuffyWeightedBlanketMinOriginalStorePage}'      Fail        Wrong Puffy Weighted Blanket "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYWEIGHTEDBLANKETTWINORIGINAL} Actual Result: ${PuffyWeightedBlanketMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Mattress Pad
-    ${PuffyMattressPadMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(4) > div > div > div:nth-child(4) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyMattressPadMinOriginalStorePage}=     get text        css=body > div:nth-child(13) > div > div > div:nth-child(4) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYMATTRESSPADTWINORIGINAL}'!='${PuffyMattressPadMinOriginalStorePage}'      Fail        Wrong Puffy Mattress Pad "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYMATTRESSPADTWINORIGINAL} Actual Result: ${PuffyMattressPadMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Mattress Topper
-    ${PuffyTopperMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(4) > div > div > div:nth-child(5) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyTopperMinOriginalStorePage}=     get text        css=body > div:nth-child(13) > div > div > div:nth-child(5) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYTOPPERTWINORIGINAL}'!='${PuffyTopperMinOriginalStorePage}'      Fail        Wrong Puffy Topper "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYTOPPERTWINORIGINAL} Actual Result: ${PuffyTopperMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Mattress Protector
-    ${PuffyMattressProtectorMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(4) > div > div > div:nth-child(6) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyMattressProtectorMinOriginalStorePage}=     get text        css=body > div:nth-child(13) > div > div > div:nth-child(6) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYMATTRESSPROTECTORTWINORIGINAL}'!='${PuffyMattressProtectorMinOriginalStorePage}'      Fail        Wrong Puffy Mattress Protector "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYMATTRESSPROTECTORTWINORIGINAL} Actual Result: ${PuffyMattressProtectorMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Blanket
-    ${PuffyBlanketMinOriginalStorePage}=     get text        css=body > div.container.main.content > div.text-bar.text-bar--medium-text.text-bar--gift-shop > div > div > div:nth-child(2) > div > div:nth-child(1) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyBlanketMinOriginalStorePage}=     get text        css=body > div.text-bar.text-bar--medium-text.text-bar--gift-shop > div > div > div:nth-child(2) > div > div:nth-child(1) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYBLANKETSMALLORIGINAL}'!='${PuffyBlanketMinOriginalStorePage}'      Fail        Wrong Puffy Blanket "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYBLANKETSMALLORIGINAL} Actual Result: ${PuffyBlanketMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Body Pillow
-    ${PuffyBodyPillowMinOriginalStorePage}=     get text        css=body > div.container.main.content > div.text-bar.text-bar--medium-text.text-bar--gift-shop > div > div > div:nth-child(2) > div > div:nth-child(2) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyBodyPillowMinOriginalStorePage}=     get text        css=body > div.text-bar.text-bar--medium-text.text-bar--gift-shop > div > div > div:nth-child(2) > div > div:nth-child(2) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYBODYPILLOWORIGINAL}'!='${PuffyBodyPillowMinOriginalStorePage}'      Fail        Wrong Puffy Body Pillow "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYBODYPILLOWORIGINAL} Actual Result: ${PuffyBodyPillowMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Rug
-    ${PuffyRugMinOriginalStorePage}=     get text        css=body > div.container.main.content > div.text-bar.text-bar--medium-text.text-bar--gift-shop > div > div > div:nth-child(2) > div > div:nth-child(3) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyRugMinOriginalStorePage}=     get text        css=body > div.text-bar.text-bar--medium-text.text-bar--gift-shop > div > div > div:nth-child(2) > div > div:nth-child(3) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYRUGMEDIUMORIGINAL}'!='${PuffyRugMinOriginalStorePage}'      Fail        Wrong Puffy Rug "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYRUGSMALLORIGINAL} Actual Result: ${PuffyRugMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Mattress
-    ${PuffyMattressMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(7) > div > div > div:nth-child(1) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > span > del
+    ${PuffyMattressMinOriginalStorePage}=     get text        css=body > div:nth-child(16) > div > div > div:nth-child(1) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > span > del
     Run keyword if          '${PUFFYMATTRESSTWINORIGINAL}'!='${PuffyMattressMinOriginalStorePage}'      Fail        Wrong Puffy Mattress "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYMATTRESSTWINORIGINAL} Actual Result: ${PuffyMattressMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Lux Hybrid
-    ${PuffyLuxMattressMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(7) > div > div > div:nth-child(2) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > span > del
+    ${PuffyLuxMattressMinOriginalStorePage}=     get text        css=body > div:nth-child(16) > div > div > div:nth-child(2) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > span > del
     Run keyword if          '${PUFFYLUXMATTRESSTWINORIGINAL}'!='${PuffyLuxMattressMinOriginalStorePage}'      Fail        Wrong Puffy Lux Mattress "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYLUXMATTRESSTWINORIGINAL} Actual Result: ${PuffyLuxMattressMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Royal Hybrid
-    ${PuffyRoyalMattressMinOriginalStorePage}=     get text        css=body > div.container.main.content > div:nth-child(7) > div > div > div:nth-child(3) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > span > del
+    ${PuffyRoyalMattressMinOriginalStorePage}=     get text        css=body > div:nth-child(16) > div > div > div:nth-child(3) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > span > del
     Run keyword if          '${PUFFYROYALMATTRESSTWINORIGINAL}'!='${PuffyRoyalMattressMinOriginalStorePage}'      Fail        Wrong Puffy Royal Mattress "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYROYALMATTRESSTWINORIGINAL} Actual Result: ${PuffyRoyalMattressMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Adjustable Base
-    ${PuffyAdjustableBaseMinOriginalStorePage}=     get text        css=body > div.container.main.content > div.text-bar.text-bar--medium-text.is--gray > div > div.text-bar__content.text-bar__content--single > div > div > div:nth-child(1) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > span > del
+    ${PuffyAdjustableBaseMinOriginalStorePage}=     get text        css=body > div.text-bar.text-bar--medium-text.is--gray > div > div.text-bar__content.text-bar__content--single > div > div > div:nth-child(1) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > span > del
     Run keyword if          '${PUFFYADJUSTABLEBASETWINXLORIGINAL}'!='${PuffyAdjustableBaseMinOriginalStorePage}'      Fail        Wrong Puffy Adjustable Base "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYADJUSTABLEBASETWINXLORIGINAL} Actual Result: ${PuffyAdjustableBaseMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Foundation
-    ${PuffyFoundationMinOriginalStorePage}=     get text        css=body > div.container.main.content > div.text-bar.text-bar--medium-text.is--gray > div > div.text-bar__content.text-bar__content--single > div > div > div:nth-child(2) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyFoundationMinOriginalStorePage}=     get text        css=body > div.text-bar.text-bar--medium-text.is--gray > div > div.text-bar__content.text-bar__content--single > div > div > div:nth-child(2) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYFOUNDATIONTWINORIGINAL}'!='${PuffyFoundationMinOriginalStorePage}'      Fail        Wrong Puffy Foundation "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYFOUNDATIONTWINORIGINAL} Actual Result: ${PuffyFoundationMinOriginalStorePage}
 
 Gift Shop Price check for Puffy Bed Frame
-    ${PuffyBedFrameMinOriginalStorePage}=     get text        css=body > div.container.main.content > div.text-bar.text-bar--medium-text.is--gray > div > div.text-bar__content.text-bar__content--single > div > div > div:nth-child(3) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
+    ${PuffyBedFrameMinOriginalStorePage}=     get text        css=body > div.text-bar.text-bar--medium-text.is--gray > div > div.text-bar__content.text-bar__content--single > div > div > div:nth-child(3) > div > a > div.product-box__content > div.product-box__desc > div.product-box__prices > strong
     Run keyword if          '${PUFFYBEDFRAMEFULLORIGINAL}'!='${PuffyBedFrameMinOriginalStorePage}'      Fail        Wrong Puffy Bed Frame "Starting From" Original amount in Gift Page. Expected Result: ${PUFFYBEDFRAMEFULLORIGINAL} Actual Result: ${PuffyBedFrameMinOriginalStorePage}
 
 Switch to Version A
@@ -2112,42 +2112,43 @@ Keyfail
 Go to Finance page
     Click link                  link:Financing
 Click Klarna See Details link
-    Click element               css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__klarna > a
+    Scroll element into view    css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__klarna > a
+    Click element               css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__klarna > a
 Check amount in Pay as low as for Klarna
-    ${KlarnaPayAsLow}=     get text        css=body > div.container.main.content > div.financing__klarna > div.featured-financing.text-bar > div.featured-financing__desc > strong
+    ${KlarnaPayAsLow}=     get text        css=body > div.financing__klarna > div.featured-financing.text-bar > div.featured-financing__desc > strong
     Run keyword if          '${$350PUFFYFINANCINGPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${$350PuffyFinancingPageKlarna} Actual Result: ${KlarnaPayAsLow}
 
 Scroll Up to Splitit
-    Scroll Element Into View                css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > h2
+    Scroll Element Into View                css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > div
 Check amount in Pay as low as for SplitIt
-    ${SplitItPayAsLow}=     get text        css=body > div.container.main.content > div.financing__splitit > div.featured-financing.text-bar > div.featured-financing__desc > strong
+    ${SplitItPayAsLow}=     get text        css=body > div.financing__splitit > div.featured-financing.text-bar > div.featured-financing__desc > strong
     Run keyword if          '${$350PUFFYFINANCINGPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${$350PuffyFinancingPageSplitIt} Actual Result: ${SplitItPayAsLow}
 Click Splitit See Details link
-    wait until page contains element    css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
-    Click element           css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
+    wait until page contains element    css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
+    Click element                       css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
 
 Go to Discount page
     Go To                    https://puffy.com/pages/puffy-discount-code
 
 Check discount details 1
-    ${DiscountDetails1}=     get text        css=body > div.container.main.content > div.text-bar.is--blue > div > h2 > strong > span:nth-child(1)
-    Run keyword if          '${DISCOUNTCODEPAGEDETAILS1}'!='${DiscountDetails1}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DiscountCodePageDetails1} Actual Result: ${DiscountDetails1}
+    ${DiscountDetails1}=     get text        css=body > div.text-bar.is--blue > div > h2 > strong > span:nth-child(1)
+    Run keyword if          '${DISCOUNTCODEPAGEDETAILS1}'!='${DiscountDetails1}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DISCOUNTCODEPAGEDETAILS1} Actual Result: ${DiscountDetails1}
 
 Check discount details 2
-    ${DiscountDetails2}=     get text        css=body > div.container.main.content > div.text-bar.is--blue > div > h2 > strong > span:nth-child(3)
-    Run keyword if          '${DISCOUNTCODEPAGEDETAILS2}'!='${DiscountDetails2}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DiscountCodePageDetails2} Actual Result: ${DiscountDetails2}
+    ${DiscountDetails2}=     get text        css=body > div.text-bar.is--blue > div > h2 > strong > span:nth-child(3)
+    Run keyword if          '${DISCOUNTCODEPAGEDETAILS2}'!='${DiscountDetails2}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DISCOUNTCODEPAGEDETAILS2} Actual Result: ${DiscountDetails2}
 Scroll down to Mattress Financing with Klarna
-    Scroll Element Into View                    css=body > div.container.main.content > div.text-bar.is--gray.no-bottom-padding > div > h2
+    Scroll Element Into View                    css=body > div.text-bar.is--gray.no-top-padding > div > h2
 
 Scroll down to Mattress Payment plans with Splitit
-    Scroll Element Into View                    css=body > div.container.main.content > div:nth-child(7) > div > h2
+    Scroll Element Into View                    css=body > div:nth-child(16) > div > h2
 Check amount in Pay as low as for Klarna Discount Page
-    ${KlarnaPayAsLow}=     get text        css=body > div.container.main.content > div.text-bar.is--gray.no-bottom-padding > div > div > strong
-    Run keyword if          '${PUFFYDISCOUNTPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PuffyDiscountPageKlarna} Actual Result: ${KlarnaPayAsLow}
+    ${KlarnaPayAsLow}=     get text        css=body > div.text-bar.is--gray.no-bottom-padding > div > div > strong
+    Run keyword if          '${PUFFYDISCOUNTPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PUFFYDISCOUNTPAGEKLARNA} Actual Result: ${KlarnaPayAsLow}
 
 Check amount in Pay as low as for SplitIt Discount Page
-    ${SplitItPayAsLow}=     get text        css=body > div.container.main.content > div:nth-child(7) > div > div > strong
-    Run keyword if          '${PUFFYDISCOUNTPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PuffyDiscountPageSplitIt} Actual Result: ${SplitItPayAsLow}
+    ${SplitItPayAsLow}=     get text        css=body > div:nth-child(16) > div > div > strong
+    Run keyword if          '${PUFFYDISCOUNTPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PUFFYDISCOUNTPAGESPLITIT} Actual Result: ${SplitItPayAsLow}
 
 Go to Save350 page
     Go to                           ${SAVE350}
@@ -2157,6 +2158,7 @@ Go to homepage
     Go to                           ${HOMEPAGE}
 Go to checkout
     Go to                           https://puffy.com/17400017/checkouts/5619f740ae3cd56f1ca86f6ffec3626a?channel=online_store&preview_checkout_version=2021-01-25
+
 
 #===================================SMOKE TEST===========================================================================================================================
 *** Keywords ***
