@@ -78,6 +78,8 @@ ${FOOTERPUFFYREVIEWSPELLING}                        Puffy Review
 ${FOOTERPUFFYLUXREVIEWSPELLING}                     Puffy Lux Review
 ${FOOTERPUFFYROYALREVIEWSPELLING}                   Puffy Royal Review
 ${FOOTERPUFFYMATTRESSREVIEWSPELLING}                Puffy Mattress Review
+${FOOTERHEALTHCAREDISCOUNTSPELLING}                         Healthcare Discount
+${FOOTERMILITARYDISCOUNTSPELLING}                           Military Discount
 ${FOOTERREVIEWSSPELLING}                            Reviews
 ${FOOTERCONTACTUSSPELLING}                          Contact Us
 ${FOOTERFAQSSPELLING}                               FAQs
