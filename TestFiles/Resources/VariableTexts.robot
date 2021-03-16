@@ -89,6 +89,7 @@ ${FOOTERPUFFYGUARANTEESPELLING}                     Puffy Guarantee
 ${FOOTERPRIVACYSPELLING}                            Privacy
 ${FOOTERTERMSSPELLING}                              Terms
 ${FOOTERWARRANTYSPELLING}                           Warranty
+${FOOTERDNSMPISPELLING}                             Do Not Sell My Personal Information
 ${FOOTERCOPYRIGHTSPELLING}                          Puffy Mattress
 ${SIGNUPNODOMAIN}                                   email
 ${SIGNUPINVALIDEMAIL}                               email.com
