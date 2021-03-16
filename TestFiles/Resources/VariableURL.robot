@@ -44,6 +44,7 @@ ${SUPPORTPUFFYGUARANTEEURL}                         https://puffy.com/pages/puff
 ${AUXPRIVACYURL}                                    https://puffy.com/pages/puffy-privacy-policy
 ${AUXTERMSURL}                                      https://puffy.com/pages/terms-and-conditions
 ${AUXWARRANTYURL}                                   https://puffy.com/pages/puffy-mattress-warranty
+${AUXDNSMPIURL}                                     https://puffy.com/pages/data-privacy
 ${SOCIALFACEBOOKURL}                                https://www.facebook.com/PuffyMattress/
 ${SOCIALTWITTERURL}                                 https://twitter.com/puffymattress
 ${SOCIALINSTAGRAMURL}                               https://www.instagram.com/puffymattress/

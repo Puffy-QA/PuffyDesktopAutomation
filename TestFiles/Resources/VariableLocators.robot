@@ -91,6 +91,7 @@ ${LOCFOOTERPUFFYGUARANTEE}          css=#shopify-section-footer > footer > div.c
 ${LOCFOOTERPRIVACY}                 css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div > a:nth-child(1)
 ${LOCFOOTERTERMS}                   css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div > a:nth-child(2)
 ${LOCFOOTERWARRANTY}                css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div > a:nth-child(3)
+${LOCFOOTERDNSMPI}                  css=#shopify-section-footer > footer > div.footer-bottom > div > div.columns.column-custom-width > div > a.menu-bottom-desktop
 ${LOCFOOTERFACEBOOK}                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > ul > li:nth-child(1) > a
 ${LOCFOOTERTWITTER}                 css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > ul > li:nth-child(2) > a
 ${LOCFOOTERINSTAGRAM}               css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > ul > li:nth-child(3) > a
