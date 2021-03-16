@@ -545,7 +545,6 @@ Finance Page check
     Scroll Up to Splitit
     Click Splitit See Details link
     Check amount in Pay as low as for Splitit
-
 Discount page check
     Go to Discount page
     Check discount details 1
@@ -554,9 +553,6 @@ Discount page check
     Check amount in Pay as low as for Klarna Discount Page
     Scroll down to Mattress Payment plans with Splitit
     Check amount in Pay as low as for SplitIt Discount Page
-
-
-
 Stop All Video Recordings
     Stop All Video Recordings
 
