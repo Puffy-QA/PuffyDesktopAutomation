@@ -72,7 +72,7 @@ Check Product Section Redirection
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPUFFYROYAL}
     Location Should Be                      ${PDPPUFFYROYALMATTRESSURL}
-    wait until page contains element        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-royal-mattress > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__headline.product-head__headline--hybrid > h1
+    wait until page contains element        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-royal-mattress > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__text.product-head__text--boxed > div.product-head__headline.product-head__headline--hybrid > h1 > span.product-head__title-line
 
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
@@ -170,12 +170,14 @@ Check Puffy Section Spelling
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     ${Footer101NightSleepTrial}=               get text           ${LOCFOOTER101NIGHTSLEEPTRIAL}
     Run keyword if          '${Footer101NightSleepTrial}'!='${FOOTER101NIGHTSLEEPTRIALSPELLING}'      Fail        Wrong 101-Night Sleep Trial Spelling in Footer. Actual content: ${Footer101NightSleepTrial} expected: ${FOOTER101NIGHTSLEEPTRIALSPELLING}
-    #${FooterHowItsMade}=            get text        ${LOCFOOTERHOWITSMADE}
-    #Run keyword if          '${FooterHowItsMade}'!='${FOOTERHOWITSMADESPELLING}'      Fail        Wrong How It's Made Spelling in Footer. Actual content: ${FooterHowItsMade} expected: ${FOOTERHOWITSMADESPELLING}
+    ${FooterHowItsMade}=            get text        ${LOCFOOTERHOWITSMADE}
+    Run keyword if          "${FooterHowItsMade}"!="${FOOTERHOWITSMADESPELLING}"      Fail        Wrong How It's Made Spelling in Footer. Actual content: ${FooterHowItsMade} expected: ${FOOTERHOWITSMADESPELLING}
     ${FooterMattressLayers}=          get text      ${LOCFOOTERMATTRESSLAYERS}
     Run keyword if          '${FooterMattressLayers}'!='${FOOTERMATTRESSLAYERSSPELLING}'      Fail        Wrong Mattress Layers Spelling in Footer. Actual content: ${FooterMattressLayers} expected: ${FOOTERMATTRESSLAYERSSPELLING}
     ${FooterPerfectSleep}=               get text           ${LOCFOOTERPERFECTSLEEP}
     Run keyword if          '${FooterPerfectSleep}'!='${FOOTERPERFECTSLEEPSPELLING}'      Fail        Wrong Perfect Sleep Spelling in Footer. Actual content: ${FooterPerfectSleep} expected: ${FOOTERPERFECTSLEEPSPELLING}
+    ${FooterMattressAwards}=               get text           ${LOCFOOTERMATTRESSAWARDS}
+    Run keyword if          '${FooterMattressAwards}'!='${FOOTERMATTRESSAWARDS}'      Fail        Wrong Perfect Sleep Spelling in Footer. Actual content: ${FooterMattressAwards} expected: ${FOOTERMATTRESSAWARDS}
     ${FooterCompareMattress}=            get text        ${LOCFOOTERCOMPAREMATTRESS}
     Run keyword if          '${FooterCompareMattress}'!='${FOOTERCOMPAREMATTRESSSPELLING}'      Fail        Wrong Compare Mattress Spelling in Footer. Actual content: ${FooterCompareMattress} expected: ${FOOTERCOMPAREHYBRIDSSPELLING}
     ${FooterCompareHybrid}=          get text      ${LOCFOOTERCOMPAREHYBRIDS}
@@ -186,8 +188,6 @@ Check Puffy Section Spelling
     Run keyword if          '${FooterAffiliateProgram}'!='${FOOTERAFFILIATEPROGRAMSPELLING}'      Fail        Wrong Affiliate Program Spelling in Footer. Actual content: ${FooterAffiliateProgram} expected: ${FOOTERAFFILIATEPROGRAMSPELLING}
     ${FooterReferAFriend}=          get text      ${LOCFOOTERREFERAFRIEND}
     Run keyword if          '${FooterReferAFriend}'!='${FOOTERREFERAFRIENDSPELLING}'      Fail        Wrong Refer a Friend Spelling in Footer. Actual content: ${FooterReferAFriend} expected: ${FOOTERREFERAFRIENDSPELLING}
-    ${FooterMattressAwards}=               get text           ${LOCFOOTERMATTRESSAWARDS}
-    Run keyword if          '${FooterMattressAwards}'!='${FOOTERMATTRESSAWARDSSPELLING}'      Fail        Wrong Mattress Awards Spelling in Footer. Actual content: ${FooterMattressAwards} expected: ${FOOTERMATTRESSAWARDSSPELLING}
     ${FooterGiftShop}=            get text        ${LOCFOOTERGIFTSHOP}
     Run keyword if          '${FooterGiftShop}'!='${FOOTERGIFTSHOPSPELLING}'      Fail        Wrong Gift Shop Spelling in Footer. Actual content: ${FooterGiftShop} expected: ${FOOTERGIFTSHOPSPELLING}
     ${FooterPuffyStore}=          get text      ${LOCFOOTERPUFFYSTORE}
@@ -202,7 +202,10 @@ Check Puffy Section Spelling
     Run keyword if          '${FooterPuffyRoyalReview}'!='${FOOTERPUFFYROYALREVIEWSPELLING}'      Fail        Wrong Puffy Royal Review Spelling in Footer. Actual content: ${FooterPuffyRoyalReview} expected: ${FOOTERPUFFYROYALREVIEWSPELLING}
     ${FooterPuffyMattressReview}=            get text        ${LOCFOOTERPUFFYMATTRESSREVIEW}
     Run keyword if          '${FooterPuffyMattressReview}'!='${FOOTERPUFFYMATTRESSREVIEWSPELLING}'      Fail        Wrong Puffy Mattress Review Spelling in Footer. Actual content: ${FooterPuffyMattressReview} expected: ${FOOTERPUFFYMATTRESSREVIEWSPELLING}
-
+    ${FooterHealthcareDiscount}=            get text        ${LOCFOOTERHEALTHCAREDISCOUNT}
+    Run keyword if          '${FooterHealthcareDiscount}'!='${FOOTERHEALTHCAREDISCOUNT}'      Fail        Wrong Puffy Mattress Review Spelling in Footer. Actual content: ${FooterHealthcareDiscount} expected: ${FOOTERHEALTHCAREDISCOUNT}
+    ${FooterMilitaryDiscount}=            get text        ${LOCFOOTERMILITARYDISCOUNT}
+    Run keyword if          '${FooterMilitaryDiscount}'!='${FOOTERMILITARYDISCOUNTSPELLING}'      Fail        Wrong Puffy Mattress Review Spelling in Footer. Actual content: ${FooterPuffyMattressReview} expected: ${FOOTERMILITARYDISCOUNTSPELLING}
 Check Puffy Section Redirection
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
@@ -227,6 +230,13 @@ Check Puffy Section Redirection
     Click element                           ${LOCFOOTERPERFECTSLEEP}
     Location Should Be                      ${PUFFYPERFECTSLEEPURL}
     wait until page contains                Perfect Sleep
+
+    sleep                                   2s
+    Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
+    Click element                           ${LOCFOOTERMATTRESSAWARDS}
+    Location Should Be                      ${PUFFYMATTRESSAWARDSURL}
+    wait until page contains                Award-Winning
+
 
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
@@ -266,12 +276,6 @@ Check Puffy Section Redirection
     Location Should Be                      ${PUFFYREFERAFRIENDURL}
     sleep                                   5s
     wait until page contains                Refer a Friend
-
-    sleep                                   2s
-    Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
-    Click element                           ${LOCFOOTERMATTRESSAWARDS}
-    Location Should Be                      ${PUFFYMATTRESSAWARDSURL}
-    wait until page contains                Award-Winning
 
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
@@ -335,7 +339,13 @@ Check Puffy Section Redirection
 
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
-    Click element                           ${LOCFOOTERHEALTHCARE}
+    Click element                           ${LOCFOOTERMILITARYDISCOUNT}
+    Location Should Be                      ${PUFFYMILITARYURL}
+    wait until page contains                Exclusive Military Discount
+
+    sleep                                   2s
+    Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
+    Click element                           ${LOCFOOTERHEALTHCAREDISCOUNT}
     Location Should Be                      ${PUFFYHEALTHCAREURL}
     wait until page contains                Healthcare Professionals
 
@@ -366,19 +376,19 @@ Check Support Section Redirection
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERCONTACTUS}
     Location Should Be                      ${SUPPORTCONTACTUSURL}
-    wait until page contains                Questions? Ask away, we love helping.
+    wait until page contains                Ask Away.
 
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERFAQS}
     Location Should Be                      ${SUPPORTFAQSURL}
-    wait until page contains                QUESTIONS? REVIEW OUR FAQ BY SELECTING THE RELEVANT CATEGORY. IF YOU STILL HAVE QUESTIONS, CONTACT US BY USING THE FORM BELOW.
+    wait until page contains                Frequently Asked Questions
 
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERFINANCING}
     Location Should Be                      ${SUPPORTFINANCINGURL}
-    wait until page contains                Sleep on a cloud
+    wait until page contains                You choose
 
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
@@ -470,7 +480,7 @@ Check Auxiliary Section Redirection
     Scroll Element Into View                css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPRIVACY}
     Location Should Be                      ${AUXPRIVACYURL}
-    wait until page contains                Puffy Privacy Policy
+    wait until page contains                PRIVACY STATEMENT
 
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div

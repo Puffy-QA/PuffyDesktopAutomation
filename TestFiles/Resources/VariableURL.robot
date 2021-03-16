@@ -47,10 +47,11 @@ ${AUXWARRANTYURL}                                   https://puffy.com/pages/puff
 ${SOCIALFACEBOOKURL}                                https://www.facebook.com/PuffyMattress/
 ${SOCIALTWITTERURL}                                 https://twitter.com/puffymattress
 ${SOCIALINSTAGRAMURL}                               https://www.instagram.com/puffymattress/
-${SOCIALYOUTUBEURL}                                 https://www.youtube.com/c/PuffyMattress
+${SOCIALYOUTUBEURL}                                 https://www.youtube.com/channel/UCOJqN_xm1eR5lDMo3RIvN6A
 ${SOCIALLINKEDINURL}                                https://www.linkedin.com/company/puffy
 ${SOCIALPINTERESTURL}                               https://www.pinterest.com/puffymattressonline/
 ${AUXCOPYRIGHTURL}                                  https://puffy.com/
+${PUFFYMILITARYURL}                                 https://puffy.com/pages/military-discount
 ${PUFFYHEALTHCAREURL}                               https://puffy.com/pages/healthcare-professional-discount
 ${SUPPORTREVIEWVIDEOSURL}                           https://puffy.com/pages/puffy-mattress-video-reviews
 ${HEADERPUFFYICONURL}                               https://puffy.com/
