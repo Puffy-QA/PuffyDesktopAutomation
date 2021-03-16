@@ -32,7 +32,7 @@ Check sale text in Seasonal Banner (Mattress)
     Run keyword if          "${Content}"!="${SALENAME}"      Fail        Wrong Seasonal Sale Content Actual Result: ${Content} Expected: ${SALENAME}
 Check sale text in Seasonal Banner
     sleep                   2s
-    ${Content}=            get text        css=#Summer_SALE > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan:nth-child(1)
     Run keyword if          "${Content}"!="${SALENAME}"      Fail        Wrong Seasonal Sale Content Actual Result: ${Content} Expected: ${SALENAME}
 
 Don't show seasonal sale content check
@@ -162,7 +162,7 @@ Check Freebie and discount value in PDP
     Run keyword if          '${Content}'!='${SALEDETAILS}'      Fail        Wrong Discount Value and Freebie Content  Expected: ${SALEDETAILS} Actual: ${Content}
 
 Check Freebie and discount value in PDP Adjustable Base
-    ${Content}=            get text        css=#_300_Off > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan.cls-mattress-badge3
     Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong Discount Value and Freebie Content  Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
 
 Wait and dismiss popup
@@ -1145,11 +1145,11 @@ Check Puffy Topper sizes list order
 
 Check Puffy Blanket sizes list order
 
-    Wait Until Element Is Visible          css=#product_form_4412718972962 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
-    ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
+    Wait Until Element Is Visible          css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
+    ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(1) > div > span.display-name.is--not--sale
     Run keyword if          '${Content}'!='${SIZEPUFFYBLANKETPDPSIZEORDER1}'      Fail        First size in Puffy Blanket PDP is Wrong. Expected Result: ${SIZEPUFFYBLANKETPDPSIZEORDER1} Actual Result: ${Content}
 
-    ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
+    ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
     Run keyword if          '${Content}'!='${SIZEPUFFYBLANKETPDPSIZEORDER2}'      Fail        Second size in Puffy Blanket PDP is Wrong. Expected Result: ${SIZEPUFFYBLANKETPDPSIZEORDER2} Actual Result: ${Content}
 
     ${Content}=            get text        css=#product_form_4412718972962 > div.product-variants-holder > div > div > ul > li:nth-child(3) > div > span.display-name.is--not--sale
@@ -2114,41 +2114,42 @@ Keyfail
 Go to Finance page
     Click link                  link:Financing
 Click Klarna See Details link
-    Click element               css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__klarna > a
+    Scroll element into view    css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__klarna > a
+    Click element               css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__klarna > a
 Check amount in Pay as low as for Klarna
-    ${KlarnaPayAsLow}=     get text        css=body > div.container.main.content > div.financing__klarna > div.featured-financing.text-bar > div.featured-financing__desc > strong
+    ${KlarnaPayAsLow}=     get text        css=body > div.financing__klarna > div.featured-financing.text-bar > div.featured-financing__desc > strong
     Run keyword if          '${$300PUFFYFINANCINGPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${$300PUFFYFINANCINGPAGEKLARNA} Actual Result: ${KlarnaPayAsLow}
 
 Scroll Up to Splitit
-    Scroll Element Into View                css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > h2
+    Scroll Element Into View                css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > div
 Check amount in Pay as low as for SplitIt
-    ${SplitItPayAsLow}=     get text        css=body > div.container.main.content > div.financing__splitit > div.featured-financing.text-bar > div.featured-financing__desc > strong
+    ${SplitItPayAsLow}=     get text        css=body > div.financing__splitit > div.featured-financing.text-bar > div.featured-financing__desc > strong
     Run keyword if          '${$300PUFFYFINANCINGPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${$300PUFFYFINANCINGPAGESPLITIT} Actual Result: ${SplitItPayAsLow}
 Click Splitit See Details link
-    wait until page contains element    css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
-    Click element           css=body > div.container.main.content > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
+    wait until page contains element    css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
+    Click element                       css=body > div.text-bar.text-bar--financing > div.text-bar__inner > div > div.text-bar__splitit > a
 
 Go to Discount page
     Go To                    https://puffy.com/pages/puffy-discount-code
 
 Check discount details 1
-    ${DiscountDetails1}=     get text        css=body > div.container.main.content > div.text-bar.is--blue > div > h2 > strong > span:nth-child(1)
+    ${DiscountDetails1}=     get text        css=body > div.text-bar.is--blue > div > h2 > strong > span:nth-child(1)
     Run keyword if          '${DISCOUNTCODEPAGEDETAILS1}'!='${DiscountDetails1}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DISCOUNTCODEPAGEDETAILS1} Actual Result: ${DiscountDetails1}
 
 Check discount details 2
-    ${DiscountDetails2}=     get text        css=body > div.container.main.content > div.text-bar.is--blue > div > h2 > strong > span:nth-child(3)
+    ${DiscountDetails2}=     get text        css=body > div.text-bar.is--blue > div > h2 > strong > span:nth-child(3)
     Run keyword if          '${DISCOUNTCODEPAGEDETAILS2}'!='${DiscountDetails2}'      Fail      Wrong Amount for SplitIt "Pay as low as" section. Expected Result: ${DISCOUNTCODEPAGEDETAILS2} Actual Result: ${DiscountDetails2}
 Scroll down to Mattress Financing with Klarna
-    Scroll Element Into View                    css=body > div.container.main.content > div.text-bar.is--gray.no-bottom-padding > div > h2
+    Scroll Element Into View                    css=body > div.text-bar.is--gray.no-top-padding > div > h2
 
 Scroll down to Mattress Payment plans with Splitit
-    Scroll Element Into View                    css=body > div.container.main.content > div:nth-child(7) > div > h2
+    Scroll Element Into View                    css=body > div:nth-child(16) > div > h2
 Check amount in Pay as low as for Klarna Discount Page
-    ${KlarnaPayAsLow}=     get text        css=body > div.container.main.content > div.text-bar.is--gray.no-bottom-padding > div > div > strong
+    ${KlarnaPayAsLow}=     get text        css=body > div.text-bar.is--gray.no-bottom-padding > div > div > strong
     Run keyword if          '${PUFFYDISCOUNTPAGEKLARNA}'!='${KlarnaPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PUFFYDISCOUNTPAGEKLARNA} Actual Result: ${KlarnaPayAsLow}
 
 Check amount in Pay as low as for SplitIt Discount Page
-    ${SplitItPayAsLow}=     get text        css=body > div.container.main.content > div:nth-child(7) > div > div > strong
+    ${SplitItPayAsLow}=     get text        css=body > div:nth-child(16) > div > div > strong
     Run keyword if          '${PUFFYDISCOUNTPAGESPLITIT}'!='${SplitItPayAsLow}'      Fail        Wrong Amount for Klarna "Pay as low as" section. Expected Result: ${PUFFYDISCOUNTPAGESPLITIT} Actual Result: ${SplitItPayAsLow}
 
 Go to Save350 page
@@ -2333,7 +2334,7 @@ Check discount value and freebie on Mattress PDPs
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on mattress PDP Expected: ${SALEDETAILS} Actual: ${Content}
 Check discount value on badges for adjustable base
     sleep                   2s
-    ${Content}=            get text        css=#_300_OFF > tspan
+    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan.cls-mattress-badge3 > tspan
     Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong discount value text on badge for adjustable base Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
 Check discount value on Adjustable Base PDP
     sleep                   2s
