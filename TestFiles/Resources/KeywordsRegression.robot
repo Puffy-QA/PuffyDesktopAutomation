@@ -620,347 +620,425 @@ Switch to Version C
 ###########################################################MEGA MENU KEYWORDS###########################################################
 
 *** Keywords ***
-Check the spelling of MATTRESSES items in main menu
+Mouse over the MATTRESSES in Mega Menu
     Mouse Over          ${LOCMATTRESSES}
+Look at the MATTRESSES mega menu spelling for Puffy Mattress
     ${PuffyMattress}=               get text           ${LOCMENUPUFFYMATTRESSTEXT}
     Run keyword if          '${PuffyMattress}'!='${MENUPUFFYMATTRESSSPELLING}'      Fail        Wrong Puffy Mattress Spelling in Mattresses Menu. Actual content: ${PuffyMattress} expected: ${MENUPUFFYMATTRESSSPELLING}
+Look at the MATTRESSES mega menu spelling for Puffy Lux Mattress
     ${PuffyLuxMattress}=            get text        ${LOCMENUPUFFYLUXMATTRESSTEXT}
     Run keyword if          '${PuffyLuxMattress}'!='${MENUPUFFYLUXMATTRESSSPELLING}'      Fail        Wrong Puffy Lux Mattress Spelling in Mattresses Menu. Actual content: ${PuffyLuxMattress} expected: ${MENUPUFFYLUXMATTRESSSPELLING}
+Look at the MATTRESSES mega menu spelling for Puffy Royal Mattress
     ${PuffyRoyalMattress}=          get text      ${LOCMENUPUFFYROYALMATTRESSTEXT}
     Run keyword if          '${PuffyRoyalMattress}'!='${MENUPUFFYROYALMATTRESSSPELLING}'      Fail        Wrong Puffy Royal Mattress Spelling in Mattresses Menu. Actual content: ${PuffyRoyalMattress} expected: ${MENUPUFFYROYALMATTRESSSPELLING}
 
-Check the spelling of BASES items in main menu
+Mouse over the BASES in Mega Menu
     Mouse Over          ${LOCBASES}
+Look at the BASES mega menu spelling for Puffy Foundation
     ${PuffyFoundation}=               get text           ${LOCMENUPUFFYFOUNDATIONTEXT}
     Run keyword if          '${PuffyFoundation}'!='${MENUPUFFYFOUNDATIONSPELLING}'      Fail        Wrong Puffy Foundation Spelling in Bases Menu. Actual content: ${PuffyFoundation} expected: ${MENUPUFFYFOUNDATIONSPELLING}
+Look at the BASES mega menu spelling for Puffy Adjustable Base
     ${PuffyAdjustableBase}=            get text        ${LOCMENUPUFFYADJUSTABLEBASETEXT}
     Run keyword if          '${PuffyAdjustableBase}'!='${MENUPUFFYADJUSTABLEBASESPELLING}'      Fail        Wrong Puffy Adjustable Base Spelling in Bases Menu. Actual content: ${PuffyAdjustableBase} expected: ${MENUPUFFYADJUSTABLEBASESPELLING}
+Look at the BASES mega menu spelling for Puffy Bed Frame
     ${PuffyBedFrame}=          get text      ${LOCMENUPUFFYBEDFRAMETEXT}
     Run keyword if          '${PuffyBedFrame}'!='${MENUPUFFYBEDFRAMESPELLING}'      Fail        Wrong Puffy Bed Frame Spelling in Bases Menu. Actual content: ${PuffyBedFrame} expected: ${MENUPUFFYBEDFRAMESPELLING}
 
-Check the spelling of BEDDING items in main menu
+Mouse over the BEDDING in Mega Menu
     Mouse Over          ${LOCBEDDING}
+Look at the BEDDING mega menu spelling for Comforter
     ${PuffyComforter}=               get text           ${LOCMENUPUFFYCOMFORTERTEXT}
     Run keyword if          '${PuffyComforter}'!='${MENUPUFFYCOMFORTERSPELLING}'      Fail        Wrong Puffy Comforter Spelling in Bedding Menu. Actual content: ${PuffyComforter} expected: ${MENUPUFFYCOMFORTERSPELLING}
+Look at the BEDDING mega menu spelling for Puffy Pillow
     ${PuffyPillow}=            get text        ${LOCMENUPUFFYPILLOWTEXT}
     Run keyword if          '${PuffyPillow}'!='${MENUPUFFYPILLOWSPELLING}'      Fail        Wrong Puffy Pillow Spelling in Bedding Menu. Actual content: ${PuffyPillow} expected: ${MENUPUFFYPILLOWSPELLING}
+Look at the BEDDING mega menu spelling for Puffy Body Pillow
     ${PuffyBodyPillow}=          get text      ${LOCMENUPUFFYBODYPILLOWTEXT}
     Run keyword if          '${PuffyBodyPillow}'!='${MENUPUFFYBODYPILLOWSPELLING}'      Fail        Wrong Puffy Body Pillow Spelling in Bedding Menu. Actual content: ${PuffyBodyPillow} expected: ${MENUPUFFYBODYPILLOWSPELLING}
+Look at the BEDDING mega menu spelling for Puffy Mattress Pad
     ${PuffyMattressPad}=               get text           ${LOCMENUPUFFYMATTRESSPADTEXT}
     Run keyword if          '${PuffyMattressPad}'!='${MENUPUFFYMATTRESSPADSPELLING}'      Fail        Wrong Puffy Mattress Pad Spelling in Bedding Menu. Actual content: ${PuffyMattressPad} expected: ${MENUPUFFYMATTRESSPADSPELLING}
+Look at the BEDDING mega menu spelling for Puffy Mattress Protector
     ${PuffyMattressProtector}=            get text        ${LOCMENUPUFFYMATTRESSPROTECTORTEXT}
     Run keyword if          '${PuffyMattressProtector}'!='${MENUPUFFYMATTRESSPROTECTORSPELLING}'      Fail        Wrong Puffy Mattress Protector Spelling in Bedding Menu. Actual content: ${PuffyMattressProtector} expected: ${MENUPUFFYMATTRESSPROTECTORSPELLING}
+Look at the BEDDING mega menu spelling for Puffy Mattress Topper
     ${PuffyMattressTopper}=          get text      ${LOCMENUPUFFYMATTRESSTOPPERTEXT}
     Run keyword if          '${PuffyMattressTopper}'!='${MENUPUFFYMATTRESSTOPPERSPELLING}'      Fail        Wrong Puffy Mattress Topper Spelling in Bedding Menu. Actual content: ${PuffyMattressTopper} expected: ${MENUPUFFYMATTRESSTOPPERSPELLING}
+Look at the BEDDING mega menu spelling for Puffy Blanket
     ${PuffyBlanket}=               get text           ${LOCMENUPUFFYBLANKETTEXT}
     Run keyword if          '${PuffyBlanket}'!='${MENUPUFFYBLANKETSPELLING}'      Fail        Wrong Puffy Blanket Spelling in Bedding Menu. Actual content: ${PuffyBlanket} expected: ${MENUPUFFYBLANKETSPELLING}
+Look at the BEDDING mega menu spelling for Puffy Weighted Blanket
     ${PuffyWeightedBlanket}=            get text        ${LOCMENUPUFFYWEIGHTEDBLANKETTEXT}
     Run keyword if          '${PuffyWeightedBlanket}'!='${MENUPUFFYWEIGHTEDBLANKETSPELLING}'      Fail        Wrong Puffy Weighted Blanket Spelling in Bedding Menu. Actual content: ${PuffyWeightedBlanket} expected: ${MENUPUFFYWEIGHTEDBLANKETSPELLING}
+Look at the BEDDING mega menu spelling for Puffy Sheets
     ${PuffySheets}=          get text      ${LOCMENUPUFFYSHEETSTEXT}
     Run keyword if          '${PuffySheets}'!='${MENUPUFFYSHEETSSPELLING}'      Fail        Wrong Puffy Sheets Spelling in Bedding Menu. Actual content: ${PuffySheets} expected: ${MENUPUFFYSHEETSSPELLING}
 
-Check the spelling of BEDROOM items in main menu
+Mouse over the BEDROOM in Mega Menu
     Mouse Over          ${LOCBEDROOM}
+Look at the BEDROOM mega menu spelling for Puffy Dog Bed
     ${PuffyDogBed}=               get text           ${LOCMENUPUFFYDOGBEDTEXT}
     Run keyword if          '${PuffyDogBed}'!='${MENUPUFFYDOGBEDSPELLING}'      Fail        Wrong Puffy Dog Bed Spelling in Bedroom Menu. Actual content: ${PuffyDogBed} expected: ${MENUPUFFYDOGBEDSPELLING}
+Look at the BEDROOM mega menu spelling for Puffy Rug
     ${PuffyRug}=            get text        ${LOCMENUPUFFYRUGTEXT}
     Run keyword if          '${PuffyRug}'!='${MENUPUFFYRUGSPELLING}'      Fail        Wrong Puffy Rug Spelling in Bedroom Menu. Actual content: ${PuffyRug} expected: ${MENUPUFFYRUGSPELLING}
 
-Check the spelling of STORE button the header
+Look at the store mega menu spelling for STORE
     ${STOREHeader}=               get text           ${LOCHEADERSTORE}
     Run keyword if          '${STOREHeader}'!='${HEADERSTORESPELLING}'      Fail        Wrong STORE Spelling in Header. Actual content: ${STOREHeader} expected: ${HEADERSTORESPELLING}
 
+Mouse over the REVIEWS in Mega Menu
+    Mouse Over          ${LOCREVIEWS}
+Look at the REVIEWS mega menu spelling for Customer Reviews
+    ${CustomerReviews}=            get text        ${LOCMENUCUSTOMERREVIEWS}
+    Run keyword if          '${CustomerReviews}'!='${MENUCUSTOMERREVIEWSSPELLING}'      Fail        Wrong Customer Reviews Spelling in Reviews Menu. Actual content: ${CustomerReviews} expected: ${MENUCUSTOMERREVIEWSSPELLING}
 
-MATTRESSES Submenu redirection checks
+Look at the REVIEWS mega menu spelling for Video Reviews
+    ${VideoReviews}=            get text        ${LOCMENUVIDEOREVIEWS}
+    Run keyword if          '${VideoReviews}'!='${MENUVIDEOREVIEWSSPELLING}'      Fail        Wrong Video Reviews Spelling in Reviews Menu. Actual content: ${VideoReviews} expected: ${MENUVIDEOREVIEWSSPELLING}
+
+Look at the REVIEWS mega menu spelling for Awards
+    ${Awards}=            get text        ${LOCMENUAWARDS}
+    Run keyword if          '${Awards}'!='${MENUMENUAWARDSSPELLING}'      Fail        Wrong Awards Spelling in Reviews Menu. Actual content: ${Awards} expected: ${MENUMENUAWARDSSPELLING}
+
+Mouse over the SUPPORT in Mega Menu
+    Mouse Over          ${LOCSUPPORT}
+Look at the SUPPORT mega menu spelling for Contact US
+    ${ContactUs}=            get text        ${LOCMENUCONTACTUS}
+    Run keyword if          '${ContactUs}'!='${MENUCONTACTUSSPELLING}'      Fail        Wrong Contact Us Spelling in SUPPORT Menu. Actual content: ${ContactUs} expected: ${MENUCONTACTUSSPELLING}
+
+Look at the SUPPORT mega menu spelling for FAQs
+    ${FAQs}=            get text        ${LOCMENUFAQS}
+    Run keyword if          '${FAQs}'!='${MENUFAQSSPELLING}'      Fail        Wrong FAQs Spelling in SUPPORT Menu. Actual content: ${FAQs} expected: ${MENUFAQSSPELLING}
+
+Look at the SUPPORT mega menu spelling for Financing
+    ${Financing}=            get text        ${LOCMENUFINANCING}
+    Run keyword if          '${Financing}'!='${MENUFINANCINGSPELLING}'      Fail        Wrong Financing Spelling in SUPPORT Menu. Actual content: ${Financing} expected: ${MENUFINANCINGSPELLING}
+
+Click on Mega Menu Image (Puffy Mattress)
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYMATTRESSIMAGE}
     Location Should Be  ${PDPPUFFYMATTRESSURL}
     wait until page contains        ${TEXTPUFFYMATTRESSH1}
-
+Click on Mega Menu Image (Puffy Lux Mattress)
     sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYLUXMATTRESSIMAGE}
     Location Should Be  ${PDPPUFFYLUXMATTRESSURL}
     wait until page contains        ${TEXTPUFFYLUXMATTRESSH1}
-
+Click on Mega Menu Image (Puffy Royal Mattress)
     sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYROYALMATTRESSIMAGE}
     Location Should Be  ${PDPPUFFYROYALMATTRESSURL}
     wait until page contains        ${TEXTPUFFYROYALMATTRESSH1}
-
-BASES Submenu redirection checks
+Click on Mega Menu Image (Foundation)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYFOUNDATIONIMAGE}
     Location Should Be  ${PDPFOUNDATIONURL}
     wait until page contains        ${TEXTPUFFYFOUNDATIONH1}
-
+Click on Mega Menu Image (Adjustable Base)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYADJUSTABLEBASEIMAGE}
     Location Should Be  ${PDPADJUSTABLEBASEURL}
     wait until page contains        ${TEXTPUFFYADJUSTABLEBASEH1}
-
+Click on Mega Menu Image (Bed Frame)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYBEDFRAMEIMAGE}
     Location Should Be  ${PDPBEDFRAMEURL}
     wait until page contains        ${TEXTPUFFYBEDFRAMEH1}
-
-BEDDING Submenu redirection checks
+Click on Mega Menu Image (Comforter)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYCOMFORTERIMAGE}
     Location Should Be  ${PDPPUFFYCOMFORTERURL}
     wait until page contains        ${TEXTPUFFYCOMFORTERH1}
-
+Click on Mega Menu Image (Pillow)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYPILLOWIMAGE}
     Location Should Be  ${PDPPILLOWURL}
     wait until page contains        ${TEXTPUFFYPILLOWH1}
 
+Click on Mega Menu Image (Body Pillow)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYBODYPILLOWIMAGE}
     Location Should Be  ${PDPBODYPILLOWURL}
     wait until page contains        ${TEXTPUFFYBODYPILLOWH1}
-
+Click on Mega Menu Image (Mattress Pad)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSPADIMAGE}
     Location Should Be  ${PDPMATTRESSPADURL}
     wait until page contains        ${TEXTPUFFYMATTRESSPADH1}
-
+Click on Mega Menu Image (Mattress Protector)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSPROTECTORIMAGE}
     Location Should Be  ${PDPPUFFYMATTRESSPROTECTORURL}
     wait until page contains        ${TEXTPUFFYMATTRESSPROTECTORH1}
-
+Click on Mega Menu Image (Mattress Topper)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSTOPPERIMAGE}
     Location Should Be  ${PDPMATTRESSTOPPERURL}
     wait until page contains        ${TEXTPUFFYMATTRESSTOPPERH1}
-
+Click on Mega Menu Image (Blanket)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYBLANKETIMAGE}
     Location Should Be  ${PDPPUFFYBLANKETURL}
     wait until page contains        ${TEXTPUFFYBLANKETH1}
-
+Click on Mega Menu Image (Weighted Blanket)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYWEIGHTEDBLANKETIMAGE}
     Location Should Be  ${PDPWEIGHTEDBLANKETURL}
     wait until page contains        ${TEXTPUFFYWEIGHTEDBLANKETH1}
-
+Click on Mega Menu Image (Sheets)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYSHEETSIMAGE}
     Location Should Be  ${PDPPUFFYSHEETSURL}
     wait until page contains        ${TEXTPUFFYSHEETSH1}
-
-BEDROOM Submenu redirection checks
+Click on Mega Menu Image (Dog Bed)
     sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click element       ${LOCMENUPUFFYDOGBEDIMAGE}
     Location Should Be  ${PDPDOGBEDURL}
     wait until page contains        ${TEXTPUFFYDOGBEDH1}
-
+Click on Mega Menu Image (Rug)
     sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click element       ${LOCMENUPUFFYRUGIMAGE}
     Location Should Be  ${PDPPUFFYRUGURL}
     wait until page contains        ${TEXTPUFFYRUGH1}
 
-REVIEWS Submenu redirection checks
+Click on Mega Menu Image (Customer Reviews)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
-    Click element       ${LOCMENUCUSTOMERREVIEWS}
+    Click Image       ${LOCMENUCUSTOMERREVIEWSIMAGE}
     Location Should Be  ${SUPPORTREVIEWSURL}
     wait until page contains        ${TEXTPUFFYMATTRESSREVIEWSH1}
-
+Click on Mega Menu Image (Video Reviews)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
-    Click element       ${LOCMENUVIDEOREVIEWS}
+    Click element       ${LOCMENUVIDEOREVIEWSIMAGE}
     Location Should Be  ${SUPPORTREVIEWVIDEOSURL}
     wait until page contains        ${TEXTPUFFYMATTRESSREVIEWVIDEOSH1}
-
+Click on Mega Menu Image (Awards)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
-    Click element       ${LOCMENUAWARDS}
+    Click element       ${LOCMENUAWARDSIMAGE}
     Location Should Be  ${PUFFYMATTRESSAWARDSURL}
     wait until page contains         ${TEXTPUFFYMATTRESSAWARDSH1}
-
-SUPPORT Submenu redirection checks
+Click on Mega Menu Image (Contact Us)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUCONTACTUS}
     Location Should Be  ${SUPPORTCONTACTUSURL}
     wait until page contains        ${TEXTCONTACTUSH1}
-
+Click on Mega Menu Image (FAQs)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUFAQS}
     Location Should Be  ${SUPPORTFAQSURL}
     wait until page contains        ${TEXTFAQH2}
-
+Click on Mega Menu Image (Financing)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUFINANCING}
     Location Should Be  ${SUPPORTFINANCINGURL}
     wait until page contains         ${TEXTFINANCINGH1}
 
-STORE button redirection checks
+Click on STORE button from Mega Menu section
     sleep               1s
     click element       ${LOCHEADERSTORE}
     Location should be  ${PUFFYSTOREURL}
     wait until page contains        ${TEXTSTOREH1}
 
-Puffy Logo redirection checks
+Click on Puffy Logo
     wait until page contains element               ${LOCHEADERPUFFYLOGO}
     click element       ${LOCHEADERPUFFYLOGO}
     Location should be  ${HEADERPUFFYICONURL}
     wait until page contains    ${TEXTHOMEPAGEH1}
 
 
-MATTRESSES Submenu redirection checks using name text
+Click on text name (Puffy Mattress)
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYMATTRESSTEXT}
     Location Should Be  ${PDPPUFFYMATTRESSURL}
     wait until page contains        ${TEXTPUFFYMATTRESSH1}
-
+Click on text name (Puffy Lux Mattress)
     sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYLUXMATTRESSTEXT}
     Location Should Be  ${PDPPUFFYLUXMATTRESSURL}
     wait until page contains        ${TEXTPUFFYLUXMATTRESSH1}
-
+Click on text name (Puffy Royal Mattress)
     sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYROYALMATTRESSTEXT}
     Location Should Be  ${PDPPUFFYROYALMATTRESSURL}
     wait until page contains        ${TEXTPUFFYROYALMATTRESSH1}
 
-BASES Submenu redirection checks using name text
+Click on text name (Foundation)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYFOUNDATIONTEXT}
     Location Should Be  ${PDPFOUNDATIONURL}
     wait until page contains        ${TEXTPUFFYFOUNDATIONH1}
-
+Click on text name (Adjustable Base)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYADJUSTABLEBASETEXT}
     Location Should Be  ${PDPADJUSTABLEBASEURL}
     wait until page contains        ${TEXTPUFFYADJUSTABLEBASEH1}
-
+Click on text name (Bed Frame)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYBEDFRAMETEXT}
     Location Should Be  ${PDPBEDFRAMEURL}
     wait until page contains        ${TEXTPUFFYBEDFRAMEH1}
-
-BEDDING Submenu redirection checks using name text
+Click on text name (Comforter)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYCOMFORTERTEXT}
     Location Should Be  ${PDPPUFFYCOMFORTERURL}
     wait until page contains        ${TEXTPUFFYCOMFORTERH1}
-
+Click on text name (Pillow)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYPILLOWTEXT}
     Location Should Be  ${PDPPILLOWURL}
     wait until page contains        ${TEXTPUFFYPILLOWH1}
-
+Click on text name (Body Pillow)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYBODYPILLOWTEXT}
     Location Should Be  ${PDPBODYPILLOWURL}
     wait until page contains        ${TEXTPUFFYBODYPILLOWH1}
-
+Click on text name (Mattress Pad)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSPADTEXT}
     Location Should Be  ${PDPMATTRESSPADURL}
     wait until page contains        ${TEXTPUFFYMATTRESSPADH1}
-
+Click on text name (Mattress Protector)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSPROTECTORTEXT}
     Location Should Be  ${PDPPUFFYMATTRESSPROTECTORURL}
     wait until page contains        ${TEXTPUFFYMATTRESSPROTECTORH1}
-
+Click on text name (Mattress Topper)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSTOPPERTEXT}
     Location Should Be  ${PDPMATTRESSTOPPERURL}
     wait until page contains        ${TEXTPUFFYMATTRESSTOPPERH1}
-
+Click on text name (Blanket)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYBLANKETTEXT}
     Location Should Be  ${PDPPUFFYBLANKETURL}
     wait until page contains        ${TEXTPUFFYBLANKETH1}
-
+Click on text name (Weighted Blanket)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYWEIGHTEDBLANKETTEXT}
     Location Should Be  ${PDPWEIGHTEDBLANKETURL}
     wait until page contains        ${TEXTPUFFYWEIGHTEDBLANKETH1}
-
+Click on text name (Sheets)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYSHEETSTEXT}
     Location Should Be  ${PDPPUFFYSHEETSURL}
     wait until page contains        ${TEXTPUFFYSHEETSH1}
-
-BEDROOM Submenu redirection checks using name text
+Click on text name (Dog Bed)
     sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click element       ${LOCMENUPUFFYDOGBEDTEXT}
     Location Should Be  ${PDPDOGBEDURL}
     wait until page contains        ${TEXTPUFFYDOGBEDH1}
-
+Click on text name (Rug)
     sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click element       ${LOCMENUPUFFYRUGTEXT}
     Location Should Be  ${PDPPUFFYRUGURL}
     wait until page contains        ${TEXTPUFFYRUGH1}
-
-Main Menu click checks
+Click on text name (Customer Reviews)
+    sleep               1s
+    Mouse Over          ${LOCMENUREVIEWS}
+    Click element       ${LOCMENUCUSTOMERREVIEWS}
+    Location Should Be  ${SUPPORTREVIEWSURL}
+    wait until page contains        ${TEXTPUFFYMATTRESSREVIEWSH1}
+Click on text name (Video Reviews)
+    sleep               1s
+    Mouse Over          ${LOCMENUREVIEWS}
+    Click Link          link:Video Reviews
+    Location Should Be  ${SUPPORTREVIEWVIDEOSURL}
+    wait until page contains        ${TEXTPUFFYMATTRESSREVIEWVIDEOSH1}
+Click on text name (Awards)
+    sleep               1s
+    Mouse Over          ${LOCMENUREVIEWS}
+    Click Link          link:Awards
+    Location Should Be  ${PUFFYMATTRESSAWARDSURL}
+    wait until page contains        ${TEXTPUFFYMATTRESSAWARDSH1}
+Click on text name (Contact Us)
+    sleep               1s
+    Mouse Over          ${LOCSUPPORT}
+    Click element       ${LOCMENUCONTACTUS}
+    Location Should Be  ${SUPPORTCONTACTUSURL}
+    wait until page contains        ${TEXTCONTACTUSH1}
+Click on text name (FAQs)
+    sleep               1s
+    Mouse Over          ${LOCSUPPORT}
+    Click element       ${LOCMENUFAQS}
+    Location Should Be  ${SUPPORTFAQSURL}
+    wait until page contains        ${TEXTFAQH1}
+Click on text name (Financing)
+    sleep               1s
+    Mouse Over          ${LOCSUPPORT}
+    Click element       ${LOCMENUFINANCING}
+    Location Should Be  ${SUPPORTFINANCINGURL}
+    wait until page contains        ${TEXTFINANCINGH1}
+Click on Main Menu text (MATTRESSES)
     Sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click Element       ${LOCMATTRESSES}
-    Page Should Contain            Find Your Perfect Mattress
-
+    Location Should be  https://puffy.com/#mattresses
+    wait until page contains            Find Your Perfect Mattress
+Click on Main Menu text (BASES)
     Sleep               1s
     Mouse Over          ${LOCBASES}
     Click Element       ${LOCBASES}
-    Page Should Not Contain     ${LOCMENUPUFFYFOUNDATIONTEXT}
-
+    Location should be  https://puffy.com/collections/bed-frames
+    wait until page contains     Modern Bed Frames
+Click on Main Menu text (BEDDING)
     Sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click Element       ${LOCBEDDING}
-    Page Should Not Contain     ${LOCMENUPUFFYCOMFORTERTEXT}
-
+    Location should be  https://puffy.com/collections/bedding
+    wait until page contains     Ultra-cozy Bedding Collection
+Click on Main Menu text (BEDROOM)
     Sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click Element       ${LOCBEDROOM}
-    Page Should Not Contain     ${LOCMENUPUFFYRUGTEXT}
-
+    Location should be  https://puffy.com/collections/bedroom
+    wait until page contains     Lux Bedroom Essentials
+Click on Main Menu text (REVIEWS)
     Sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
     Click Element       ${LOCMENUREVIEWS}
     Page Should Not Contain     ${LOCMENUAWARDS}
-
+Click on Main Menu text (SUPPORT)
     Sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click Element       ${LOCSUPPORT}
-    Location Should be     ${SUPPORTFAQSURL}
-    wait until page contains        ${TEXTFAQH2}
+    Location Should be     https://puffy.com/pages/contact-puffy-mattress
+    wait until page contains         Puffy Support
 

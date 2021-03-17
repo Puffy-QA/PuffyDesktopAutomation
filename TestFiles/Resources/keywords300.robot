@@ -2259,7 +2259,7 @@ Select and proceed with Splitit
     sleep                               2s
     click element                       xpath=//*[@id="continue_button"]
     sleep                               5s
-    wait until page contains            Select Number of Payments
+    wait until page contains            Order Total
     ${Content}=            get text     css=#maincontent > app-main-page > div > app-footer > footer > div > div.how-works.ng-star-inserted > a
     Run keyword if          '${Content}'!='${TEXTSPLITITH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTSPLITITH1} Actual: ${Content}
     sleep                               2s
@@ -2334,7 +2334,7 @@ Check discount value and freebie on Mattress PDPs
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on mattress PDP Expected: ${SALEDETAILS} Actual: ${Content}
 Check discount value on badges for adjustable base
     sleep                   2s
-    ${Content}=            get text        css=#NEW_YEAR_S_SALE_FREE_ACCESSORIES_UP_TO_440 > tspan.cls-mattress-badge3 > tspan
+    ${Content}=            get text        css=#_300_OFF > tspan
     Run keyword if          '${Content}'!='${DISCOUNTAMOUNT}'      Fail        Wrong discount value text on badge for adjustable base Expected: ${DISCOUNTAMOUNT} Actual: ${Content}
 Check discount value on Adjustable Base PDP
     sleep                   2s
