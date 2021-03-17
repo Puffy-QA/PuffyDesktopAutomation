@@ -282,7 +282,6 @@ Check default size for Puffy Blanket
 Check default size for Puffy Weighted Blanket
     ${DefaultSize}=            get text        css=#product_form_3773124771874 > div.product-variants-holder > div > div > div > div > span.display-name.is--not--sale
     Run keyword if          '${DefaultSize}'!='${SIZEPUFFYWEIGHTEDBLANKETDEFAULTSIZE}'      Fail        Wrong Puffy WeightedBlanket Default Size. Expected Result: ${SIZEPUFFYWEIGHTEDBLANKETDEFAULTSIZE} Actual Result: ${DefaultSize}
-
 Check default color for Puffy Sheets
     ${DefaultSize}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-color > div > div > div > span.display-name.is--not--sale
     Run keyword if          '${DefaultSize}'!='${SIZEPUFFYSHEETSDEFAULTCOLOR}'      Fail        Wrong Puffy Sheets Default color. Expected Result: ${SIZEPUFFYSHEETSDEFAULTCOLOR} Actual Result: ${DefaultSize}
@@ -367,6 +366,7 @@ Check original price for Puffy Lux Hybrid Mattress (all sizes)
 
     ${Content}=            get text        css=#product_form_549302042658 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-size > div > ul > li:nth-child(6) > span > del > span.hybrid-price
     Run keyword if          '${Content}'!='${PUFFYLUXMATTRESSCALKINGORIGINAL}'      Fail        Wrong Puffy Lux Hybrid CalKing Size original price. Expected Result: ${PUFFYLUXMATTRESSCALKINGORIGINAL} Actual Result: ${Content}
+
 
 
 Check original price for Puffy Royal Mattress (all SIZES)
@@ -2206,7 +2206,7 @@ Click on Puffy Royal Hybrid Toggle
     ${Content}=            get text         ${LOC12REASONSPDP}
     Run keyword if         '${Content}'!='${TEXTPUFFYROYALHYBRIDMATTRESSH2}'               Fail        Product Name (H1) not found Expected: ${TEXTPUFFYROYALHYBRIDMATTRESSH2} Actual: ${Content}
 Check current cart count
-    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div/a/span
     set test variable       ${CartCount}    ${CartText}
 Go to Puffy Sheets
     Mouse Over          ${LOCBEDDING}

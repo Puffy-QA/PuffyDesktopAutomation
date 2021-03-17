@@ -146,4 +146,5 @@ ${LOCMENUFINANCING}                                 css=body > div.shopify-secti
 ${LOCHEADERSTORE}                                            css=.store-button--desktop
 ${LOCHEADERPUFFYLOGO}                                  css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.logo
 ${LOCSUPPORT}                       css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(6) > a
-#${LOCSUPPORT}                       css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > a
+
+
