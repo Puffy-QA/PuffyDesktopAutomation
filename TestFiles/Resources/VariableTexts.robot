@@ -40,6 +40,7 @@ ${TEXTPUFFYMATTRESSAWARDSH1}        Award-Winning
 ${TEXTCONTACTUSH1}                  Ask Away.
 ${TEXTFAQH2}                        Ask Away.
 ${TEXTFINANCINGH1}                  You choose how you pay
+${TEXTFAQH1}                        Frequently Asked Questions
 ${TEXTSTOREH1}                      Puffy Store
 ${TEXTHOMEPAGEH1}                   Puffy Mattress
 ###########################################################FOOTER TESTCASES$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$##############
