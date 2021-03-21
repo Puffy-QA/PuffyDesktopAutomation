@@ -18,7 +18,7 @@ ${SALENAME}                     SPRING SALE NOW
 ${SALEDETAILS}                  $300 OFF + FREE PILLOW
 ${DISCOUNTAMOUNT}               $300 OFF
 ${DISCOUNTAMOUNT350}            $350 OFF
-${HOMEPAGE}                     https://puffy.com/
+${HOMEPAGE}                     https://puffy.com/?preview_theme_id=84072824866
 ${SYSTEMBROWSER}                Chrome
 ${FOOTER}                       SPRING SALE NOW $300 OFF + FREE PILLOW
 ${DISCOUNTCODEPAGEDETAILS1}     $300 Off Any Mattress

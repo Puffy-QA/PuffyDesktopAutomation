@@ -206,4 +206,15 @@ ${SUBTOTAL350}                                         $8,765.00
 ${SHIPPING}                                         Free
 ${TOTAL}                                            $9,065.00
 ${TOTAL350}                                            $8,765.00
-
+############################CONTACT US###############################
+${TEXTCONTACTUSTITLEDESCRIPTION}                    The Puffy team is always ready to help you with your sleep queries. Feel free to call or email us.
+${TEXTCONTACTUSEMAIL}                               Send us an email
+${TEXTEMAILADDRESS}                                 support@puffy.com
+${TEXTCONTACTUSPHONE}                               Give us a call
+${TEXTPHONENUMBER}                                  1 800-430-8380
+${TEXTCONTACTUSFORMSUBJECT}                         Do you have questions? We are here to answer them.
+${TEXTCONTACTUSNAMELABEL}                           NAME *
+${TEXTCONTACTUSEMAILLABEL}                          EMAIL *
+${TEXTCONTACTUSREASONLABEL}                         WHY ARE YOU REACHING OUT? *
+${TEXTCONTACTUSMESSAGELABEL}                        MESSAGE *
+${TEXTCONTACTUSSENDMESSAGE}                         Send Message

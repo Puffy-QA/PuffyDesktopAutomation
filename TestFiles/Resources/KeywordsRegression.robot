@@ -1040,4 +1040,113 @@ Click on Main Menu text (SUPPORT)
     Click Element       ${LOCSUPPORT}
     Location Should be     https://puffy.com/pages/contact-puffy-mattress
     wait until page contains         Puffy Support
+Check if breadcrumb product is visible
+    Page Should Not Contain         ${LOCFOOTERBREADCRUMB}
+###############################CONTACT US###############################
 
+Check the URL for Contact Us if it is correct
+    Location should be                      ${SUPPORTCONTACTUSURL}
+
+Check if the Contact us title is showing
+    Wait until page contains element        ${LOCCONTACTUSTITLE}
+
+Look at the Title Content for Contact US
+    ${ContactUsTitle}=            get text        ${LOCCONTACTUSTITLE}
+    Run keyword if          '${ContactUsTitle}'!='${TEXTCONTACTUSH1}'      Fail        Wrong Contact Us Title Content in Contact Us Page. Actual content: ${ContactUsTitle} expected: ${TEXTCONTACTUSH1}
+
+Check if the Contact us title description is showing
+    Wait until page contains element        ${LOCCONTACTUSTITLEDESCRIPTION}
+
+Look at the Title description Content for Contact US
+    ${ContactUsTitleDescription}=            get text        ${LOCCONTACTUSTITLEDESCRIPTION}
+    Run keyword if          '${ContactUsTitleDescription}'!='${TEXTCONTACTUSTITLEDESCRIPTION}'      Fail        Wrong Contact Us Title description Content in Contact Us Page. Actual content: ${ContactUsTitleDescription} expected: ${TEXTCONTACTUSTITLEDESCRIPTION}
+
+Check if the email icon in Contact Us is showing
+    Page Should Contain Image       ${LOCCONTACTUSEMAILICON}
+
+Look at the Email icon content for Contact US
+    ${SendUsAnEmail}=            get text        ${LOCSENDUSANEMAIL}
+    Run keyword if          '${SendUsAnEmail}'!='${TEXTCONTACTUSEMAIL}'      Fail        Wrong Email icon text in Contact Us Page. Actual content: ${SendUsAnEmail} expected: ${TEXTCONTACTUSEMAIL}
+
+Look for the email address and see if it showing correct email address
+    Wait until page contains element             ${LOCCONTACTUSEMAILADD}
+    ${EmailAddress}=            get text        ${LOCCONTACTUSEMAILADD}
+    Run keyword if          '${EmailAddress}'!='${TEXTEMAILADDRESS}'      Fail        Wrong Email Address in Contact Us Page. Actual content: ${EmailAddress} expected: ${TEXTEMAILADDRESS}
+
+Check if the Phone icon in Contact Us is showing
+    Page Should Contain Image       ${LOCCONTACTUSPHONEICON}
+
+Look at the Phone icon content for Contact US
+    ${GiveUsACall}=            get text        ${LOCGIVEUSACALL}
+    Run keyword if          '${GiveUsACall}'!='${TEXTCONTACTUSPHONE}'      Fail        Wrong Phone icon text in Contact Us Page. Actual content: ${GiveUsACall} expected: ${TEXTCONTACTUSPHONE}
+
+Look for the Phone Number and see if it showing correct details
+    Wait until page contains element             ${LOCCONTACTUSPHONENUMBER}
+    ${PhoneNumber}=            get text        ${LOCCONTACTUSPHONENUMBER}
+    Run keyword if          '${PhoneNumber}'!='${TEXTPHONENUMBER}'      Fail        Wrong Phone Number in Contact Us Page. Actual content: ${PhoneNumber} expected: ${TEXPHONENUMBER}
+
+Look for Contact Us form subject and see if it is showing correct text and spelling
+    Wait until page contains element             ${LOCCONTACTUSFORMSUBJECT}
+    ${ContactUsFormSubject}=            get text        ${LOCCONTACTUSFORMSUBJECT}
+    Run keyword if          '${ContactUsFormSubject}'!='${TEXTCONTACTUSFORMSUBJECT}'      Fail        Wrong Phone Number in Contact Us Page. Actual content: ${ContactUsFormSubject} expected: ${TEXTCONTACTUSFORMSUBJECT}
+
+Look for NAME textbox and check the label if it is showing and correctly spelled
+    Wait until page contains element             ${LOCCONTACTUSNAMELABEL}
+    ${ContactUsFormNameLabel}=            get text        ${LOCCONTACTUSNAMELABEL}
+    Run keyword if          '${ContactUsFormNameLabel}'!='${TEXTCONTACTUSNAMELABEL}'      Fail        Wrong Name label in Contact Us form. Actual content: ${ContactUsFormNameLabel} expected: ${TEXTCONTACTUSNAMELABEL}
+Look for EMAIL textbox and check the label if it is showing and correctly spelled
+    Wait until page contains element             ${LOCCONTACTUSEMAILLABEL}
+    ${ContactUsFormEmailLabel}=            get text        ${LOCCONTACTUSEMAILLABEL}
+    Run keyword if          '${ContactUsFormEmailLabel}'!='${TEXTCONTACTUSEMAILLABEL}'      Fail        Wrong Email Label in Contact Us Form. Actual content: ${ContactUsFormEmailLabel} expected: ${TEXTCONTACTUSEMAILLABEL}
+Look for REASON dropdown box and check the label if it is showing and correctly spelled
+    Wait until page contains element             ${LOCCONTACTUSREASONLABEL}
+    ${ContactUsFormReasonLabel}=            get text        ${LOCCONTACTUSREASONLABEL}
+    Run keyword if          '${ContactUsFormReasonLabel}'!='${TEXTCONTACTUSREASONLABEL}'      Fail        Wrong Reason Label in Contact Us Form. Actual content: ${ContactUsFormReasonLabel} expected: ${TEXTCONTACTUSREASONLABEL}
+Look for MESSAGE textbox and check the label if it is showing and correctly spelled
+    Wait until page contains element             ${LOCCONTACTUSMESSAGELABEL}
+    ${ContactUsFormMessageLabel}=            get text        ${LOCCONTACTUSMESSAGELABEL}
+    Run keyword if          '${ContactUsFormMessageLabel}'!='${TEXTCONTACTUSMESSAGELABEL}'      Fail        Wrong Message Label in Contact Us Form. Actual content: ${ContactUsFormMessageLabel} expected: ${TEXTCONTACTUSMESSAGELABEL}
+
+Check if the Name Textbox is showing
+    Page Should Contain Element                         ${LOCCONTACTUSNAMETEXTBOX}
+Check if the Email Textbox is showing
+    Page Should Contain Element                         ${LOCCONTACTUSEMAILTEXTBOX}
+Check if the Reason Dropdown is showing
+    Page Should Contain Element                         ${LOCCONTACTUSREASONDROPDOWNBOX}
+Check if the Message Textbox is showing
+    Page Should Contain Element                         ${LOCCONTACTUSMESSAGETEXTBOX}
+Check if the Send Message action button is showing
+    Page Should Contain Element                         ${LOCCONTACTUSSENDMESSAGE}
+Check if the field validation is working in contact us form
+    Element Should Not Be Visible                       ${LOCCONTACTUSORDERNUMBERTEXTBOX}
+    Click element                                       ${LOCCONTACTUSSENDMESSAGE}
+    Location should be                                  ${SUPPORTCONTACTUSURL}
+    Input Text                                          ${LOCCONTACTUSNAMETEXTBOX}      ${FIRSTNAME}
+    Click element                                       ${LOCCONTACTUSSENDMESSAGE}
+    Location should be                                  ${SUPPORTCONTACTUSURL}
+    Input Text                                          ${LOCCONTACTUSEMAILTEXTBOX}     ${EMAIL}
+    Click element                                       ${LOCCONTACTUSSENDMESSAGE}
+    Location should be                                  ${SUPPORTCONTACTUSURL}
+    Select from list by value                           contact-category    Contact Form - Shipping and Tracking - CF002
+    Page Should Contain Textfield                       ${LOCCONTACTUSORDERNUMBERTEXTBOX}
+    Click element                                       ${LOCCONTACTUSSENDMESSAGE}
+    Location should be                                  ${SUPPORTCONTACTUSURL}
+    Select from list by value                           contact-category    Contact Form - Warranty - CF003
+    Element Should Not Be Visible                       ${LOCCONTACTUSORDERNUMBERTEXTBOX}
+    Click element                                       ${LOCCONTACTUSSENDMESSAGE}
+    Location should be                                  ${SUPPORTCONTACTUSURL}
+    Select from list by value                           contact-category    Contact Form - Returns and Exchanges - CF004
+    Page Should Contain Textfield                       ${LOCCONTACTUSORDERNUMBERTEXTBOX}
+    Click element                                       ${LOCCONTACTUSSENDMESSAGE}
+    Location should be                                  ${SUPPORTCONTACTUSURL}
+    Go To                                               ${HOMEPAGE}
+    Go To                                               ${SUPPORTCONTACTUSURL}
+Fill out Contact Us form
+    Input text                                          ${LOCCONTACTUSNAMETEXTBOX}      ${FIRSTNAME}
+    Input Text                                          ${LOCCONTACTUSEMAILTEXTBOX}     ${EMAIL}
+    Element Should Not Be Visible                       ${LOCCONTACTUSORDERNUMBERTEXTBOX}
+    Select from list by value                           contact-category    Contact Form - Shipping and Tracking - CF002
+    Page Should Contain Textfield                       ${LOCCONTACTUSORDERNUMBERTEXTBOX}
+    Input Text                                          ${LOCCONTACTUSMESSAGETEXTBOX}       Hi
+    Click element                                       ${LOCCONTACTUSSENDMESSAGE}
+    Location should be                                  ${CONTACTFORMCHALLENGEURL}
