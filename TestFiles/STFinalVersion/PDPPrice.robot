@@ -16,6 +16,7 @@ Start Record Video
     Initiate Video Recording
 Verify the Sale Popup appears
     Open Login Screen
+    Switch to Version A
     Wait and dismiss popup
 Verify sale details on Timer Bar
     Check Seasonal Sale text on timer

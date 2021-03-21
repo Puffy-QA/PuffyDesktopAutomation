@@ -22,6 +22,7 @@ Start Record Video
     Initiate Video Recording
 Verify the Sale Popup appears
     Open Login Screen
+    Switch to Version A
     Wait and dismiss popup
 Save350 page
     Go to Save350 page

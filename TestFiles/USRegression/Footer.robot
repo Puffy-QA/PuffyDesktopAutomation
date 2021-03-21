@@ -16,9 +16,10 @@ Start Record Video
     Initiate Video Recording
 Verify the Sale Popup appears
     Open Login Screen
+    Switch to Version A
     Wait and dismiss popup
 #Switch version
-    #Switch to Version B
+    #Switch to Version A
     sleep               2s
 Verify sale details on Timer Bar
     Check Seasonal Sale text on timer
@@ -66,6 +67,8 @@ Verify if the spelling is correct for Puffy Rug
     Footer Spell check for word Puffy Rug
 Check Product Section Redirection (Puffy)
     Click on Puffy and check redirection URL
+Verify if breadcrumb product is visible
+    Check if breadcrumb product is visible
 Check Product Section Redirection (Puffy Lux)
     Click on Puffy Lux and check redirection URL
 Check Product Section Redirection (Puffy Royal)
@@ -235,6 +238,7 @@ Check Auxiliary Section Redirection (Do Not Sell My Personal Information)
     Click on Do Not Sell My Personal Information and check redirection URL
 Check Auxiliary Section Redirection (Copyright)
     Click on Copyright and check redirection URL
+
 Stop All Video Recordings
     Stop All Video Recordings
 

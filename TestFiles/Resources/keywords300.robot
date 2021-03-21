@@ -2291,6 +2291,7 @@ Click on "Shop The Mattress" on the Homepage
 Verify H1 on Comparison Page
     sleep                               5s
     #Wait until page contains            ${TEXTCOMPAREPAGEH1}
+    wait until page contains element    css=body > div.compare-page.content > div.compare-page__headline > h1
     ${Content}=            get text     css=body > div.compare-page.content > div.compare-page__headline > h1
     Run keyword if          '${Content}'!='${TEXTCOMPAREPAGEH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTCOMPAREPAGEH1} Actual: ${Content}
 Verify H1 on Puffy PDP
