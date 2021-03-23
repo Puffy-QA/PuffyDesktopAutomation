@@ -1106,7 +1106,6 @@ Look for MESSAGE textbox and check the label if it is showing and correctly spel
     Wait until page contains element             ${LOCCONTACTUSMESSAGELABEL}
     ${ContactUsFormMessageLabel}=            get text        ${LOCCONTACTUSMESSAGELABEL}
     Run keyword if          '${ContactUsFormMessageLabel}'!='${TEXTCONTACTUSMESSAGELABEL}'      Fail        Wrong Message Label in Contact Us Form. Actual content: ${ContactUsFormMessageLabel} expected: ${TEXTCONTACTUSMESSAGELABEL}
-
 Check if the Name Textbox is showing
     Page Should Contain Element                         ${LOCCONTACTUSNAMETEXTBOX}
 Check if the Email Textbox is showing
@@ -1327,9 +1326,6 @@ Check if the CTA for Klarna financing is showing with correct content and functi
     Go Back
     sleep                                   2s
     Go Back
-
-
-
 Click See Details in Splitit
     ${SplititSeeDetails}=            get text        ${LOCFINANCINGSPLITITSEEDETAILS}
     Run keyword if          '${SplititSeeDetails}'!='${TEXTFINANCINGSEEDETAILS}'      Fail        Wrong Splitit button label for see details. Actual content: ${SplititSeeDetails} expected: ${TEXTFINANCINGSEEDETAILS}
@@ -1388,11 +1384,6 @@ Check Splitit Section CTA button is showing with correct content and functionali
     Click element                                   css=body > app-root > app-learn-more > div > div > div.splitit-modal-header.ng-tns-c6-0.ng-star-inserted > a
     Sleep                                           2s
     scroll element into view                        css=body > div.financing__splitit > div.text-bar.text-bar--small-text.text-bar--financing-info > div > div
-
-
-
-
-
 Check the first question in the list if showing and with correct content (Splitit)
     Element should be visible                       ${LOCSPLITITFIRSTFAQ}
     ${SplititFAQFirstQuestion}=            get text      ${LOCSPLITITFIRSTFAQ}
@@ -1404,7 +1395,6 @@ Click first question to see if it will expand (Splitit)
 Check if the first answer will show with correct content (Splitit)
     ${SplititFAQFirstQuestionAnswer}=            get text      ${LOCSPLITITFIRSTFAQANSWER}
     Run keyword if          "${SplititFAQFirstQuestionAnswer}"!="${TEXTSPLITITFIRSTFAQANSWER}"      Fail        Wrong Splitit First FAQ Answer. Actual content: ${SplititFAQFirstQuestionAnswer} expected: ${TEXTSPLITITFIRSTFAQANSWER}
-
 Click the first question to see if it will collapse (Splitit)
     Click Element                                   ${LOCSPLITITFIRSTFAQ}
     sleep                                           2s
@@ -1442,7 +1432,6 @@ Click the third question to see if it will collapse (Splitit)
 Check if the disclaimer is showing with correct content (Splitit)
     ${SplititDisclaimer}=            get text      ${LOCSPLITITDISCLAIMER}
     Run keyword if          "${SplititDisclaimer}"!="${TEXTSPLITITDISCLAIMER}"      Fail        Wrong Splitit disclaimer. Actual content: ${SplititDisclaimer} expected: ${TEXTSPLITITDISCLAIMER}
-
 Check if the CTA for Klarna financing is showing with correct content and functionality (Splitit)
     ${SplititCTA}=            get text      ${LOCSPLITITCTA}
     Run keyword if          "${SplititCTA}"!="${TEXTSHOPTHEMATTRESSCTA}"      Fail        Wrong Splitit CTA text. Actual content: ${SplititCTA} expected: ${TEXTSHOPTHEMATTRESSCTA}
@@ -1451,3 +1440,97 @@ Check if the CTA for Klarna financing is showing with correct content and functi
     Go Back
     sleep                                   2s
     Go Back
+#########################################RETURN POLICY######################################
+Go to Return Policy Page
+    sleep                                   2s
+    Scroll Element Into View                ${LOCFOOTERSECTION}
+    Click element                           ${LOCFOOTERRETURNPOLICY}
+    Location should be                      ${SUPPORTRETURNPOLICYURL}
+Check Return Policy Title if showing with correct content
+    Element should be visible               ${LOCRETURNPOLICYTITLE}
+    ${ReturnPolicyTitle}=            get text      ${LOCRETURNPOLICYTITLE}
+    Run keyword if          "${ReturnPolicyTitle}"!="${TEXTRETURNPOLICYTITLE}"      Fail        Wrong Title for Return Policy. Actual content: ${ReturnPolicyTitle} expected: ${TEXTRETURNPOLICYTITLE}
+Read and check the Return Policy Description content if showing and correct
+    Element should be visible               ${LOCRETURNPOLICYINFORMATION}
+    ${ReturnPolicyInformation}=            get text      ${LOCRETURNPOLICYINFORMATION}
+    Run keyword if          "${ReturnPolicyInformation}"!="${TEXTRETURNPOLICYINFORMATION}"      Fail        Wrong content for Return Policy. Actual content: ${ReturnPolicyInformation} expected: ${TEXTRETURNPOLICYINFORMATION}
+Check if the title Why Buy Puffy? is showing with correct content
+    Element should be visible               ${LOCWHYBUYPUFFYTITLE}
+    ${WhyBuyPuffyTitle}=            get text      ${LOCWHYBUYPUFFYTITLE}
+    Run keyword if          "${WhyBuyPuffyTitle}"!="${TEXTWHYBUYPUFFYTITLE}"      Fail        Wrong Title for Why Buy Puffy Section. Actual content: ${WhyBuyPuffyTitle} expected: ${TEXTWHYBUYPUFFYTITLE}
+Read and check the Why Buy Puffy? description content if showing and correct
+    Element should be visible               ${LOCWHYBUYPUFFYINFORMATION}
+    ${WhyBuyPuffyInformation}=            get text      ${LOCWHYBUYPUFFYINFORMATION}
+    Run keyword if          "${WhyBuyPuffyInformation}"!="${TEXTWHYBUYPUFFYINFORMATION}"      Fail        Wrong content for Why Buy Puffy Section. Actual content: ${WhyBuyPuffyInformation} expected: ${TEXTWHYBUYPUFFYINFORMATION}
+Check if Puffy hyperlink is clickable and redirected to correct page
+    Click element                          ${LOCWHYBUYPUFFYHYPERLINKPUFFY}
+    Location should be                     ${HOMEPAGE}
+    Go Back
+Check if the title PUFFY MATTRESS RETURNS is showing with correct content
+    Element should be visible               ${LOCPUFFYMATTRESSRETURNSTITLE}
+    ${PuffyMattressReturnsTitle}=            get text      ${LOCPUFFYMATTRESSRETURNSTITLE}
+    Run keyword if          "${PuffyMattressReturnsTitle}"!="${TEXTPUFFYMATTRESSRETURNSTITLE}"      Fail        Wrong content for PUFFY MATTRESS RETURNS Title. Actual content: ${PuffyMattressReturnsTitle} expected: ${TEXTPUFFYMATTRESSRETURNSTITLE}
+Read and check the PUFFY MATTRESS RETURNS description content if showing and correct
+    Element should be visible               ${LOCPUFFYMATTRESSRETURNSINFORMATION1}
+    ${PuffyMattressReturnsInformation1}=            get text      ${LOCPUFFYMATTRESSRETURNSINFORMATION1}
+    Run keyword if          "${PuffyMattressReturnsInformation1}"!="${TEXTPUFFYMATTRESSRETURNSINFORMATION1}"      Fail        Wrong content for Puffy Mattress Returns paragraph 1. Actual content: ${PuffyMattressReturnsInformation1} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION1}
+    Element should be visible               ${LOCPUFFYMATTRESSRETURNSINFORMATION2}
+    ${PuffyMattressReturnsInformation2}=            get text      ${LOCPUFFYMATTRESSRETURNSINFORMATION2}
+    Run keyword if          "${PuffyMattressReturnsInformation2}"!="${TEXTPUFFYMATTRESSRETURNSINFORMATION2}"      Fail        Wrong content for Puffy Mattress Returns paragraph 2. Actual content: ${PuffyMattressReturnsInformation2} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION2}
+    Element should be visible               ${LOCPUFFYMATTRESSRETURNSINFORMATION3}
+    ${PuffyMattressReturnsInformation3}=            get text      ${LOCPUFFYMATTRESSRETURNSINFORMATION3}
+    Run keyword if          "${PuffyMattressReturnsInformation3}"!="${TEXTPUFFYMATTRESSRETURNSINFORMATION3}"      Fail        Wrong content for Puffy Mattress Returns paragraph 3. Actual content: ${PuffyMattressReturnsInformation3} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION3}
+Check if Puffy Mattress hyperlink is clickable and landing to correct page
+    Click element                          ${LOCPUFFYMATTRESSHYPERLINK}
+    Location should be                     ${PUFFYCOMPAREMATTRESSURL}
+    Go Back
+Check if the title PUFFY PRODUCT RETURNS is showing with correct content
+    Element should be visible               ${LOCPUFFYPRODUCTRETURNSTITLE}
+    ${PuffyProductReturnsTitle}=            get text      ${LOCPUFFYPRODUCTRETURNSTITLE}
+    Run keyword if          "${PuffyProductReturnsTitle}"!="${TEXTPUFFYPRODUCTRETURNSTITLE}"      Fail        Wrong content for PUFFY PRODUCT RETURNS Title. Actual content: ${PuffyProductReturnsTitle} expected: ${TEXTPUFFYPRODUCTRETURNSTITLE}
+Read and check the PUFFY PRODUCT RETURNS description content if showing and correct
+    Element should be visible               ${LOCPUFFYPRODUCTRETURNSINFORMATION1}
+    ${PuffyProductReturnsInformation1}=            get text      ${LOCPUFFYPRODUCTRETURNSINFORMATION1}
+    Run keyword if          "${PuffyProductReturnsInformation1}"!="${TEXTPUFFYPRODUCTRETURNSINFORMATION1}"      Fail        Wrong content for Puffy Product Returns paragraph 1. Actual content: ${PuffyProductReturnsInformation1} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION1}
+    Element should be visible               ${LOCPUFFYPRODUCTRETURNSINFORMATION2}
+    ${PuffyProductReturnsInformation2}=            get text      ${LOCPUFFYPRODUCTRETURNSINFORMATION2}
+    Run keyword if          "${PuffyProductReturnsInformation2}"!="${TEXTPUFFYPRODUCTRETURNSINFORMATION2}"      Fail        Wrong content for Puffy Product Returns paragraph 2. Actual content: ${PuffyProductReturnsInformation2} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION2}
+    Element should be visible               ${LOCPUFFYPRODUCTRETURNSINFORMATION3}
+    ${PuffyProductReturnsInformation3}=            get text      ${LOCPUFFYPRODUCTRETURNSINFORMATION3}
+    Run keyword if          "${PuffyProductReturnsInformation3}"!="${TEXTPUFFYPRODUCTRETURNSINFORMATION3}"      Fail        Wrong content for Puffy Product Returns paragraph 3. Actual content: ${PuffyProductReturnsInformation3} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION3}
+    Element should be visible               ${LOCPUFFYPRODUCTRETURNSINFORMATION4}
+    ${PuffyProductReturnsInformation4}=            get text      ${LOCPUFFYPRODUCTRETURNSINFORMATION4}
+    Run keyword if          "${PuffyProductReturnsInformation4}"!="${TEXTPUFFYPRODUCTRETURNSINFORMATION4}"      Fail        Wrong content for Puffy Product Returns paragraph 3. Actual content: ${PuffyProductReturnsInformation4} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION4}
+    Element should be visible               ${LOCPUFFYPRODUCTRETURNSINFORMATION5}
+    ${PuffyProductReturnsInformation5}=            get text      ${LOCPUFFYPRODUCTRETURNSINFORMATION5}
+    Run keyword if          "${PuffyProductReturnsInformation5}"!="${TEXTPUFFYPRODUCTRETURNSINFORMATION5}"      Fail        Wrong content for Puffy Product Returns paragraph 3. Actual content: ${PuffyProductReturnsInformation5} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION3}
+Check if 101-night sleep trial hyperlink is clickable and landing to correct page
+    Click element                          ${LOC101NIGHTSLEEPTRIALHYPERLINK}
+    Location should be                     ${PUFFY101NIGHTSLEEPTRIALURL}
+    Go Back
+Check if Puffy.com hyperlink is clickable and landing to correct page
+    Click element                          ${LOCPUFFYCOMHYPERLINK}
+    Location should be                     ${HOMEPAGE}
+    Go Back
+Check if the section is showing
+    Element should be visible               css=body > div.product-bar > div
+Check if the Product Bar title is showing with correct content
+    Element should be visible               ${LOCPRODUCTBARTITLE}
+    ${ProductBarTitle}=            get text      ${LOCPRODUCTBARTITLE}
+    Run keyword if          "${ProductBarTitle}"!="${TEXTPRODUCTBARTITLE}"      Fail        Wrong content for Puffy Product Returns paragraph 3. Actual content: ${ProductBarTitle} expected: ${TEXTPRODUCTBARTITLE}
+Check if the first product bar box is showing (Icon and text desc)
+    Element should be visible                ${LOCPRODUCTBARICON1}
+    Element should be visible                ${LOCPRODUCTBARICON1DESC}
+Check if product bar icon arrow is showing
+    Element should be visible                ${LOCPRODUCTBARARROW}
+Check if the second product bar box is showing (Icon and text desc)
+    Element should be visible                ${LOCPRODUCTBARICON2}
+    Element should be visible                ${LOCPRODUCTBARICON2DESC}
+Check if product bar text at the bottom is showing with correct content
+    Element should be visible                ${LOCPRODUCTBARBOTTOMTEXT}
+    ${ProductBarBottomText}=            get text      ${LOCPRODUCTBARBOTTOMTEXT}
+    Run keyword if          "${ProductBarBottomText}"!="${TEXTPRODUCTBARBOTTOMTEXT}"      Fail        Wrong content for Puffy Product Returns paragraph 3. Actual content: ${ProductBarTitle} expected: ${TEXTPRODUCTBARTITLE}
+Check if the product bar CTA is showing with correct label and functionality
+    Element should be visible                ${LOCPRODUCTBARCTA}
+    ${ProductBarCTA}=            get text      ${LOCPRODUCTBARCTA}
+    Run keyword if          "${ProductBarCTA}"!="${TEXTORDERNOWCTA}"      Fail        Wrong Product Bar CTA text. Actual content: ${ProductBarCTA} expected: ${TEXTORDERNOWCTA}
