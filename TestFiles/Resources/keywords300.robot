@@ -17,6 +17,19 @@ Open Login Screen
     Maximize Browser Window
     wait until page contains element    css=#saleTimer > div:nth-child(1) > div
 
+Open Shopify
+    Open Browser            ${SHOPIFY}  ${SYSTEMBROWSER}
+    Maximize Browser Window
+    wait until page contains element    css=#account_email
+    Input text                          css=#account_email  ${SHOPIFYLOGIN}
+    Click Element                       css=#body-content > div:nth-child(2) > div > div > div > div > div:nth-child(3) > div > form > button
+    wait until page contains element    css=#login_form > div.ui-form__section > div.next-input-wrapper > div
+    sleep                               5s
+    Input text                          css=#account_password   ${SHOPIFYPASS}
+    Click element                       css=#login_form > div.ui-form__group > ul > button
+    sleep                               5s
+    Location should be                  https://puffy.com/?cart
+    Go to homepage
 #=============================SEASON SALE KEYWORDS=================================================#
 Check Seasonal Sale text on timer
     ${Content}=            get text        css=#saleTimer > div:nth-child(1) > div
@@ -2206,7 +2219,7 @@ Click on Puffy Royal Hybrid Toggle
     ${Content}=            get text         ${LOC12REASONSPDP}
     Run keyword if         '${Content}'!='${TEXTPUFFYROYALHYBRIDMATTRESSH2}'               Fail        Product Name (H1) not found Expected: ${TEXTPUFFYROYALHYBRIDMATTRESSH2} Actual: ${Content}
 Check current cart count
-    ${CartText}   get text  xpath=/html/body/div[4]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
     set test variable       ${CartCount}    ${CartText}
 Go to Puffy Sheets
     Mouse Over          ${LOCBEDDING}
@@ -2300,7 +2313,7 @@ Verify H1 on Puffy PDP
     Run keyword if          '${Content}'!='${TEXTPUFFYMATTRESSH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTPUFFYMATTRESSH1} Actual: ${Content}
 Check Seasonal Sale text on Homepage
     sleep                   2s
-    ${Content}=            get text        css=#Cyber_Monday_Sale_Now > tspan
+    ${Content}=            get text        css=#SPRING_sale_now_300_off_free_pillow > tspan:nth-child(1)
     Run keyword if          "${Content}"!="${SALENAME}"        Fail        Wrong Seasonal Sale text on homepage Expected: ${SALENAME} Actual: ${Content}
 Check Seasonal Sale text on Homepage (HYBRID)
     sleep                   2s
@@ -2312,7 +2325,7 @@ Go back to Compare Page
 click on "Shop Now" button for Puffy Lux
     Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.compare-boxes__action > a
 Check discount value and freebie on Homepage
-    ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan
+    ${Content}=            get text        css=#SPRING_sale_now_300_off_free_pillow > tspan:nth-child(2)
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on homepage Expected: ${SALEDETAILS} Actual: ${Content}
 Check discount value and freebie on Homepage (HYBRID)
     ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan
