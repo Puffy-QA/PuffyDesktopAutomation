@@ -19,7 +19,7 @@ ${ZipCode}                      03101
 ${Sale Name}                    SPRING SALE NOW
 ${Sale Details}                 $300 OFF
 ${Discount Amount}              $300 OFF
-${Homepage}                     https://puffy.ca/?preview_theme_id=120147476554
+${Homepage}                     https://puffy.ca
 ${systembrowser}                Chrome
 ${Feedback}                     html.null body.index.is--hybrid-false.timer--exists.jdgm-buyer-badge--removed div.index-sections div#shopify-section-hov_instagramBoxes.shopify-section div.instagram-boxes div.instagram-boxes__inner
 ${STORE}                        css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div > div > ul > li:nth-child(9) > a

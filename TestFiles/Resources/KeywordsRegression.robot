@@ -1150,3 +1150,304 @@ Fill out Contact Us form
     Input Text                                          ${LOCCONTACTUSMESSAGETEXTBOX}       Hi
     Click element                                       ${LOCCONTACTUSSENDMESSAGE}
     Location should be                                  ${CONTACTFORMCHALLENGEURL}
+######################################FINANCING PAGE##############################################
+Go to Financing Page
+    sleep                                   2s
+    Scroll Element Into View                ${LOCFOOTERSECTION}
+    Click element                           ${LOCFOOTERFINANCING}
+    Location should be                      ${SUPPORTFINANCINGURL}
+Check if top-banner__image is showing
+    sleep                                   5s
+    Page Should Contain Image               ${LOCFINANCINGTOPBANNERIMAGE}
+    Element Should Be Visible               ${LOCFINANCINGTOPBANNERIMAGE}
+Check if the Top Banner title is showing and with correct content
+    Element should be Visible               ${LOCFINANCINGTOPBANNERTITLE}
+    Wait until page contains                ${TEXTFINANCINGH1}
+Check if the Top Banner description is showing and with correct content
+    Element should be Visible               ${LOCFINANCINGTOPBANNERTITLEDESC}
+    Wait until page contains                ${TEXTFINANCINGTOPBANNERTITLEDESC}
+Check if Top Banner CTA button is showing and with correct text and functionality
+    Element should be Visible                   ${LOCFINANCINGTOPBANNERCTA}
+    ${TopBannerCTA}=            get text        ${LOCFINANCINGTOPBANNERCTA}
+    Run keyword if          '${TopBannerCTA}'!='${TEXTSHOPTHEMATTRESSCTA}'      Fail        Wrong CTA label name for Top Banner. Actual content: ${TopBannerCTA} expected: ${TEXTSHOPTHEMATTRESSCTA}
+Check if Financing option title is showing and with correct content
+    Scroll Element Into View                    ${LOCFINANCINGKLARNAHEADER}
+    Element should be Visible                   ${LOCFINANCINGFINANCEOPTIONHEADER}
+    Wait until page contains                    ${TEXTFINANCEOPTIONHEADER}
+Check if Klarna image is showing
+    sleep                                       5s
+    element should be visible                   ${LOCFINANCINGFINANCEKLARNAIMAGE}
+Check if Klarna Summary is showing and with correct content
+    element should be visible                   ${LOCFINANCINGKLARNASUMMARY}
+    ${KlarnaFirstSummary}=            get text        ${LOCFINANCINGKLARNASUMMARYFIRST}
+    Run keyword if          '${KlarnaFirstSummary}'!='${TEXTKLARNAFIRSTSUMMARY}'      Fail        Wrong Klarna First Summary. Actual content: ${KlarnaFirstSummary} expected: ${TEXTKLARNAFIRSTSUMMARY}
+    ${KlarnaSecondSummary}=            get text        ${LOCFINANCINGKLARNASUMMARYSECOND}
+    Run keyword if          '${KlarnaSecondSummary}'!='${TEXTKLARNASECONDSUMMARY}'      Fail        Wrong Klarna Second Summary. Actual content: ${KlarnaSecondSummary} expected: ${TEXTKLARNASECONDSUMMARY}
+    ${KlarnaThirdSummary}=            get text        ${LOCFINANCINGKLARNASUMMARYTHIRD}
+    Run keyword if          '${KlarnaThirdSummary}'!='${TEXTKLARNATHIRDSUMMARY}'      Fail        Wrong Klarna Third Summary. Actual content: ${KlarnaThirdSummary} expected: ${TEXTKLARNATHIRDSUMMARY}
+    ${KlarnaFourthSummary}=            get text        ${LOCFINANCINGKLARNASUMMARYFOURTH}
+    Run keyword if          '${KlarnaFourthSummary}'!='${TEXTKLARNAFOURTHSUMMARY}'      Fail        Wrong Klarna Fourth Summary. Actual content: ${KlarnaFourthSummary} expected: ${TEXTKLARNAFOURTHSUMMARY}
+Check if See Details in Klarna is showing and redirecting to correct section
+    ${KlarnaSeeDetails}=            get text        ${LOCFINANCINGKLARNASEEDETAILS}
+    Run keyword if          '${KlarnaSeeDetails}'!='${TEXTFINANCINGSEEDETAILS}'      Fail        Wrong Klarna button label for see details. Actual content: ${KlarnaSeeDetails} expected: ${TEXTFINANCINGSEEDETAILS}
+    Click element                                   ${LOCFINANCINGKLARNASEEDETAILS}
+    Location should be                              ${FINANCINGKLARNASECTION}
+    Go Back
+Check if Splitit image is showing
+    sleep                                       5s
+    element should be visible                   ${LOCFINANCINGFINANCESPLITITIMAGE}
+Check if Splitit Summary is showing with correct content
+    element should be visible                   ${LOCFINANCINGSPLITITSUMMARY}
+    ${SplititFirstSummary}=            get text        ${LOCFINANCINGSPLITITSUMMARYFIRST}
+    Run keyword if          '${SplititFirstSummary}'!='${TEXTSPLITITFIRSTSUMMARY}'      Fail        Wrong Klarna First Summary. Actual content: ${SplititFirstSummary} expected: ${TEXTSPLITITFIRSTSUMMARY}
+    ${SplititSecondSummary}=            get text        ${LOCFINANCINGSPLITITSUMMARYSECOND}
+    Run keyword if          '${SplititSecondSummary}'!='${TEXTSPLITITSECONDSUMMARY}'      Fail        Wrong Klarna Second Summary. Actual content: ${SplititSecondSummary} expected: ${TEXTSPLITITSECONDSUMMARY}
+    ${SplititThirdSummary}=            get text        ${LOCFINANCINGSPLITITSUMMARYTHIRD}
+    Run keyword if          '${SplititThirdSummary}'!='${TEXTSPLITITTHIRDSUMMARY}'      Fail        Wrong Klarna Third Summary. Actual content: ${SplititThirdSummary} expected: ${TEXTSPLITITTHIRDSUMMARY}
+    ${SplititFourthSummary}=            get text        ${LOCFINANCINGSPLITITSUMMARYFOURTH}
+    Run keyword if          '${SplititFourthSummary}'!='${TEXTSPLITITFOURTHSUMMARY}'      Fail        Wrong Klarna Fourth Summary. Actual content: ${SplititFourthSummary} expected: ${TEXTSPLITITFOURTHSUMMARY}
+Check if See Details in Splitit is showing and redirecting to correct section
+    ${SplititSeeDetails}=            get text        ${LOCFINANCINGSPLITITSEEDETAILS}
+    Run keyword if          '${SplititSeeDetails}'!='${TEXTFINANCINGSEEDETAILS}'      Fail        Wrong Splitit button label for see details. Actual content: ${SplititSeeDetails} expected: ${TEXTFINANCINGSEEDETAILS}
+    Click element                                   ${LOCFINANCINGSPLITITSEEDETAILS}
+    Location should be                              ${FINANCINGSPLITITSECTION}
+    Go Back
+Click See Details in Klarna
+    ${KlarnaSeeDetails}=            get text        ${LOCFINANCINGKLARNASEEDETAILS}
+    Run keyword if          '${KlarnaSeeDetails}'!='${TEXTFINANCINGSEEDETAILS}'      Fail        Wrong Klarna button label for see details. Actual content: ${KlarnaSeeDetails} expected: ${TEXTFINANCINGSEEDETAILS}
+    Click element                                   ${LOCFINANCINGKLARNASEEDETAILS}
+    Location should be                              ${FINANCINGKLARNASECTION}
+Check if Klarna image in finance is showing
+    Element should be visible                       css=body > div.financing__klarna > div.featured-financing.text-bar > div.featured-financing__icon
+Check if Klarna section title is showing and with correct content
+    Element should be visible                       ${LOCKLARNAFINANCETITLE}
+    ${KlarnaFinanceTitle}=            get text      ${LOCKLARNAFINANCETITLE}
+    Run keyword if          '${KlarnaFinanceTitle}'!='${TEXTKLARNAFINANCETITLE}'      Fail        Wrong Klarna Finance title. Actual content: ${KlarnaFinanceTitle} expected: ${TEXTKLARNAFINANCETITLE}
+Check if Klarna featured financing is showing with correct content (Including the amount per month)
+    Element should be visible                       ${LOCKLARNAFINANCETITLEDESC}
+    ${KlarnaFinanceTitleDesc}=            get text      ${LOCKLARNAFINANCETITLEDESC}
+    Run keyword if          '${KlarnaFinanceTitleDesc}'!='${TEXTKLARNAFINANCETITLEDESC}'      Fail        Wrong Klarna Finance title description. Actual content: ${KlarnaFinanceTitleDesc} expected: ${TEXTKLARNAFINANCETITLE}
+Check if Klarna Financing Icon is Showing
+    Element should be visible                       ${LOCKLARNAAPRFINANCINGICON}
+Check if Klarna Financing feature title is showing with correct content
+    Element Should be Visible                       ${LOCKLARNAAPRFINANCINGTITLE}
+    ${KlarnaAPRFinaningTitle}=            get text      ${LOCKLARNAAPRFINANCINGTITLE}
+    Run keyword if          '${KlarnaAPRFinaningTitle}'!='${TEXTKLARNAAPRFINANCING}'      Fail        Wrong Klarna APR Financing title. Actual content: ${KlarnaAPRFinaningTitle} expected: ${TEXTKLARNAAPRFINANCING}
+Check if Klarna Financing feature Description is showing with correct content
+    Element Should be Visible                       ${LOCKLARNAAPRFINANCINGTITLEDESC}
+    ${KlarnaAPRFinaningTitleDesc}=            get text      ${LOCKLARNAAPRFINANCINGTITLEDESC}
+    Run keyword if          '${KlarnaAPRFinaningTitleDesc}'!='${TEXTKLARNAAPRFINANCINGDESC}'      Fail        Wrong Klarna APR Financing title desc. Actual content: ${KlarnaAPRFinaningTitleDesc} expected: ${TEXTKLARNAAPRFINANCINGDESC}
+Check if Klarna Apply in Minutes icon is showing
+    Element should be visible                       ${LOCKLARNAAPPLYINMINICON}
+Check if Klarna Apply in Minutes Title is showing and with correct content
+    Element Should be Visible                       ${LOCKLARNAAPPLYINMINTITLE}
+    ${KlarnaApplyInMinTitle}=            get text      ${LOCKLARNAAPPLYINMINTITLE}
+    Run keyword if          '${KlarnaApplyInMinTitle}'!='${TEXTKLARNAAPPLYINMIN}'      Fail        Wrong Klarna APR Financing title. Actual content: ${KlarnaApplyInMinTitle} expected: ${TEXTKLARNAAPPLYINMIN}
+Check if Klarna Apply in Minutes description is showing and with correct content
+    Element Should be Visible                       ${LOCKLARNAAPPLYINMINTITLEDESC}
+    ${KlarnaApplyInMinTitleDesc}=            get text      ${LOCKLARNAAPPLYINMINTITLEDESC}
+    Run keyword if          '${KlarnaApplyInMinTitleDesc}'!='${TEXTKLARNAAPPLYINMINDESC}'      Fail        Wrong Klarna APR Financing title desc. Actual content: ${KlarnaApplyInMinTitleDesc} expected: ${TEXTKLARNAAPPLYINMINDESC}
+Check if Klarna Simple repayment icon is showing
+    Element should be visible                       ${LOCKLARNASIMPLEREPAYMENTSICON}
+Check if Klarna Simple repayment Title is showing and with correct content
+    Element Should be Visible                       ${LOCKLARNASIMPLEREPAYMENTSTITLE}
+    ${KlarnaSimpleRepaymentTitle}=            get text      ${LOCKLARNASIMPLEREPAYMENTSTITLE}
+    Run keyword if          '${KlarnaSimpleRepaymentTitle}'!='${TEXTKLARNASIMPLEREPAYMENTS}'      Fail        Wrong Klarna APR Financing title. Actual content: ${KlarnaSimpleRepaymentTitle} expected: ${TEXTKLARNASIMPLEREPAYMENTS}
+Check if Klarna Simple repayment description is showing and with correct content
+    Element Should be Visible                       ${LOCKLARNASIMPLEREPAYMENTSTITLEDESC}
+    ${KlarnaSimpleRepaymentsTitleDesc}=            get text      ${LOCKLARNASIMPLEREPAYMENTSTITLEDESC}
+    Run keyword if          '${KlarnaSimpleRepaymentsTitleDesc}'!='${TEXTLARNASIMPLEREPAYMENTSTITLEDESC}'      Fail        Wrong Klarna APR Financing title desc. Actual content: ${KlarnaSimpleRepaymentsTitleDesc} expected: ${TEXTLARNASIMPLEREPAYMENTSTITLEDESC}
+Check if Select Klarna at checkout is showing
+    Element Should be Visible                       ${LOCSELECTKLARNA}
+    ${SelectKlarnaAtCheckout}=            get text      ${LOCSELECTKLARNA}
+    Run keyword if          "${SelectKlarnaAtCheckout}"!="${TEXTSELECTKLARNA}"      Fail        Wrong Klarna APR Financing title desc. Actual content: ${SelectKlarnaAtCheckout} expected: ${TEXTSELECTKLARNA}
+Check Klarna Section CTA button is showing with correct content and functionality
+    Element Should be Visible                       css=body > div.financing__klarna > div.featured-financing.text-bar > span
+    Element Should not be Visible                   css=body > iframe.klarna-upstream-interstitial-frame
+    Click element                                   css=body > div.financing__klarna > div.featured-financing.text-bar > span
+    Element should be visible                       css=body > iframe.klarna-upstream-interstitial-frame
+    sleep                                           5s
+    unselect frame
+    Select Frame                                    css:iframe[class="klarna-upstream-interstitial-frame"]
+    Click element                                   css=#eligibility-service-amount-screen > div > div > div > div > div:nth-child(1) > div > div:nth-child(3) > button > div > div
+    scroll element into view                        css=body > div.financing__klarna > div.text-bar.text-bar--small-text.text-bar--financing-info > div.text-bar__inner > div > p
+Check the first question in the list if showing and with correct content (Klarna)
+    Element should be visible                       ${LOCKLARNAFIRSTFAQ}
+    ${KlarnaFAQFirstQuestion}=            get text      ${LOCKLARNAFIRSTFAQ}
+    Run keyword if          "${KlarnaFAQFirstQuestion}"!="${TEXTKLARNAFIRSTFAQ}"      Fail        Wrong Klarna First FAQ. Actual content: ${KlarnaFAQFirstQuestion} expected: ${TEXTKLARNAFIRSTFAQ}
+Click first question to see if it will expand (Klarna)
+    Element Should Not Be Visible                   ${LOCKLARNAFIRSTFAQANSWER}
+    Click Element                                   ${LOCKLARNAFIRSTFAQ}
+    Element Should Be Visible                       ${LOCKLARNAFIRSTFAQANSWER}
+Check if the first answer will show with correct content (Klarna)
+    ${KlarnaFAQFirstQuestionAnswer}=            get text      ${LOCKLARNAFIRSTFAQANSWER}
+    Run keyword if          "${KlarnaFAQFirstQuestionAnswer}"!="${TEXTKLARNAFIRSTFAQANSWER}"      Fail        Wrong Klarna First FAQ Answer. Actual content: ${KlarnaFAQFirstQuestionAnswer} expected: ${TEXTKLARNAFIRSTFAQANSWER}
+Click the first question to see if it will collapse (Klarna)
+    Click Element                                   ${LOCKLARNAFIRSTFAQ}
+    sleep                                           2s
+    Element Should Not Be Visible                   ${LOCKLARNAFIRSTFAQANSWER}
+Check the second question in the list if showing and with correct content (Klarna)
+    Element should be visible                       ${LOCKLARNASECONDFAQ}
+    ${KlarnaFAQSecondQuestion}=            get text      ${LOCKLARNASECONDFAQ}
+    Run keyword if          "${KlarnaFAQSecondQuestion}"!="${TEXTKLARNASECONDFAQ}"      Fail        Wrong Klarna Second FAQ. Actual content: ${KlarnaFAQSecondQuestion} expected: ${TEXTKLARNASECONDFAQ}
+Click second question to see if it will expand (Klarna)
+    Element Should Not Be Visible                   ${LOCKLARNASECONDFAQANSWER}
+    Click Element                                   ${LOCKLARNASECONDFAQ}
+    Element Should Be Visible                       ${LOCKLARNASECONDFAQANSWER}
+Check if the second answer will show with correct content (Klarna)
+    ${KlarnaFAQSecondQuestionAnswer}=            get text      ${LOCKLARNASECONDFAQANSWER}
+    Run keyword if          "${KlarnaFAQSecondQuestionAnswer}"!="${TEXTKLARNASECONDFAQANSWER}"      Fail        Wrong Klarna Second FAQ Answer. Actual content: ${KlarnaFAQSecondQuestionAnswer} expected: ${TEXTKLARNASECONDFAQANSWER}
+Click the second question to see if it will collapse (Klarna)
+    Click Element                                   ${LOCKLARNASECONDFAQ}
+    sleep                                           2s
+    Element Should Not Be Visible                   ${LOCKLARNASECONDFAQANSWER}
+Check the third question in the list if showing and with correct content (Klarna)
+    Element should be visible                       ${LOCKLARNATHIRDFAQ}
+    ${KlarnaFAQThirdQuestion}=            get text      ${LOCKLARNATHIRDFAQ}
+    Run keyword if          "${KlarnaFAQThirdQuestion}"!="${TEXTKLARNATHIRDFAQ}"      Fail        Wrong Klarna Third FAQ. Actual content: ${KlarnaFAQThirdQuestion} expected: ${TEXTKLARNASECONDFAQ}
+Click third question to see if it will expand (Klarna)
+    Element Should Not Be Visible                   ${LOCKLARNATHIRDFAQANSWER}
+    Click Element                                   ${LOCKLARNATHIRDFAQ}
+    Element Should Be Visible                       ${LOCKLARNATHIRDFAQANSWER}
+Check if the third answer will show with correct content (Klarna)
+    ${KlarnaFAQThirdQuestionAnswer}=            get text      ${LOCKLARNATHIRDFAQANSWER}
+    Run keyword if          "${KlarnaFAQThirdQuestionAnswer}"!="${TEXTKLARNATHIRDFAQANSWER}"      Fail        Wrong Klarna Third FAQ Answer. Actual content: ${KlarnaFAQThirdQuestionAnswer} expected: ${TEXTKLARNASECONDFAQANSWER}
+Click the third question to see if it will collapse (Klarna)
+    Click Element                                   ${LOCKLARNATHIRDFAQ}
+    sleep                                           2s
+    Element Should Not Be Visible                   ${LOCKLARNATHIRDFAQANSWER}
+Check if the disclaimer is showing with correct content (Klarna)
+    ${KlarnaDisclaimer}=            get text      ${LOCKLARNADISCLAIMER}
+    Run keyword if          "${KlarnaDisclaimer}"!="${TEXTKLARNADISCLAIMER}"      Fail        Wrong Klarna disclaimer. Actual content: ${KlarnaDisclaimer} expected: ${TEXTKLARNADISCLAIMER}
+Check if the CTA for Klarna financing is showing with correct content and functionality (Klarna)
+    ${KlarnaCTA}=            get text      ${LOCKLARNACTA}
+    Run keyword if          "${KlarnaCTA}"!="${TEXTSHOPTHEMATTRESSCTA}"      Fail        Wrong Klarna CTA text. Actual content: ${KlarnaCTA} expected: ${TEXTSHOPTHEMATTRESSCTA}
+    Click element                           ${LOCKLARNACTA}
+    Location should be                      ${PUFFYCOMPAREMATTRESSURL}
+    Go Back
+    sleep                                   2s
+    Go Back
+
+
+
+Click See Details in Splitit
+    ${SplititSeeDetails}=            get text        ${LOCFINANCINGSPLITITSEEDETAILS}
+    Run keyword if          '${SplititSeeDetails}'!='${TEXTFINANCINGSEEDETAILS}'      Fail        Wrong Splitit button label for see details. Actual content: ${SplititSeeDetails} expected: ${TEXTFINANCINGSEEDETAILS}
+    Click element                                   ${LOCFINANCINGSPLITITSEEDETAILS}
+    Location should be                              ${FINANCINGSPLITITSECTION}
+Check if Splitit image in finance is showing
+    Element should be visible                       css=body > div.financing__splitit > div.featured-financing.text-bar > div.featured-financing__icon
+Check if Splitit section title is showing and with correct content
+    Element should be visible                       ${LOCSPLITITFINANCETITLE}
+    ${SplititFinanceTitle}=            get text      ${LOCSPLITITFINANCETITLE}
+    Run keyword if          '${SplititFinanceTitle}'!='${TEXTSPLITITFINANCETITLE}'      Fail        Wrong Splitit Finance title. Actual content: ${SplititFinanceTitle} expected: ${TEXTSPLITITFINANCETITLE}
+Check if Splitit featured financing is showing with correct content (Including the amount per month)
+    Element should be visible                       ${LOCSPLITITFINANCETITLEDESC}
+    ${SplititFinanceTitleDesc}=            get text      ${LOCSPLITITFINANCETITLEDESC}
+    Run keyword if          '${SplititFinanceTitleDesc}'!='${TEXTSPLITITFINANCETITLEDESC}'      Fail        Wrong Splitit Finance title description. Actual content: ${SplititFinanceTitleDesc} expected: ${TEXTSPLITITFINANCETITLE}
+Check if Splitit Split your payment Icon is Showing
+    Element should be visible                       ${LOCSPLITITSPLITYOURPAYMENTICON}
+Check if Splitit Split your payment feature title is showing with correct content
+    Element Should be Visible                       ${LOCSPLITITSPLITYOURPAYMENTTITLE}
+    ${SplititSplitYourPaymentTitle}=            get text      ${LOCSPLITITSPLITYOURPAYMENTTITLE}
+    Run keyword if          '${SplititSplitYourPaymentTitle}'!='${TEXTSPLITITSPLITYOURPAYMENTTITLE}'      Fail        Wrong Splitit Split your payment title. Actual content: ${SplititSplitYourPaymentTitle} expected: ${TEXTSPLITITSPLITYOURPAYMENTTITLE}
+Check if Splitit Split your payment feature Description is showing with correct content
+    Element Should be Visible                       ${LOCSPLITITSPLITYOURPAYMENTTITLEDESC}
+    ${SplititSplitYourPaymentTitleDesc}=            get text      ${LOCSPLITITSPLITYOURPAYMENTTITLEDESC}
+    Run keyword if          '${SplititSplitYourPaymentTitleDesc}'!='${TEXTSPLITITSPLITYOURPAYMENTTITLEDESC}'      Fail        Wrong Splitit Split your payment title Desc. Actual content: ${KlarnaAPRFinaningTitleDesc} expected: ${TEXTSPLITITSPLITYOURPAYMENTTITLEDESC}
+Check if Splitit No Application or CC icon is showing
+    Element should be visible                       ${LOCSPLITITNOAPPLICATIONICON}
+Check if Splitit No Application or CC Title is showing and with correct content
+    Element Should be Visible                       ${LOCSPLITITNOAPPLICATIONTITLE}
+    ${SplititNoApplicationorCCTitle}=            get text      ${LOCSPLITITNOAPPLICATIONTITLE}
+    Run keyword if          '${SplititNoApplicationorCCTitle}'!='${TEXTSPLITITNOAPPLICATIONTITLE}'      Fail        Wrong Splitit No Application or Credit Checks Title. Actual content: ${SplititNoApplicationorCCTitle} expected: ${TEXTSPLITITNOAPPLICATIONTITLE}
+Check if Splitit No Application or CC description is showing and with correct content
+    Element Should be Visible                       ${LOCSPLITITNOAPPLICATIONTITLEDESC}
+    ${SplititNoApplicationorCCTitleDesc}=            get text      ${LOCSPLITITNOAPPLICATIONTITLEDESC}
+    Run keyword if          '${SplititNoApplicationorCCTitleDesc}'!='${TEXTSPLITITNOAPPLICATIONTITLEDESC}'      Fail        Wrong Splitit No Application or Credit Checks Title desc. Actual content: ${SplititNoApplicationorCCTitleDesc} expected: ${TEXTSPLITITNOAPPLICATIONTITLEDESC}
+Check if Splitit Take Advantage icon is showing
+    Element should be visible                       ${LOCSPLITITTAKEADVANTAGEICON}
+Check if Splitit Take Advantage Title is showing and with correct content
+    Element Should be Visible                       ${LOCSPLITITTAKEADVANTAGETITLE}
+    ${SplititTakeAdvantageTitle}=            get text      ${LOCSPLITITTAKEADVANTAGETITLE}
+    Run keyword if          '${SplititTakeAdvantageTitle}'!='${TEXTSPLITITTAKEADVANTAGETITLE}'      Fail        Wrong Splitit Take Advantage of your Card Benefits title. Actual content: ${SplititTakeAdvantageTitle} expected: ${TEXTSPLITITTAKEADVANTAGETITLE}
+Check if Splitit Take Advantage description is showing and with correct content
+    Element Should be Visible                       ${LOCSPLITITTAKEADVANTAGETITLEDESC}
+    ${SplititTakeAdvantageTitleDesc}=            get text      ${LOCSPLITITTAKEADVANTAGETITLEDESC}
+    Run keyword if          '${SplititTakeAdvantageTitleDesc}'!='${TEXTSPLITITTAKEADVANTAGETITLEDESC}'      Fail        Wrong Splitit Take Advantage of your Card Benefits title desc. Actual content: ${SplititTakeAdvantageTitleDesc} expected: ${TEXTSPLITITTAKEADVANTAGETITLEDESC}
+Check if Select Splitit at checkout is showing
+    Element Should be Visible                       ${LOCSELECTSPITIT}
+    ${SelectSplititAtCheckout}=            get text      ${LOCSELECTSPITIT}
+    Run keyword if          "${SelectSplititAtCheckout}"!="${TEXTSELECTSPLITIT}"      Fail        Wrong Select Splitit at Checkout content. Actual content: ${SelectSplititAtCheckout} expected: ${TEXTSELECTSPLITIT}
+Check Splitit Section CTA button is showing with correct content and functionality
+    Element Should be Visible                       css=body > div.financing__splitit > div.featured-financing.text-bar > div.text-bar__desc > div > a
+    Click element                                   css=body > div.financing__splitit > div.featured-financing.text-bar > div.text-bar__desc > div > a
+    sleep                                           5s
+    unselect frame
+    Select Frame                                    xpath=//iframe[contains(@name,'splitit-iframe-popup')]
+    Click element                                   css=body > app-root > app-learn-more > div > div > div.splitit-modal-header.ng-tns-c6-0.ng-star-inserted > a
+    Sleep                                           2s
+    scroll element into view                        css=body > div.financing__splitit > div.text-bar.text-bar--small-text.text-bar--financing-info > div > div
+
+
+
+
+
+Check the first question in the list if showing and with correct content (Splitit)
+    Element should be visible                       ${LOCSPLITITFIRSTFAQ}
+    ${SplititFAQFirstQuestion}=            get text      ${LOCSPLITITFIRSTFAQ}
+    Run keyword if          "${SplititFAQFirstQuestion}"!="${TEXTSPLITITFIRSTFAQ}"      Fail        Wrong Splitit First FAQ. Actual content: ${SplititFAQFirstQuestion} expected: ${TEXTSPLITITFIRSTFAQ}
+Click first question to see if it will expand (Splitit)
+    Element Should Not Be Visible                   ${LOCSPLITITFIRSTFAQANSWER}
+    Click Element                                   ${LOCSPLITITFIRSTFAQ}
+    Element Should Be Visible                       ${LOCSPLITITFIRSTFAQANSWER}
+Check if the first answer will show with correct content (Splitit)
+    ${SplititFAQFirstQuestionAnswer}=            get text      ${LOCSPLITITFIRSTFAQANSWER}
+    Run keyword if          "${SplititFAQFirstQuestionAnswer}"!="${TEXTSPLITITFIRSTFAQANSWER}"      Fail        Wrong Splitit First FAQ Answer. Actual content: ${SplititFAQFirstQuestionAnswer} expected: ${TEXTSPLITITFIRSTFAQANSWER}
+
+Click the first question to see if it will collapse (Splitit)
+    Click Element                                   ${LOCSPLITITFIRSTFAQ}
+    sleep                                           2s
+    Element Should Not Be Visible                   ${LOCSPLITITFIRSTFAQANSWER}
+Check the second question in the list if showing and with correct content (Splitit)
+    Element should be visible                       ${LOCSPLITITSECONDFAQ}
+    ${SplititFAQSecondQuestion}=            get text      ${LOCSPLITITSECONDFAQ}
+    Run keyword if          "${SplititFAQSecondQuestion}"!="${TEXTSPLITITSECONDFAQ}"      Fail        Wrong Splitit Second FAQ. Actual content: ${SplititFAQSecondQuestion} expected: ${TEXTSPLITITSECONDFAQ}
+Click second question to see if it will expand (Splitit)
+    Element Should Not Be Visible                   ${LOCSPLITITSECONDFAQANSWER}
+    Click Element                                   ${LOCSPLITITSECONDFAQ}
+    Element Should Be Visible                       ${LOCSPLITITSECONDFAQANSWER}
+Check if the second answer will show with correct content (Splitit)
+    ${SplititFAQSecondQuestionAnswer}=            get text      ${LOCSPLITITSECONDFAQANSWER}
+    Run keyword if          "${SplititFAQSecondQuestionAnswer}"!="${TEXTSPLITITSECONDFAQANSWER}"      Fail        Wrong Splitit Second FAQ Answer. Actual content: ${SplititFAQSecondQuestionAnswer} expected: ${TEXTSPLITITSECONDFAQANSWER}
+Click the second question to see if it will collapse (Splitit)
+    Click Element                                   ${LOCSPLITITSECONDFAQ}
+    sleep                                           2s
+    Element Should Not Be Visible                   ${LOCSPLITITSECONDFAQANSWER}
+Check the third question in the list if showing and with correct content (Splitit)
+    Element should be visible                       ${LOCSPLITITTHIRDFAQ}
+    ${SplititFAQThirdQuestion}=            get text      ${LOCSPLITITTHIRDFAQ}
+    Run keyword if          "${SplititFAQThirdQuestion}"!="${TEXTSPLITITTHIRDFAQ}"      Fail        Wrong Splitit Third FAQ. Actual content: ${SplititFAQThirdQuestion} expected: ${TEXTSPLITITTHIRDFAQ}
+Click third question to see if it will expand (Splitit)
+    Element Should Not Be Visible                   ${LOCSPLITITTHIRDFAQANSWER}
+    Click Element                                   ${LOCSPLITITTHIRDFAQ}
+    Element Should Be Visible                       ${LOCSPLITITTHIRDFAQANSWER}
+Check if the third answer will show with correct content (Splitit)
+    ${SplititFAQThirdQuestionAnswer}=            get text      ${LOCSPLITITTHIRDFAQANSWER}
+    Run keyword if          "${SplititFAQThirdQuestionAnswer}"!="${TEXTSPLITITTHIRDFAQANSWER}"      Fail        Wrong Splitit Third FAQ Answer. Actual content: ${SplititFAQThirdQuestionAnswer} expected: ${TEXTSPLITITSECONDFAQANSWER}
+Click the third question to see if it will collapse (Splitit)
+    Click Element                                   ${LOCSPLITITTHIRDFAQ}
+    sleep                                           2s
+    Element Should Not Be Visible                   ${LOCSPLITITTHIRDFAQANSWER}
+Check if the disclaimer is showing with correct content (Splitit)
+    ${SplititDisclaimer}=            get text      ${LOCSPLITITDISCLAIMER}
+    Run keyword if          "${SplititDisclaimer}"!="${TEXTSPLITITDISCLAIMER}"      Fail        Wrong Splitit disclaimer. Actual content: ${SplititDisclaimer} expected: ${TEXTSPLITITDISCLAIMER}
+
+Check if the CTA for Klarna financing is showing with correct content and functionality (Splitit)
+    ${SplititCTA}=            get text      ${LOCSPLITITCTA}
+    Run keyword if          "${SplititCTA}"!="${TEXTSHOPTHEMATTRESSCTA}"      Fail        Wrong Splitit CTA text. Actual content: ${SplititCTA} expected: ${TEXTSHOPTHEMATTRESSCTA}
+    Click element                           ${LOCSPLITITCTA}
+    Location should be                      ${PUFFYCOMPAREMATTRESSURL}
+    Go Back
+    sleep                                   2s
+    Go Back

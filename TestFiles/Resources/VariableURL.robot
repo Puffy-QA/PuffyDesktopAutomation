@@ -57,3 +57,5 @@ ${PUFFYHEALTHCAREURL}                               https://puffy.com/pages/heal
 ${SUPPORTREVIEWVIDEOSURL}                           https://puffy.com/pages/puffy-mattress-video-reviews
 ${HEADERPUFFYICONURL}                               https://puffy.com/
 ${CONTACTFORMCHALLENGEURL}                          https://puffy.com/challenge#contact_form
+${FINANCINGKLARNASECTION}                           https://puffy.com/pages/financing#financingKlarna
+${FINANCINGSPLITITSECTION}                          https://puffy.com/pages/financing#financingSplitit

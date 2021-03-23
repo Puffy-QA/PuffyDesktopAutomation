@@ -18,8 +18,9 @@ Resource            ../Resources/VariableTexts.robot
 Start Video Recording
     Initiate video recording
 Verify the Sale Popup appears
+    #Open Shopify
     Open Login screen
-    Switch to Version A
+    #Switch to Version A
     Wait and dismiss popup
     #Go to checkout
     Go to homepage

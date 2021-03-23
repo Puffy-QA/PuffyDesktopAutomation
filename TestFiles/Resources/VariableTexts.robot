@@ -218,3 +218,48 @@ ${TEXTCONTACTUSEMAILLABEL}                          EMAIL *
 ${TEXTCONTACTUSREASONLABEL}                         WHY ARE YOU REACHING OUT? *
 ${TEXTCONTACTUSMESSAGELABEL}                        MESSAGE *
 ${TEXTCONTACTUSSENDMESSAGE}                         Send Message
+######################################FINANCING########################################################
+${TEXTFINANCINGTOPBANNERTITLEDESC}                  Choose mattress financing from Klarna or split your payments on a credit card with Splitit, both at 0% APR.
+${TEXTSHOPTHEMATTRESSCTA}                           SHOP THE MATTRESS
+${TEXTFINANCEOPTIONHEADER}                          Start your 101-night sleep trial now, pay over time, and get the sleep you deserve.
+${TEXTKLARNAFIRSTSUMMARY}                           Mattress financing at 0% APR*
+${TEXTKLARNASECONDSUMMARY}                          Apply and pre-qualify in minutes
+${TEXTKLARNATHIRDSUMMARY}                           Pay $0 upfront at checkout
+${TEXTKLARNAFOURTHSUMMARY}                          Pay in up to 36 months
+${TEXTFINANCINGSEEDETAILS}                          See Details
+${TEXTSPLITITFIRSTSUMMARY}                          Split your payment at 0% APR**
+${TEXTSPLITITSECONDSUMMARY}                         No application, no credit checks
+${TEXTSPLITITTHIRDSUMMARY}                          Use your Visa or Mastercard
+${TEXTSPLITITFOURTHSUMMARY}                         Pay in up to 12 months
+${TEXTKLARNAFINANCETITLE}                           Apply for mattress financing at 0% APR and pay nothing upfront.
+${TEXTKLARNAFINANCETITLEDESC}                       Pay as low as $42 per month for a Puffy Mattress
+${TEXTKLARNAAPRFINANCING}                           0% APR Financing
+${TEXTKLARNAAPRFINANCINGDESC}                       $0 interest if you pay in full within 6 to 12 months with Klarna.
+${TEXTKLARNAAPPLYINMIN}                             Apply in Minutes
+${TEXTKLARNAAPPLYINMINDESC}                         You can pre-qualify in minutes and get a decision in real-time.
+${TEXTKLARNASIMPLEREPAYMENTS}                       Simple Repayments
+${TEXTLARNASIMPLEREPAYMENTSTITLEDESC}               Clear and easy monthly repayments you won’t lose sleep over.
+${TEXTSELECTKLARNA}                                 Select 'Klarna' at checkout
+${TEXTKLARNAFIRSTFAQ}                               How does mattress financing with Klarna work?
+${TEXTKLARNAFIRSTFAQANSWER}                         We like to make mattress financing sleep easy. So easy that if you qualify with Klarna for mattress financing, you can buy your Puffy Mattress now and pay later. Puffy's mattress financing options with Klarna are paid monthly so it's simple to manage. All your information is kept safe and you can direct debit your payments to save time. We recommend spending that extra time sleeping on your Puffy.
+${TEXTKLARNASECONDFAQ}                              How to get your mattress finance started?
+${TEXTKLARNASECONDFAQANSWER}                        Simply select Klarna at checkout. Pre-qualify in minutes, pick the mattress financing you want, and we'll ship to you within 1-3 business days. What's even better is that you get 101 nights to try your Puffy at home.
+${TEXTKLARNATHIRDFAQ}                               Can I use Klarna for other products?
+${TEXTKLARNATHIRDFAQANSWER}                         Yes! You can finance mattresses, bed frames, bedding, and all accessories in our product range.
+${TEXTKLARNADISCLAIMER}                             *Minimum monthly payment required. Additional payments may be required to pay off purchase before promotion expires. Promotional offers are for qualifying customers. Non-promotional purchases have a standard APR of 19.99% and are subject to a potential $2 monthly minimum interest charge. Subject to credit check and approval. Estimated payment amount includes taxes and shipping fees. Klarna Credit accounts are issued by WebBank.
+${TEXTSPLITITFINANCETITLE}                          Split payment into small amounts at 0% APR with no application.
+${TEXTSPLITITFINANCETITLEDESC}                      Pay as low as $41 per month for a Puffy Mattress
+${TEXTSPLITITSPLITYOURPAYMENTTITLE}                 Split your payment at 0% APR
+${TEXTSPLITITSPLITYOURPAYMENTTITLEDESC}             Pay for your mattress in small and easy to manage repayments.
+${TEXTSPLITITNOAPPLICATIONTITLE}                    No Application or Credit Checks
+${TEXTSPLITITNOAPPLICATIONTITLEDESC}                Since you are using your credit card, there is zero paperwork involved.
+${TEXTSPLITITTAKEADVANTAGETITLE}                    Take Advantage of Your Card Benefits
+${TEXTSPLITITTAKEADVANTAGETITLEDESC}                Continue to earn rewards on your card such as miles and cashbacks.
+${TEXTSELECTSPLITIT}                                Select 'Splitit' at checkout
+${TEXTSPLITITFIRSTFAQ}                              How do mattress payment plans work with Splitit?
+${TEXTSPLITITSECONDFAQ}                             How to get your mattress payment plan started?
+${TEXTSPLITITTHIRDFAQ}                              Can I use Splitit for other products?
+${TEXTSPLITITFIRSTFAQANSWER}                        Splitit breaks down the full amount of your mattress purchase into smaller, easy to manage repayments over up to 12 months. At the time of purchase, once Puffy confirms the shipment, you will only be charged for the first payment. The remaining balance will be held on the credit card until the final payment is made. After each monthly payment, the amount held from the available balance will be reduced to the new remaining balance. Accepted cards include Visa and Mastercard.
+${TEXTSPLITITSECONDFAQANSWER}                       Simply select to pay with Splitit at checkout and choose the number of installments you want. Splitit charges no fees to split the amount of your purchase! What’s even better is that you get 101 nights to try your Puffy at home!
+${TEXTSPLITITTHIRDFAQANSWER}                        Yes! You can create a payment plan for mattresses, bed frames, bedding, and all accessories in our product range.
+${TEXTSPLITITDISCLAIMER}                            **At the time of purchase, once the merchant confirms your order, you will only be charged for the first payment. The remaining balance will be held on your credit card until the final payment is made. After each monthly payment, the amount held from your available balance will be reduced to the new remaining balance (the held amount might appear as “pending”).
