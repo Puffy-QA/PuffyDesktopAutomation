@@ -21,7 +21,7 @@ ${DISCOUNTAMOUNT350}            $350 OFF
 ${HOMEPAGE}                     https://puffy.com/
 ${SHOPIFY}                      https://puffydreams.myshopify.com/admin/scripts/preview?script_id=84672546
 ${SHOPIFYLOGIN}                 rhogie@puffy.com
-${SHOPIFYPASS}                  S9u43U3jh&nc)RM
+${SHOPIFYPASS}                  S9u143U13jh&n2)RM1
 ${SYSTEMBROWSER}                Chrome
 ${FOOTER}                       SPRING SALE NOW $300 OFF + FREE PILLOW
 ${DISCOUNTCODEPAGEDETAILS1}     $300 Off Any Mattress
