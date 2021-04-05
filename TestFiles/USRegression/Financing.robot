@@ -16,7 +16,7 @@ Start Record Video
     Initiate Video Recording
 Verify the Sale Popup appears
     Open Login Screen
-    #Switch to Version A
+    Switch to Version A
     Wait and dismiss popup
 #Switch version
     #Switch to Version A

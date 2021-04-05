@@ -2185,14 +2185,14 @@ Go to Puffy Hybrid Homepage
 
 Check Seasonal Sale text on Homepage
     sleep                   2s
-    ${Content}=            get text        css=#SPRING_sale_now_300_off_free_pillow > tspan:nth-child(1)
+    ${Content}=            get text        css=#Cyber_Monday_Sale_Now > tspan
     Run keyword if          "${Content}"!="${SALENAME}"        Fail        Wrong Seasonal Sale text on homepage Expected: ${SALENAME} Actual: ${Content}
 Check Seasonal Sale text on Homepage (HYBRID)
     sleep                   2s
     ${Content}=            get text        css=#Cyber_Monday_Sale_Now > tspan
     Run keyword if          "${Content}"!="${SALENAME}"        Fail        Wrong Seasonal Sale text on homepage Expected: ${SALENAME} Actual: ${Content}
 Check discount value and freebie on Homepage
-    ${Content}=            get text        css=#SPRING_sale_now_300_off_free_pillow > tspan:nth-child(2)
+    ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan
     Run keyword if          "${Content}"!="${SALE350DETAILS}"         Fail        Wrong discount value and freebie text on homepage Expected: ${SALE350DETAILS} Actual: ${Content}
 Check discount value and freebie on Homepage (HYBRID)
     ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan

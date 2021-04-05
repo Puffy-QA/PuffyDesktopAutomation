@@ -292,6 +292,7 @@ Verify the price in PDP Puffy Pillow
     Go to Puffy Pillow Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
+    Check default color for Puffy Pillow
     Check default size for Puffy Pillow
     Click Puffy Pillow Size dropdown
     Check Puffy Pillow original prices
@@ -301,6 +302,18 @@ Verify the price in PDP Puffy Pillow
     Click Puffy Pillow Size dropdown
     Select Puffy Pillow King
     Check Puffy Pillow King size monthly payment price
+    #
+    Click Puffy Pillow color dropdown
+    Select Puffy Pillow Gray
+    Click Puffy Pillow Size dropdown
+    Check Puffy Pillow original prices
+    Check Puffy Pillow sizes list order
+    Select Puffy Pillow Standard
+    Check Puffy Pillow Standard size monthly payment price
+    Click Puffy Pillow Size dropdown
+    Select Puffy Pillow King
+    Check Puffy Pillow King size monthly payment price
+
 Verify the price in PDP Puffy Body Pillow
     Go to Puffy Body Pillow Product Page
     Don't show seasonal sale content check
@@ -508,6 +521,7 @@ Verify the price in PDP Puffy Dog Bed
     Click Puffy Dog Bed Size dropdown
     Check Puffy Dog Bed original prices
     #Check Puffy Dog Bed 15%OFF prices
+    Check Puffy Dog Bed 50% OFF prices
     Check Puffy Dog Bed sizes list order
     Select Puffy Dog Bed Small
     Check Puffy Dog Bed Small size monthly payment price
