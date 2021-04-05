@@ -16,7 +16,7 @@ ${Last Name}                    Doe
 ${Address}                      123 William Street
 ${City}                         New York
 ${ZipCode}                      03101
-${Sale Name}                    SPRING SALE NOW
+${Sale Name}                    EASTER SALE NOW
 ${Sale Details}                 $300 OFF
 ${Discount Amount}              $300 OFF
 ${Homepage}                     https://puffy.ca
@@ -50,7 +50,7 @@ ${Puffy Nightstand}
 ${Dog Bed}                      css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(1) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${Rug}                          css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.dropdown_container.mega-menu.mega-menu-4 > div > div > div:nth-child(2) > div.mega-menu__image-caption-link > a > div.image-element__wrap > img
 ${Cart}                         css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.cart_container > div > a
-${FOOTER}                       SPRING SALE NOW $300 OFF
+${FOOTER}                       EASTER SALE NOW $300 OFF
 ${BlackFridaySALEMenuButton}    css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li.menu__item.menu__item--sale > a
 
 ####################################################Product Default Sizes####################################################
@@ -693,8 +693,9 @@ Timer Bar
 
 
 Store page ALL category price check
-    Go to Store page
-    Price check for Puffy Mattress
+    Go To Store Page (Click on footer Store link)
+    sleep                   2s
+    Check price in Store page for Puffy Mattress
     Price check for Puffy Lux Mattress
     #Price check for Puffy Royal Mattress
     Price check for Puffy Foundation
@@ -1342,8 +1343,8 @@ Go to Compare Mattress Page
     Click element       ${COMPARE}
     Wait Until Page Contains    CHOOSE YOUR PUFFY MATTRESS
 
-Go To Store Page
-    Click element       ${STORE}
+Go To Store Page (Click on footer Store link)
+    Click link       link:STORE
 
 Go to Gift Shop page
     Click link          link:Gift Shop
@@ -3161,9 +3162,12 @@ Get Puffy Royal Hybrid Mattress Price and compare to mid page
 
 #########################################################STORE PAGE###############################################################################
 
-Price check for Puffy Mattress
+Check price in Store page for Puffy Mattress
     ${PuffyMattressMinOriginalStorePage}=     get text        css=#collectionProductsWrap > div:nth-child(1) > div > div.product-details > a.product-info__caption > span.price.sale > span.was_price > span
-    Run keyword if          '${PuffyMattTwinOriginal}'!='${PuffyMattressMinOriginalStorePage}'      Fail        Wrong Puffy Mattress "Starting From" Original amount in Store Page. Expected Result: ${PuffyMattTwinOriginal} Actual Result: ${PuffyMattressMinOriginalStorePage}
+    Run keyword if          '${PUFFYMATTRESSTWINORIGINAL}'!='${PuffyMattressMinOriginalStorePage}'      Fail        Wrong Puffy Mattress "Starting From" Original amount in Store Page. Expected Result: ${PUFFYMATTRESSTWINORIGINAL} Actual Result: ${PuffyMattressMinOriginalStorePage}
+    ${PuffyMattressMinDiscountedStorePage}=     get text        css=#collectionProductsWrap > div:nth-child(1) > div > div.product-details > a.product-info__caption > span.price.sale > span.money.jsDiscountedPrice
+    Run keyword if          '${PUFFYMATTRESSTWIN300OFF}'!='${PuffyMattressMinDiscountedStorePage}'      Fail        Wrong Puffy Mattress "Starting From" discounted amount in Store Page. Expected Result: ${PUFFYMATTRESSTWIN300OFF} Actual Result: ${PuffyMattressMinDiscountedStorePage}
+
 Price check for Puffy Lux Mattress
     ${PuffyLuxMattressMinOriginalStorePage}=     get text        css=#collectionProductsWrap > div:nth-child(2) > div > div.product-details > a.product-info__caption > span.price.sale > span.was_price > span
     Run keyword if          '${PuffyLuxTwinOriginal}'!='${PuffyLuxMattressMinOriginalStorePage}'      Fail        Wrong Puffy Lux Mattress "Starting From" Original amount in Store Page. Expected Result: ${PuffyLuxTwinOriginal} Actual Result: ${PuffyLuxMattressMinOriginalStorePage}

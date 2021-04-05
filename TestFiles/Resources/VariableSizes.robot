@@ -14,6 +14,7 @@ ${SIZEPUFFYADJUSTABLEBASEDEFAULTSIZE}                       Split King
 ${SIZEPUFFYBEDFRAMEDEFAULTSIZE}                             Queen
 ${SIZEPUFFYCOMFORTERDEFAULTSIZE}                            Full/Queen
 ${SIZEPUFFYPILLOWDEFAULTSIZE}                               Standard
+${SIZEPUFFYPILLOWDEFAULTCOLOR}                              White
 ${SIZEPUFFYBODYPILLOWDEFAULTSIZE}                           -----  #one size only
 ${SIZEPUFFYMATTRESSPADDEFAULTSIZE}                          Queen
 ${SIZEPuffyMattressProtectorDefaultSize}                    Queen

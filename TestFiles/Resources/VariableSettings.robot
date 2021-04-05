@@ -14,20 +14,20 @@ ${LASTNAME}                     Doe
 ${ADDRESS}                      123 William Street
 ${CITY}                         New York
 ${ZIPCODE}                      03101
-${SALENAME}                     SPRING SALE NOW
+${SALENAME}                     EASTER SALE NOW
 ${SALEDETAILS}                  $300 OFF + FREE PILLOW
 ${DISCOUNTAMOUNT}               $300 OFF
 ${DISCOUNTAMOUNT350}            $350 OFF
-${HOMEPAGE}                     https://puffy.com/
-${SHOPIFY}                      https://puffydreams.myshopify.com/admin/scripts/preview?script_id=84672546
+${HOMEPAGE}                     https://puffy.com/?preview_theme_id=120192008226
+${SHOPIFY}                      https://puffy.com/?preview_theme_id=120192008226
 ${SHOPIFYLOGIN}                 rhogie@puffy.com
 ${SHOPIFYPASS}                  S9u143U13jh&n2)RM1
 ${SYSTEMBROWSER}                Chrome
-${FOOTER}                       SPRING SALE NOW $300 OFF + FREE PILLOW
+${FOOTER}                       EASTER SALE NOW $300 OFF + FREE PILLOW
 ${DISCOUNTCODEPAGEDETAILS1}     $300 Off Any Mattress
 ${DISCOUNTCODEPAGEDETAILS2}     + Free Pillow
 ${SAVE350}                      https://puffy.com/pages/save350
-${FOOTER350}                    SPRING SALE NOW $350 OFF + FREE PILLOW
+${FOOTER350}                    EASTER SALE NOW $350 OFF + FREE PILLOW
 ${SALE350DETAILS}               $350 OFF + FREE PILLOW
 ${PUFFYBROWSER}                 alias=Puffy
 ${SIGNUPNODOMAIN}               email

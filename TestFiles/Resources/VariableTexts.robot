@@ -63,7 +63,7 @@ ${FOOTERPUFFYBLANKETSPELLING}                       Puffy Blanket
 ${FOOTERPUFFYSHEETSSPELLING}                        Puffy Sheets
 ${FOOTERPUFFYRUGSPELLING}                           Puffy Rug
 ${FOOTER101NIGHTSLEEPTRIALSPELLING}                 101-Night Sleep Trial
-${FOOTERHOWITSMADESPELLING}                         How it’s Made
+${FOOTERHOWITSMADESPELLING}                         How it's Made
 ${FOOTERMATTRESSLAYERSSPELLING}                     Mattress Layers
 ${FOOTERPERFECTSLEEPSPELLING}                       Perfect Sleep
 ${FOOTERCOMPAREMATTRESSSPELLING}                    Compare Mattress
@@ -129,7 +129,7 @@ ${ORDERSUMMARYDISCOUNTCODE4}                        FREE KING PILLOW (-$285.00)
 ${ORDERSUMMARYDISCOUNTCODE5}                        DISCOUNT APPLIED (-$350.00)
 #PUFFY SHEETS
 ${ORDERSUMMARYPUFFYSHEETS}                          Puffy Sheets
-${ORDERSUMMARYPUFFYSHEETSSIZECOLOR}                 White / Queen
+${ORDERSUMMARYPUFFYSHEETSSIZECOLOR}                 White / Standard
 ${ORDERSUMMARYPUFFYSHEETSQTY}                       1
 ${ORDERSUMMARYPUFFYSHEETSPRICE}                     $125.00
 #PUFFY BODY PILLOW
