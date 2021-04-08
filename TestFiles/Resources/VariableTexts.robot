@@ -66,7 +66,7 @@ ${FOOTER101NIGHTSLEEPTRIALSPELLING}                 101-Night Sleep Trial
 ${FOOTERHOWITSMADESPELLING}                         How It's Made
 ${FOOTERMATTRESSLAYERSSPELLING}                     Mattress Layers
 ${FOOTERPERFECTSLEEPSPELLING}                       Perfect Sleep
-${FOOTERCOMPAREMATTRESSSPELLING}                    Compare Mattress
+${FOOTERCOMPAREMATTRESSSPELLING}                    Compare Mattresses
 ${FOOTERCOMPAREHYBRIDSSPELLING}                     Compare Hybrids
 ${FOOTERPUFFYDONATIONSSPELLING}                     Puffy Donations
 ${FOOTERAFFILIATEPROGRAMSPELLING}                   Affiliate Program

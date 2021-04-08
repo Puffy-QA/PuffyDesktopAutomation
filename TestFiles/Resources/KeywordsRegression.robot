@@ -1,6 +1,6 @@
 *** Keywords ***
 Initiate Video Recording
-    Start Video Recording       alias=FallSale name=FallSale    ${MonitorID}
+    Start Video Recording       alias=FallSale name=FallSale    monitor=3
 
 Open Login Screen
     Open Browser            ${HOMEPAGE}  ${SYSTEMBROWSER}

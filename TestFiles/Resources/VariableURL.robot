@@ -48,7 +48,7 @@ ${AUXDNSMPIURL}                                     https://puffy.com/pages/data
 ${SOCIALFACEBOOKURL}                                https://www.facebook.com/PuffyMattress/
 ${SOCIALTWITTERURL}                                 https://twitter.com/puffymattress
 ${SOCIALINSTAGRAMURL}                               https://www.instagram.com/puffymattress/
-${SOCIALYOUTUBEURL}                                 https://www.youtube.com/c
+${SOCIALYOUTUBEURL}                                 https://www.youtube.com/channel/UCOJqN_xm1eR5lDMo3RIvN6A
 ${SOCIALLINKEDINURL}                                https://www.linkedin.com/company/puffy
 ${SOCIALPINTERESTURL}                               https://www.pinterest.com/puffymattressonline/
 ${AUXCOPYRIGHTURL}                                  https://puffy.com/
