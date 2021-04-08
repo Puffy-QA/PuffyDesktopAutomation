@@ -80,6 +80,8 @@ ${SIZEPUFFYTOPPERPDPFEELORDER1}                             Firm
 ${SIZEPUFFYTOPPERPDPFEELORDER2}                             Soft
 ${SIZEPUFFYSHEETSPDPCOLORORDER1}                            Gray
 ${SIZEPUFFYSHEETSPDPCOLORORDER2}                            White
+${SIZEPUFFYPILLOWPDPCOLORORDER1}                            White
+${SIZEPUFFYPILLOWPDPCOLORORDER2}                            Gray
 ${SIZEPUFFYTOPPERPDPSIZEORDER1}                             Twin
 ${SIZEPUFFYTOPPERPDPSIZEORDER2}                             Twin XL
 ${SIZEPUFFYTOPPERPDPSIZEORDER3}                             Full

@@ -10,7 +10,7 @@ Resource            ../Resources/VariableTexts.robot
 
 #=============================TEST REQUIREMENTS==================================================#
 Initiate Video Recording
-    Start Video Recording       alias=FallSale name=FallSale
+    Start Video Recording       alias=FallSale name=FallSale    monitor=3
 
 Open Login Screen
     Open Browser            ${HOMEPAGE}  ${SYSTEMBROWSER}
@@ -1074,13 +1074,13 @@ Check Puffy Comforter sizes list order
 
 Check Puffy Pillow sizes list order
 
-    Wait Until Element Is Visible          css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
+    Wait Until Element Is Visible          css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
 
-    ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
+    ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
     Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPSIZEORDER1}'      Fail        First size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYPILLOWPDPSIZEORDER1} Actual Result: ${Content}
 
-    ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
-    Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPSIZEORDER2}'      Fail        Second size in Puffy Pillow PDP is Wrong. Expected Result: ${PUFFYPILLOWPDPSIZEORDER2} Actual Result: ${Content}
+    ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
+    Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPSIZEORDER2}'      Fail        Second size in Puffy Pillow PDP is Wrong. Expected Result: ${SIZEPUFFYPILLOWPDPSIZEORDER2} Actual Result: ${Content}
 
 Check Puffy Mattress Pad sizes list order
 
@@ -1195,6 +1195,15 @@ Check Puffy Sheets color options
     ${Content}=            get text        css=#product_form_4359826341922 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-color > div > ul > li:nth-child(2)
     Run keyword if          '${Content}'!='${SIZEPUFFYSHEETSPDPCOLORORDER2}'      Fail        Second color option in Puffy Sheets PDP is Wrong. Expected Result: ${SIZEPUFFYSHEETSPDPCOLORORDER2} Actual Result: ${Content}
 
+Check Puffy Pillow color options
+    Sleep                                  5s
+    Wait Until Element Is Visible          css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-color > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
+
+    ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-color > div > ul > li.option.selected.focus > div > span.display-name.is--not--sale
+    Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPCOLORORDER1}'      Fail        First color option in Puffy Pillow PDP is Wrong. Expected Result: ${SIZEPUFFYPILLOWPDPCOLORORDER1} Actual Result: ${Content}
+
+    ${Content}=            get text        css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-color > div > ul > li:nth-child(2) > div > span.display-name.is--not--sale
+    Run keyword if          '${Content}'!='${SIZEPUFFYPILLOWPDPCOLORORDER2}'      Fail        Second color option in Puffy Pillow PDP is Wrong. Expected Result: ${SIZEPUFFYPILLOWPDPCOLORORDER2} Actual Result: ${Content}
 
 Check Puffy Sheets sizes list order
 
@@ -1324,9 +1333,9 @@ Select Puffy Comforter King/Cal King
     Click element           css=#product_form_1536090603554 > div.product-variants-holder > div > div > ul > li:nth-child(3)
 
 Select Puffy Pillow Standard
-    Click element           css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li:nth-child(1)
+    Click element           css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li.option.selected.focus
 Select Puffy Pillow King
-    Click element           css=#product_form_625398710306 > div.product-variants-holder > div > div > ul > li:nth-child(2)
+    Click element           css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-size > div > ul > li:nth-child(2)
 Select Puffy Pillow Gray
     Click element           css=#product_form_625398710306 > div.product-variants-holder > div.product-variant.selector-wrapper.jsRealOptions.product-color > div > ul > li:nth-child(2)
 Select Puffy Pillow White
@@ -2230,7 +2239,7 @@ Click on Puffy Royal Hybrid Toggle
     ${Content}=            get text         ${LOC12REASONSPDP}
     Run keyword if         '${Content}'!='${TEXTPUFFYROYALHYBRIDMATTRESSH2}'               Fail        Product Name (H1) not found Expected: ${TEXTPUFFYROYALHYBRIDMATTRESSH2} Actual: ${Content}
 Check current cart count
-    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.cart_container > div > a > span
     set test variable       ${CartCount}    ${CartText}
 Go to Puffy Sheets
     Mouse Over          ${LOCBEDDING}
@@ -2627,7 +2636,7 @@ Add Puffy Royal to cart
     ${Content}=            get text        css=#main-header
     Run keyword if          '${Content}'!='${INFOTABHEADER}'     Fail        Wrong Header on Checkout page Information Tab. Expected: ${INFOTABHEADER} Actual: ${Content}
 Check current cart count (Lux Hybrid)
-    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.cart_container > div > a > span
     set test variable       ${CartCount}    ${CartText}
 Check cart count after adding an accessory
     ${BeforeShopping} =     evaluate    ${CartCount}

@@ -59,11 +59,11 @@ ${FOOTERPUFFYADJUSTABLEBASESPELLING}                Adjustable Base
 ${FOOTERPUFFYPILLOWSPELLING}                        Pillow
 ${FOOTERPUFFYBODYPILLOWSPELLING}                    Body Pillow
 ${FOOTERPUFFYMATTRESSPADSPELLING}                   Mattress Pad
-${FOOTERPUFFYBLANKETSPELLING}                       Puffy Blanket
-${FOOTERPUFFYSHEETSSPELLING}                        Puffy Sheets
-${FOOTERPUFFYRUGSPELLING}                           Puffy Rug
+${FOOTERPUFFYBLANKETSPELLING}                       Blanket
+${FOOTERPUFFYSHEETSSPELLING}                        Sheets
+${FOOTERPUFFYRUGSPELLING}                           Rug
 ${FOOTER101NIGHTSLEEPTRIALSPELLING}                 101-Night Sleep Trial
-${FOOTERHOWITSMADESPELLING}                         How it's Made
+${FOOTERHOWITSMADESPELLING}                         How It's Made
 ${FOOTERMATTRESSLAYERSSPELLING}                     Mattress Layers
 ${FOOTERPERFECTSLEEPSPELLING}                       Perfect Sleep
 ${FOOTERCOMPAREMATTRESSSPELLING}                    Compare Mattress
