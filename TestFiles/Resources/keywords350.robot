@@ -2167,19 +2167,26 @@ Go to Homepage (Click on Puffy Logo)
     sleep       2s
     Wait until page contains element    ${LOCLOGO}
     Click Element       ${LOCLOGO}
-    #wait until page contains    ${Timer}
+    sleep                                   2s
+    Wait until page contains                Puffy Mattress
+    wait until page contains element       css=body > div.index-sections > div.hero-area.is--mobile-reversed > div.hero-area__box.hero-area__box--hero-image > div > div.b-hero__inner > div.b-hero__content > h1
     ${Content}=            get text        css=body > div.index-sections > div.hero-area.is--mobile-reversed > div.hero-area__box.hero-area__box--hero-image > div > div.b-hero__inner > div.b-hero__content > h1
     Run keyword if          '${Content}'!='${TEXTPUFFYMATTRESSH1}'                Fail        Homepage main title (H1) not found Expected: ${TEXTPUFFYMATTRESSH1} Actual: ${Content}
 
 Go to Puffy Lux Homepage
     sleep                   2s
     Click Link           link:Puffy Lux
+    sleep                                   2s
+    Wait until page contains                Puffy Lux Mattress
+    Location should be                     https://puffy.com/pages/puffy-lux-mattress
     ${Content}=            get text        css=body > div.index-sections > div.hero-area.is--mobile-reversed > div.hero-area__box.hero-area__box--hero-image > div > div.b-hero__inner > div.b-hero__content > h1
     Run keyword if          '${Content}'!='${TEXTPUFFYLUXMATTRESSH1}'                Fail        Homepage main title (H1) not found Expected: ${TEXTPUFFYLUXMATTRESSH1} Actual: ${Content}
 
 Go to Puffy Hybrid Homepage
     sleep                   5s
     Click Link           link:Puffy Hybrid
+    sleep                                   2s
+    Wait until page contains                Puffy Hybrid Mattress
     ${Content}=            get text        css=body > div.index-sections > div.hero-area.is--mobile-reversed > div.hero-area__box.hero-area__box--hero-image > div > div.b-hero__inner > div.b-hero__content > h1
     Run keyword if          '${Content}'!='${TEXTPUFFYHYBRIDMATTRESSH1}'                Fail        Homepage main title (H1) not found Expected: ${TEXTPUFFYHYBRIDMATTRESSH1} Actual: ${Content}
 
@@ -2284,6 +2291,7 @@ Go to Puffy Sheets
     Mouse Over          ${LOCBEDDING}
     sleep               2s
     Click element       ${LOCSHEETS}
+    sleep               2s
     Wait Until Page Contains    12 REASONS TO CHOOSE
     ${Content}=         get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-sheets > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head.product-head--smaller > div > div.product-head__headline > h1 > span
     Run keyword if      '${Content}'!='${TEXTPUFFYSHEETSH1}'          Fail        Product name (H1) not found on the page Expected: ${TEXTPUFFYSHEETSH1} Actual: ${Content}
@@ -2603,12 +2611,14 @@ Open cart
 
 Check product redirection in cart
     click link                      link:Puffy Sheets
+    sleep                           2s
     Wait Until Page Contains        Puffy Sheets
     ${Content}=            get text        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-sheets > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head.product-head--smaller > div > div.product-head__headline > h1 > span
     Run keyword if          '${Content}'!='${TEXTPUFFYSHEETSH1}'     Fail        Product name (H1) not found Expected: ${PuffySheetsH1} Actual: ${Content}
 
 Click checkout
     Click link              link:CHECKOUT
+    sleep                               2s
     Wait Until Page Contains Element    css=body > div.checkout-header > div.checkout-header__right > div > div:nth-child(1) > img
 
 Select Mattress Pad from Complete your Bedroom Set in checkout
@@ -2710,7 +2720,7 @@ Click "Shop Now" button for Puffy
     Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.compare-boxes__action > a
 
 Verify H1 on Puffy PDP
-    Wait until page Contains            ${TEXTPUFFYMATTRESSH1}
+    Wait until page Contains element    css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-mattress > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__text.product-head__text--boxed > div.product-head__headline > h1 > span
     ${Content}=            get text     css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-mattress > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__text.product-head__text--boxed > div.product-head__headline > h1 > span
     Run keyword if          '${Content}'!='${TEXTPUFFYMATTRESSH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTPUFFYMATTRESSH1} Actual: ${Content}
 
