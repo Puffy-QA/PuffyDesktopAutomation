@@ -31,3 +31,4 @@ ${FOOTER350}                    SPRING SALE NOW $350 OFF + FREE PILLOW
 ${SALE350DETAILS}               $350 OFF + FREE PILLOW
 ${PUFFYBROWSER}                 alias=Puffy
 ${SIGNUPNODOMAIN}               email
+${MonitorID}                      monitor=3

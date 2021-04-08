@@ -1,6 +1,6 @@
 *** Keywords ***
 Initiate Video Recording
-    Start Video Recording       alias=FallSale name=FallSale    monitor=3
+    Start Video Recording       alias=FallSale name=FallSale    ${MonitorID}
 
 Open Login Screen
     Open Browser            ${HOMEPAGE}  ${SYSTEMBROWSER}
@@ -78,9 +78,9 @@ Click on Puffy and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=.footer-menu-wrap
     Click element                           ${LOCFOOTERPUFFY}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Mattress
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     sleep                                   5s
     Location Should Be                      ${PDPPUFFYMATTRESSURL}
 
@@ -89,9 +89,9 @@ Click on Puffy Lux and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPUFFYLUX}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Lux Mattress
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${HOMEPAGEPUFFYLUXURL}
     wait until page contains                Puffy Lux Mattress
 
@@ -99,9 +99,9 @@ Click on Puffy Royal and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPUFFYROYAL}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains element        css=#shopify-section-product-puffy-template > div.container.main.content.product-name--puffy-royal-mattress > div > div > div > div > div.seven.columns.medium-down--one-whole.alpha > div > div.product-head > div.product-head__text.product-head__text--boxed > div.product-head__headline.product-head__headline--hybrid > h1 > span.product-head__title-line
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPPUFFYROYALMATTRESSURL}
 
 
@@ -109,9 +109,9 @@ Click on Puffy Hybrid and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPUFFYHYBRID}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Hybrid Mattress
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${HOMEPAGEPUFFYHYBRIDURL}
 
 
@@ -119,9 +119,9 @@ Click on Comforter and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERCOMFORTER}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Comforter
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPPUFFYCOMFORTERURL}
 
 
@@ -129,18 +129,18 @@ Click on Mattress Protector and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERMATTRESSPROTECTOR}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Mattress Protector
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPPUFFYMATTRESSPROTECTORURL}
 
 Click on Mattress Topper and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERMATTRESSTOPPER}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Topper
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPMATTRESSTOPPERURL}
 
 
@@ -148,9 +148,9 @@ Click on Weighted Blanket and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERWEIGHTEDBLANKET}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Weighted Blanket
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPWEIGHTEDBLANKETURL}
 
 
@@ -158,9 +158,9 @@ Click on Dog Bed and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERDOGBED}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Dog Bed
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPDOGBEDURL}
 
 
@@ -168,9 +168,9 @@ Click on Bed Frame and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERBEDFRAME}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Bed Frame
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPBEDFRAMEURL}
 
 
@@ -178,9 +178,9 @@ Click on Foundation and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERFOUNDATION}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Mattress Foundation
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPFOUNDATIONURL}
 
 
@@ -188,9 +188,9 @@ Click on Adjustable Base and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERADJUSTABLEBASE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Adjustable Base
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPADJUSTABLEBASEURL}
 
 
@@ -198,9 +198,9 @@ Click on Pillow and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPILLOW}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Pillow
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPPILLOWURL}
 
 
@@ -208,9 +208,9 @@ Click on Body Pillow and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERBODYPILLOW}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Body Pillow
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPBODYPILLOWURL}
 
 
@@ -218,36 +218,36 @@ Click on Mattress Pad and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERMATTRESSPAD}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Mattress Pad
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPMATTRESSPADURL}
 
 Click on Puffy Blanket and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPUFFYBLANKET}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Blanket
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPPUFFYBLANKETURL}
 
 Click on Puffy Sheets and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPUFFYSHEETS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Sheets
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPPUFFYSHEETSURL}
 
 Click on Puffy Rug and check redirection URL
     sleep                                   1s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPUFFYRUG}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Rug
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PDPPUFFYRUGURL}
 
 Footer Spell check for word 101-Night Sleep Trial
@@ -312,18 +312,18 @@ Click on 101-Night Sleep Trial and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTER101NIGHTSLEEPTRIAL}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                101-Night Sleep Trial
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFY101NIGHTSLEEPTRIALURL}
 
 Click on How it’s Made and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERHOWITSMADE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Making the Perfect Mattress
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYHOWITSMADEURL}
 
 
@@ -331,54 +331,54 @@ Click on Mattress Layers and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERMATTRESSLAYERS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Sleep System
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYMATTRESSLAYERSURL}
 
 Click on Perfect Sleep and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERPERFECTSLEEP}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Perfect Sleep
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYPERFECTSLEEPURL}
 
 Click on Mattress Awards and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERMATTRESSAWARDS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Award-Winning
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYMATTRESSAWARDSURL}
 
 Click on Compare Mattress and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERCOMPAREMATTRESS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                choose your
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYCOMPAREMATTRESSURL}
 
 Click on Compare Hybrids and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERCOMPAREHYBRIDS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                choose your
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYCOMPAREHYBRIDSURL}
 
 Click on Puffy Donations and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERPUFFYDONATIONS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Every Child Deserves
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYDONATIONSURL}
 
 Click on Affiliate Program and check redirection URL
@@ -393,9 +393,9 @@ Click on Affiliate Program and check redirection URL
     ${WindowNames}=                         Get Window Names
     Sleep                                   2s
     Switch Window                           ${WindowHandles}[1]
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                © 2021 ShareASale.com, Inc. -
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYAFFILIATEPROGRAMURL}
     Close Window
     sleep                                   2s
@@ -405,9 +405,9 @@ Click on Refer a Friend and check redirection URL
 
     Click element                           ${LOCFOOTERREFERAFRIEND}
     sleep                                   2s
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Refer a Friend
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYREFERAFRIENDURL}
     sleep                                   5s
 
@@ -415,27 +415,27 @@ Click on Gift Shop and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERGIFTSHOP}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Gift Ideas For
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYGIFTSHOPURL}
 
 Click on Puffy Store and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERPUFFYSTORE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Store
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYSTOREURL}
 
 Click on Puffy Blog and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERPUFFYBLOG}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                In The Clouds
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYBLOGURL}
 
 Click on Puffy Review and check redirection URL
@@ -446,9 +446,9 @@ Click on Puffy Review and check redirection URL
     ${WindowHandles}=                       Get Window Handles
     Sleep                                   2s
     Switch Window                           ${WindowHandles}[1]
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYREVIEWURL}
     Close Window
     sleep                                   2s
@@ -462,9 +462,9 @@ Click on Puffy Lux Review and check redirection URL
     ${WindowHandles}=                       Get Window Handles
     Sleep                                   2s
     Switch Window                           ${WindowHandles}[1]
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Lux Mattress Review
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYLUXREVIEWURL}
     Close Window
     sleep                                   2s
@@ -476,9 +476,9 @@ Click on Puffy Royal Review and check redirection URL
     ${WindowHandles}=                       Get Window Handles
     Sleep                                   2s
     Switch Window                           ${WindowHandles}[1]
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Royal Mattress
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYROYALREVIEWURL}
     Close Window
     sleep                                   2s
@@ -489,9 +489,9 @@ Click on Puffy Mattress Review and check redirection URL
     ${WindowHandles}=                       Get Window Handles
     Sleep                                   2s
     Switch Window                           ${WindowHandles}[1]
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Mattress Review
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYMATTRESSREVIEWURL}
     Close Window
     Switch Window                           ${WindowHandles}[0]
@@ -501,18 +501,18 @@ Click on Healthcare Discount and check redirection URL
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERMILITARYDISCOUNT}
     sleep                                   2s
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Exclusive Military Discount
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYMILITARYURL}
 
 Click on Military Discount and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(2) > div
     Click element                           ${LOCFOOTERHEALTHCAREDISCOUNT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Healthcare Professionals
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${PUFFYHEALTHCAREURL}
 
 Footer Spell check for word Reviews
@@ -538,54 +538,54 @@ Click on Reviews and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERREVIEWS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Mattress Reviews
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${SUPPORTREVIEWSURL}
 
 Click on Contact Us and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERCONTACTUS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Ask Away.
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${SUPPORTCONTACTUSURL}
 
 Click on FAQs and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERFAQS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Frequently Asked Questions
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${SUPPORTFAQSURL}
 
 Click on Financing and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERFINANCING}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                You choose
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${SUPPORTFINANCINGURL}
 
 Click on Return Policy and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERRETURNPOLICY}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Return Policy
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${SUPPORTRETURNPOLICYURL}
 
 Click on Puffy Guarantee and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(3) > div
     Click element                           ${LOCFOOTERPUFFYGUARANTEE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                REST EASY
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${SUPPORTPUFFYGUARANTEEURL}
 
 Check Social Media Section Redirection
@@ -676,45 +676,45 @@ Click on Privacy and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div
     Click element                           ${LOCFOOTERPRIVACY}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                PRIVACY STATEMENT
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${AUXPRIVACYURL}
 
 Click on Terms and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div
     Click element                           ${LOCFOOTERTERMS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Terms and Conditions
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${AUXTERMSURL}
 
 Click on Warranty and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div
     Click element                           ${LOCFOOTERWARRANTY}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Warranty Information
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${AUXWARRANTYURL}
 
 Click on Do Not Sell My Personal Information and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(1) > div
     Click element                           ${LOCFOOTERDNSMPI}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Do Not Sell My Personal Information
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${AUXDNSMPIURL}
 
 Click on Copyright and check redirection URL
     sleep                                   2s
     Scroll Element Into View                css=#shopify-section-footer > footer > div.footer-bottom > div > div:nth-child(2)
     Click element                           ${LOCFOOTERCOPYRIGHT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains                Puffy Mattress
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be                      ${AUXCOPYRIGHTURL}
 
 Click sign up without email address
@@ -840,422 +840,422 @@ Look at the SUPPORT mega menu spelling for Financing
 Click on Mega Menu Image (Puffy Mattress)
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYMATTRESSIMAGE}
-    Take Screenshot                 monitor=3
+    Take Screenshot                 ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSH1}
-    Take Screenshot                     monitor=3
+    Take Screenshot                     ${MonitorID}
     Location Should Be  ${PDPPUFFYMATTRESSURL}
 
 Click on Mega Menu Image (Puffy Lux Mattress)
     sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYLUXMATTRESSIMAGE}
-    Take Screenshot                 monitor=3
+    Take Screenshot                 ${MonitorID}
     wait until page contains        ${TEXTPUFFYLUXMATTRESSH1}
-    Take Screenshot                 monitor=3
+    Take Screenshot                 ${MonitorID}
     Location Should Be  ${PDPPUFFYLUXMATTRESSURL}
 Click on Mega Menu Image (Puffy Royal Mattress)
     sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYROYALMATTRESSIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYROYALMATTRESSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYROYALMATTRESSURL}
 Click on Mega Menu Image (Foundation)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYFOUNDATIONIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYFOUNDATIONH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPFOUNDATIONURL}
 Click on Mega Menu Image (Adjustable Base)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYADJUSTABLEBASEIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYADJUSTABLEBASEH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPADJUSTABLEBASEURL}
 Click on Mega Menu Image (Bed Frame)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYBEDFRAMEIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYBEDFRAMEH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPBEDFRAMEURL}
 Click on Mega Menu Image (Comforter)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYCOMFORTERIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYCOMFORTERH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYCOMFORTERURL}
 Click on Mega Menu Image (Pillow)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYPILLOWIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYPILLOWH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPILLOWURL}
 
 Click on Mega Menu Image (Body Pillow)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYBODYPILLOWIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYBODYPILLOWH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPBODYPILLOWURL}
 Click on Mega Menu Image (Mattress Pad)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSPADIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSPADH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPMATTRESSPADURL}
 Click on Mega Menu Image (Mattress Protector)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSPROTECTORIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSPROTECTORH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYMATTRESSPROTECTORURL}
 Click on Mega Menu Image (Mattress Topper)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSTOPPERIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSTOPPERH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPMATTRESSTOPPERURL}
 Click on Mega Menu Image (Blanket)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYBLANKETIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYBLANKETH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYBLANKETURL}
 Click on Mega Menu Image (Weighted Blanket)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYWEIGHTEDBLANKETIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYWEIGHTEDBLANKETH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPWEIGHTEDBLANKETURL}
 Click on Mega Menu Image (Sheets)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYSHEETSIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYSHEETSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYSHEETSURL}
 Click on Mega Menu Image (Dog Bed)
     sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click element       ${LOCMENUPUFFYDOGBEDIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYDOGBEDH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPDOGBEDURL}
 Click on Mega Menu Image (Rug)
     sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click element       ${LOCMENUPUFFYRUGIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYRUGH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYRUGURL}
 
 Click on Mega Menu Image (Customer Reviews)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
     Click Image       ${LOCMENUCUSTOMERREVIEWSIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSREVIEWSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTREVIEWSURL}
 Click on Mega Menu Image (Video Reviews)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
     Click element       ${LOCMENUVIDEOREVIEWSIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSREVIEWVIDEOSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTREVIEWVIDEOSURL}
 Click on Mega Menu Image (Awards)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
     Click element       ${LOCMENUAWARDSIMAGE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains         ${TEXTPUFFYMATTRESSAWARDSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PUFFYMATTRESSAWARDSURL}
 Click on Mega Menu Image (Contact Us)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUCONTACTUS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTCONTACTUSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTCONTACTUSURL}
 Click on Mega Menu Image (FAQs)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUFAQS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTFAQH2}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTFAQSURL}
 Click on Mega Menu Image (Financing)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUFINANCING}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains         ${TEXTFINANCINGH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTFINANCINGURL}
 
 Click on STORE button from Mega Menu section
     sleep               1s
     click element       ${LOCHEADERSTORE}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTSTOREH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location should be  ${PUFFYSTOREURL}
 
 Click on Puffy Logo
     wait until page contains element               ${LOCHEADERPUFFYLOGO}
     click element       ${LOCHEADERPUFFYLOGO}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains    ${TEXTHOMEPAGEH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location should be  ${HEADERPUFFYICONURL}
 
 
 Click on text name (Puffy Mattress)
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYMATTRESSTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYMATTRESSURL}
 Click on text name (Puffy Lux Mattress)
     sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYLUXMATTRESSTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYLUXMATTRESSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYLUXMATTRESSURL}
 Click on text name (Puffy Royal Mattress)
     sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click element       ${LOCMENUPUFFYROYALMATTRESSTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYROYALMATTRESSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYROYALMATTRESSURL}
 
 Click on text name (Foundation)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYFOUNDATIONTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYFOUNDATIONH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPFOUNDATIONURL}
 Click on text name (Adjustable Base)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYADJUSTABLEBASETEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYADJUSTABLEBASEH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPADJUSTABLEBASEURL}
 Click on text name (Bed Frame)
     sleep               1s
     Mouse Over          ${LOCBASES}
     Click element       ${LOCMENUPUFFYBEDFRAMETEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYBEDFRAMEH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPBEDFRAMEURL}
 Click on text name (Comforter)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYCOMFORTERTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYCOMFORTERH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYCOMFORTERURL}
 Click on text name (Pillow)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYPILLOWTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYPILLOWH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPILLOWURL}
 Click on text name (Body Pillow)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYBODYPILLOWTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYBODYPILLOWH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPBODYPILLOWURL}
 Click on text name (Mattress Pad)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSPADTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSPADH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPMATTRESSPADURL}
 Click on text name (Mattress Protector)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSPROTECTORTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSPROTECTORH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYMATTRESSPROTECTORURL}
 Click on text name (Mattress Topper)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYMATTRESSTOPPERTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSTOPPERH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPMATTRESSTOPPERURL}
 Click on text name (Blanket)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYBLANKETTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYBLANKETH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYBLANKETURL}
 Click on text name (Weighted Blanket)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYWEIGHTEDBLANKETTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYWEIGHTEDBLANKETH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPWEIGHTEDBLANKETURL}
 Click on text name (Sheets)
     sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click element       ${LOCMENUPUFFYSHEETSTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYSHEETSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYSHEETSURL}
 Click on text name (Dog Bed)
     sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click element       ${LOCMENUPUFFYDOGBEDTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYDOGBEDH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPDOGBEDURL}
 Click on text name (Rug)
     sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click element       ${LOCMENUPUFFYRUGTEXT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYRUGH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PDPPUFFYRUGURL}
 Click on text name (Customer Reviews)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
     Click element       ${LOCMENUCUSTOMERREVIEWS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSREVIEWSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTREVIEWSURL}
 Click on text name (Video Reviews)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
     Click Link          link:Video Reviews
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSREVIEWVIDEOSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTREVIEWVIDEOSURL}
 Click on text name (Awards)
     sleep               1s
     Mouse Over          ${LOCMENUREVIEWS}
     Click Link          link:Awards
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTPUFFYMATTRESSAWARDSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${PUFFYMATTRESSAWARDSURL}
 Click on text name (Contact Us)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUCONTACTUS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTCONTACTUSH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTCONTACTUSURL}
 Click on text name (FAQs)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUFAQS}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTFAQH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTFAQSURL}
 Click on text name (Financing)
     sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click element       ${LOCMENUFINANCING}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains        ${TEXTFINANCINGH1}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should Be  ${SUPPORTFINANCINGURL}
 Click on Main Menu text (MATTRESSES)
     Sleep               1s
     Mouse Over          ${LOCMATTRESSES}
     Click Element       ${LOCMATTRESSES}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains            Find Your Perfect Mattress
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should be  https://puffy.com/#mattresses
 Click on Main Menu text (BASES)
     Sleep               1s
     Mouse Over          ${LOCBASES}
     Click Element       ${LOCBASES}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains     Modern Bed Frames
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location should be  https://puffy.com/collections/bed-frames
 Click on Main Menu text (BEDDING)
     Sleep               1s
     Mouse Over          ${LOCBEDDING}
     Click Element       ${LOCBEDDING}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains     Ultra-cozy Bedding Collection
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location should be  https://puffy.com/collections/bedding
 Click on Main Menu text (BEDROOM)
     Sleep               1s
     Mouse Over          ${LOCBEDROOM}
     Click Element       ${LOCBEDROOM}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains     Lux Bedroom Essentials
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location should be  https://puffy.com/collections/bedroom
 Click on Main Menu text (REVIEWS)
     Sleep               1s
@@ -1267,9 +1267,9 @@ Click on Main Menu text (SUPPORT)
     Sleep               1s
     Mouse Over          ${LOCSUPPORT}
     Click Element       ${LOCSUPPORT}
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     wait until page contains         Puffy Support
-    Take Screenshot                         monitor=3
+    Take Screenshot                         ${MonitorID}
     Location Should be     https://puffy.com/pages/contact-puffy-mattress
 Check if breadcrumb product is visible
     Page Should Not Contain         ${LOCFOOTERBREADCRUMB}
