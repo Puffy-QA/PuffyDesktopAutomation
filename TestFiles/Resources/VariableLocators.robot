@@ -46,7 +46,7 @@ ${LOCTOGGLEC}                       css=#showVersionC
 ###########################################################FOOTER TESTCASES$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$##############
 ${LOCSIGNUPTEXTFIELD}               css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > div.newsletter-wrapper > div > div > div > div > form > div > div > div.needsclick.FormComponent__StyledFormComponentWrapper-e0xun6-0.kyRZKh.notranslate.kl-private-reset-css-Xuajs1 > div > input
 ${LOCFOOTERSIGNUP}                  css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(4) > div > div.newsletter-wrapper > div > div > div > div > form > div > div > div.needsclick.FormComponent__StyledFormComponentWrapper-e0xun6-0.kUeWNY.notranslate.kl-private-reset-css-Xuajs1 > button
-${LOCFOOTERPUFFY}                   css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(1) > a
+${LOCFOOTERPUFFY}                   css=.footer-menu__link[href="/products/puffy-mattress"]
 ${LOCFOOTERPUFFYLUX}                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(2) > a
 ${LOCFOOTERPUFFYROYAL}              css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(3) > a
 ${LOCFOOTERPUFFYHYBRID}             css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(4) > a
@@ -57,7 +57,7 @@ ${LOCFOOTERWEIGHTEDBLANKET}         css=#shopify-section-footer > footer > div.c
 ${LOCFOOTERDOGBED}                  css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(9) > a
 ${LOCFOOTERBEDFRAME}                css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(10) > a
 ${LOCFOOTERFOUNDATION}              css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(11) > a
-${LOCFOOTERADJUSTABLEBASE}          css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(12) > a
+${LOCFOOTERADJUSTABLEBASE}          css=.footer-menu__link[href="/products/puffy-adjustable-base"]
 ${LOCFOOTERPILLOW}                  css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(13) > a
 ${LOCFOOTERBODYPILLOW}              css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(14) > a
 ${LOCFOOTERMATTRESSPAD}             css=#shopify-section-footer > footer > div.container.footer-menu-wrap > div:nth-child(1) > div > div > ul > li:nth-child(15) > a
@@ -142,8 +142,10 @@ ${LOCMENUCUSTOMERREVIEWS}                           css=body > div.shopify-secti
 ${LOCMENUVIDEOREVIEWS}                              css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(5) > div > div > div > ul > li:nth-child(2) > a
 ${LOCMENUAWARDS}                                    css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(5) > div > div > div > ul > li:nth-child(3) > a
 ${LOCMENUCONTACTUS}                                 css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(1) > a
-${LOCMENUFAQS}                                      css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(2) > a
-${LOCMENUFINANCING}                                 css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(3) > a
+${LOCMENUCHAT}                                      css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(1) > a
+${LOCMENUCONTACTUS}                                      css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(2) > a
+${LOCMENUFAQS}                                      css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(3) > a
+${LOCMENUFINANCING}                                 css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.nav > ul > li:nth-child(6) > div > div > div > ul > li:nth-child(4) > a
 ${LOCHEADERSTORE}                                            css=.store-button--desktop
 ${LOCHEADERPUFFYLOGO}                                  css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.logo
 ${LOCSUPPORT}                       css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(6) > a

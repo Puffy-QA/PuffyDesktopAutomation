@@ -8,7 +8,7 @@ Resource            ../Resources/VariableTexts.robot
 *** Keywords ***
 #=============================TEST REQUIREMENTS===================================================#
 Initiate Video Recording
-    Start Video Recording       alias=FallSale name=FallSale
+    Start Video Recording       alias=FallSale name=FallSale    monitor=3
 
 Open Login Screen
     Open Browser            ${HOMEPAGE}  ${SYSTEMBROWSER}
@@ -2567,11 +2567,11 @@ Close cart
     Wait until page contains element    ${LOCLOGO}
 
 Check current cart count
-    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.cart_container > div > a > span
     set test variable       ${CartCount}    ${carttext}
 
 Check current cart count (Lux Hybrid)
-    ${CartText}   get text  xpath=/html/body/div[5]/div/header[2]/div/div/div/div[3]/div/a/span
+    ${CartText}   get text  css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.cart_container > div > a > span
     set test variable       ${CartCount}    ${CartText}
 
 Check cart count after adding a mattress
