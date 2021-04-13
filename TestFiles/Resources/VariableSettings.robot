@@ -13,7 +13,7 @@ ${FIRSTNAME}                    John
 ${LASTNAME}                     Doe
 ${ADDRESS}                      123 William Street
 ${CITY}                         New York
-${ZIPCODE}                      03101
+${ZIPCODE}                      10001
 ${SALENAME}                     SPRING SALE NOW
 ${SALEDETAILS}                  $300 OFF + FREE PILLOW
 ${DISCOUNTAMOUNT}               $300 OFF
