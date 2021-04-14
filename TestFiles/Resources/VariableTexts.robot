@@ -282,6 +282,7 @@ ${TEXTPRODUCTBARTITLE}                              ORDER YOUR PUFFY NOW
 ${TEXTPRODUCTBARBOTTOMTEXT}                         If you're not 100% in love, we'll pick it up for free and give you a full refund.
 ${TEXTORDERNOWCTA}                                  ORDER NOW
 ##################################################################
+${TEXTPUFFYGUARANTEEPAGEBANNERTITLE1LINE}           REST EASY
 ${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}                REST EASY\nPUFFY HAS YOU COVERED
 ${TEXTGET100RISKFREETITLE}                          GET PUFFY 100% RISK-FREE
 ${TEXTGET100RISKFREETITLEDESC}                      PUFFY WILL BE THE MOST COMFORTABLE MATTRESS YOU'VE EVER SLEPT ON GUARANTEED OR WE'LL HAPPILY GIVE YOU A REFUND.
@@ -294,3 +295,11 @@ ${TEXT101NIGHTSLEEPTRIALTITLE}                      101-NIGHT SLEEP TRIAL
 ${TEXT101NIGHTSLEEPTRIALP1}                         Puffy provides all of its customers a complimentary 101-night sleep trial, and that's because we are highly confident that our sleep system will be the best foam mattress you have ever tried. So, if you've been considering our mattress, order worry-free!  Better yet, if for some reason you don't believe the Puffy Mattress has provided you with the best sleep of your life, we will help you donate that mattress to a local charity and provide you a full refund!
 ${TEXT101NIGHTSLEEPTRIALP2}                         It's a win-win all around!  Either you will discover a new level of deep sleep with our Puffy Mattress, or, if you decide it's just not for you, you get to sleep easy knowing that your mattress won't go to waste.  It will be donated to a local or national charity to provide those in need with a comfortable bed they can lay their head on.
 ${TEXT101NIGHTSLEEPTRIALP3}                         You may be wondering to yourself why our company would just give away our mattress when its barely been used?  We here at Puffy Mattress believe that everyone deserves a restful sleep.  Everyone deserves a chance to wake up energized and ready to take on the day.  We want to ensure that your foam mattress won't end up in a dump, but will help to give those in need a better sleep to help better themselves!
+${TEXTPRODUCTBARICON1DESC}                          Your Puffy Ships\nWithin 1 - 3 Business Days
+${TEXTPRODUCTBARICON2DESC}                          Get The Best Sleep\nEver Guaranteed
+####################################################AWARDS##########################################################
+${TEXTAWARDSTOPBANNERTITLE}                         AWARD-WINNING
+${TEXTAWARDSPAGEH1}                                 AWARD-WINNING\nDESIGN & COMFORT
+${TEXTAWARDSPAGEH1DESC}                             Designing the most comfortable mattresses for\nlife-changing sleep is what we do best.
+${TEXTAWARDSPAGERANKEDBEST2021TITLE}                RANKED BEST MATTRESS 2021
+${TEXTAWARDSPAGERANKEDBEST2021DESC}                 Not only do thousands of sleepers rate Puffy as the Best Mattress, but we’ve also received numerous industry awards taking out the top spot in various Best Mattress categories.

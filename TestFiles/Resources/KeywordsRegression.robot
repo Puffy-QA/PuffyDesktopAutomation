@@ -1748,15 +1748,21 @@ Check if the section is showing
 Check if the Product Bar title is showing with correct content
     Element should be visible               ${LOCPRODUCTBARTITLE}
     ${ProductBarTitle}=            get text      ${LOCPRODUCTBARTITLE}
-    Run keyword if          "${ProductBarTitle}"!="${TEXTPRODUCTBARTITLE}"      Fail        Wrong content for Puffy Product Returns paragraph 3. Actual content: ${ProductBarTitle} expected: ${TEXTPRODUCTBARTITLE}
+    Run keyword if          "${ProductBarTitle}"!="${TEXTPRODUCTBARTITLE}"      Fail        Wrong Product Bar Title. Actual content: ${ProductBarTitle} expected: ${TEXTPRODUCTBARTITLE}
 Check if the first product bar box is showing (Icon and text desc)
     Element should be visible                ${LOCPRODUCTBARICON1}
     Element should be visible                ${LOCPRODUCTBARICON1DESC}
+    ${ProductBarTitle1Desc}=            get text      ${LOCPRODUCTBARICON1DESC}
+    Run keyword if          """${ProductBarTitle1Desc}"""!="""${TEXTPRODUCTBARICON1DESC}"""      Fail        Wrong Product Bar Title Description. Actual content: ${ProductBarTitle1Desc} expected: ${TEXTPRODUCTBARICON1DESC}
+
 Check if product bar icon arrow is showing
     Element should be visible                ${LOCPRODUCTBARARROW}
 Check if the second product bar box is showing (Icon and text desc)
     Element should be visible                ${LOCPRODUCTBARICON2}
     Element should be visible                ${LOCPRODUCTBARICON2DESC}
+    ${ProductBarTitle2Desc}=            get text      ${LOCPRODUCTBARICON2DESC}
+    Run keyword if          """${ProductBarTitle2Desc}"""!="""${TEXTPRODUCTBARICON2DESC}"""      Fail        Wrong Product Bar Title Description. Actual content: ${ProductBarTitle2Desc} expected: ${TEXTPRODUCTBARICON2DESC}
+
 Check if product bar text at the bottom is showing with correct content
     Element should be visible                ${LOCPRODUCTBARBOTTOMTEXT}
     ${ProductBarBottomText}=            get text      ${LOCPRODUCTBARBOTTOMTEXT}
@@ -1770,70 +1776,115 @@ Go To Puffy Guarantee page
     Scroll to Footer section
     Click element                                       ${LOCFOOTERPUFFYGUARANTEE}
 Check if page banner image is showing
-    Wait until page contains                             REST EASY
-    Page Should Contain Image                            css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img
-    Element should be visible                            css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img
-    ${src}                                               Get Element Attribute  css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img  src
+    Wait until page contains                             ${TEXTPUFFYGUARANTEEPAGEBANNERTITLE1LINE}
+    Page Should Contain Image                            ${LOCPUFFYGUARANTEEHEROIMAGE}
+    Element should be visible                            ${LOCPUFFYGUARANTEEHEROIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCPUFFYGUARANTEEHEROIMAGE}  src
     Go To                                                ${src}
     Wait until element is visible                        css=img
     Go Back
 
 Check if page banner title and description is showing with correct content
-    ${PageBannerTitle1}=            get text      css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__inner > div > h1
+    ${PageBannerTitle1}=            get text      ${LOCPUFFYGUARANTEEPAGEBANNERTITLE}
     Run keyword if          """${PageBannerTitle1}"""!="""${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}"""      Fail        Wrong Puffy Guarantee Page Banner Title. Actual content: ${PageBannerTitle1} expected: ${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}
 
 Check if the 100% Risk Free block is showing the title with correct content
-    Scroll Element Into View                            css=.block__page
-    ${Get100RiskFreeBlockTitle}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > h2.RNdesk2
+    Scroll Element Into View                            ${LOCGET100RISKFREEBLOCK}
+    ${Get100RiskFreeBlockTitle}=            get text      ${LOCGET100RISKFREETITLE}
     Run keyword if          """${Get100RiskFreeBlockTitle}"""!="""${TEXTGET100RISKFREETITLE}"""      Fail        Wrong block__page Title. Actual content: ${Get100RiskFreeBlockTitle} expected: ${TEXTGET100RISKFREETITLE}
 Check if the block is showing the description with correct content
-    ${Get100RiskFreeBlockDesc}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > h2:nth-child(4)
+    ${Get100RiskFreeBlockDesc}=            get text      ${LOCGET100RISKFREETITLEDESC}
     Run keyword if          """${Get100RiskFreeBlockDesc}"""!="""${TEXTGET100RISKFREETITLEDESC}"""      Fail        Wrong block__page Title Desc. Actual content: ${Get100RiskFreeBlockDesc} expected: ${TEXTGET100RISKFREETITLEDESC}
 Check if the 3 USP images are showing
-    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img
-    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img
-    ${uspsrc1}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img  src
+    Page Should Contain Image                            ${LOC101NIGHTTRIALUSPIMG}
+    Element should be visible                            ${LOC101NIGHTTRIALUSPIMG}
+    ${uspsrc1}                                           Get Element Attribute  ${LOC101NIGHTTRIALUSPIMG}  src
     Go To                                                ${uspsrc1}
     Wait until element is visible                        css=img
     Go Back
 
-    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img
-    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img
-    ${uspsrc2}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img  src
+    Page Should Contain Image                            ${LOCFREESHIPPINGUSPIMG}
+    Element should be visible                            ${LOCFREESHIPPINGUSPIMG}
+    ${uspsrc2}                                           Get Element Attribute  ${LOCFREESHIPPINGUSPIMG}  src
     Go To                                                ${uspsrc2}
     Wait until element is visible                        css=img
     Go Back
 
-    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img
-    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img
-    ${uspsrc3}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img  src
+    Page Should Contain Image                            ${LOCLIFETIMEWARRANTYUSPIMG}
+    Element should be visible                            ${LOCLIFETIMEWARRANTYUSPIMG}
+    ${uspsrc3}                                           Get Element Attribute  ${LOCLIFETIMEWARRANTYUSPIMG}  src
     Go To                                                ${uspsrc3}
     Wait until element is visible                        css=img
     Go Back
 
 Check if the 3 USP texts are showing with correct content
-    ${usp1Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > strong > span
+    ${usp1Title}=            get text      ${LOC101NIGHTTRIALUSPTITLE}
     Run keyword if          """${usp1Title}"""!="""${TEXTUSP1TITLE}"""      Fail        Wrong USP1 Title Desc. Actual content: ${usp1Title} expected: ${TEXTUSP1TITLE}
-    ${usp2Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > strong > span
+    ${usp2Title}=            get text      ${LOCFREESHIPPINGUSPTITLE}
     Run keyword if          """${usp2Title}"""!="""${TEXTUSP2TITLE}"""      Fail        Wrong USP2 Title Desc. Actual content: ${usp2Title} expected: ${TEXTUSP2TITLE}
-    ${usp3Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > strong > span
+    ${usp3Title}=            get text      ${LOCLIFETIMEWARRANTYUSPTITLE}
     Run keyword if          """${usp3Title}"""!="""${TEXTUSP3TITLE}"""      Fail        Wrong USP3 Title Desc. Actual content: ${usp3Title} expected: ${TEXTUSP3TITLE}
 
 Check if the Lifetime warranty block is showing the title with correct content
-    ${PuffyLifetimeWarrantyTitle}=            get text      css=body > div.detail-sections > div:nth-child(3) > div > div > div > h2
+    ${PuffyLifetimeWarrantyTitle}=            get text      ${LOCPUFFYLIFETIMEWARRANTYTITLE}
     Run keyword if          """${PuffyLifetimeWarrantyTitle}"""!="""${TEXTPUFFYLIFETIMEWARRANTYTITLE}"""      Fail        Wrong Puffy Lifetime Warranty Title. Actual content: ${PuffyLifetimeWarrantyTitle} expected: ${TEXTPUFFYLIFETIMEWARRANTYTITLE}
 Check if the Lifetime warranty block featured text is showing with correct content
-    ${PuffyLifetimeWarrantyTitleDesc}=            get text      css=body > div.detail-sections > div:nth-child(3) > div > div > div > div.featured_text.puffy_guarantee_text
+    ${PuffyLifetimeWarrantyTitleDesc}=            get text      ${LOCPUFFYLIFETIMEWARRANTYTITLEDESC}
     Run keyword if          """${PuffyLifetimeWarrantyTitleDesc}"""!="""${TEXTPUFFYLIFETIMEWARRANTYTITLEDESC}"""      Fail        Wrong Puffy Lifetime Warranty Title Description. Actual content: ${PuffyLifetimeWarrantyTitleDesc} expected: ${TEXTPUFFYLIFETIMEWARRANTYTITLEDESC}
 
 Check if the 101-Night Sleep Trial block is showing the title with correct content
-    Scroll Element Into View                                    css=.block__rich_text_and_image.block__1565656478391
-    ${101NightSleepTrialTitle}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > h2
+    Scroll Element Into View               ${101NIGHTSLEEPTRIALBLOCK}
+    ${101NightSleepTrialTitle}=            get text      ${LOC101NIGHTSLEEPTRIALTITLE}
     Run keyword if          """${101NightSleepTrialTitle}"""!="""${TEXT101NIGHTSLEEPTRIALTITLE}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialTitle} expected: ${TEXT101NIGHTSLEEPTRIALTITLE}
 Check if the 101-Night Sleep Trial block featured text is showing with correct content
-    ${101NightSleepTrialP1}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(1)
+    ${101NightSleepTrialP1}=            get text      ${LOC101NIGHTSLEEPTRIALP1}
     Run keyword if          """${101NightSleepTrialP1}"""!="""${TEXT101NIGHTSLEEPTRIALP1}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP1} expected: ${TEXT101NIGHTSLEEPTRIALP1}
-    ${101NightSleepTrialP2}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(2)
+    ${101NightSleepTrialP2}=            get text      ${LOC101NIGHTSLEEPTRIALP2}
     Run keyword if          """${101NightSleepTrialP2}"""!="""${TEXT101NIGHTSLEEPTRIALP2}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP2} expected: ${TEXT101NIGHTSLEEPTRIALP2}
-    ${101NightSleepTrialP3}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(3)
+    ${101NightSleepTrialP3}=            get text      ${LOC101NIGHTSLEEPTRIALP3}
     Run keyword if          """${101NightSleepTrialP3}"""!="""${TEXT101NIGHTSLEEPTRIALP3}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP3} expected: ${TEXT101NIGHTSLEEPTRIALP3}
+
+Check in 101-Night Trial section if Puffy Mattress hyperlink is clickable and landing to correct page
+    Click Element                                   ${LOCL101NIGHTSLEEPTRIALPUFFYLINK}
+    Wait until page contains element                ${LOCHOMEPAGEH1}
+    Location should be                              ${Homepage}
+    Go Back
+
+    Wait until page contains element                ${LOCL101NIGHTSLEEPTRIALPUFFYMATTRESSHYPERLINK}
+    Click Element                                   ${LOCL101NIGHTSLEEPTRIALPUFFYMATTRESSHYPERLINK}
+    sleep                                           2s
+    Wait until page contains element                ${LOCCOMPAREPAGEH1}
+    Location should be                              ${PUFFYCOMPAREMATTRESSURL}
+    Go Back
+Check if the Order Your Puffy section is showing
+    Scroll Element into view                                ${LOCPRODUCTBAR}
+    Element should be visible                               ${LOCPRODUCTBAR}
+################################AWARDS PAGE####################################################
+Verify if the Awards page Top banner block is showing
+    Wait until element is visible                           css=.top-banner__inner
+    Page should contain element                             css=.top-banner__inner
+Verify Awards page image of Top Banner is showing
+    Sleep                                                5s
+    Wait until page contains element                     ${LOCAWARDSHEROIMAGE}
+    Page Should Contain Image                            ${LOCAWARDSHEROIMAGE}
+    Element should be visible                            ${LOCAWARDSHEROIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCAWARDSHEROIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify Awards page Top Banner text is showing with correct content
+    Wait until page contains element                     css=.top-banner__title
+    page should contain element                          css=.top-banner__title
+    ${AwardsPageH1}=            get text      ${LOCAWARDSPAGEH1}
+    Run keyword if          """${AwardsPageH1}"""!="""${TEXTAWARDSPAGEH1}"""      Fail        Wrong Awards Page Title. Actual content: ${AwardsPageH1} expected: ${TEXTAWARDSPAGEH1}
+    ${AwardsPageH1Desc}=            get text      ${LOCAWARDSPAGEH1DESC}
+    Run keyword if          """${AwardsPageH1Desc}"""!="""${TEXTAWARDSPAGEH1DESC}"""      Fail        Wrong Awards Page Title Desc. Actual content: ${AwardsPageH1Desc} expected: ${TEXTAWARDSPAGEH1DESC}
+
+Verify RANKED BEST MATTRESS TITLE is showing with correct content
+    Scroll Element Into View                            ${LOCAWARDSPAGERANKEDBEST2021TITLE}
+    ${AwardsPageRankedBest2021Title}=            get text      ${LOCAWARDSPAGERANKEDBEST2021TITLE}
+    Run keyword if          """${AwardsPageRankedBest2021Title}"""!="""${TEXTAWARDSPAGERANKEDBEST2021TITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${AwardsPageRankedBest2021Title} expected: ${TEXTAWARDSPAGERANKEDBEST2021TITLE}
+verify RANKED BEST MATTRESS desc is showing with correct content
+    Scroll Element Into View                            ${LOCAWARDSPAGERANKEDBEST2021TITLE}
+    ${AwardsPageRankedBest2021Desc}=            get text      ${LOCAWARDSPAGERANKEDBEST2021DESC}
+    Run keyword if          """${AwardsPageRankedBest2021Desc}"""!="""${TEXTAWARDSPAGERANKEDBEST2021DESC}"""      Fail        Wrong Awards Page Title. Actual content: ${AwardsPageRankedBest2021Desc} expected: ${TEXTAWARDSPAGERANKEDBEST2021DESC}
