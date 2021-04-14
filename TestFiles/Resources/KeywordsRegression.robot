@@ -1748,15 +1748,21 @@ Check if the section is showing
 Check if the Product Bar title is showing with correct content
     Element should be visible               ${LOCPRODUCTBARTITLE}
     ${ProductBarTitle}=            get text      ${LOCPRODUCTBARTITLE}
-    Run keyword if          "${ProductBarTitle}"!="${TEXTPRODUCTBARTITLE}"      Fail        Wrong content for Puffy Product Returns paragraph 3. Actual content: ${ProductBarTitle} expected: ${TEXTPRODUCTBARTITLE}
+    Run keyword if          "${ProductBarTitle}"!="${TEXTPRODUCTBARTITLE}"      Fail        Wrong Product Bar Title. Actual content: ${ProductBarTitle} expected: ${TEXTPRODUCTBARTITLE}
 Check if the first product bar box is showing (Icon and text desc)
     Element should be visible                ${LOCPRODUCTBARICON1}
     Element should be visible                ${LOCPRODUCTBARICON1DESC}
+    ${ProductBarTitle1Desc}=            get text      ${LOCPRODUCTBARICON1DESC}
+    Run keyword if          """${ProductBarTitle1Desc}"""!="""${TEXTPRODUCTBARICON1DESC}"""      Fail        Wrong Product Bar Title Description. Actual content: ${ProductBarTitle1Desc} expected: ${TEXTPRODUCTBARICON1DESC}
+
 Check if product bar icon arrow is showing
     Element should be visible                ${LOCPRODUCTBARARROW}
 Check if the second product bar box is showing (Icon and text desc)
     Element should be visible                ${LOCPRODUCTBARICON2}
     Element should be visible                ${LOCPRODUCTBARICON2DESC}
+    ${ProductBarTitle2Desc}=            get text      ${LOCPRODUCTBARICON2DESC}
+    Run keyword if          """${ProductBarTitle2Desc}"""!="""${TEXTPRODUCTBARICON2DESC}"""      Fail        Wrong Product Bar Title Description. Actual content: ${ProductBarTitle2Desc} expected: ${TEXTPRODUCTBARICON2DESC}
+
 Check if product bar text at the bottom is showing with correct content
     Element should be visible                ${LOCPRODUCTBARBOTTOMTEXT}
     ${ProductBarBottomText}=            get text      ${LOCPRODUCTBARBOTTOMTEXT}
@@ -1770,70 +1776,433 @@ Go To Puffy Guarantee page
     Scroll to Footer section
     Click element                                       ${LOCFOOTERPUFFYGUARANTEE}
 Check if page banner image is showing
-    Wait until page contains                             REST EASY
-    Page Should Contain Image                            css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img
-    Element should be visible                            css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img
-    ${src}                                               Get Element Attribute  css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img  src
+    Wait until page contains                             ${TEXTPUFFYGUARANTEEPAGEBANNERTITLE1LINE}
+    Page Should Contain Image                            ${LOCPUFFYGUARANTEEHEROIMAGE}
+    Element should be visible                            ${LOCPUFFYGUARANTEEHEROIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCPUFFYGUARANTEEHEROIMAGE}  src
     Go To                                                ${src}
     Wait until element is visible                        css=img
     Go Back
 
 Check if page banner title and description is showing with correct content
-    ${PageBannerTitle1}=            get text      css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__inner > div > h1
+    ${PageBannerTitle1}=            get text      ${LOCPUFFYGUARANTEEPAGEBANNERTITLE}
     Run keyword if          """${PageBannerTitle1}"""!="""${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}"""      Fail        Wrong Puffy Guarantee Page Banner Title. Actual content: ${PageBannerTitle1} expected: ${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}
 
 Check if the 100% Risk Free block is showing the title with correct content
-    Scroll Element Into View                            css=.block__page
-    ${Get100RiskFreeBlockTitle}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > h2.RNdesk2
+    Scroll Element Into View                            ${LOCGET100RISKFREEBLOCK}
+    ${Get100RiskFreeBlockTitle}=            get text      ${LOCGET100RISKFREETITLE}
     Run keyword if          """${Get100RiskFreeBlockTitle}"""!="""${TEXTGET100RISKFREETITLE}"""      Fail        Wrong block__page Title. Actual content: ${Get100RiskFreeBlockTitle} expected: ${TEXTGET100RISKFREETITLE}
 Check if the block is showing the description with correct content
-    ${Get100RiskFreeBlockDesc}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > h2:nth-child(4)
+    ${Get100RiskFreeBlockDesc}=            get text      ${LOCGET100RISKFREETITLEDESC}
     Run keyword if          """${Get100RiskFreeBlockDesc}"""!="""${TEXTGET100RISKFREETITLEDESC}"""      Fail        Wrong block__page Title Desc. Actual content: ${Get100RiskFreeBlockDesc} expected: ${TEXTGET100RISKFREETITLEDESC}
 Check if the 3 USP images are showing
-    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img
-    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img
-    ${uspsrc1}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img  src
+    Page Should Contain Image                            ${LOC101NIGHTTRIALUSPIMG}
+    Element should be visible                            ${LOC101NIGHTTRIALUSPIMG}
+    ${uspsrc1}                                           Get Element Attribute  ${LOC101NIGHTTRIALUSPIMG}  src
     Go To                                                ${uspsrc1}
     Wait until element is visible                        css=img
     Go Back
 
-    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img
-    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img
-    ${uspsrc2}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img  src
+    Page Should Contain Image                            ${LOCFREESHIPPINGUSPIMG}
+    Element should be visible                            ${LOCFREESHIPPINGUSPIMG}
+    ${uspsrc2}                                           Get Element Attribute  ${LOCFREESHIPPINGUSPIMG}  src
     Go To                                                ${uspsrc2}
     Wait until element is visible                        css=img
     Go Back
 
-    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img
-    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img
-    ${uspsrc3}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img  src
+    Page Should Contain Image                            ${LOCLIFETIMEWARRANTYUSPIMG}
+    Element should be visible                            ${LOCLIFETIMEWARRANTYUSPIMG}
+    ${uspsrc3}                                           Get Element Attribute  ${LOCLIFETIMEWARRANTYUSPIMG}  src
     Go To                                                ${uspsrc3}
     Wait until element is visible                        css=img
     Go Back
 
 Check if the 3 USP texts are showing with correct content
-    ${usp1Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > strong > span
+    ${usp1Title}=            get text      ${LOC101NIGHTTRIALUSPTITLE}
     Run keyword if          """${usp1Title}"""!="""${TEXTUSP1TITLE}"""      Fail        Wrong USP1 Title Desc. Actual content: ${usp1Title} expected: ${TEXTUSP1TITLE}
-    ${usp2Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > strong > span
+    ${usp2Title}=            get text      ${LOCFREESHIPPINGUSPTITLE}
     Run keyword if          """${usp2Title}"""!="""${TEXTUSP2TITLE}"""      Fail        Wrong USP2 Title Desc. Actual content: ${usp2Title} expected: ${TEXTUSP2TITLE}
-    ${usp3Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > strong > span
+    ${usp3Title}=            get text      ${LOCLIFETIMEWARRANTYUSPTITLE}
     Run keyword if          """${usp3Title}"""!="""${TEXTUSP3TITLE}"""      Fail        Wrong USP3 Title Desc. Actual content: ${usp3Title} expected: ${TEXTUSP3TITLE}
 
 Check if the Lifetime warranty block is showing the title with correct content
-    ${PuffyLifetimeWarrantyTitle}=            get text      css=body > div.detail-sections > div:nth-child(3) > div > div > div > h2
+    ${PuffyLifetimeWarrantyTitle}=            get text      ${LOCPUFFYLIFETIMEWARRANTYTITLE}
     Run keyword if          """${PuffyLifetimeWarrantyTitle}"""!="""${TEXTPUFFYLIFETIMEWARRANTYTITLE}"""      Fail        Wrong Puffy Lifetime Warranty Title. Actual content: ${PuffyLifetimeWarrantyTitle} expected: ${TEXTPUFFYLIFETIMEWARRANTYTITLE}
 Check if the Lifetime warranty block featured text is showing with correct content
-    ${PuffyLifetimeWarrantyTitleDesc}=            get text      css=body > div.detail-sections > div:nth-child(3) > div > div > div > div.featured_text.puffy_guarantee_text
+    ${PuffyLifetimeWarrantyTitleDesc}=            get text      ${LOCPUFFYLIFETIMEWARRANTYTITLEDESC}
     Run keyword if          """${PuffyLifetimeWarrantyTitleDesc}"""!="""${TEXTPUFFYLIFETIMEWARRANTYTITLEDESC}"""      Fail        Wrong Puffy Lifetime Warranty Title Description. Actual content: ${PuffyLifetimeWarrantyTitleDesc} expected: ${TEXTPUFFYLIFETIMEWARRANTYTITLEDESC}
 
 Check if the 101-Night Sleep Trial block is showing the title with correct content
-    Scroll Element Into View                                    css=.block__rich_text_and_image.block__1565656478391
-    ${101NightSleepTrialTitle}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > h2
+    Scroll Element Into View               ${101NIGHTSLEEPTRIALBLOCK}
+    ${101NightSleepTrialTitle}=            get text      ${LOC101NIGHTSLEEPTRIALTITLE}
     Run keyword if          """${101NightSleepTrialTitle}"""!="""${TEXT101NIGHTSLEEPTRIALTITLE}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialTitle} expected: ${TEXT101NIGHTSLEEPTRIALTITLE}
 Check if the 101-Night Sleep Trial block featured text is showing with correct content
-    ${101NightSleepTrialP1}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(1)
+    ${101NightSleepTrialP1}=            get text      ${LOC101NIGHTSLEEPTRIALP1}
     Run keyword if          """${101NightSleepTrialP1}"""!="""${TEXT101NIGHTSLEEPTRIALP1}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP1} expected: ${TEXT101NIGHTSLEEPTRIALP1}
-    ${101NightSleepTrialP2}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(2)
+    ${101NightSleepTrialP2}=            get text      ${LOC101NIGHTSLEEPTRIALP2}
     Run keyword if          """${101NightSleepTrialP2}"""!="""${TEXT101NIGHTSLEEPTRIALP2}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP2} expected: ${TEXT101NIGHTSLEEPTRIALP2}
-    ${101NightSleepTrialP3}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(3)
+    ${101NightSleepTrialP3}=            get text      ${LOC101NIGHTSLEEPTRIALP3}
     Run keyword if          """${101NightSleepTrialP3}"""!="""${TEXT101NIGHTSLEEPTRIALP3}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP3} expected: ${TEXT101NIGHTSLEEPTRIALP3}
+
+Check in 101-Night Trial section if Puffy Mattress hyperlink is clickable and landing to correct page
+    Click Element                                   ${LOCL101NIGHTSLEEPTRIALPUFFYLINK}
+    Wait until page contains element                ${LOCHOMEPAGEH1}
+    Location should be                              ${Homepage}
+    Go Back
+
+    Wait until page contains element                ${LOCL101NIGHTSLEEPTRIALPUFFYMATTRESSHYPERLINK}
+    Click Element                                   ${LOCL101NIGHTSLEEPTRIALPUFFYMATTRESSHYPERLINK}
+    sleep                                           2s
+    Wait until page contains element                ${LOCCOMPAREPAGEH1}
+    Location should be                              ${PUFFYCOMPAREMATTRESSURL}
+    Go Back
+Check if the Order Your Puffy section is showing
+    Scroll Element into view                                ${LOCPRODUCTBAR}
+    Element should be visible                               ${LOCPRODUCTBAR}
+################################AWARDS PAGE####################################################
+Verify if the Awards page Top banner block is showing
+    Wait until element is visible                           css=.top-banner__inner
+    Page should contain element                             css=.top-banner__inner
+Verify Awards page image of Top Banner is showing
+    Sleep                                                5s
+    Wait until page contains element                     ${LOCAWARDSHEROIMAGE}
+    Page Should Contain Image                            ${LOCAWARDSHEROIMAGE}
+    Element should be visible                            ${LOCAWARDSHEROIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCAWARDSHEROIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify Awards page Top Banner text is showing with correct content
+    Wait until page contains element                     css=.top-banner__title
+    page should contain element                          css=.top-banner__title
+    ${AwardsPageH1}=            get text      ${LOCAWARDSPAGEH1}
+    Run keyword if          """${AwardsPageH1}"""!="""${TEXTAWARDSPAGEH1}"""      Fail        Wrong Awards Page Title. Actual content: ${AwardsPageH1} expected: ${TEXTAWARDSPAGEH1}
+    ${AwardsPageH1Desc}=            get text      ${LOCAWARDSPAGEH1DESC}
+    Run keyword if          """${AwardsPageH1Desc}"""!="""${TEXTAWARDSPAGEH1DESC}"""      Fail        Wrong Awards Page Title Desc. Actual content: ${AwardsPageH1Desc} expected: ${TEXTAWARDSPAGEH1DESC}
+
+Verify RANKED BEST MATTRESS TITLE is showing with correct content
+    Scroll Element Into View                            ${LOCAWARDSPAGERANKEDBEST2021TITLE}
+    ${AwardsPageRankedBest2021Title}=            get text      ${LOCAWARDSPAGERANKEDBEST2021TITLE}
+    Run keyword if          """${AwardsPageRankedBest2021Title}"""!="""${TEXTAWARDSPAGERANKEDBEST2021TITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${AwardsPageRankedBest2021Title} expected: ${TEXTAWARDSPAGERANKEDBEST2021TITLE}
+verify RANKED BEST MATTRESS desc is showing with correct content
+    Scroll Element Into View                            ${LOCAWARDSPAGERANKEDBEST2021TITLE}
+    ${AwardsPageRankedBest2021Desc}=            get text      ${LOCAWARDSPAGERANKEDBEST2021DESC}
+    Run keyword if          """${AwardsPageRankedBest2021Desc}"""!="""${TEXTAWARDSPAGERANKEDBEST2021DESC}"""      Fail        Wrong Awards Page Title. Actual content: ${AwardsPageRankedBest2021Desc} expected: ${TEXTAWARDSPAGERANKEDBEST2021DESC}
+########################SLEEP MATTERS##########################
+Verify SLEEP MATTERS image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCSLEEPMATTERSBLOCKTITLE}
+    Wait until page contains element                     ${LOCSLEEPMATTERSIMAGE}
+    Page Should Contain Image                            ${LOCSLEEPMATTERSIMAGE}
+    Element should be visible                            ${LOCSLEEPMATTERSIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCSLEEPMATTERSIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify SLEEP MATTERS title is showing with correct content
+    Scroll Element into view                                ${LOCSLEEPMATTERSBLOCKTITLE}
+    ${SleepMattersBlockTitle}=            get text          ${LOCSLEEPMATTERSBLOCKTITLE}
+    Run keyword if          """${SleepMattersBlockTitle}"""!="""${TEXTSLEEPMATTERSBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${SleepMattersBlockTitle} expected: ${TEXTSLEEPMATTERSBLOCKTITLE}
+Verify SLEEP MATTERS desc is showing with correct content
+    ${SleepMattersBlockTitleDesc}=            get text          ${LOCSLEEPMATTERSBLOCKTITLEDESC}
+    Run keyword if          """${SleepMattersBlockTitleDesc}"""!="""${TEXTSLEEPMATTERSBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${SleepMattersBlockTitleDesc} expected: ${TEXTSLEEPMATTERSBLOCKTITLEDESC}
+Verify SLEEP MATTERS redirection and if Puffy is visible on their page
+    Click Element                           ${LOCSLEEPMATTERSIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Puffy Lux Memory Foam Mattress
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${SLEEPMATTERSURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+#################OUR SLEEP GUIDE#######################
+Verify Our Sleep Guide image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCOURSLEEPGUIDEBLOCKTITLE}
+    Wait until page contains element                     ${LOCOURSLEEPGUIDEIMAGE}
+    Page Should Contain Image                            ${LOCOURSLEEPGUIDEIMAGE}
+    Element should be visible                            ${LOCOURSLEEPGUIDEIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCOURSLEEPGUIDEIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify Our Sleep Guide title is showing with correct content
+    Scroll Element into view                                ${LOCOURSLEEPGUIDEBLOCKTITLE}
+    ${OurSleepGuideBlockTitle}=            get text          ${LOCOURSLEEPGUIDEBLOCKTITLE}
+    Run keyword if          """${OurSleepGuideBlockTitle}"""!="""${TEXTOURSLEEPGUIDEBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${OurSleepGuideBlockTitle} expected: ${TEXTOURSLEEPGUIDEBLOCKTITLE}
+Verify Our Sleep Guide desc is showing with correct content
+    ${OurSleepGuideBlockTitleDesc}=            get text          ${LOCOURSLEEPGUIDEBLOCKTITLEDESC}
+    Run keyword if          """${OurSleepGuideBlockTitleDesc}"""!="""${TEXTOURSLEEPGUIDEBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${OurSleepGuideBlockTitleDesc} expected: ${TEXTOURSLEEPGUIDEBLOCKTITLEDESC}
+Verify Our Sleep Guide redirection and if Puffy is visible on their page
+    Click Element                           ${LOCOURSLEEPGUIDEIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                1 – Puffy Lux: Editor’s Pick
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${OURSLEEPGUIDEURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+#################SLEEPOPOLiS#######################
+Verify SLEEPOPOLiS image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCSLEEPOPOLISBLOCKTITLE}
+    Wait until page contains element                     ${LOCSLEEPOPOLISIMAGE}
+    Page Should Contain Image                            ${LOCSLEEPOPOLISIMAGE}
+    Element should be visible                            ${LOCSLEEPOPOLISIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCSLEEPOPOLISIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify SLEEPOPOLiS title is showing with correct content
+    Scroll Element into view                                ${LOCSLEEPOPOLISBLOCKTITLE}
+    ${SLEEPOPOLiSBlockTitle}=            get text          ${LOCSLEEPOPOLISBLOCKTITLE}
+    Run keyword if          """${SLEEPOPOLiSBlockTitle}"""!="""${TEXTSLEEPOPOLISBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${SLEEPOPOLiSBlockTitle} expected: ${TEXTSLEEPOPOLISBLOCKTITLE}
+Verify SLEEPOPOLiS desc is showing with correct content
+    ${SLEEPOPOLiSBlockTitleDesc}=            get text          ${LOCSLEEPOPOLISBLOCKTITLEDESC}
+    Run keyword if          """${SLEEPOPOLiSBlockTitleDesc}"""!="""${TEXTSLEEPOPOLISBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${SLEEPOPOLiSBlockTitleDesc} expected: ${TEXTSLEEPOPOLISBLOCKTITLEDESC}
+Verify SLEEPOPOLiS redirection and if Puffy is visible on their page
+    Click Element                           ${LOCSLEEPOPOLISIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Best Foam Mattress for Back Sleepers – Puffy
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${SLEEPOPOLISURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+##############Health#######################
+Verify Health image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCHEALTHBLOCKTITLE}
+    Wait until page contains element                     ${LOCHEALTHIMAGE}
+    Page Should Contain Image                            ${LOCHEALTHIMAGE}
+    Element should be visible                            ${LOCHEALTHIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCHEALTHIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify Health title is showing with correct content
+    Scroll Element into view                                ${LOCHEALTHBLOCKTITLE}
+    ${HealthBlockTitle}=            get text          ${LOCHEALTHBLOCKTITLE}
+    Run keyword if          """${HealthBlockTitle}"""!="""${TEXTHEALTHBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${HealthBlockTitle} expected: ${TEXTHEALTHBLOCKTITLE}
+Verify Health desc is showing with correct content
+    ${HealthBlockTitleDesc}=            get text          ${LOCHEALTHBLOCKTITLEDESC}
+    Run keyword if          """${HealthBlockTitleDesc}"""!="""${TEXTHEALTHBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${HealthBlockTitleDesc} expected: ${TEXTHEALTHBLOCKTITLEDESC}
+Verify Health redirection and if Puffy is visible on their page
+    Click Element                           ${LOCHEALTHIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Best Overall: Puffy Lux
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${HEALTHURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+##############Best Mattress Guide#######################
+Verify Best Mattress Guide image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCBESTMATTRESSGUIDEBLOCKTITLE}
+    Wait until page contains element                     ${LOCBESTMATTRESSGUIDEIMAGE}
+    Page Should Contain Image                            ${LOCBESTMATTRESSGUIDEIMAGE}
+    Element should be visible                            ${LOCBESTMATTRESSGUIDEIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCBESTMATTRESSGUIDEIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify Best Mattress Guide title is showing with correct content
+    Scroll Element into view                                ${LOCBESTMATTRESSGUIDEBLOCKTITLE}
+    ${BestMattressGuideBlockTitle}=            get text          ${LOCBESTMATTRESSGUIDEBLOCKTITLE}
+    Run keyword if          """${BestMattressGuideBlockTitle}"""!="""${TEXTBESTMATTRESSGUIDEBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${BestMattressGuideBlockTitle} expected: ${TEXTBESTMATTRESSGUIDEBLOCKTITLE}
+Verify Best Mattress Guide desc is showing with correct content
+    ${BestMattressGuideBlockTitleDesc}=            get text          ${LOCBESTMATTRESSGUIDEBLOCKTITLEDESC}
+    Run keyword if          """${BestMattressGuideBlockTitleDesc}"""!="""${TEXTBESTMATTRESSGUIDEBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${BestMattressGuideBlockTitleDesc} expected: ${TEXTBESTMATTRESSGUIDEBLOCKTITLEDESC}
+Verify Best Mattress Guide redirection and if Puffy is visible on their page
+    Click Element                           ${LOCBESTMATTRESSGUIDEIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Here’s Why Puffy is
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${BESTMATTRESSGUIDEURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+##############Mattress Clarity#######################
+Verify Mattress Clarity image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCMATTRESSCLARITYBLOCKTITLE}
+    Wait until page contains element                     ${LOCMATTRESSCLARITYIMAGE}
+    Page Should Contain Image                            ${LOCMATTRESSCLARITYIMAGE}
+    Element should be visible                            ${LOCMATTRESSCLARITYIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCMATTRESSCLARITYIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify Mattress Clarity title is showing with correct content
+    Scroll Element into view                                ${LOCMATTRESSCLARITYBLOCKTITLE}
+    ${MattressClarityBlockTitle}=            get text          ${LOCMATTRESSCLARITYBLOCKTITLE}
+    Run keyword if          """${MattressClarityBlockTitle}"""!="""${TEXTMATTRESSCLARITYBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${MattressClarityBlockTitle} expected: ${TEXTMATTRESSCLARITYBLOCKTITLE}
+Verify Mattress Clarity desc is showing with correct content
+    ${MattressClarityBlockTitleDesc}=            get text          ${LOCMATTRESSCLARITYBLOCKTITLEDESC}
+    Run keyword if          """${MattressClarityBlockTitleDesc}"""!="""${TEXTMATTRESSCLARITYBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${MattressClarityBlockTitleDesc} expected: ${TEXTMATTRESSCLARITYBLOCKTITLEDESC}
+Verify Mattress Clarity redirection and if Puffy is visible on their page
+    Click Element                           ${LOCMATTRESSCLARITYIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Puffy – Best Firm Memory Foam Mattress
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${MATTRESSCLARITYURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+
+
+##############The Mattress Nerd#######################
+Verify The Mattress Nerd image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCTHEMATTRESSNERDBLOCKTITLE}
+    Wait until page contains element                     ${LOCTHEMATTRESSNERDIMAGE}
+    Page Should Contain Image                            ${LOCTHEMATTRESSNERDIMAGE}
+    Element should be visible                            ${LOCTHEMATTRESSNERDIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCTHEMATTRESSNERDIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify The Mattress Nerd title is showing with correct content
+    Scroll Element into view                                ${LOCTHEMATTRESSNERDBLOCKTITLE}
+    ${TheMattressNerdBlockTitle}=            get text          ${LOCTHEMATTRESSNERDBLOCKTITLE}
+    Run keyword if          """${TheMattressNerdBlockTitle}"""!="""${TEXTTHEMATTRESSNERDBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${TheMattressNerdBlockTitle} expected: ${TEXTTHEMATTRESSNERDBLOCKTITLE}
+Verify The Mattress Nerd desc is showing with correct content
+    ${TheMattressNerdBlockTitleDesc}=            get text          ${LOCTHEMATTRESSNERDBLOCKTITLEDESC}
+    Run keyword if          """${TheMattressNerdBlockTitleDesc}"""!="""${TEXTTHEMATTRESSNERDBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${TheMattressNerdBlockTitleDesc} expected: ${TEXTTHEMATTRESSNERDBLOCKTITLEDESC}
+Verify The Mattress Nerd redirection and if Puffy is visible on their page
+    Click Element                           ${LOCTHEMATTRESSNERDIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Puffy – Best Foam Mattress
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${THEMATTRESSNERDURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+
+
+##############healthline#######################
+Verify healthline image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCHEALTHLINEBLOCKTITLE}
+    Wait until page contains element                     ${LOCHEALTHLINEIMAGE}
+    Page Should Contain Image                            ${LOCHEALTHLINEIMAGE}
+    Element should be visible                            ${LOCHEALTHLINEIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCHEALTHLINEIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify healthline title is showing with correct content
+    Scroll Element into view                                ${LOCHEALTHLINEBLOCKTITLE}
+    ${HealthlineBlockTitle}=            get text          ${LOCHEALTHLINEBLOCKTITLE}
+    Run keyword if          """${HealthlineBlockTitle}"""!="""${TEXTHEALTHLINEBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${HealthlineBlockTitle} expected: ${TEXTHEALTHLINEBLOCKTITLE}
+Verify healthline desc is showing with correct content
+    ${HealthlineBlockTitleDesc}=            get text          ${LOCHEALTHLINEBLOCKTITLEDESC}
+    Run keyword if          """${HealthlineBlockTitleDesc}"""!="""${TEXTHEALTHLINEBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${HealthlineBlockTitleDesc} expected: ${TEXTHEALTHLINEBLOCKTITLEDESC}
+Verify healthline redirection and if Puffy is visible on their page
+    Click Element                           ${LOCHEALTHLINEIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Best rated mattress in a box: Puffy LUX Mattress
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${HEALTHLINEURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+
+
+##############MATTRESS ADVISOR#######################
+Verify MATTRESS ADVISOR image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCMATTRESSADVISORBLOCKTITLE}
+    Wait until page contains element                     ${LOCMATTRESSADVISORIMAGE}
+    Page Should Contain Image                            ${LOCMATTRESSADVISORIMAGE}
+    Element should be visible                            ${LOCMATTRESSADVISORIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCMATTRESSADVISORIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify MATTRESS ADVISOR title is showing with correct content
+    Scroll Element into view                                ${LOCMATTRESSADVISORBLOCKTITLE}
+    ${MattressAdvisorBlockTitle}=            get text          ${LOCMATTRESSADVISORBLOCKTITLE}
+    Run keyword if          """${MattressAdvisorBlockTitle}"""!="""${TEXTMATTRESSADVISORBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${MattressAdvisorBlockTitle} expected: ${TEXTMATTRESSADVISORBLOCKTITLE}
+Verify MATTRESS ADVISOR desc is showing with correct content
+    ${MattressAdvisorBlockTitleDesc}=            get text          ${LOCMATTRESSADVISORBLOCKTITLEDESC}
+    Run keyword if          """${MattressAdvisorBlockTitleDesc}"""!="""${TEXTMATTRESSADVISORBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${MattressAdvisorBlockTitleDesc} expected: ${TEXTMATTRESSADVISORBLOCKTITLEDESC}
+Verify MATTRESS ADVISOR redirection and if Puffy is visible on their page
+    Click Element                           ${LOCMATTRESSADVISORIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Puffy – Best Pressure Relief
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${MATTRESSADVISORURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]
+    
+    
+##############BEST MATTRESS PICKS#######################
+Verify BEST MATTRESS PICKS image is showing
+    Sleep                                                5s
+    Scroll Element into view                             ${LOCBESTMATTRESSPICKSBLOCKTITLE}
+    Wait until page contains element                     ${LOCBESTMATTRESSPICKSIMAGE}
+    Page Should Contain Image                            ${LOCBESTMATTRESSPICKSIMAGE}
+    Element should be visible                            ${LOCBESTMATTRESSPICKSIMAGE}
+    ${src}                                               Get Element Attribute  ${LOCBESTMATTRESSPICKSIMAGE}  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+Verify BEST MATTRESS PICKS title is showing with correct content
+    Scroll Element into view                                ${LOCBESTMATTRESSPICKSBLOCKTITLE}
+    ${BestMattressPicksBlockTitle}=            get text          ${LOCBESTMATTRESSPICKSBLOCKTITLE}
+    Run keyword if          """${BestMattressPicksBlockTitle}"""!="""${TEXTBESTMATTRESSPICKSBLOCKTITLE}"""      Fail        Wrong Awards Page Title. Actual content: ${BestMattressPicksBlockTitle} expected: ${TEXTBESTMATTRESSPICKSBLOCKTITLE}
+Verify BEST MATTRESS PICKS desc is showing with correct content
+    ${BestMattressPicksBlockTitleDesc}=            get text          ${LOCBESTMATTRESSPICKSBLOCKTITLEDESC}
+    Run keyword if          """${BestMattressPicksBlockTitleDesc}"""!="""${TEXTBESTMATTRESSPICKSBLOCKTITLEDESC}"""      Fail        Wrong Awards Page Title. Actual content: ${BestMattressPicksBlockTitleDesc} expected: ${TEXTBESTMATTRESSPICKSBLOCKTITLEDESC}
+Verify BEST MATTRESS PICKS redirection and if Puffy is visible on their page
+    Click Element                           ${LOCBESTMATTRESSPICKSIMAGE}
+    sleep                                   2s
+    ${WindowHandles}=                       Get Window Handles
+    Sleep                                   2s
+    Switch Window                           ${WindowHandles}[1]
+    Take Screenshot                         ${MonitorID}
+    wait until page contains                Puffy Mattress Review
+    Take Screenshot                         ${MonitorID}
+    Location Should Be                      ${BESTMATTRESSPICKSURL}
+    Close Window
+    sleep                                   2s
+    Switch Window                           ${WindowHandles}[0]

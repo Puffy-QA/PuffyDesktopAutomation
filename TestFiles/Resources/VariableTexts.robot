@@ -282,6 +282,7 @@ ${TEXTPRODUCTBARTITLE}                              ORDER YOUR PUFFY NOW
 ${TEXTPRODUCTBARBOTTOMTEXT}                         If you're not 100% in love, we'll pick it up for free and give you a full refund.
 ${TEXTORDERNOWCTA}                                  ORDER NOW
 ##################################################################
+${TEXTPUFFYGUARANTEEPAGEBANNERTITLE1LINE}           REST EASY
 ${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}                REST EASY\nPUFFY HAS YOU COVERED
 ${TEXTGET100RISKFREETITLE}                          GET PUFFY 100% RISK-FREE
 ${TEXTGET100RISKFREETITLEDESC}                      PUFFY WILL BE THE MOST COMFORTABLE MATTRESS YOU'VE EVER SLEPT ON GUARANTEED OR WE'LL HAPPILY GIVE YOU A REFUND.
@@ -294,3 +295,32 @@ ${TEXT101NIGHTSLEEPTRIALTITLE}                      101-NIGHT SLEEP TRIAL
 ${TEXT101NIGHTSLEEPTRIALP1}                         Puffy provides all of its customers a complimentary 101-night sleep trial, and that's because we are highly confident that our sleep system will be the best foam mattress you have ever tried. So, if you've been considering our mattress, order worry-free!  Better yet, if for some reason you don't believe the Puffy Mattress has provided you with the best sleep of your life, we will help you donate that mattress to a local charity and provide you a full refund!
 ${TEXT101NIGHTSLEEPTRIALP2}                         It's a win-win all around!  Either you will discover a new level of deep sleep with our Puffy Mattress, or, if you decide it's just not for you, you get to sleep easy knowing that your mattress won't go to waste.  It will be donated to a local or national charity to provide those in need with a comfortable bed they can lay their head on.
 ${TEXT101NIGHTSLEEPTRIALP3}                         You may be wondering to yourself why our company would just give away our mattress when its barely been used?  We here at Puffy Mattress believe that everyone deserves a restful sleep.  Everyone deserves a chance to wake up energized and ready to take on the day.  We want to ensure that your foam mattress won't end up in a dump, but will help to give those in need a better sleep to help better themselves!
+${TEXTPRODUCTBARICON1DESC}                          Your Puffy Ships\nWithin 1 - 3 Business Days
+${TEXTPRODUCTBARICON2DESC}                          Get The Best Sleep\nEver Guaranteed
+####################################################AWARDS##########################################################
+${TEXTAWARDSTOPBANNERTITLE}                         AWARD-WINNING
+${TEXTAWARDSPAGEH1}                                 AWARD-WINNING\nDESIGN & COMFORT
+${TEXTAWARDSPAGEH1DESC}                             Designing the most comfortable mattresses for\nlife-changing sleep is what we do best.
+${TEXTAWARDSPAGERANKEDBEST2021TITLE}                RANKED BEST MATTRESS 2021
+${TEXTAWARDSPAGERANKEDBEST2021DESC}                 Not only do thousands of sleepers rate Puffy as the Best Mattress, but we’ve also received numerous industry awards taking out the top spot in various Best Mattress categories.
+${TEXTSLEEPMATTERSBLOCKTITLE}                       BEST MEMORY FOAM MATTRESSES 2021
+${TEXTSLEEPMATTERSBLOCKTITLEDESC}                   Sleep Matters ranks Puffy Lux as the Best Memory Foam Mattress 2021. American-made and very supportive, reviewers recommend Puffy Lux for all sleepers.
+${TEXTOURSLEEPGUIDEBLOCKTITLE}                      BEST MEMORY FOAM MATTRESS: EDITOR’S PICK 2021
+${TEXTOURSLEEPGUIDEBLOCKTITLEDESC}                  Our Sleep Guide ranks the Puffy Lux as the Best Memory Foam Mattress! Adaptability, cooling, and the luxurious feel are standout features for reviewers.
+${TEXTSLEEPOPOLISBLOCKTITLE}                        BEST FOAM MATTRESS FOR BACK SLEEPERS 2021
+${TEXTSLEEPOPOLISBLOCKTITLEDESC}                    Sleepopolis ranks Puffy as the best foam mattress for back sleepers. Plush pressure relief, back support, and cooling innovation is why Puffy is considered the best.
+${TEXTHEALTHBLOCKTITLE}                             BEST OVERALL SOFT MATTRESS 2021
+${TEXTHEALTHBLOCKTITLEDESC}                         Health.com ranks Puffy Lux number one as the Best Overall Soft Mattress 2021. Puffy's signature 'sleeping on a cloud' feeling gets a perfect score for comfort.
+${TEXTBESTMATTRESSGUIDEBLOCKTITLE}                  BEST MEMORY FOAM MATTRESS 2021
+${TEXTBESTMATTRESSGUIDEBLOCKTITLEDESC}              Best Mattresses Guide ranks Puffy as the Best Memory Foam Mattress for 2021. Independent reviewers selected Puffy for comfort, highest BBB rating and lifetime warranty.
+${TEXTMATTRESSCLARITYBLOCKTITLE}                    BEST FIRM MEMORY FOAM MATTRESS 2021
+${TEXTMATTRESSCLARITYBLOCKTITLEDESC}                Mattress Clarity ranks Puffy as the best firm memory foam mattress. Puffy’s unique plush yet supportive medium-firm feel stands out from the competition.
+${TEXTTHEMATTRESSNERDBLOCKTITLE}                    BEST FOAM MATTRESS 2021
+${TEXTTHEMATTRESSNERDBLOCKTITLEDESC}                The Mattress Nerd ranks Puffy best in the all-foam mattress category. Puffy is ranked highest for adaptability and comfort for all sleeping styles.
+${TEXTHEALTHLINEBLOCKTITLE}                         BEST-RATED MATTRESS-IN-A-BOX 2021
+${TEXTHEALTHLINEBLOCKTITLEDESC}                     Healthline ranks Puffy Lux as the best mattress-in-a-box you can buy online! Puffy is the top choice for luxurious cloud-like comfort that’s delivered for free!
+${TEXTMATTRESSADVISORBLOCKTITLE}                    BEST MATTRESS FOR PRESSURE RELIEF 2021
+${TEXTMATTRESSADVISORBLOCKTITLEDESC}                Mattress Advisor ranks the Puffy Mattress the top spot as the best mattress for back pain sufferers who need proper spinal alignment.
+${TEXTBESTMATTRESSPICKSBLOCKTITLE}                  BEST MATTRESS 2021
+${TEXTBESTMATTRESSPICKSBLOCKTITLEDESC}              Best Mattress Picks ranks Puffy high on their top 10 best mattress picks for 2021. The reviewers recommend Puffy's famous 'sleeping on a cloud' feeling as a standout.
+

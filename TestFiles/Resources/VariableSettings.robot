@@ -18,7 +18,7 @@ ${SALENAME}                     SPRING SALE NOW
 ${SALEDETAILS}                  $300 OFF + FREE PILLOW
 ${DISCOUNTAMOUNT}               $300 OFF
 ${DISCOUNTAMOUNT350}            $350 OFF
-${HOMEPAGE}                     https://puffy.com
+${HOMEPAGE}                     https://puffy.com/
 ${SHOPIFY}
 ${SHOPIFYLOGIN}
 ${SHOPIFYPASS}
