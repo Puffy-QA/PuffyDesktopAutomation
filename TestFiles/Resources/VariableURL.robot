@@ -59,3 +59,16 @@ ${HEADERPUFFYICONURL}                               https://puffy.com/
 ${CONTACTFORMCHALLENGEURL}                          https://puffy.com/challenge#contact_form
 ${FINANCINGKLARNASECTION}                           https://puffy.com/pages/financing#financingKlarna
 ${FINANCINGSPLITITSECTION}                          https://puffy.com/pages/financing#financingSplitit
+
+
+##################AFFILIATE URLS################################
+${SLEEPMATTERSURL}                                  https://www.thesleepmatters.com/best-single-size-memory-foam-mattress/
+${OURSLEEPGUIDEURL}                                 https://www.oursleepguide.com/best-memory-foam-mattresses/
+${SLEEPOPOLISURL}                                   https://sleepopolis.com/best-mattress/best-mattress-for-back-sleepers/
+${HEALTHURL}                                        https://www.health.com/condition/sleep/best-soft-mattress
+${BESTMATTRESSGUIDEURL}                             https://bestmattressesguide.com/top-memory-foam-mattresses/
+${MATTRESSCLARITYURL}                               https://www.mattressclarity.com/reviews/best-memory-foam-mattress/
+${THEMATTRESSNERDURL}                               https://www.mattressnerd.com/best-mattress/
+${HEALTHLINEURL}                                    https://www.healthline.com/health/best-mattress-in-a-box#Quick-glance-at-the-best-mattresses-in-a-box
+${MATTRESSADVISORURL}                               https://www.mattressadvisor.com/best-mattresses-for-back-pain/
+${BESTMATTRESSPICKSURL}                             https://www.bestmattresspicks.com/best-mattress/10-best-mattresses

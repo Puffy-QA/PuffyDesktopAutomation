@@ -303,3 +303,24 @@ ${TEXTAWARDSPAGEH1}                                 AWARD-WINNING\nDESIGN & COMF
 ${TEXTAWARDSPAGEH1DESC}                             Designing the most comfortable mattresses for\nlife-changing sleep is what we do best.
 ${TEXTAWARDSPAGERANKEDBEST2021TITLE}                RANKED BEST MATTRESS 2021
 ${TEXTAWARDSPAGERANKEDBEST2021DESC}                 Not only do thousands of sleepers rate Puffy as the Best Mattress, but we’ve also received numerous industry awards taking out the top spot in various Best Mattress categories.
+${TEXTSLEEPMATTERSBLOCKTITLE}                       BEST MEMORY FOAM MATTRESSES 2021
+${TEXTSLEEPMATTERSBLOCKTITLEDESC}                   Sleep Matters ranks Puffy Lux as the Best Memory Foam Mattress 2021. American-made and very supportive, reviewers recommend Puffy Lux for all sleepers.
+${TEXTOURSLEEPGUIDEBLOCKTITLE}                      BEST MEMORY FOAM MATTRESS: EDITOR’S PICK 2021
+${TEXTOURSLEEPGUIDEBLOCKTITLEDESC}                  Our Sleep Guide ranks the Puffy Lux as the Best Memory Foam Mattress! Adaptability, cooling, and the luxurious feel are standout features for reviewers.
+${TEXTSLEEPOPOLISBLOCKTITLE}                        BEST FOAM MATTRESS FOR BACK SLEEPERS 2021
+${TEXTSLEEPOPOLISBLOCKTITLEDESC}                    Sleepopolis ranks Puffy as the best foam mattress for back sleepers. Plush pressure relief, back support, and cooling innovation is why Puffy is considered the best.
+${TEXTHEALTHBLOCKTITLE}                             BEST OVERALL SOFT MATTRESS 2021
+${TEXTHEALTHBLOCKTITLEDESC}                         Health.com ranks Puffy Lux number one as the Best Overall Soft Mattress 2021. Puffy's signature 'sleeping on a cloud' feeling gets a perfect score for comfort.
+${TEXTBESTMATTRESSGUIDEBLOCKTITLE}                  BEST MEMORY FOAM MATTRESS 2021
+${TEXTBESTMATTRESSGUIDEBLOCKTITLEDESC}              Best Mattresses Guide ranks Puffy as the Best Memory Foam Mattress for 2021. Independent reviewers selected Puffy for comfort, highest BBB rating and lifetime warranty.
+${TEXTMATTRESSCLARITYBLOCKTITLE}                    BEST FIRM MEMORY FOAM MATTRESS 2021
+${TEXTMATTRESSCLARITYBLOCKTITLEDESC}                Mattress Clarity ranks Puffy as the best firm memory foam mattress. Puffy’s unique plush yet supportive medium-firm feel stands out from the competition.
+${TEXTTHEMATTRESSNERDBLOCKTITLE}                    BEST FOAM MATTRESS 2021
+${TEXTTHEMATTRESSNERDBLOCKTITLEDESC}                The Mattress Nerd ranks Puffy best in the all-foam mattress category. Puffy is ranked highest for adaptability and comfort for all sleeping styles.
+${TEXTHEALTHLINEBLOCKTITLE}                         BEST-RATED MATTRESS-IN-A-BOX 2021
+${TEXTHEALTHLINEBLOCKTITLEDESC}                     Healthline ranks Puffy Lux as the best mattress-in-a-box you can buy online! Puffy is the top choice for luxurious cloud-like comfort that’s delivered for free!
+${TEXTMATTRESSADVISORBLOCKTITLE}                    BEST MATTRESS FOR PRESSURE RELIEF 2021
+${TEXTMATTRESSADVISORBLOCKTITLEDESC}                Mattress Advisor ranks the Puffy Mattress the top spot as the best mattress for back pain sufferers who need proper spinal alignment.
+${TEXTBESTMATTRESSPICKSBLOCKTITLE}                  BEST MATTRESS 2021
+${TEXTBESTMATTRESSPICKSBLOCKTITLEDESC}              Best Mattress Picks ranks Puffy high on their top 10 best mattress picks for 2021. The reviewers recommend Puffy's famous 'sleeping on a cloud' feeling as a standout.
+
