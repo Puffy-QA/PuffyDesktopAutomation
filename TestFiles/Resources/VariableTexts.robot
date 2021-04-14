@@ -281,3 +281,16 @@ ${TEXTPUFFYPRODUCTRETURNSINFORMATION5}              Puffy's 101-night sleep tria
 ${TEXTPRODUCTBARTITLE}                              ORDER YOUR PUFFY NOW
 ${TEXTPRODUCTBARBOTTOMTEXT}                         If you're not 100% in love, we'll pick it up for free and give you a full refund.
 ${TEXTORDERNOWCTA}                                  ORDER NOW
+##################################################################
+${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}                REST EASY\nPUFFY HAS YOU COVERED
+${TEXTGET100RISKFREETITLE}                          GET PUFFY 100% RISK-FREE
+${TEXTGET100RISKFREETITLEDESC}                      PUFFY WILL BE THE MOST COMFORTABLE MATTRESS YOU'VE EVER SLEPT ON GUARANTEED OR WE'LL HAPPILY GIVE YOU A REFUND.
+${TEXTUSP1TITLE}                                    101-NIGHT SLEEP TRIAL
+${TEXTUSP2TITLE}                                    FREE SHIPPING AND RETURNS
+${TEXTUSP3TITLE}                                    LIFETIME WARRANTY
+${TEXTPUFFYLIFETIMEWARRANTYTITLE}                   PUFFY LIFETIME WARRANTY
+${TEXTPUFFYLIFETIMEWARRANTYTITLEDESC}               Puffy has one of the best warranties available in the mattress industry. We have you covered for as long as you own the mattress.\nShould anything go wrong, we'll replace it free of charge.
+${TEXT101NIGHTSLEEPTRIALTITLE}                      101-NIGHT SLEEP TRIAL
+${TEXT101NIGHTSLEEPTRIALP1}                         Puffy provides all of its customers a complimentary 101-night sleep trial, and that's because we are highly confident that our sleep system will be the best foam mattress you have ever tried. So, if you've been considering our mattress, order worry-free!  Better yet, if for some reason you don't believe the Puffy Mattress has provided you with the best sleep of your life, we will help you donate that mattress to a local charity and provide you a full refund!
+${TEXT101NIGHTSLEEPTRIALP2}                         It's a win-win all around!  Either you will discover a new level of deep sleep with our Puffy Mattress, or, if you decide it's just not for you, you get to sleep easy knowing that your mattress won't go to waste.  It will be donated to a local or national charity to provide those in need with a comfortable bed they can lay their head on.
+${TEXT101NIGHTSLEEPTRIALP3}                         You may be wondering to yourself why our company would just give away our mattress when its barely been used?  We here at Puffy Mattress believe that everyone deserves a restful sleep.  Everyone deserves a chance to wake up energized and ready to take on the day.  We want to ensure that your foam mattress won't end up in a dump, but will help to give those in need a better sleep to help better themselves!

@@ -2288,6 +2288,8 @@ Fill out Information tab in checkout
     Input text                          xpath=//*[@id="checkout_shipping_address_last_name"]     ${LASTNAME}
     Press Keys	                        xpath=//*[@id="checkout_shipping_address_address1"]	123
     Press Keys	                        xpath=//*[@id="checkout_shipping_address_province"]	New+York
+    Click Element                       css=#checkout_shipping_address_province
+    Select From List By Value           value="NY"
     Press Keys	                        button	RETURN
     wait until page contains element    xpath=//*[@id="checkout_shipping_address_city"]
     Input text                          xpath=//*[@id="checkout_shipping_address_city"]          ${CITY}

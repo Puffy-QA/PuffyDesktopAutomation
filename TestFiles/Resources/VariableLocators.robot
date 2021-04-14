@@ -259,3 +259,4 @@ ${LOCPRODUCTBARICON2}                   css=body > div.product-bar > div > div >
 ${LOCPRODUCTBARICON2DESC}               css=body > div.product-bar > div > div > div > div.product-bar__content > div:nth-child(3) > div.product-bar__icon-title
 ${LOCPRODUCTBARBOTTOMTEXT}              css=body > div.product-bar > div > div > div > div.product-bar__action > div
 ${LOCPRODUCTBARCTA}                     css=body > div.product-bar > div > div > div > div.product-bar__action > a
+${LOCPUFFYGUARANTEEH2}                  css=body > div.detail-sections > div.block__page > div > div > div > div > h2.RNdesk2 > b

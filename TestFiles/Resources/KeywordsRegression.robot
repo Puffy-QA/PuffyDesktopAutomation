@@ -1765,3 +1765,75 @@ Check if the product bar CTA is showing with correct label and functionality
     Element should be visible                ${LOCPRODUCTBARCTA}
     ${ProductBarCTA}=            get text      ${LOCPRODUCTBARCTA}
     Run keyword if          "${ProductBarCTA}"!="${TEXTORDERNOWCTA}"      Fail        Wrong Product Bar CTA text. Actual content: ${ProductBarCTA} expected: ${TEXTORDERNOWCTA}
+####################################################PUFFY GUARANTEE###############################################
+Go To Puffy Guarantee page
+    Scroll to Footer section
+    Click element                                       ${LOCFOOTERPUFFYGUARANTEE}
+Check if page banner image is showing
+    Wait until page contains                             REST EASY
+    Page Should Contain Image                            css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img
+    Element should be visible                            css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img
+    ${src}                                               Get Element Attribute  css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__image > div > img  src
+    Go To                                                ${src}
+    Wait until element is visible                        css=img
+    Go Back
+
+Check if page banner title and description is showing with correct content
+    ${PageBannerTitle1}=            get text      css=body > div.detail-sections > div.page-banner.is--left-top > div.page-banner__inner > div > h1
+    Run keyword if          """${PageBannerTitle1}"""!="""${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}"""      Fail        Wrong Puffy Guarantee Page Banner Title. Actual content: ${PageBannerTitle1} expected: ${TEXTPUFFYGUARANTEEPAGEBANNERTITLE}
+
+Check if the 100% Risk Free block is showing the title with correct content
+    Scroll Element Into View                            css=.block__page
+    ${Get100RiskFreeBlockTitle}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > h2.RNdesk2
+    Run keyword if          """${Get100RiskFreeBlockTitle}"""!="""${TEXTGET100RISKFREETITLE}"""      Fail        Wrong block__page Title. Actual content: ${Get100RiskFreeBlockTitle} expected: ${TEXTGET100RISKFREETITLE}
+Check if the block is showing the description with correct content
+    ${Get100RiskFreeBlockDesc}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > h2:nth-child(4)
+    Run keyword if          """${Get100RiskFreeBlockDesc}"""!="""${TEXTGET100RISKFREETITLEDESC}"""      Fail        Wrong block__page Title Desc. Actual content: ${Get100RiskFreeBlockDesc} expected: ${TEXTGET100RISKFREETITLEDESC}
+Check if the 3 USP images are showing
+    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img
+    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img
+    ${uspsrc1}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > img  src
+    Go To                                                ${uspsrc1}
+    Wait until element is visible                        css=img
+    Go Back
+
+    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img
+    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img
+    ${uspsrc2}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > img  src
+    Go To                                                ${uspsrc2}
+    Wait until element is visible                        css=img
+    Go Back
+
+    Page Should Contain Image                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img
+    Element should be visible                            css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img
+    ${uspsrc3}                                           Get Element Attribute  css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > img  src
+    Go To                                                ${uspsrc3}
+    Wait until element is visible                        css=img
+    Go Back
+
+Check if the 3 USP texts are showing with correct content
+    ${usp1Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.alpha > h5 > strong > span
+    Run keyword if          """${usp1Title}"""!="""${TEXTUSP1TITLE}"""      Fail        Wrong USP1 Title Desc. Actual content: ${usp1Title} expected: ${TEXTUSP1TITLE}
+    ${usp2Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div:nth-child(2) > h5 > strong > span
+    Run keyword if          """${usp2Title}"""!="""${TEXTUSP2TITLE}"""      Fail        Wrong USP2 Title Desc. Actual content: ${usp2Title} expected: ${TEXTUSP2TITLE}
+    ${usp3Title}=            get text      css=body > div.detail-sections > div.block__page > div > div > div > div > div > div.one-third.column.omega > h5 > strong > span
+    Run keyword if          """${usp3Title}"""!="""${TEXTUSP3TITLE}"""      Fail        Wrong USP3 Title Desc. Actual content: ${usp3Title} expected: ${TEXTUSP3TITLE}
+
+Check if the Lifetime warranty block is showing the title with correct content
+    ${PuffyLifetimeWarrantyTitle}=            get text      css=body > div.detail-sections > div:nth-child(3) > div > div > div > h2
+    Run keyword if          """${PuffyLifetimeWarrantyTitle}"""!="""${TEXTPUFFYLIFETIMEWARRANTYTITLE}"""      Fail        Wrong Puffy Lifetime Warranty Title. Actual content: ${PuffyLifetimeWarrantyTitle} expected: ${TEXTPUFFYLIFETIMEWARRANTYTITLE}
+Check if the Lifetime warranty block featured text is showing with correct content
+    ${PuffyLifetimeWarrantyTitleDesc}=            get text      css=body > div.detail-sections > div:nth-child(3) > div > div > div > div.featured_text.puffy_guarantee_text
+    Run keyword if          """${PuffyLifetimeWarrantyTitleDesc}"""!="""${TEXTPUFFYLIFETIMEWARRANTYTITLEDESC}"""      Fail        Wrong Puffy Lifetime Warranty Title Description. Actual content: ${PuffyLifetimeWarrantyTitleDesc} expected: ${TEXTPUFFYLIFETIMEWARRANTYTITLEDESC}
+
+Check if the 101-Night Sleep Trial block is showing the title with correct content
+    Scroll Element Into View                                    css=.block__rich_text_and_image.block__1565656478391
+    ${101NightSleepTrialTitle}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > h2
+    Run keyword if          """${101NightSleepTrialTitle}"""!="""${TEXT101NIGHTSLEEPTRIALTITLE}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialTitle} expected: ${TEXT101NIGHTSLEEPTRIALTITLE}
+Check if the 101-Night Sleep Trial block featured text is showing with correct content
+    ${101NightSleepTrialP1}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(1)
+    Run keyword if          """${101NightSleepTrialP1}"""!="""${TEXT101NIGHTSLEEPTRIALP1}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP1} expected: ${TEXT101NIGHTSLEEPTRIALP1}
+    ${101NightSleepTrialP2}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(2)
+    Run keyword if          """${101NightSleepTrialP2}"""!="""${TEXT101NIGHTSLEEPTRIALP2}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP2} expected: ${TEXT101NIGHTSLEEPTRIALP2}
+    ${101NightSleepTrialP3}=            get text      css=body > div.detail-sections > div.block__rich_text_and_image.block__1565656478391 > div > div > div > div.regular_text.puffy_guarantee_text > p:nth-child(3)
+    Run keyword if          """${101NightSleepTrialP3}"""!="""${TEXT101NIGHTSLEEPTRIALP3}"""      Fail        Wrong 101-Night Sleep Trial Title. Actual content: ${101NightSleepTrialP3} expected: ${TEXT101NIGHTSLEEPTRIALP3}
