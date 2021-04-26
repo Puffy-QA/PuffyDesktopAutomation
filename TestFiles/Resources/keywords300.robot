@@ -2213,7 +2213,7 @@ Go to checkout
 #===========================SmokeTest=========================
 
 Click "Shop Now" button for Puffy
-    Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(2) > div > div.compare-boxes__action > a
+    Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-banners > div.compare-banners__content > div.compare-banners__item.compare-banners__item--puffy-mattress > div.compare-banners__actions > div > a
 
 Go to Homepage (Click on Puffy Logo)
     sleep       2s
@@ -2284,17 +2284,29 @@ Fill out Information tab in checkout
     ${Content}=            get text     css=#main-header
     Run keyword if          '${Content}'!='${TEXTCHECKOUTINFORMATIONH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTCHECKOUTINFORMATIONH1} Actual: ${Content}
     Input text                          xpath=//*[@id="checkout_email"]     ${EMAIL}
+    sleep                               1s
     Input text                          xpath=//*[@id="checkout_shipping_address_first_name"]     ${FIRSTNAME}
+    sleep                               1s
     Input text                          xpath=//*[@id="checkout_shipping_address_last_name"]     ${LASTNAME}
+    sleep                               1s
     Press Keys	                        xpath=//*[@id="checkout_shipping_address_address1"]	123
+    sleep                               1s
     Press Keys	                        xpath=//*[@id="checkout_shipping_address_province"]	New+York
-    Click Element                       css=#checkout_shipping_address_province
-    Select From List By Value           value="NY"
+    sleep                               1s
+    Click Element                       css=body > div.main_wrapper > div > div.wrap > div.main > div.main__content > div.step > form > div.step__sections > div.section.section--shipping-address > div.section__content > div > div.address-fields > div:nth-child(16)
+    sleep                               2s
     Press Keys	                        button	RETURN
+    sleep                               1s
     wait until page contains element    xpath=//*[@id="checkout_shipping_address_city"]
+    sleep                               1s
     Input text                          xpath=//*[@id="checkout_shipping_address_city"]          ${CITY}
+    sleep                               2s
     Input text                          xpath=//*[@id="checkout_shipping_address_zip"]           ${ZIPCODE}
+    sleep                               2s
     Input text                          xpath=//*[@id="checkout_shipping_address_phone"]         ${PHONE}
+    sleep                               2s
+    Input text                          xpath=//*[@id="checkout_shipping_address_zip"]           ${ZIPCODE}
+    sleep                               1s
 Select and proceed with Paypal
     Wait until page contains element    css=#checkout_payment_gateway_22050897954
     click element                       css=#checkout_payment_gateway_22050897954
@@ -2304,6 +2316,8 @@ Select and proceed with Paypal
     click element                       xpath=//*[@id="continue_button"]
     sleep                               5s
     wait until page contains element    css=#acceptAllButton
+    sleep                               2s
+    Element should be visible           css=#acceptAllButton
     Click element                       css=#acceptAllButton
     wait until page contains            Cancel and return to Puffy LLC
     ${Content}=            get text     css=#headerText
@@ -2359,22 +2373,22 @@ Verify H1 on Puffy PDP
     Run keyword if          '${Content}'!='${TEXTPUFFYMATTRESSH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTPUFFYMATTRESSH1} Actual: ${Content}
 Check Seasonal Sale text on Homepage
     sleep                   2s
-    ${Content}=            get text        css=#Cyber_Monday_Sale_Now > tspan
+    ${Content}=            get text        css=#SPRING_SALE_NOW_300_OFF_2_FREE_PILLOW > tspan:nth-child(1)
     Run keyword if          "${Content}"!="${SALENAME}"        Fail        Wrong Seasonal Sale text on homepage Expected: ${SALENAME} Actual: ${Content}
 Check Seasonal Sale text on Homepage (HYBRID)
     sleep                   2s
-    ${Content}=            get text        css=#Cyber_Monday_Sale_Now > tspan
+    ${Content}=            get text        css=#SPRING_SALE_NOW_300_OFF_2_FREE_PILLOWS > tspan:nth-child(1)
     Run keyword if          "${Content}"!="${SALENAME}"        Fail        Wrong Seasonal Sale text on homepage Expected: ${SALENAME} Actual: ${Content}
 Go back to Compare Page
     Go Back
     #Wait until page contains            ${TEXTCOMPAREPAGEH1}
 click on "Shop Now" button for Puffy Lux
-    Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-boxes.is--puffy-mattress-and-puffy-lux > div:nth-child(1) > div > div.compare-boxes__action > a
+    Click Element                       css=body > div.compare-page.content > div.compare-page__content > div.compare-banners > div.compare-banners__content > div.compare-banners__item.compare-banners__item--puffy-lux-mattress > div.compare-banners__actions > div > a
 Check discount value and freebie on Homepage
-    ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan
+    ${Content}=            get text        css=#SPRING_SALE_NOW_300_OFF_2_FREE_PILLOW > tspan:nth-child(2)
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on homepage Expected: ${SALEDETAILS} Actual: ${Content}
 Check discount value and freebie on Homepage (HYBRID)
-    ${Content}=            get text        css=#_300_OFF_Free_Pillow > tspan
+    ${Content}=            get text        css=#SPRING_SALE_NOW_300_OFF_2_FREE_PILLOWS > tspan:nth-child(2)
     Run keyword if          "${Content}"!="${SALEDETAILS}"         Fail        Wrong discount value and freebie text on homepage Expected: ${SALEDETAILS} Actual: ${Content}
 
 Add Puffy Body Pillow to cart
@@ -2644,6 +2658,7 @@ Add Puffy Mattress to cart
 Click Return to cart
     sleep                   1s
     Click element           css=body > div.main_wrapper > div > div.wrap > div.main > div.main__content > div.step > form > div.step__footer > a > span
+    sleep                   2s
     Wait until page contains element    ${LOCCARTHEADER}
 Close cart
     sleep                   1s
@@ -2653,7 +2668,7 @@ Check cart count after adding a mattress
     ${BeforeShopping} =     evaluate    ${CartCount}
     sleep                   2s
     Check Current Cart Count
-    ${AfterShopping}=       evaluate    ${CartCount}-2
+    ${AfterShopping}=       evaluate    ${CartCount}-3
     Run keyword if          ${BeforeShopping}!=${AfterShopping}       Fail    Wrong cart count after adding a mattress
 Add Puffy Royal to cart
     click element           css=#product_form_3832788910114 > div.purchase-details > div > button
@@ -2688,12 +2703,12 @@ Check cart count after adding a mattress (Lux Hybrid)
     ${BeforeShopping} =     evaluate    ${CartCount}
     sleep                   2s
     Check Current Cart Count (Lux Hybrid)
-    ${AfterShopping}=       evaluate    ${CartCount}-2
+    ${AfterShopping}=       evaluate    ${CartCount}-3
     Run keyword if          ${BeforeShopping}!=${AfterShopping}       Fail    Wrong cart count after adding a mattress
 Continue to Shipping tab
     Press Keys	                        button	RETURN
     wait until page contains            automation@puffy.com
-    wait until page contains            123, New York NH 03101, United States
+    wait until page contains            123, New York NH 03087, United States
     sleep                               10s
     wait until page contains element    css=body > div.main_wrapper > div > div.wrap > div.main > div.main__content > div.step > form > div.step__sections > div.section.section--shipping-method > div.section__content > div > div > div > label > span.radio__label__primary
     ${Content}=            get text     css=#main-header
@@ -2703,6 +2718,7 @@ Continue to Payment tab
     sleep                               2s
     wait until page contains element    css=#main-header
     wait until page contains            All transactions are secure and encrypted.
+    sleep                               2s
     ${Content}=            get text     css=#main-header
     Run keyword if          '${Content}'!='${TEXTCHECKOUTPAYMENTH1}'     Fail        Checkout - Information tab (H1) not found Expected: ${TEXTCHECKOUTPAYMENTH1} Actual: ${Content}
 
@@ -2866,3 +2882,79 @@ Verify if Total amount is correct
     ${Total}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--total-lines > table > tfoot > tr > td > span.payment-due__price.skeleton-while-loading--lg
     Run keyword if          '${Total}'!='${TOTAL}'      Fail        Wrong Product in Order Summary. Expected: ${TOTAL}  Actual: ${Total}
 
+#####################STORE CATEGORIES##########################
+
+Click Mattresses category
+    Click Element                                   css=#shopify-section-collection-template > div > div.sixteen.columns.puffy-store__container > div.collection-tabs > div > a:nth-child(2)
+    wait until page contains element                css=#shopify-section-collection-template > div > div.sixteen.columns.puffy-store__container > div.collection-tabs > div > a:nth-child(2)
+Click Compare Mattresses button
+    Wait until page contains element                css=#collection-cta-container > a
+    Click element                                   css=#collection-cta-container > a
+Verify if redirected to Compare Page
+    Wait until page contains element                css=body > div.compare-page.mattress-quiz__midpage > a.button.button--white.jsMattressQuizShow.ab-test__version-b
+    Location should be                              https://puffy.com/pages/puffy-mattress-and-puffy-lux
+Click Bases Category
+    wait until page contains element                css=#shopify-section-collection-template > div > div.sixteen.columns.puffy-store__container > div.collection-tabs > div > a:nth-child(3)
+    Click Element                                   css=#shopify-section-collection-template > div > div.sixteen.columns.puffy-store__container > div.collection-tabs > div > a:nth-child(3)
+    wait until page contains element                css=#collection-cta-container > a
+Click See All Bases button
+    Element should be visible                       css=#collection-cta-container > a
+    Click Element                                   css=#collection-cta-container > a
+Verify if redirected to Bases collection page
+    wait until page contains element                css=#verifyEligibility > div > div > div.b-hero__inner > div > h1
+    Location should be                              https://puffy.com/collections/bed-frames
+Verify if the prices in bases collection page are correct
+    Element should be visible                       css=body > div.item-boxes.bed-frames-products > div > div > div:nth-child(1) > div.item-boxes__ribbon > div > span:nth-child(2)
+    ${FoundationStartingAt}=            get text    css=body > div.item-boxes.bed-frames-products > div > div > div:nth-child(1) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${FoundationStartingAt}'!='${PUFFYFOUNDATIONTWINORIGINAL}'      Fail        Wrong Puffy Foundation Starting at price in Bed Frame Collection page. Expected: ${PUFFYFOUNDATIONTWINORIGINAL}  Actual: ${FoundationStartingAt}
+    ${AdjustableBaseStartingAt}=            get text    css=body > div.item-boxes.bed-frames-products > div > div > div:nth-child(2) > div.item-boxes__ribbon > div > span.jsDiscountedPrice
+    Run keyword if          '${AdjustableBaseStartingAt}'!='${PUFFYADJUSTABLEBASETWINXL300OFF}'      Fail        Wrong Puffy Adjustable Base Starting at price in Bed Frame Collection page. Expected: ${PUFFYADJUSTABLEBASETWINXL300OFF}  Actual: ${AdjustableBaseStartingAt}
+    ${BedFrameStartingAt}=            get text    css=body > div.item-boxes.bed-frames-products > div > div > div:nth-child(3) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${BedFrameStartingAt}'!='${PUFFYBEDFRAMEFULLORIGINAL}'      Fail        Wrong Puffy Bed Frame Starting at price in Bed Frame Collection page. Expected: ${PUFFYBEDFRAMEFULLORIGINAL}  Actual: ${BedFrameStartingAt}
+
+Click Bedding Category
+    wait until page contains element                css=#shopify-section-collection-template > div > div.sixteen.columns.puffy-store__container > div.collection-tabs > div > a:nth-child(4)
+    Click Element                                   css=#shopify-section-collection-template > div > div.sixteen.columns.puffy-store__container > div.collection-tabs > div > a:nth-child(4)
+    wait until page contains element                css=#collection-cta-container > a
+Click See All Bedding Button
+    Element should be visible                       css=#collection-cta-container > a
+    Click Element                                   css=#collection-cta-container > a
+Verify if redirected to Bedding collection page
+    wait until page contains element                css=#verifyEligibility > div > div > div.b-hero__inner.b-hero__inner--beddings-content > div > h1
+    Location should be                              https://puffy.com/collections/bedding
+Verify if the prices in bedding collection page are correct
+    Element should be visible                        css=body > div.item-boxes.beddings-products > div > div > div:nth-child(1) > div.item-boxes__ribbon > div > span:nth-child(2)
+    ${PuffyPillowStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(1) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyPillowStartingAt}'!='${PUFFYPILLOWSTANDARDORIGINAL}'      Fail        Wrong Puffy Pillow Starting at price in Bedding Collection page. Expected: ${PUFFYPILLOWSTANDARDORIGINAL}  Actual: ${PuffyPillowStartingAt}
+    ${PuffyBodyPillowStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(2) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyBodyPillowStartingAt}'!='${PUFFYBODYPILLOWORIGINAL}'      Fail        Wrong Puffy Body Pillow Starting at price in Bedding Collection page. Expected: ${PUFFYBODYPILLOWORIGINAL}  Actual: ${PuffyBodyPillowStartingAt}
+    ${PuffyComforterStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(3) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyComforterStartingAt}'!='${PUFFYCOMFORTERTWIN/TWINXLORIGINAL}'      Fail        Wrong Puffy Comforter Starting at price in Bedding Collection page. Expected: ${PUFFYCOMFORTERTWIN/TWINXLORIGINAL}  Actual: ${PuffyComforterStartingAt}
+    ${PuffyMattressPadStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(4) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyMattressPadStartingAt}'!='${PUFFYMATTRESSPADTWINORIGINAL}'      Fail        Wrong Puffy Mattress Pad Starting at price in Bedding Collection page. Expected: ${PUFFYMATTRESSPADTWINORIGINAL}  Actual: ${PuffyMattressPadStartingAt}
+    ${PuffyMattressProtectorStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(5) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyMattressProtectorStartingAt}'!='${PUFFYMATTRESSPROTECTORTWINORIGINAL}'      Fail        Wrong Puffy Mattress Protector Starting at price in Bedding Collection page. Expected: ${PUFFYMATTRESSPROTECTORTWINORIGINAL}  Actual: ${PuffyMattressProtectorStartingAt}
+    ${PuffyMattressTopperStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(6) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyMattressTopperStartingAt}'!='${PUFFYTOPPERTWINORIGINAL}'      Fail        Wrong Puffy Mattress Topper Starting at price in Bedding Collection page. Expected: ${PUFFYTOPPERTWINORIGINAL}  Actual: ${PuffyMattressTopperStartingAt}
+    ${PuffyBlanketStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(7) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyBlanketStartingAt}'!='${PUFFYBLANKETSMALLORIGINAL}'      Fail        Wrong Puffy Blanket Starting at price in Bedding Collection page. Expected: ${PUFFYBLANKETSMALLORIGINAL}  Actual: ${PuffyBlanketStartingAt}
+    ${PuffyWeightedBlanketStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(8) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyWeightedBlanketStartingAt}'!='${PUFFYWEIGHTEDBLANKETTWINORIGINAL}'      Fail        Wrong Puffy Weighted Blanket Starting at price in Bedding Collection page. Expected: ${PUFFYWEIGHTEDBLANKETTWINORIGINAL}  Actual: ${PuffyWeightedBlanketStartingAt}
+    ${PuffySheetsStartingAt}=            get text    css=body > div.item-boxes.beddings-products > div > div > div:nth-child(9) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffySheetsStartingAt}'!='${PUFFYSHEETSTWINORIGINAL}'      Fail        Wrong Puffy Sheets Starting at price in Bedding Collection page. Expected: ${PUFFYSHEETSTWINORIGINAL}  Actual: ${PuffySheetsStartingAt}
+Click on Bedroom category
+    wait until page contains element                css=#shopify-section-collection-template > div > div.sixteen.columns.puffy-store__container > div.collection-tabs > div > a:nth-child(5)
+    Click Element                                   css=#shopify-section-collection-template > div > div.sixteen.columns.puffy-store__container > div.collection-tabs > div > a:nth-child(5)
+    wait until page contains element                css=#collection-cta-container > a
+Click See All Bedroom Button
+    Element should be visible                       css=#collection-cta-container > a
+    Click Element                                   css=#collection-cta-container > a
+Verify if redirected to Bedroom collection page
+    wait until page contains element                css=#verifyEligibility > div > div > div.b-hero__inner.b-hero__inner--bedroom-content > div > h1
+    Location should be                              https://puffy.com/collections/bedroom
+Verify if the prices in bedroom collection page are correct
+    Element should be visible                        css=body > div.item-boxes.bedroom-products > div > div > div:nth-child(1) > div.item-boxes__ribbon > div > span:nth-child(2)
+    ${PuffyDogBedStartingAt}=            get text    css=body > div.item-boxes.bedroom-products > div > div > div:nth-child(1) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyDogBedStartingAt}'!='${PUFFYDOGBEDSMALL50OFF}'      Fail        Wrong Puffy Dog Bed Starting at price in Bedroom Collection page. Expected: ${PUFFYDOGBEDSMALL50OFF}  Actual: ${PuffyDogBedStartingAt}
+    ${PuffyBodyPillowStartingAt}=            get text    css=body > div.item-boxes.bedroom-products > div > div > div:nth-child(2) > div.item-boxes__ribbon > div > span:nth-child(2)
+    Run keyword if          '${PuffyBodyPillowStartingAt}'!='${PUFFYRUGMEDIUMORIGINAL}'      Fail        Wrong Puffy Rug Starting at price in Bedroom Collection page. Expected: ${PUFFYRUGMEDIUMORIGINAL}  Actual: ${PuffyBodyPillowStartingAt}

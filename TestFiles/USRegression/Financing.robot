@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Regression for Footer
+Documentation       Regression for Financing
 Library             Selenium2Library
 Library             ScreenCapLibrary
 Library             Collections

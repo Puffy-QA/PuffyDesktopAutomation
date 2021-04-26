@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Regression for Footer
+Documentation       Regression for PuffyGuarantee
 Library             Selenium2Library
 Library             ScreenCapLibrary
 Library             Collections
@@ -37,7 +37,7 @@ Check the details in Puffy Lifetime warranty block
     Check if the Lifetime warranty block featured text is showing with correct content
 Check the details in 101-Night Sleep Trial Block
     Check if the 101-Night Sleep Trial block is showing the title with correct content
-    #Check if the 101-Night Sleep Trial block featured text is showing with correct content     #Bug in website with extra spaces
+    Check if the 101-Night Sleep Trial block featured text is showing with correct content     #Bug in website with extra spaces
     Check in 101-Night Trial section if Puffy Mattress hyperlink is clickable and landing to correct page
 Verify the Order Your Puffy Now section
     Check if the Order Your Puffy section is showing

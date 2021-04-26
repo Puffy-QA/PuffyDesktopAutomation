@@ -22,7 +22,7 @@ Start Record Video
     Initiate Video Recording
 Verify the Sale Popup appears
     Open Login Screen
-    Switch to Version A
+    #Switch to Version A
     Wait and dismiss popup
 Save350 page
     Go to Save350 page
@@ -36,40 +36,40 @@ Timer Bar
 Store page ALL category price check
     Go to Store page (Click on footer Store link)
     sleep  2s
-    Price check for Puffy Mattress
-    Price check for Puffy Lux Mattress
-    Price check for Puffy Royal Mattress
-    Price check for Puffy Foundation
-    Price check for Puffy Adjustable Base
-    Price check for Puffy Bed Frame
-    Price check for Puffy Pillow
-    Price check for Puffy Body Pillow
-    Price check for Puffy Comforter
-    Price check for Puffy Mattress Pad
-    Price check for Puffy Topper
-    Price check for Puffy Mattress Protector
-    Price check for Puffy Blanket
-    Price check for Puffy Weighted Blanket
-    Price check for Puffy Sheets
-    Price check for Puffy Dog Bed
-    Price check for Puffy Rug
+    Check price in Store page for Puffy Mattress
+    Check price in Store page for Puffy Lux Mattress
+    Check price in Store page for Puffy Royal Mattress
+    Check price in Store page for Puffy Foundation
+    Check price in Store page for Puffy Adjustable Base
+    Check price in Store page for Puffy Bed Frame
+    Check price in Store page for Puffy Pillow
+    Check price in Store page for Puffy Body Pillow
+    Check price in Store page for Puffy Comforter
+    Check price in Store page for Puffy Mattress Pad
+    Check price in Store page for Puffy Topper
+    Check price in Store page for Puffy Mattress Protector
+    Check price in Store page for Puffy Blanket
+    Check price in Store page for Puffy Weighted Blanket
+    Check price in Store page for Puffy Sheets
+    Check price in Store page for Puffy Dog Bed
+    Check price in Store page for Puffy Rug
 Gift Shop page price check
     Go to Gift Shop page (Click on footer Gift Shop link)
-    Gift Shop Price check for Puffy Pillow
-    Gift Shop Price check for Puffy Comforter
-    Gift Shop Price check for Puffy Weighted Blanket
-    Gift Shop Price check for Puffy Mattress Pad
-    Gift Shop Price check for Puffy Mattress Topper
-    Gift Shop Price check for Puffy Mattress Protector
-    Gift Shop Price check for Puffy Blanket
-    Gift Shop Price check for Puffy Body Pillow
-    Gift Shop Price check for Puffy Rug
-    Gift Shop Price check for Puffy Mattress
-    Gift Shop Price check for Puffy Lux Hybrid
-    Gift Shop Price check for Puffy Royal Hybrid
-    Gift Shop Price check for Puffy Adjustable Base
-    Gift Shop Price check for Puffy Foundation
-    Gift Shop Price check for Puffy Bed Frame
+    Check Price in GiftShop page for Puffy Pillow
+    Check Price in GiftShop page for Puffy Comforter
+    Check Price in GiftShop page for Puffy Weighted Blanket
+    Check Price in GiftShop page for Puffy Mattress Pad
+    Check Price in GiftShop page for Puffy Mattress Topper
+    Check Price in GiftShop page for Puffy Mattress Protector
+    Check Price in GiftShop page for Puffy Blanket
+    Check Price in GiftShop page for Puffy Body Pillow
+    Check Price in GiftShop page for Puffy Rug
+    Check Price in GiftShop page for Puffy Mattress
+    Check Price in GiftShop page for Puffy Lux Hybrid
+    Check Price in GiftShop page for Puffy Royal Hybrid
+    Check Price in GiftShop page for Puffy Adjustable Base
+    Check Price in GiftShop page for Puffy Foundation
+    Check Price in GiftShop page for Puffy Bed Frame
 Compare page Puffy Mattress price check
     Go to Puffy Mattress Product Page
     Click size dropdown for Puffy Mattress

@@ -1385,7 +1385,9 @@ Go to Financing Page
     sleep                                   2s
     Scroll Element Into View                ${LOCFOOTERSECTION}
     Click element                           ${LOCFOOTERFINANCING}
+    Take Screenshot
     Location should be                      ${SUPPORTFINANCINGURL}
+    Take Screenshot
 Check if top-banner__image is showing
     sleep                                   5s
     Page Should Contain Image               ${LOCFINANCINGTOPBANNERIMAGE}
@@ -1538,6 +1540,7 @@ Check the third question in the list if showing and with correct content (Klarna
 Click third question to see if it will expand (Klarna)
     Element Should Not Be Visible                   ${LOCKLARNATHIRDFAQANSWER}
     Click Element                                   ${LOCKLARNATHIRDFAQ}
+    wait until page contains element                ${LOCKLARNATHIRDFAQANSWER}
     Element Should Be Visible                       ${LOCKLARNATHIRDFAQANSWER}
 Check if the third answer will show with correct content (Klarna)
     ${KlarnaFAQThirdQuestionAnswer}=            get text      ${LOCKLARNATHIRDFAQANSWER}
@@ -1553,7 +1556,9 @@ Check if the CTA for Klarna financing is showing with correct content and functi
     ${KlarnaCTA}=            get text      ${LOCKLARNACTA}
     Run keyword if          "${KlarnaCTA}"!="${TEXTSHOPTHEMATTRESSCTA}"      Fail        Wrong Klarna CTA text. Actual content: ${KlarnaCTA} expected: ${TEXTSHOPTHEMATTRESSCTA}
     Click element                           ${LOCKLARNACTA}
+    Take Screenshot                         ${MonitorID}
     Location should be                      ${PUFFYCOMPAREMATTRESSURL}
+    Take Screenshot                         ${MonitorID}
     Go Back
     sleep                                   2s
     Go Back
@@ -1667,7 +1672,9 @@ Check if the CTA for Klarna financing is showing with correct content and functi
     ${SplititCTA}=            get text      ${LOCSPLITITCTA}
     Run keyword if          "${SplititCTA}"!="${TEXTSHOPTHEMATTRESSCTA}"      Fail        Wrong Splitit CTA text. Actual content: ${SplititCTA} expected: ${TEXTSHOPTHEMATTRESSCTA}
     Click element                           ${LOCSPLITITCTA}
+    Take screenshot                         ${MonitorID}
     Location should be                      ${PUFFYCOMPAREMATTRESSURL}
+    Take screenshot                         ${MonitorID}
     Go Back
     sleep                                   2s
     Go Back
@@ -1676,7 +1683,9 @@ Go to Return Policy Page
     sleep                                   2s
     Scroll Element Into View                ${LOCFOOTERSECTION}
     Click element                           ${LOCFOOTERRETURNPOLICY}
+    Take Screenshot                         ${MonitorID}
     Location should be                      ${SUPPORTRETURNPOLICYURL}
+    Take Screenshot                         ${MonitorID}
 Check Return Policy Title if showing with correct content
     Element should be visible               ${LOCRETURNPOLICYTITLE}
     ${ReturnPolicyTitle}=            get text      ${LOCRETURNPOLICYTITLE}
@@ -1695,7 +1704,9 @@ Read and check the Why Buy Puffy? description content if showing and correct
     Run keyword if          "${WhyBuyPuffyInformation}"!="${TEXTWHYBUYPUFFYINFORMATION}"      Fail        Wrong content for Why Buy Puffy Section. Actual content: ${WhyBuyPuffyInformation} expected: ${TEXTWHYBUYPUFFYINFORMATION}
 Check if Puffy hyperlink is clickable and redirected to correct page
     Click element                          ${LOCWHYBUYPUFFYHYPERLINKPUFFY}
+    Take Screenshot                         ${MonitorID}
     Location should be                     ${HOMEPAGE}
+    Take Screenshot                         ${MonitorID}
     Go Back
 Check if the title PUFFY MATTRESS RETURNS is showing with correct content
     Element should be visible               ${LOCPUFFYMATTRESSRETURNSTITLE}
@@ -1713,7 +1724,9 @@ Read and check the PUFFY MATTRESS RETURNS description content if showing and cor
     Run keyword if          "${PuffyMattressReturnsInformation3}"!="${TEXTPUFFYMATTRESSRETURNSINFORMATION3}"      Fail        Wrong content for Puffy Mattress Returns paragraph 3. Actual content: ${PuffyMattressReturnsInformation3} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION3}
 Check if Puffy Mattress hyperlink is clickable and landing to correct page
     Click element                          ${LOCPUFFYMATTRESSHYPERLINK}
+    Take Screenshot                        ${MonitorID}
     Location should be                     ${PUFFYCOMPAREMATTRESSURL}
+    Take Screenshot                        ${MonitorID}
     Go Back
 Check if the title PUFFY PRODUCT RETURNS is showing with correct content
     Element should be visible               ${LOCPUFFYPRODUCTRETURNSTITLE}
@@ -1737,11 +1750,15 @@ Read and check the PUFFY PRODUCT RETURNS description content if showing and corr
     Run keyword if          "${PuffyProductReturnsInformation5}"!="${TEXTPUFFYPRODUCTRETURNSINFORMATION5}"      Fail        Wrong content for Puffy Product Returns paragraph 3. Actual content: ${PuffyProductReturnsInformation5} expected: ${TEXTPUFFYMATTRESSRETURNSINFORMATION3}
 Check if 101-night sleep trial hyperlink is clickable and landing to correct page
     Click element                          ${LOC101NIGHTSLEEPTRIALHYPERLINK}
+    Take Screenshot                        ${MonitorID}
     Location should be                     ${PUFFY101NIGHTSLEEPTRIALURL}
+    Take Screenshot                        ${MonitorID}
     Go Back
 Check if Puffy.com hyperlink is clickable and landing to correct page
     Click element                          ${LOCPUFFYCOMHYPERLINK}
+    Take Screenshot                        ${MonitorID}
     Location should be                     ${HOMEPAGE}
+    Take Screenshot                        ${MonitorID}
     Go Back
 Check if the section is showing
     Element should be visible               css=body > div.product-bar > div
@@ -1847,7 +1864,7 @@ Check if the 101-Night Sleep Trial block featured text is showing with correct c
 Check in 101-Night Trial section if Puffy Mattress hyperlink is clickable and landing to correct page
     Click Element                                   ${LOCL101NIGHTSLEEPTRIALPUFFYLINK}
     Wait until page contains element                ${LOCHOMEPAGEH1}
-    Location should be                              ${Homepage}
+    Location should be                              ${HEADERPUFFYICONURL}
     Go Back
 
     Wait until page contains element                ${LOCL101NIGHTSLEEPTRIALPUFFYMATTRESSHYPERLINK}
