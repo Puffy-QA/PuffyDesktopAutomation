@@ -1675,7 +1675,7 @@ Check Puffy Comforter Full/Queen size monthly payment price
     ${Klarna}=            get text        css=#product_form_1536090603554 > div.hc-custom-block.finance-area > div:nth-child(1) > klarna-placement > a:nth-child(2) > klarna-placement-style-amount
     Run keyword if          '${Klarna}'!='${PUFFYCOMFORTERFULL/QUEENKLARNANOOFF}'      Fail        Wrong Puffy Comforter Full/Queen Size monthly payment for Klarna. Expected Result: ${PUFFYCOMFORTERFULL/QUEENKLARNANOOFF} Actual Result: ${Klarna}
     ${Splitit}=            get text        css=#product_form_1536090603554 > div.hc-custom-block.finance-area > div.finance-area__box.finance-area__box--separator > div > a.data-splitit-logo > span.data-splitit-price > span
-    Run keyword if          '${Splitit}'!='${PUFFYCOMFORTERFULL/QUEENSPLITITNOOFF}'      Fail      Wrong Puffy Comforter Full/Queen Size monthly payment for Splitit. Expected Result: ${PUFFYBEDFRAMEQUEENSPLITIT300OFF} Actual Result: ${Splitit}
+    Run keyword if          '${Splitit}'!='${PUFFYCOMFORTERFULL/QUEENSPLITITNOOFF}'      Fail      Wrong Puffy Comforter Full/Queen Size monthly payment for Splitit. Expected Result: ${PUFFYBEDFRAMEQUEENSPLITITNOOFF} Actual Result: ${Splitit}
 
 Check Puffy Comforter King/Cal King size monthly payment price
     sleep                               2s

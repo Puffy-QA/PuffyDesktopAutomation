@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210419 17:38:36.945" rpa="false">
+<suite id="s1" name="Smoketest" source="D:\PycharmProjects\PuffyDesktopAutomation\TestFiles\USDev\smoketest.robot">
+<test id="s1-t1" name="Start Video Recording">
+<kw name="Initiate video recording">
+<kw name="Start Video Recording" library="ScreenCapLibrary">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<arguments>
+<arg>alias=FallSale name=FallSale</arg>
+</arguments>
+<msg timestamp="20210419 17:38:39.396" level="INFO">Automatically setting a fps of 12.0</msg>
+<status status="PASS" starttime="20210419 17:38:37.301" endtime="20210419 17:38:39.399"></status>
+</kw>
+<status status="PASS" starttime="20210419 17:38:37.300" endtime="20210419 17:38:39.399"></status>
+</kw>
+<status status="PASS" starttime="20210419 17:38:37.300" endtime="20210419 17:38:39.400" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Verify the Sale Popup appears">
+<kw name="Open Login screen">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${HomepageURL}</arg>
+<arg>${systembrowser}</arg>
+</arguments>
+<msg timestamp="20210419 17:38:39.402" level="INFO">Opening browser 'Chrome' to base url 'https://puffy.com'.</msg>
+<status status="PASS" starttime="20210419 17:38:39.402" endtime="20210419 17:39:26.347"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210419 17:39:26.348" endtime="20210419 17:39:26.472"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Timer}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:39:32.501" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:39:31.499" endtime="20210419 17:39:32.502"></status>
+</kw>
+<msg timestamp="20210419 17:39:32.503" level="FAIL">Text 'CYBER WEEK SALE NOW $300 OFF + FREE PILLOW' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210419 17:39:26.473" endtime="20210419 17:39:32.503"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:38:39.402" endtime="20210419 17:39:32.503"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:38:39.401" endtime="20210419 17:39:32.504" critical="yes">Text 'CYBER WEEK SALE NOW $300 OFF + FREE PILLOW' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t3" name="Verify sale details on Timer Bar">
+<kw name="Check Seasonal Sale text on timer">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#saleTimer &gt; div:nth-child(1) &gt; div &gt; div.timer-text__content.timer-text__content--desktop</arg>
+</arguments>
+<assign>
+<var>${Content}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:39:33.605" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:39:32.521" endtime="20210419 17:39:33.605"></status>
+</kw>
+<msg timestamp="20210419 17:39:33.608" level="FAIL">Element with locator 'css=#saleTimer &gt; div:nth-child(1) &gt; div &gt; div.timer-text__content.timer-text__content--desktop' not found.</msg>
+<status status="FAIL" starttime="20210419 17:39:32.511" endtime="20210419 17:39:33.608"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:32.510" endtime="20210419 17:39:33.609"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:32.510" endtime="20210419 17:39:33.609" critical="yes">Element with locator 'css=#saleTimer &gt; div:nth-child(1) &gt; div &gt; div.timer-text__content.timer-text__content--desktop' not found.</status>
+</test>
+<test id="s1-t4" name="Verify sale details on Puffy Mattress Homepage">
+<kw name="Go to Homepage (Click on Puffy Logo)">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:39:35.618" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:39:33.612" endtime="20210419 17:39:35.618"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Logo}</arg>
+</arguments>
+<status status="PASS" starttime="20210419 17:39:35.618" endtime="20210419 17:39:35.630"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Logo}</arg>
+</arguments>
+<msg timestamp="20210419 17:39:35.630" level="INFO">Clicking element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header.feature_image &gt; div &gt; div &gt; div &gt; div.logo &gt; a'.</msg>
+<status status="PASS" starttime="20210419 17:39:35.630" endtime="20210419 17:39:35.704"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Timer}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:39:41.830" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:39:40.886" endtime="20210419 17:39:41.831"></status>
+</kw>
+<msg timestamp="20210419 17:39:41.832" level="FAIL">Text 'CYBER WEEK SALE NOW $300 OFF + FREE PILLOW' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210419 17:39:35.704" endtime="20210419 17:39:41.832"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:33.611" endtime="20210419 17:39:41.832"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:33.611" endtime="20210419 17:39:41.833" critical="yes">Text 'CYBER WEEK SALE NOW $300 OFF + FREE PILLOW' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t5" name="Verify sale details on Puffy Lux Mattress Homepage">
+<kw name="Go to Puffy Lux Homepage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:39:43.845" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:39:41.835" endtime="20210419 17:39:43.845"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:Puffy Lux</arg>
+</arguments>
+<msg timestamp="20210419 17:39:43.845" level="INFO">Clicking link 'link:Puffy Lux'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:39:45.383" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:39:45.041" endtime="20210419 17:39:45.383"></status>
+</kw>
+<msg timestamp="20210419 17:39:45.385" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="footer-menu__link" href="/pages/puffy-lux-mattress"&gt;...&lt;/a&gt; is not clickable at point (391, 916). Other element would receive the click: &lt;div class="custom-timer" id="saleTimer" style=""&gt;...&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:39:43.845" endtime="20210419 17:39:45.385"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:41.835" endtime="20210419 17:39:45.385"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:41.835" endtime="20210419 17:39:45.386" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="footer-menu__link" href="/pages/puffy-lux-mattress"&gt;...&lt;/a&gt; is not clickable at point (391, 916). Other element would receive the click: &lt;div class="custom-timer" id="saleTimer" style=""&gt;...&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t6" name="Verify sale details on Puffy Hybrid Mattress Homepage">
+<kw name="Go to Puffy Hybrid Homepage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210419 17:39:50.388" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210419 17:39:45.388" endtime="20210419 17:39:50.388"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:Puffy Hybrid</arg>
+</arguments>
+<msg timestamp="20210419 17:39:50.388" level="INFO">Clicking link 'link:Puffy Hybrid'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:39:52.083" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:39:51.625" endtime="20210419 17:39:52.083"></status>
+</kw>
+<msg timestamp="20210419 17:39:52.084" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="footer-menu__link" href="/pages/puffy-hybrid-mattress"&gt;...&lt;/a&gt; is not clickable at point (401, 916). Other element would receive the click: &lt;div class="subscribe-popup__overlay jsCloseSubscribePopup"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:39:50.388" endtime="20210419 17:39:52.084"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:45.388" endtime="20210419 17:39:52.084"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:45.387" endtime="20210419 17:39:52.084" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="footer-menu__link" href="/pages/puffy-hybrid-mattress"&gt;...&lt;/a&gt; is not clickable at point (401, 916). Other element would receive the click: &lt;div class="subscribe-popup__overlay jsCloseSubscribePopup"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t7" name="Verify sale details on Store Page">
+<kw name="Go to Store page">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:39:54.093" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:39:52.087" endtime="20210419 17:39:54.093"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:Puffy Store</arg>
+</arguments>
+<msg timestamp="20210419 17:39:54.094" level="INFO">Clicking link 'link:Puffy Store'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:39:55.764" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:39:55.321" endtime="20210419 17:39:55.764"></status>
+</kw>
+<msg timestamp="20210419 17:39:55.765" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="footer-menu__link" href="/collections/puffy-store"&gt;...&lt;/a&gt; is not clickable at point (844, 860). Other element would receive the click: &lt;div class="subscribe-popup__overlay jsCloseSubscribePopup"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:39:54.093" endtime="20210419 17:39:55.765"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:52.087" endtime="20210419 17:39:55.765"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:52.086" endtime="20210419 17:39:55.766" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="footer-menu__link" href="/collections/puffy-store"&gt;...&lt;/a&gt; is not clickable at point (844, 860). Other element would receive the click: &lt;div class="subscribe-popup__overlay jsCloseSubscribePopup"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t8" name="Verify sale details on Gift Shop Page">
+<kw name="Go to Gift Shop page">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210419 17:40:00.782" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210419 17:39:55.768" endtime="20210419 17:40:00.782"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:Gift Shop</arg>
+</arguments>
+<msg timestamp="20210419 17:40:00.782" level="INFO">Clicking link 'link:Gift Shop'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:02.360" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:01.920" endtime="20210419 17:40:02.360"></status>
+</kw>
+<msg timestamp="20210419 17:40:02.361" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="footer-menu__link" href="/pages/gift-shop"&gt;...&lt;/a&gt; is not clickable at point (838, 832). Other element would receive the click: &lt;div class="subscribe-popup__overlay jsCloseSubscribePopup"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:40:00.782" endtime="20210419 17:40:02.361"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:55.768" endtime="20210419 17:40:02.361"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:39:55.767" endtime="20210419 17:40:02.362" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="footer-menu__link" href="/pages/gift-shop"&gt;...&lt;/a&gt; is not clickable at point (838, 832). Other element would receive the click: &lt;div class="subscribe-popup__overlay jsCloseSubscribePopup"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t9" name="Verify sale details, sizes, and prices on Puffy Mattress PDP then add to cart">
+<kw name="Go to Puffy Mattress Product Page">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Mattresses}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:02.364" level="INFO">Simulating Mouse Over on element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header &gt; div &gt; div &gt; div &gt; div.nav &gt; ul &gt; li:nth-child(1) &gt; a'.</msg>
+<status status="PASS" starttime="20210419 17:40:02.364" endtime="20210419 17:40:02.654"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:40:04.660" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:40:02.654" endtime="20210419 17:40:04.660"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Puffy Mattress}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:04.661" level="INFO">Clicking element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header &gt; div &gt; div &gt; div &gt; div.dropdown_container.mega-menu.mega-menu-1 &gt; div &gt; div.dropdown_content &gt; div:nth-child(1) &gt; div.mega-menu__image-caption-link &gt; a &gt; div.image-element__wrap &gt; img'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:05.126" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:04.688" endtime="20210419 17:40:05.126"></status>
+</kw>
+<msg timestamp="20210419 17:40:05.127" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:40:04.660" endtime="20210419 17:40:05.127"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:02.363" endtime="20210419 17:40:05.127"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:02.363" endtime="20210419 17:40:05.127" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t10" name="Verify sale details, sizes, and prices on Puffy Lux Mattress PDP then add to cart">
+<kw name="Go to Puffy Lux Mattress Product Page">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Mattresses}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:05.130" level="INFO">Simulating Mouse Over on element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header &gt; div &gt; div &gt; div &gt; div.nav &gt; ul &gt; li:nth-child(1) &gt; a'.</msg>
+<status status="PASS" starttime="20210419 17:40:05.130" endtime="20210419 17:40:05.417"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:40:07.432" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:40:05.417" endtime="20210419 17:40:07.432"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Puffy Lux Mattress}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:07.432" level="INFO">Clicking element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header &gt; div &gt; div &gt; div &gt; div.dropdown_container.mega-menu.mega-menu-1 &gt; div &gt; div.dropdown_content &gt; div:nth-child(2) &gt; div.mega-menu__image-caption-link &gt; a &gt; div.image-element__wrap &gt; img'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:07.888" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:07.459" endtime="20210419 17:40:07.888"></status>
+</kw>
+<msg timestamp="20210419 17:40:07.889" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:40:07.432" endtime="20210419 17:40:07.889"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:05.130" endtime="20210419 17:40:07.889"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:05.129" endtime="20210419 17:40:07.889" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t11" name="Verify sale details, sizes, and prices on Puffy Lux Hybrid Mattress PDP then add to cart">
+<kw name="Click on Puffy Lux Hybrid Toggle">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#product_form_549302042658 &gt; div.product-variants-holder &gt; div.selector-wrapper.withQueen.jsRealOptions.product-type &gt; div.hybrid-buttons &gt; label.hybrid-buttons__item.hybrid-buttons__item--2</arg>
+</arguments>
+<msg timestamp="20210419 17:40:07.892" level="INFO">Clicking element 'css=#product_form_549302042658 &gt; div.product-variants-holder &gt; div.selector-wrapper.withQueen.jsRealOptions.product-type &gt; div.hybrid-buttons &gt; label.hybrid-buttons__item.hybrid-buttons__item--2'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:08.342" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:07.903" endtime="20210419 17:40:08.342"></status>
+</kw>
+<msg timestamp="20210419 17:40:08.343" level="FAIL">Element with locator 'css=#product_form_549302042658 &gt; div.product-variants-holder &gt; div.selector-wrapper.withQueen.jsRealOptions.product-type &gt; div.hybrid-buttons &gt; label.hybrid-buttons__item.hybrid-buttons__item--2' not found.</msg>
+<status status="FAIL" starttime="20210419 17:40:07.892" endtime="20210419 17:40:08.343"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:07.892" endtime="20210419 17:40:08.343"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:07.891" endtime="20210419 17:40:08.344" critical="yes">Element with locator 'css=#product_form_549302042658 &gt; div.product-variants-holder &gt; div.selector-wrapper.withQueen.jsRealOptions.product-type &gt; div.hybrid-buttons &gt; label.hybrid-buttons__item.hybrid-buttons__item--2' not found.</status>
+</test>
+<test id="s1-t12" name="Verify sale details, sizes, and prices on Puffy Royal Mattress PDP then add to cart">
+<kw name="Go to Puffy Royal Mattress Product Page">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Mattresses}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:08.346" level="INFO">Simulating Mouse Over on element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header &gt; div &gt; div &gt; div &gt; div.nav &gt; ul &gt; li:nth-child(1) &gt; a'.</msg>
+<status status="PASS" starttime="20210419 17:40:08.346" endtime="20210419 17:40:08.622"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:40:10.625" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:40:08.622" endtime="20210419 17:40:10.625"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Puffy Royal Mattress}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:10.625" level="INFO">Clicking element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header &gt; div &gt; div &gt; div &gt; div.dropdown_container.mega-menu.mega-menu-1 &gt; div &gt; div.dropdown_content &gt; div:nth-child(3) &gt; div.mega-menu__image-caption-link &gt; a &gt; div.image-element__wrap &gt; img'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:11.102" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:10.652" endtime="20210419 17:40:11.102"></status>
+</kw>
+<msg timestamp="20210419 17:40:11.103" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:40:10.625" endtime="20210419 17:40:11.103"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:08.346" endtime="20210419 17:40:11.103"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:08.345" endtime="20210419 17:40:11.104" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t13" name="Verify sale details, sizes, and prices on Puffy Royal Hybrid Mattress PDP then add to cart">
+<kw name="Click on Puffy Royal Hybrid Toggle">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=#product_form_3832788910114 &gt; div.product-variants-holder &gt; div.selector-wrapper.withQueen.jsRealOptions.product-type &gt; div.hybrid-buttons &gt; label.hybrid-buttons__item.hybrid-buttons__item--2</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:16.582" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:16.158" endtime="20210419 17:40:16.583"></status>
+</kw>
+<msg timestamp="20210419 17:40:16.583" level="FAIL">Element 'css=#product_form_3832788910114 &gt; div.product-variants-holder &gt; div.selector-wrapper.withQueen.jsRealOptions.product-type &gt; div.hybrid-buttons &gt; label.hybrid-buttons__item.hybrid-buttons__item--2' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20210419 17:40:11.106" endtime="20210419 17:40:16.583"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:11.106" endtime="20210419 17:40:16.584"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:11.105" endtime="20210419 17:40:16.584" critical="yes">Element 'css=#product_form_3832788910114 &gt; div.product-variants-holder &gt; div.selector-wrapper.withQueen.jsRealOptions.product-type &gt; div.hybrid-buttons &gt; label.hybrid-buttons__item.hybrid-buttons__item--2' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t14" name="Verify sale details, sizes, and prices on Puffy Adjustable Base PDP then add to cart">
+<kw name="Go to Puffy Adjustable Base Product Page">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Bases}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:16.587" level="INFO">Simulating Mouse Over on element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header.feature_image &gt; div &gt; div &gt; div &gt; div.nav &gt; ul &gt; li:nth-child(2) &gt; a'.</msg>
+<status status="PASS" starttime="20210419 17:40:16.586" endtime="20210419 17:40:16.871"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:40:18.884" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:40:16.871" endtime="20210419 17:40:18.884"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Adjustable Base}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:18.884" level="INFO">Clicking element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header.feature_image &gt; div &gt; div &gt; div &gt; div.dropdown_container.mega-menu.mega-menu-2 &gt; div &gt; div &gt; div:nth-child(2) &gt; div.mega-menu__image-caption-link &gt; a &gt; div.image-element__wrap &gt; img'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:19.359" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:18.912" endtime="20210419 17:40:19.359"></status>
+</kw>
+<msg timestamp="20210419 17:40:19.360" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:40:18.884" endtime="20210419 17:40:19.360"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:16.586" endtime="20210419 17:40:19.360"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:16.586" endtime="20210419 17:40:19.360" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t15" name="Add Puffy Body Pillow to cart (product with no parameters)">
+<kw name="Go to Puffy Body Pillow Product Page">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Bedding}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:19.363" level="INFO">Simulating Mouse Over on element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header.feature_image &gt; div &gt; div &gt; div &gt; div.nav &gt; ul &gt; li:nth-child(3) &gt; a'.</msg>
+<status status="PASS" starttime="20210419 17:40:19.363" endtime="20210419 17:40:19.656"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:40:21.658" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:40:19.656" endtime="20210419 17:40:21.658"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Body Pillow}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:21.659" level="INFO">Clicking element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header.feature_image &gt; div &gt; div &gt; div &gt; div.dropdown_container.mega-menu.mega-menu-3.boxes--9 &gt; div &gt; div &gt; div:nth-child(3) &gt; div.mega-menu__image-caption-link &gt; a &gt; div.image-element__wrap &gt; img'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:22.133" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:21.686" endtime="20210419 17:40:22.133"></status>
+</kw>
+<msg timestamp="20210419 17:40:22.134" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:40:21.658" endtime="20210419 17:40:22.134"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:19.363" endtime="20210419 17:40:22.134"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:19.362" endtime="20210419 17:40:22.135" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t16" name="Add Puffy Sheets to cart (product with 2 parameters)">
+<kw name="Go to Puffy Sheets">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Bedding}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:22.137" level="INFO">Simulating Mouse Over on element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header.feature_image &gt; div &gt; div &gt; div &gt; div.nav &gt; ul &gt; li:nth-child(3) &gt; a'.</msg>
+<status status="PASS" starttime="20210419 17:40:22.137" endtime="20210419 17:40:22.425"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210419 17:40:24.438" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210419 17:40:22.425" endtime="20210419 17:40:24.438"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Sheets}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:24.438" level="INFO">Clicking element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header.feature_image &gt; div &gt; div &gt; div &gt; div.dropdown_container.mega-menu.mega-menu-3.boxes--9 &gt; div &gt; div &gt; div:nth-child(9) &gt; div.mega-menu__image-caption-link &gt; a &gt; div.image-element__wrap &gt; img'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:24.910" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:24.466" endtime="20210419 17:40:24.910"></status>
+</kw>
+<msg timestamp="20210419 17:40:24.911" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:40:24.438" endtime="20210419 17:40:24.911"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:22.137" endtime="20210419 17:40:24.911"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:22.136" endtime="20210419 17:40:24.912" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t17" name="Verify product redirection in cart">
+<kw name="Open cart">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${cart}</arg>
+</arguments>
+<msg timestamp="20210419 17:40:24.916" level="INFO">Clicking element 'css=body &gt; div.shopify-section.header-section &gt; div &gt; header.main_header &gt; div &gt; div &gt; div &gt; div.cart_container &gt; div &gt; a'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:26.412" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:25.962" endtime="20210419 17:40:26.413"></status>
+</kw>
+<msg timestamp="20210419 17:40:26.413" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href=" javascript:void(0);" class="icon-cart  js-mini_cart  mini_cart " data-no-instant=""&gt;...&lt;/a&gt; is not clickable at point (1736, 36). Other element would receive the click: &lt;div class="subscribe-popup__overlay jsCloseSubscribePopup"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</msg>
+<status status="FAIL" starttime="20210419 17:40:24.916" endtime="20210419 17:40:26.413"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:24.914" endtime="20210419 17:40:26.414"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:24.914" endtime="20210419 17:40:26.414" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href=" javascript:void(0);" class="icon-cart  js-mini_cart  mini_cart " data-no-instant=""&gt;...&lt;/a&gt; is not clickable at point (1736, 36). Other element would receive the click: &lt;div class="subscribe-popup__overlay jsCloseSubscribePopup"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.128)
+</status>
+</test>
+<test id="s1-t18" name="Proceed to checkout">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210419 17:40:31.422" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210419 17:40:26.417" endtime="20210419 17:40:31.423"></status>
+</kw>
+<kw name="Click checkout">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:CHECKOUT</arg>
+</arguments>
+<msg timestamp="20210419 17:40:31.424" level="INFO">Clicking link 'link:CHECKOUT'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:32.021" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:31.556" endtime="20210419 17:40:32.022"></status>
+</kw>
+<msg timestamp="20210419 17:40:32.022" level="FAIL">Link with locator 'link:CHECKOUT' not found.</msg>
+<status status="FAIL" starttime="20210419 17:40:31.423" endtime="20210419 17:40:32.022"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:31.423" endtime="20210419 17:40:32.022"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:26.416" endtime="20210419 17:40:32.023" critical="yes">Link with locator 'link:CHECKOUT' not found.</status>
+</test>
+<test id="s1-t19" name="Select any product from Complete your Bedroom Set in checkout (Mattress Pad)">
+<kw name="Select Mattress Pad from Complete your Bedroom Set in checkout">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>css=body &gt; div.main_wrapper &gt; div &gt; div.wrap &gt; div.sidebar &gt; div.sidebar__content &gt; div.sidebar_bottom &gt; div &gt; div &gt; div &gt; div:nth-child(6) &gt; a &gt; div.upsell-boxes__media &gt; img</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:37.532" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:37.074" endtime="20210419 17:40:37.532"></status>
+</kw>
+<msg timestamp="20210419 17:40:37.532" level="FAIL">Element 'css=body &gt; div.main_wrapper &gt; div &gt; div.wrap &gt; div.sidebar &gt; div.sidebar__content &gt; div.sidebar_bottom &gt; div &gt; div &gt; div &gt; div:nth-child(6) &gt; a &gt; div.upsell-boxes__media &gt; img' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210419 17:40:32.025" endtime="20210419 17:40:37.532"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:32.025" endtime="20210419 17:40:37.533"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:32.024" endtime="20210419 17:40:37.533" critical="yes">Element 'css=body &gt; div.main_wrapper &gt; div &gt; div.wrap &gt; div.sidebar &gt; div.sidebar__content &gt; div.sidebar_bottom &gt; div &gt; div &gt; div &gt; div:nth-child(6) &gt; a &gt; div.upsell-boxes__media &gt; img' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t20" name="Verify all payment methods">
+<kw name="Select and proceed with Paypal">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#checkout_payment_gateway_22050897954</arg>
+</arguments>
+<msg timestamp="20210419 17:40:37.535" level="INFO">Clicking element 'css=#checkout_payment_gateway_22050897954'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210419 17:40:37.994" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:37.546" endtime="20210419 17:40:37.994"></status>
+</kw>
+<msg timestamp="20210419 17:40:37.995" level="FAIL">Element with locator 'css=#checkout_payment_gateway_22050897954' not found.</msg>
+<status status="FAIL" starttime="20210419 17:40:37.535" endtime="20210419 17:40:37.995"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:37.535" endtime="20210419 17:40:37.995"></status>
+</kw>
+<status status="FAIL" starttime="20210419 17:40:37.535" endtime="20210419 17:40:37.996" critical="yes">Element with locator 'css=#checkout_payment_gateway_22050897954' not found.</status>
+</test>
+<test id="s1-t21" name="Stop Video Recording">
+<kw name="Stop All Video Recordings" library="ScreenCapLibrary">
+<doc>Stops all the video recordings and generates the files in WebM format. If ``embed`` argument
+was set to ``True`` the videos will be displayed in the log file.</doc>
+<msg timestamp="20210419 17:40:38.029" level="INFO" html="yes">&lt;a href="recording_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210419 17:40:37.998" endtime="20210419 17:40:38.029"></status>
+</kw>
+<status status="PASS" starttime="20210419 17:40:37.997" endtime="20210419 17:40:38.030" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210419 17:40:38.032" endtime="20210419 17:40:40.206"></status>
+</kw>
+<doc>This is for checking all the places where we should update the seasonal promotion</doc>
+<status status="FAIL" starttime="20210419 17:38:36.947" endtime="20210419 17:40:40.206"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="19">Critical Tests</stat>
+<stat pass="2" fail="19">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="19" id="s1" name="Smoketest">Smoketest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
