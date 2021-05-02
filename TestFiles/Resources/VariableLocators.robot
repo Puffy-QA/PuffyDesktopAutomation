@@ -5,7 +5,7 @@ Library             Selenium2Library
 Library             ScreenCapLibrary
 Library             Collections
 Library             String
-Library             Notification
+
 
 *** Variables ***
 ${LOCMATTRESSES}                    css=body > div.shopify-section.header-section > div > header.main_header > div > div > div > div.nav > ul > li:nth-child(1) > a
