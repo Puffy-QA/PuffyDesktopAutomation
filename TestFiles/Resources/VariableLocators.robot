@@ -317,3 +317,13 @@ ${LOCMATTRESSADVISORBLOCKTITLEDESC}     css=body > div.awards-section > div > di
 ${LOCBESTMATTRESSPICKSBLOCKTITLE}       css=body > div.awards-section > div > div.awards-section__content > div > div:nth-child(10) > div.award-boxes__content > h2
 ${LOCBESTMATTRESSPICKSIMAGE}            css=body > div.awards-section > div > div.awards-section__content > div > div:nth-child(10) > div.award-boxes__image > a > div > img
 ${LOCBESTMATTRESSPICKSBLOCKTITLEDESC}   css=body > div.awards-section > div > div.awards-section__content > div > div:nth-child(10) > div.award-boxes__content > p
+###################Size & Weight Information page Locators###############################
+${LOCSIZEWEIGHTPAGEBANNERTITLE}         css=body > div.size-page-banner > div > div > div.size-page-banner__box.size-page-banner__box--text > h1
+${LOCSIZEWEIGHTPAGEBANNERIMAGE}         css=body > div.size-page-banner > div > div > div.size-page-banner__box.size-page-banner__box--media > div > img
+${LOCSIZEWEIGHTPAGEBANNERCTA}           css=body > div.size-page-banner > div > div > div.size-page-banner__box.size-page-banner__box--text > a
+${LOCSIZEWEIGHTFIRSTTEXTCONTENT}        css=body > div.text-section > div > div:nth-child(1) > p
+${LOCSIZEWEIGHTFIRSTTEXTSECTIONTITLE}   css=body > div.text-section > div > h2:nth-child(2)
+${LOCSIZEWEIGHTFIRSTTABLEFIRSTCOLUMNNAME}   css=body > div.text-section > div > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(1) > strong
+${LOCSIZEWEIGHTFIRSTTABLESECONDCOLUMNNAME}  css=body > div.text-section > div > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(2) > strong
+${LOCSIZEWEIGHTFIRSTTABLETHIRDCOLUMNNAME}   css=body > div.text-section > div > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(3) > strong
+${LOCSIZEWEIGHTFIRSTTABLEFOURTHCOLUMNNAME}  css=body > div.text-section > div > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(4) > strong

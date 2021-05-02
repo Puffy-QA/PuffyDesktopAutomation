@@ -59,7 +59,7 @@ ${HEADERPUFFYICONURL}                               https://puffy.com/
 ${CONTACTFORMCHALLENGEURL}                          https://puffy.com/challenge#contact_form
 ${FINANCINGKLARNASECTION}                           https://puffy.com/pages/financing#financingKlarna
 ${FINANCINGSPLITITSECTION}                          https://puffy.com/pages/financing#financingSplitit
-
+${SIZEWEIGHTINFOPAGE}                               https://puffy.com/pages/puffy-mattress-weight
 
 ##################AFFILIATE URLS################################
 ${SLEEPMATTERSURL}                                  https://www.thesleepmatters.com/best-single-size-memory-foam-mattress/
