@@ -1961,7 +1961,7 @@ Verify Our Sleep Guide redirection and if Puffy is visible on their page
     Sleep                                   2s
     Switch Window                           ${WindowHandles}[1]
     Take Screenshot                         ${MonitorID}
-    wait until page contains                1 – Puffy Lux: Editor’s Pick
+    wait until page contains                7 – Puffy Lux: Best Luxury
     Take Screenshot                         ${MonitorID}
     Location Should Be                      ${OURSLEEPGUIDEURL}
     Close Window
@@ -2223,3 +2223,36 @@ Verify BEST MATTRESS PICKS redirection and if Puffy is visible on their page
     Close Window
     sleep                                   2s
     Switch Window                           ${WindowHandles}[0]
+###########################Size & Weight Information Page##############################
+Go to Size & Weight information page
+    Go To                                   ${SIZEWEIGHTINFOPAGE}
+    wait until page contains element        css=body > div.size-page-banner > div > div
+    Location should be                      ${SIZEWEIGHTINFOPAGE}
+Verify page banner title is correct
+    ${PageBannerTitle}=            get text      ${LOCSIZEWEIGHTPAGEBANNERTITLE}
+    Run keyword if          """${PageBannerTitle}"""!="""${TEXTSIZEWEIGHTPAGEBANNERTITLE}"""      Fail        Wrong Size & Weight Information Page Banner Title. Actual content: ${PageBannerTitle} expected: ${TEXTSIZEWEIGHTPAGEBANNERTITLE}
+Verify page banner image is showing
+    Page Should Contain Image                            ${LOCSIZEWEIGHTPAGEBANNERIMAGE}
+    Element should be visible                            ${LOCSIZEWEIGHTPAGEBANNERIMAGE}
+    ${uspsrc1}                                           Get Element Attribute  ${LOCSIZEWEIGHTPAGEBANNERIMAGE}  src
+    Go To                                                ${uspsrc1}
+    Wait until element is visible                        css=img
+    Go Back
+Verify page banner CTA has correct text and redirecting to correct page
+    ${PageBannerCTA}=            get text      ${LOCSIZEWEIGHTPAGEBANNERCTA}
+    Run keyword if          """${PageBannerCTA}"""!="""${TEXTSHOPTHEMATTRESSCTA}"""      Fail        Wrong Size & Weight Information Page Banner CTA text. Actual content: ${PageBannerCTA} expected: ${TEXTSHOPTHEMATTRESSCTA}
+Verify the text content if correct
+    ${FirstTextContent}=            get text      ${LOCSIZEWEIGHTFIRSTTEXTCONTENT}
+    Run keyword if          """${FirstTextContent}"""!="""${TEXTSIZEWEIGHTFIRSTTEXTCONTENT}"""      Fail        Wrong Size & Weight Information First text content. Actual content: ${PageBannerCTA} expected: ${TEXTSHOPTHEMATTRESSCTA}
+Verify Memory Foam Mattress Weights Title
+    ${FirstTextSectionTitle}=            get text      ${LOCSIZEWEIGHTFIRSTTEXTSECTIONTITLE}
+    Run keyword if          """${FirstTextSectionTitle}"""!="""${TEXTSIZEWEIGHTFIRSTTEXTSECTIONTITLE}"""      Fail        Wrong Size & Weight Information First Text Section Title. Actual content: ${FirstTextSectionTitle} expected: ${TEXTSIZEWEIGHTFIRSTTEXTSECTIONTITLE}
+Verify Memory Foam Mattress Weights table titles
+    ${FirstTableFirstColumnName}=            get text      ${LOCSIZEWEIGHTFIRSTTABLEFIRSTCOLUMNNAME}
+    Run keyword if          """${FirstTableFirstColumnName}"""!="""${TEXTSIZEWEIGHTFIRSTTABLEFIRSTCOLUMNNAME}"""      Fail        Wrong Size & Weight Information First Table First Column Title. Actual content: ${FirstTableFirstColumnName} expected: ${TEXTSIZEWEIGHTFIRSTTABLEFIRSTCOLUMNNAME}
+    ${FirstTableSecondColumnName}=            get text      ${LOCSIZEWEIGHTFIRSTTABLESECONDCOLUMNNAME}
+    Run keyword if          """${FirstTableSecondColumnName}"""!="""${TEXTSIZEWEIGHTFIRSTTABLESECONDCOLUMNNAME}"""      Fail        Wrong Size & Weight Information First Table Second Column Title. Actual content: ${FirstTableSecondColumnName} expected: ${TEXTSIZEWEIGHTFIRSTTABLESECONDCOLUMNNAME}
+    ${FirstTableThirdColumnName}=            get text      ${LOCSIZEWEIGHTFIRSTTABLETHIRDCOLUMNNAME}
+    Run keyword if          """${FirstTableThirdColumnName}"""!="""${TEXTSIZEWEIGHTFIRSTTABLETHIRDCOLUMNNAME}"""      Fail        Wrong Size & Weight Information First Table Third Column Title. Actual content: ${FirstTableThirdColumnName} expected: ${TEXTSIZEWEIGHTFIRSTTABLETHIRDCOLUMNNAME}
+    ${FirstTableFourthColumnName}=            get text      ${LOCSIZEWEIGHTFIRSTTABLEFOURTHCOLUMNNAME}
+    Run keyword if          """${FirstTableFourthColumnName}"""!="""${TEXTSIZEWEIGHTFIRSTTABLEFOURTHCOLUMNNAME}"""      Fail        Wrong Size & Weight Information First Table Fourth Column Title. Actual content: ${FirstTableFourthColumnName} expected: ${TEXTSIZEWEIGHTFIRSTTABLEFOURTHCOLUMNNAME}

@@ -19,7 +19,7 @@ Start Video Recording
     Initiate video recording
 Verify the Sale Popup appears
     Open Login screen
-    #Switch to Version A
+    Switch to Version A
     Wait and dismiss popup
     #Go to checkout
     Go to homepage
@@ -55,6 +55,29 @@ Verify sale details on Store Page
     Check Seasonal Sale text on badges (Store/Giftshop Page)
     Check discount value and freebie on badges for mattresses
     Check discount value on badges for adjustable base
+Verify MATTRESSES category in Store page (Redirection check)
+    Click Mattresses category
+    Click Compare Mattresses button
+    Verify if redirected to Compare Page
+    Go To Store Page (Click on footer Store link)
+Verify Bases category in store page (Redirection and price check)
+    Click Bases Category
+    Click See All Bases button
+    Verify if redirected to Bases collection page
+    Verify if the prices in bases collection page are correct
+    Go To Store Page (Click on footer Store link)
+Verify Bedding category in store page (Redirection and price check)
+    Click Bedding Category
+    Click See All Bedding Button
+    Verify if redirected to Bedding collection page
+    Verify if the prices in bedding collection page are correct
+    Go To Store Page (Click on footer Store link)
+Verify Bedroom category in store page (Redirection and price check)
+    Click on Bedroom category
+    Click See All Bedroom Button
+    Verify if redirected to Bedroom collection page
+    Verify if the prices in bedroom collection page are correct
+    Go To Store Page (Click on footer Store link)
 Verify sale details on Gift Shop Page
     Go to Gift Shop page (Click on footer Gift Shop link)
     Check Seasonal Sale text on badges (Store/Giftshop Page)

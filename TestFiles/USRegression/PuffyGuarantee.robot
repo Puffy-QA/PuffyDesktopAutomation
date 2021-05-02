@@ -18,7 +18,7 @@ Verify the Sale Popup appears
     Open Login Screen
     #Switch to Version A
     Wait and dismiss popup
-Switch version
+#Switch version
     #Switch to Version A
     sleep               2s
 Verify sale details on Timer Bar
