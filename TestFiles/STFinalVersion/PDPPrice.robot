@@ -16,6 +16,7 @@ Start Record Video
     Initiate Video Recording
 Verify the Sale Popup appears
     Open Login Screen
+    #Switch to Version A
     Wait and dismiss popup
 Verify sale details on Timer Bar
     Check Seasonal Sale text on timer
@@ -41,6 +42,29 @@ Verify product prices in Store page (ALL category)
     Check price in Store page for Puffy Sheets
     Check price in Store page for Puffy Dog Bed
     Check price in Store page for Puffy Rug
+Verify MATTRESSES category in Store page (Redirection check)
+    Click Mattresses category
+    Click Compare Mattresses button
+    Verify if redirected to Compare Page
+    Go To Store Page (Click on footer Store link)
+Verify Bases category in store page (Redirection and price check)
+    Click Bases Category
+    Click See All Bases button
+    Verify if redirected to Bases collection page
+    Verify if the prices in bases collection page are correct
+    Go To Store Page (Click on footer Store link)
+Verify Bedding category in store page (Redirection and price check)
+    Click Bedding Category
+    Click See All Bedding Button
+    Verify if redirected to Bedding collection page
+    Verify if the prices in bedding collection page are correct
+    Go To Store Page (Click on footer Store link)
+Verify Bedroom category in store page (Redirection and price check)
+    Click on Bedroom category
+    Click See All Bedroom Button
+    Verify if redirected to Bedroom collection page
+    Verify if the prices in bedroom collection page are correct
+    Go To Store Page (Click on footer Store link)
 Verify products prices in Gift Shop page
     Go to Gift Shop page (Click on footer Gift Shop link)
     Check Price in GiftShop page for Puffy Pillow
@@ -291,15 +315,39 @@ Verify the price in PDP Puffy Pillow
     Go to Puffy Pillow Product Page
     Don't show seasonal sale content check
     #Don't show freebies content check
+    Check default color for Puffy Pillow
     Check default size for Puffy Pillow
+    Click Puffy Pillow color dropdown
+    Check Puffy Pillow color options
+    Click Puffy Pillow color dropdown
     Click Puffy Pillow Size dropdown
     Check Puffy Pillow original prices
+    #Check Puffy Sheets 15%OFF prices
     Check Puffy Pillow sizes list order
+    Click Puffy Pillow size dropdown
+    Click Puffy Pillow color dropdown
+    Select Puffy Pillow Gray
+    Click Puffy Pillow size dropdown
+    Check Puffy Pillow original prices
+    Check Puffy Pillow sizes list order
+    Click Puffy Pillow size dropdown
+    Click Puffy Pillow color dropdown
+    Select Puffy Pillow White
+    Click Puffy Pillow size dropdown
     Select Puffy Pillow Standard
     Check Puffy Pillow Standard size monthly payment price
     Click Puffy Pillow Size dropdown
     Select Puffy Pillow King
     Check Puffy Pillow King size monthly payment price
+    Click Puffy Pillow color dropdown
+    Select Puffy Pillow Gray
+    Click Puffy Pillow Size dropdown
+    Select Puffy Pillow Standard
+    Check Puffy Pillow Standard size monthly payment price
+    Click Puffy Pillow Size dropdown
+    Select Puffy Pillow King
+    Check Puffy Pillow King size monthly payment price
+
 Verify the price in PDP Puffy Body Pillow
     Go to Puffy Body Pillow Product Page
     Don't show seasonal sale content check
@@ -507,6 +555,7 @@ Verify the price in PDP Puffy Dog Bed
     Click Puffy Dog Bed Size dropdown
     Check Puffy Dog Bed original prices
     #Check Puffy Dog Bed 15%OFF prices
+    Check Puffy Dog Bed 50% OFF prices
     Check Puffy Dog Bed sizes list order
     Select Puffy Dog Bed Small
     Check Puffy Dog Bed Small size monthly payment price

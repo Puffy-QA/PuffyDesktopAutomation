@@ -514,12 +514,16 @@ ${PUFFYSHEETSCALKINGKLARNA15OFF}                            $20
 ${PUFFYSHEETSCALKINGSPLITIT15OFF}                           $9.56
 #PUFFY DOG BED
 #SMALL SIZE
-${PUFFYDOGBEDSMALLORIGINAL}                                 $125
+${PUFFYDOGBEDSMALLORIGINAL}                                 $130
 ${PUFFYDOGBEDSMALLKLARNANOOFF}                              $21
 ${PUFFYDOGBEDSMALLSPLITITNOOFF}                             $10.42
-${PUFFYDOGBEDSMALL15OFF}                                   $106
+${PUFFYDOGBEDSMALL15OFF}                                    $106
 ${PUFFYDOGBEDSMALLKLARNA15OFF}                              $18
 ${PUFFYDOGBEDSMALLSPLITIT15OFF}                             $8.85
+${PUFFYDOGBEDSMALL50OFF}                                    $65
+${PUFFYDOGBEDSMALLKLARNA50OFF}                              $11
+${PUFFYDOGBEDSMALLSPLITIT50OFF}                             $5.42
+
 #MEDIUM SIZE
 ${PUFFYDOGBEDMEDIUMORIGINAL}                                $150
 ${PUFFYDOGBEDMEDIUMKLARNANOOFF}                             $25
