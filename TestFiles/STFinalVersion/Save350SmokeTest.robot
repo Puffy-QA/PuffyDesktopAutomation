@@ -19,7 +19,7 @@ Start Video Recording
     Initiate video recording
 Verify the Sale Popup appears
     Open Login screen
-    Switch to Version A
+    #Switch to Version A
     Wait and dismiss popup
     #Go to checkout
     Go to homepage
@@ -96,22 +96,9 @@ Verify sale details, sizes, and prices on Puffy Mattress PDP then add to cart
     Click Return to cart
     Close cart
     Check cart count after adding a mattress
-Verify sale details, sizes, and prices on Puffy Lux Mattress PDP then add to cart
-    Go to Puffy Lux Mattress Product Page
-    Check Seasonal Sale text on badges (PDP)
-    Check discount value and freebie on Mattress PDPs
-    Click size dropdown for Puffy Lux Mattress
-    Check Puffy Lux original prices (all sizes)
-    Check Puffy Lux 350OFF prices (all sizes)
-    Select Puffy Lux Size (King)
-    Check current cart count
-    Add Puffy Lux to cart
-    Click Return to cart
-    Close cart
-    Check cart count after adding a mattress
 Verify sale details, sizes, and prices on Puffy Lux Hybrid Mattress PDP then add to cart
     Go to Puffy Lux Mattress Product Page
-    Click on Puffy Lux Hybrid Toggle
+
     Check Seasonal Sale text on badges (PDP)
     Check discount value and freebie on Mattress PDPs
     Click size dropdown for Puffy Lux Mattress
@@ -123,22 +110,22 @@ Verify sale details, sizes, and prices on Puffy Lux Hybrid Mattress PDP then add
     Click Return to cart
     Close cart
     Check cart count after adding a mattress (Lux Hybrid)
-Verify sale details, sizes, and prices on Puffy Royal Mattress PDP then add to cart
-    Go to Puffy Royal Mattress Product Page
+Verify sale details, sizes, and prices on Puffy Lux Mattress PDP then add to cart
+    Go to Puffy Lux Mattress Product Page
+    Click on Puffy Lux Toggle
     Check Seasonal Sale text on badges (PDP)
     Check discount value and freebie on Mattress PDPs
-    Click size dropdown for Puffy Royal Mattress
-    Check Puffy Royal original prices (all sizes)
-    Check Puffy Royal 350OFF prices (all sizes)
-    Select Puffy Royal Size (Twin)
+    Click size dropdown for Puffy Lux Mattress
+    Check Puffy Lux original prices (all sizes)
+    Check Puffy Lux 350OFF prices (all sizes)
+    Select Puffy Lux Size (King)
     Check current cart count
-    Add Puffy Royal to cart
+    Add Puffy Lux to cart
     Click Return to cart
     Close cart
     Check cart count after adding a mattress
 Verify sale details, sizes, and prices on Puffy Royal Hybrid Mattress PDP then add to cart
     Go to Puffy Royal Mattress Product Page
-    Click on Puffy Royal Hybrid Toggle
     Check Seasonal Sale text on badges (PDP)
     Check discount value and freebie on Mattress PDPs
     Click size dropdown for Puffy Royal Mattress
@@ -150,6 +137,21 @@ Verify sale details, sizes, and prices on Puffy Royal Hybrid Mattress PDP then a
     Click Return to cart
     Close cart
     Check cart count after adding a mattress (Lux Hybrid)
+Verify sale details, sizes, and prices on Puffy Royal Mattress PDP then add to cart
+    Go to Puffy Royal Mattress Product Page
+    Click on Puffy Royal Toggle
+    Check Seasonal Sale text on badges (PDP)
+    Check discount value and freebie on Mattress PDPs
+    Click size dropdown for Puffy Royal Mattress
+    Check Puffy Royal original prices (all sizes)
+    Check Puffy Royal 350OFF prices (all sizes)
+    Select Puffy Royal Size (Twin)
+    Check current cart count
+    Add Puffy Royal to cart
+    Click Return to cart
+    Close cart
+    Check cart count after adding a mattress
+
 Verify sale details, sizes, and prices on Puffy Adjustable Base PDP then add to cart
     Go to Puffy Adjustable Base Product Page
     Check Seasonal Sale text on badges (PDP Adjustable Base)

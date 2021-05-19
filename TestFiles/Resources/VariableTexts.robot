@@ -1,7 +1,8 @@
 *** Variables ***
 ${TEXTPUFFYMATTRESSH1}              Puffy Mattress
-${TEXTPUFFYHYBRIDMATTRESSH1}        Puffy Hybrid Mattress
-${TEXTPUFFYLUXMATTRESSH1}           Puffy Lux Mattress
+${TEXTPUFFYMATTRESSHPH1}            Puffy\nIt'S America'S Mattress
+${TEXTPUFFYHYBRIDMATTRESSH1}        Puffy Hybrid\nIt'S America'S Mattress
+${TEXTPUFFYLUXMATTRESSH1}           Puffy Lux\nIt'S America'S Mattress
 ${TEXTPUFFYLUXMATTRESSH2}           12 REASONS TO CHOOSE PUFFY LUX MATTRESS
 ${TEXTPUFFYLUXHYBRIDMATTRESSH1}     Puffy Lux Hybrid Mattress
 ${TEXTPUFFYLUXHYBRIDMATTRESSH2}     12 REASONS TO CHOOSE PUFFY LUX Hybrid MATTRESS
@@ -150,6 +151,12 @@ ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSORIGINALPRICE}     $1,749.00
 ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSDISCOUNTEDPRICE}   $1,449.00
 ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSDISCOUNTEDPRICE350}   $1,399.00
 ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSQTY}               1
+#FREE PUFFY PILLOW (White)
+${ORDERSUMMARYPUFFYPILLOWWHITESTANDARD}                  Puffy Pillow
+${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSSIZE}              White / Standard
+${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSORIGINALPRICE}     $158.00
+${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSDISCOUNTEDPRICE}   Free
+${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSQTY}               2
 #PUFFY ROYAL MATTRESS
 ${ORDERSUMMARYPUFFYROYALMATTRESS}                  Puffy Royal
 ${ORDERSUMMARYPUFFYROYALMATTRESSSIZE}              Twin
@@ -305,7 +312,7 @@ ${TEXTAWARDSPAGERANKEDBEST2021TITLE}                RANKED BEST MATTRESS 2021
 ${TEXTAWARDSPAGERANKEDBEST2021DESC}                 Not only do thousands of sleepers rate Puffy as the Best Mattress, but we’ve also received numerous industry awards taking out the top spot in various Best Mattress categories.
 ${TEXTSLEEPMATTERSBLOCKTITLE}                       BEST MEMORY FOAM MATTRESSES 2021
 ${TEXTSLEEPMATTERSBLOCKTITLEDESC}                   Sleep Matters ranks Puffy Lux as the Best Memory Foam Mattress 2021. American-made and very supportive, reviewers recommend Puffy Lux for all sleepers.
-${TEXTOURSLEEPGUIDEBLOCKTITLE}                      BEST MEMORY FOAM MATTRESS: EDITOR’S PICK 2021
+${TEXTOURSLEEPGUIDEBLOCKTITLE}                      BEST LUXURY MATTRESS 2021
 ${TEXTOURSLEEPGUIDEBLOCKTITLEDESC}                  Our Sleep Guide ranks the Puffy Lux as the Best Memory Foam Mattress! Adaptability, cooling, and the luxurious feel are standout features for reviewers.
 ${TEXTSLEEPOPOLISBLOCKTITLE}                        BEST FOAM MATTRESS FOR BACK SLEEPERS 2021
 ${TEXTSLEEPOPOLISBLOCKTITLEDESC}                    Sleepopolis ranks Puffy as the best foam mattress for back sleepers. Plush pressure relief, back support, and cooling innovation is why Puffy is considered the best.

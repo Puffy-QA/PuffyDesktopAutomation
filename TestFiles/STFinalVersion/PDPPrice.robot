@@ -16,12 +16,11 @@ Start Record Video
     Initiate Video Recording
 Verify the Sale Popup appears
     Open Login Screen
-    Switch to Version A
+    #Switch to Version A
     Wait and dismiss popup
 Verify sale details on Timer Bar
     Check Seasonal Sale text on timer
-#Switch version
-    #Switch to Version B
+
 Verify product prices in Store page (ALL category)
     Go to Store page (Click on footer Store link)
     sleep  2s
