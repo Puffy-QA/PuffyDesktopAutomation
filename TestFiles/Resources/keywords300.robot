@@ -165,7 +165,7 @@ Go to Compare Mattress Page
     Wait Until Page Contains    CHOOSE YOUR PUFFY MATTRESS
 
 Go To Store Page (Click on footer Store link)
-    Scroll element into view            css=#shopify-section-footer > footer > div.container.footer-menu-wrap
+    Scroll element into view            css=#shopify-section-footer > footer > div.footer__top > div
     Click link       link:STORE
 
 Go to Gift Shop page (Click on footer Gift Shop link)
@@ -2260,9 +2260,9 @@ Click on Puffy Lux Toggle
     Run keyword if         '${Content}'!='${TEXTPUFFYLUXMATTRESSH2}'               Fail        Product Name (H1) not found Expected: ${TEXTPUFFYLUXMATTRESSH2} Actual: ${Content}
 Click on Puffy Royal Toggle
     Wait Until Element Is Visible       css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-type > div.hybrid-buttons > label.hybrid-buttons__item.hybrid-buttons__item--1
-    Click element       css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-type > div.hybrid-buttons > label.hybrid-buttons__item.hybrid-buttons__item--2
+    Click element       css=#product_form_3832788910114 > div.product-variants-holder > div.selector-wrapper.withQueen.jsRealOptions.product-type > div.hybrid-buttons > label.hybrid-buttons__item.hybrid-buttons__item--1
     ${Content}=            get text         ${LOC12REASONSPDP}
-    Run keyword if         '${Content}'!='${TEXTPUFFYROYALHYBRIDMATTRESSH2}'               Fail        Product Name (H1) not found Expected: ${TEXTPUFFYROYALHYBRIDMATTRESSH2} Actual: ${Content}
+    Run keyword if         '${Content}'!='${TEXTPUFFYROYALMATTRESSH2}'               Fail        Product Name (H1) not found Expected: ${TEXTPUFFYROYALMATTRESSH2} Actual: ${Content}
 Check current cart count
     ${CartText}   get text  css=body > div.shopify-section.header-section > div > header.main_header.feature_image > div > div > div > div.cart_container > div > a > span
     set test variable       ${CartCount}    ${CartText}
@@ -2764,17 +2764,17 @@ Verify if Puffy Adjustable Base is in Order Summary and details are correct
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong product price in Order Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
 
 Verify if Puffy Royal Hybrid is in Order Summary and details are correct
-    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > span.product__description__name.order-summary__emphasis
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > span.product__description__name.order-summary__emphasis
     Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESS} Actual: ${ProductName}
-    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > span.product__description__variant.order-summary__small-text
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > span.product__description__variant.order-summary__small-text
     Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSSIZE} Actual: ${Size}
-    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__image > div > span
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__image > div > span
     Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSQTY} Actual: ${Quantity}
-    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__price > span
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__price > span
     Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
-    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__price > del
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__price > del
     Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALHYBRIDMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
-    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > ul > li > span
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > ul > li > span
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
 
 Verify if FREE white Puffy Pillow is in Order Summary and details are correct
@@ -2792,87 +2792,87 @@ Verify if FREE white Puffy Pillow is in Order Summary and details are correct
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
 
 Verify if Puffy Royal is in Order Summary and details are correct
-    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > th > span.product__description__name.order-summary__emphasis
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > span.product__description__name.order-summary__emphasis
     Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYROYALMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESS} Actual: ${ProductName}
-    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > th > span.product__description__variant.order-summary__small-text
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > span.product__description__variant.order-summary__small-text
     Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYROYALMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESSSIZE} Actual: ${Size}
-    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > td.product__image > div > span
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__image > div > span
     Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYROYALMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESSQTY} Actual: ${Quantity}
-    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > td.product__price > span
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__price > span
     Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYROYALMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
-    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > td.product__price > del
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > td.product__price > del
     Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYROYALMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYROYALMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
-    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(5) > th > ul > li > span
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(4) > th > ul > li > span
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
 
 Verify if Puffy Lux Hybrid is in Order Summary and details are correct
-    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > th > span.product__description__name.order-summary__emphasis
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > th > span.product__description__name.order-summary__emphasis
     Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESS} Actual: ${ProductName}
-    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > th > span.product__description__variant.order-summary__small-text
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > th > span.product__description__variant.order-summary__small-text
     Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSSIZE} Actual: ${Size}
-    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > td.product__image > div > span
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > td.product__image > div > span
     Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSQTY} Actual: ${Quantity}
-    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > td.product__price > span
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > td.product__price > span
     Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
-    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > td.product__price > del
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > td.product__price > del
     Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXHYBRIDMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
-    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(6) > th > ul > li > span
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(11) > th > ul > li > span
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
 
 Verify if Puffy Lux is in Order Summary and details are correct
-    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > span.product__description__name.order-summary__emphasis
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > span.product__description__name.order-summary__emphasis
     Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYLUXMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESS} Actual: ${ProductName}
-    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > span.product__description__variant.order-summary__small-text
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > span.product__description__variant.order-summary__small-text
     Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYLUXMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESSSIZE} Actual: ${Size}
-    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__image > div > span
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__image > div > span
     Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYLUXMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESSQTY} Actual: ${Quantity}
-    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__price > span
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__price > span
     Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYLUXMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
-    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > td.product__price > del
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__price > del
     Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYLUXMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYLUXMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
-    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(7) > th > ul > li > span
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > ul > li > span
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
     
 Verify if Puffy Mattress is in Order Summary and details are correct
-    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > span.product__description__name.order-summary__emphasis
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(13) > th > span.product__description__name.order-summary__emphasis
     Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYMATTRESS}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESS} Actual: ${ProductName}
-    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > span.product__description__variant.order-summary__small-text
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(13) > th > span.product__description__variant.order-summary__small-text
     Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYMATTRESSSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESSSIZE} Actual: ${Size}
-    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__image > div > span
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(13) > td.product__image > div > span
     Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYMATTRESSQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESSQTY} Actual: ${Quantity}
-    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__price > span
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(13) > td.product__price > span
     Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYMATTRESSDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESSDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
-    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__price > del
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(13) > td.product__price > del
     Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYMATTRESSORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYMATTRESSORIGINALPRICE} Actual: ${OriginalPrice}
-    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > ul > li > span
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(13) > th > ul > li > span
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE1}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE1} Actual: ${DiscountCode}
     
 Verify if White Standard Free Puffy Pillow is in Order Summary and details are correct
-    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > span.product__description__name.order-summary__emphasis
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > span.product__description__name.order-summary__emphasis
     Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARD}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARD} Actual: ${ProductName}
-    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > span.product__description__variant.order-summary__small-text
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > span.product__description__variant.order-summary__small-text
     Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARDSIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARDSIZE} Actual: ${Size}
-    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__image > div > span
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__image > div > span
     Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARDQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARDQTY} Actual: ${Quantity}
-    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__price > span
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__price > span
     Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARDDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARDDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
-    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > td.product__price > del
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > td.product__price > del
     Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYPILLOWSTANDARDORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWSTANDARDORIGINALPRICE} Actual: ${OriginalPrice}
-    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(9) > th > ul > li > span
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(8) > th > ul > li > span
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE3}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE3} Actual: ${DiscountCode}
 
 Verify if White King Free Puffy Pillow is in Order Summary and details are correct    
-    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > th > span.product__description__name.order-summary__emphasis
+    ${ProductName}=            get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(12) > th > span.product__description__name.order-summary__emphasis
     Run keyword if          '${ProductName}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITE}'      Fail        Wrong Product in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITE} Actual: ${ProductName}
-    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > th > span.product__description__variant.order-summary__small-text
+    ${Size}=              get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(12) > th > span.product__description__variant.order-summary__small-text
     Run keyword if          '${Size}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITESIZE}'    Fail        Wrong Size / Color in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITESIZE} Actual: ${Size}
-    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > td.product__image > div > span
+    ${Quantity}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(12) > td.product__image > div > span
     Run keyword if          '${Quantity}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITEQTY}'      Fail        Wrong product QTY in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITEQTY} Actual: ${Quantity}
-    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > td.product__price > span
+    ${DiscountedPrice}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(12) > td.product__price > span
     Run keyword if          '${DiscountedPrice}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITEDISCOUNTEDPRICE}'      Fail        Wrong product discounted price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITEDISCOUNTEDPRICE} Actual: ${DiscountedPrice}
-    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > td.product__price > del
+    ${OriginalPrice}=               get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(12) > td.product__price > del
     Run keyword if          '${OriginalPrice}'!='${ORDERSUMMARYPUFFYPILLOWKINGWHITEORIGINALPRICE}'      Fail        Wrong product original price in Order Summary. Expected: ${ORDERSUMMARYPUFFYPILLOWKINGWHITEORIGINALPRICE} Actual: ${OriginalPrice}
-    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(10) > th > ul > li > span
+    ${DiscountCode}=                  get text         css=#order-summary > div > div.order-summary__section.order-summary__section--product-list > div > table > tbody > tr:nth-child(12) > th > ul > li > span
     Run keyword if          '${DiscountCode}'!='${ORDERSUMMARYDISCOUNTCODE2}'      Fail        Wrong Discount code displayed in Product Summary. Expected: ${ORDERSUMMARYDISCOUNTCODE2} Actual: ${DiscountCode}
 
 Verify if Gray Free Puffy Pillow is in Order Summary and details are correct
