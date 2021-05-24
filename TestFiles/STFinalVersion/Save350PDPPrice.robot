@@ -166,6 +166,7 @@ PDP Puffy Lux Hybrid Mattress Price checks
     Select Puffy Lux Mattress Cal King
     Check Puffy Lux Mattress Cal King size monthly payment price
 PDP Puffy Lux Mattress Price checks
+    Go to Puffy Lux Mattress Product Page
     Click on Puffy Lux Memory Foam Toggle
     Banner Seasonal Sale text check (Mattress)
     PDP Discount Value and Freebie check
@@ -215,6 +216,7 @@ PDP Puffy Royal Hybrid Mattress Price checks
     Select Puffy Royal Mattress Cal King
     Check Puffy Royal Mattress Cal King size monthly payment price
 PDP Puffy Royal Mattress Price checks
+    Go to Puffy Royal Mattress Product Page
     Click on Puffy Royal Memory Foam Toggle
     Banner Seasonal Sale text check (Mattress)
     PDP Discount Value and Freebie check

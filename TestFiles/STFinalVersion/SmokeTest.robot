@@ -136,6 +136,7 @@ Verify sale details, sizes, and prices on Puffy Royal Hybrid Mattress PDP then a
     Check cart count after adding a mattress (Lux Hybrid)
 Verify sale details, sizes, and prices on Puffy Royal Mattress PDP then add to cart
     Go to Puffy Royal Mattress Product Page
+    Click on Puffy Royal Toggle
     Check Seasonal Sale text on badges (PDP)
     Check discount value and freebie on Mattress PDPs
     Click size dropdown for Puffy Royal Mattress
@@ -191,8 +192,8 @@ Verify all products in checkout before adding address details
     Verify if Puffy Sheets is in Order Summary and details are correct
     Verify if Puffy Body Pillow is in Order Summary and details are correct
     Verify if Puffy Adjustable Base is in Order Summary and details are correct
-    Verify if Puffy Royal Hybrid is in Order Summary and details are correct
     Verify if Puffy Royal is in Order Summary and details are correct
+    Verify if Puffy Royal Hybrid is in Order Summary and details are correct
     Verify if Puffy Lux Hybrid is in Order Summary and details are correct
     Verify if Puffy Lux is in Order Summary and details are correct
     Verify if Puffy Mattress is in Order Summary and details are correct

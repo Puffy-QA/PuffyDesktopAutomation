@@ -14,20 +14,20 @@ ${LASTNAME}                     Doe
 ${ADDRESS}                      123 William Street
 ${CITY}                         New York
 ${ZIPCODE}                      03087
-${SALENAME}                     PRE-MEMORIAL DAY SALE NOW
+${SALENAME}                     MEMORIAL DAY SALE NOW
 ${SALEDETAILS}                  $300 OFF + 2 FREE PILLOWS
 ${DISCOUNTAMOUNT}               $300 OFF
 ${DISCOUNTAMOUNT350}            $350 OFF
-${HOMEPAGE}                     https://puffy.com/?preview_theme_id=120247124002
+${HOMEPAGE}                     https://puffy.com
 ${SHOPIFY}
 ${SHOPIFYLOGIN}
 ${SHOPIFYPASS}
 ${SYSTEMBROWSER}                Chrome
-${FOOTER}                       PRE-MEMORIAL DAY SALE NOW $300 OFF + 2 FREE PILLOWS
+${FOOTER}                       MEMORIAL DAY SALE NOW $300 OFF + 2 FREE PILLOWS
 ${DISCOUNTCODEPAGEDETAILS1}     $300 Off Any Mattress
 ${DISCOUNTCODEPAGEDETAILS2}     + 2 Free Pillows
 ${SAVE350}                      https://puffy.com/pages/save350
-${FOOTER350}                    PRE-MEMORIAL DAY SALE NOW $350 OFF + 2 FREE PILLOWS
+${FOOTER350}                    MEMORIAL DAY SALE NOW $350 OFF + 2 FREE PILLOWS
 ${SALE350DETAILS}               $350 OFF + 2 FREE PILLOWS
 ${PUFFYBROWSER}                 alias=Puffy
 ${SIGNUPNODOMAIN}               email
