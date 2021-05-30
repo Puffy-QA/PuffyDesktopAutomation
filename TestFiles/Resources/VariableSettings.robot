@@ -18,7 +18,7 @@ ${SALENAME}                     MEMORIAL DAY SALE NOW
 ${SALEDETAILS}                  $300 OFF + 2 FREE PILLOWS
 ${DISCOUNTAMOUNT}               $300 OFF
 ${DISCOUNTAMOUNT350}            $350 OFF
-${HOMEPAGE}                     https://puffy.com
+${HOMEPAGE}                     https://puffy.com/?preview_theme_id=120264949794
 ${SHOPIFY}
 ${SHOPIFYLOGIN}
 ${SHOPIFYPASS}
